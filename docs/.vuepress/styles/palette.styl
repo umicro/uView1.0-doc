@@ -1,0 +1,172 @@
+$code-color = #e2777a;
+
+div[class*="language-"] {
+    background-color: rgb(40, 44, 52);
+}
+
+.theme-default-content pre code, .theme-default-content pre[class*="language-"] code {
+    color: #bbbbbb;
+}
+
+.token.punctuation {
+    color: $code-color;
+}
+
+.token.attr-name {
+    color: #e5c07b;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+	color: #1f2f3d;
+}
+
+h2 {
+	font-size: 28px;
+}
+
+h3 {
+	font-size: 22px;
+}
+
+td,th {
+	max-width: 250px;
+}
+
+thead th {
+	background-color: #f7f7f7;
+}
+
+tr:nth-child(2n) {
+    background-color: #FFFFFF;
+}
+
+.theme-default-content:not(.custom) {
+    max-width: 960px;
+}
+
+table {
+	width: 100%;
+	font-size: 14px;
+	display: table;
+}
+
+.page p {
+    font-size: 14px;
+    color: #5e6d82;
+    line-height: 2em;
+	margin: 15px 0!important;
+}
+
+.custom-block .custom-block-title {
+    margin-bottom: -.5rem!important;
+}
+
+.page li {
+	font-size: 14px;
+	color: #5e6d82;
+	line-height: 1.8em;
+}
+
+.theme-default-content code {
+	color: #5e6d82;
+	background-color: #e6effb;
+	margin: 0 4px;
+	display: inline-block;
+	padding: 1px 5px;
+	font-size: 12px;
+	border-radius: 3px;
+	height: 18px;
+	line-height: 18px;
+}
+
+.custom-block a {
+    color: #3eaf7c!important;
+}
+
+.sidebar {
+	width: 250px;
+}
+
+.theme-container {
+	width: 1200px;
+	margin: auto;
+}
+
+.page {
+	padding-left: 260px;
+}
+
+.sidebar {
+	left: auto;
+}
+
+.sidebar-heading {
+	font-size: 16px;
+	color: #333;
+	line-height: 40px;
+	height: 40px;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	display: block;
+	position: relative;
+	transition: .15s ease-out;
+	font-weight: 700;
+	border: none;
+}
+
+.sidebar-group a.sidebar-link {
+	padding-left 0;
+}
+
+a.sidebar-link {
+    display: block;
+    height: 36px;
+    color: #444;
+    line-height: 36px;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: 400;
+	padding: 0;
+	border: none;
+}
+
+.sidebar::-webkit-scrollbar,
+body::-webkit-scrollbar {
+	width: 6px;
+}
+ 
+.sidebar::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb{
+	background: transparent;
+	border-radius: 6px;
+}
+ 
+.sidebar:hover::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb{
+	background: hsla(0,0%,53%,.4)
+}
+ 
+.sidebar:hover::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+	background: hsla(0,0%,53%,.1)
+}
+
+.sidebar > .sidebar-links > li > a.sidebar-link {
+    font-size: 1.1em;
+    line-height: 1.7;
+    font-weight: bold;
+}
+
+.sidebar-group.is-sub-group > .sidebar-heading {
+	padding-left: 0;
+	line-height 36px;
+	height 36px;
+}
+
+.sidebar-group.is-sub-group > .sidebar-group-items {
+    padding-left: 0;
+}
