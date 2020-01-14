@@ -1,9 +1,10 @@
-## Tag 标签
+## Layout 布局
 
-该组件一般用于标记和选择，有如下特点：
-- `mode`参数可以设置3种模式，`dark`(深色背景)、`light`(浅色背景)、`plain`(白色背景)
-- `shape`参数可以设置多种形状，`circle`（两边半圆形）, `square`（方形，带圆角），`circleLeft`（左边半圆），`circleRight`（右边半圆）
-- `type`参数可以设置5种主题，`primary`，`success`，`warning`，`error`，`info`
+通过基础的 12 分栏，迅速简便地创建布局  
+
+::: warning 注意
+如需实现类似宫格的布局，请使用uView的`grid`[宫格组件](/components/grid.html)，可以设置角标，功能更完善和灵活
+:::
 
 ### 平台差异说明
 
@@ -13,80 +14,132 @@
 
 ### 基本使用
 
-- 通过`type`参数设置主题类型，默认为`primary`
-- `text`设置标签内容
-
-```html
-<u-tag text="雪月夜" type="success" />
-```
-
-### 设置标签的类型
-
-- 通过设置`mode`参数，可以设置标签的类型，`dark`(深色背景)、`light`(浅色背景)、`plain`(白色背景)
-
-```html
-<u-tag text="一丘之貉" mode="dark" />
-<u-tag text="沆瀣一气" mode="light" />
-<u-tag text="狼狈为奸" mode="plain" />
-```
-
-### 设置标签的形状
-
-通过`shape`参数，可以设置标签的形状，默认是`square`（方形，带圆角），可选：`circle`（两边半圆形）, `circleLeft`（左边半圆），`circleRight`（右边半圆）
-
-```html
-<u-tag text="主谓宾" shape="circle" />
-<u-tag text="定状补" shape="circleLeft" />
-```
-
-### 设置标签是否可以关闭
-
-设置`closeable`参数为`true`，会在标签上添加一个关闭图标  
-设置可关闭后，点击关闭按钮，会发出`close`事件，回调中手动设置`show`参数为`false`，可以隐藏tag
+- 通过`col`组件的`span`设置需要分栏的比例
 
 ```html
 <template>
-	<u-tag text="要清楚" closeable :show="show" @close="tagClick" />
+	<view class="wrap">
+		<u-row gutter="16">
+			<u-col span="3">
+				<view class="demo-layout bg-purple">
+				</view>
+			</u-col>
+			<u-col span="4">
+				<view class="demo-layout bg-purple-light">
+				</view>
+			</u-col>
+			<u-col span="5">
+				<view class="demo-layout bg-purple-dark">
+				</view>
+			</u-col>
+		</u-row>
+		<u-row gutter="16" justify="space-between">
+			<u-col span="3">
+				<view class="demo-layout bg-purple">
+				</view>
+			</u-col>
+			<u-col span="9">
+				<view class="demo-layout bg-purple-light">
+				</view>
+			</u-col>
+		</u-row>
+	</view>
 </template>
 
-<script>
-	export default {
-		data() {
-			return {
-				show: true
-			}
-		},
-		methods: {
-			tagClick(index) {
-				this.show = false;
-			}
-		}
+<style scoped lang="scss">
+	.wrap {
+		padding: 24upx;
 	}
-</script>
+
+	.u-row {
+		margin: 40upx 0;
+	}
+
+	.demo-layout {
+		height: 80upx;
+		border-radius: 8upx;
+	}
+
+	.bg-purple {
+		background: #d3dce6;
+	}
+
+	.bg-purple-light {
+		background: #e5e9f2;
+	}
+
+	.bg-purple-dark {
+		background: #99a9bf;
+	}
+</style>
+```
+
+### 分栏间隔
+
+- 通过`row`组件的设置`gutter`参数，来指定每一栏之间的间隔(左边内边距各为gutter/2)，默认间隔为0
+
+```html
+<u-row gutter="16">
+	<u-col span="3">
+		<view class="demo-layout bg-purple">
+		</view>
+	</u-col>
+	<u-col span="9">
+		<view class="demo-layout bg-purple-light">
+		</view>
+	</u-col>
+</u-row>
+```
+
+### 分栏偏移
+
+通过制定`col`组件的`offset`属性可以指定分栏偏移的栏数
+
+```html
+<u-row gutter="16">
+	<u-col span="3">
+		<view class="demo-layout bg-purple">
+		</view>
+	</u-col>
+	<u-col span="3" offset="6">
+		<view class="demo-layout bg-purple-light">
+		</view>
+	</u-col>
+</u-row>
+```
+
+### 对齐方式
+
+通过`row`组件的`justify`来对分栏进行灵活的对齐，
+可选值为`start`(或`flex-start`)、`end`(或`flex-end`)、`center`、`around`(或`space-around`)、`between`(或`space-between`)
+
+```html
+<u-row gutter="16" justify="center">
+	<u-col span="3">
+		<view class="demo-layout bg-purple">
+		</view>
+	</u-col>
+	<u-col span="3">
+		<view class="demo-layout bg-purple-light">
+		</view>
+	</u-col>
+</u-row>
 ```
 
 ### API
 
-### Props
+### Row Props
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| type | 主题类型  | String	 | primary | success / info / warning / error |
-| size | 标签大小  | String	 | default | mini |
-| shape | 标签形状 | String | square | circle / circleLeft / circleRight |
-| text | 标签的文字内容 | String | - | - |
-| zoom | 是否开启缩放动画，只在`mode`为`center`时有效  | Boolean | true | false |
-| bg-color | 自定义标签的背景颜色 | String  | - | - |
-| border-color | 标签的边框颜色  | String | - | - |
-| close-color | 关闭按钮的颜色  | String | - | - |
-| index | 点击标签时，会通过`click`事件返回该值  | String \| Number | - | - |
-| mode | 模式选择，见上方说明 | String | light | dark / plain |
-| closeable | 是否可关闭，设置为`true`，会出现一个关闭图标  | Boolean | false | true |
-| show | 标签显示与否  | Boolean | true | false |
+| gutter | 栅格间隔，左右各为此值的一半  | String \| Number | 0 | - |
+| justify | 水平排列方式  | String | start(或flex-start) | end(或flex-end) / center / around(或space-around) / between(或space-between) |
+| align | 垂直排列方式 | String | center | top / bottom |
 
-### Event
+### Col Props
 
-|事件名|说明|回调参数|版本|
-|:-|:-|:-|:-|
-| click | 点击标签触发 | index: 传递的`index`参数值 | - |
-| close | `closeable`为`true`时，点击标签关闭按钮触发 | index: 传递的`index`参数值 | - |
+| 参数          | 说明            | 类型            | 默认值             |  可选值   |
+|-------------  |---------------- |---------------|------------------ |-------- |
+| span | 栅格占据的列数，总12等分  | String \| Number | 0 | 1-12 |
+| offset | 栅格左侧的间隔格数  | String \| Number | 0 | - |
+

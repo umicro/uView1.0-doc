@@ -46,6 +46,7 @@ module.exports = {
 							'/components/actionSheet',
 							'/components/keyboard',
 							'/components/picker',
+							'/components/messageInput',
 						]
 					},
 					{
@@ -67,6 +68,7 @@ module.exports = {
 							'/components/alertTips',
 							'/components/mask',
 							'/components/toast',
+							'/components/noticeBar',
 						]
 					},
 					{
