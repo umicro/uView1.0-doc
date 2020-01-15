@@ -47,6 +47,7 @@ module.exports = {
 							'/components/keyboard',
 							'/components/picker',
 							'/components/messageInput',
+							'/components/numberBox',
 						]
 					},
 					{
@@ -69,6 +70,7 @@ module.exports = {
 							'/components/mask',
 							'/components/toast',
 							'/components/noticeBar',
+							'/components/noNetwork',
 						]
 					},
 					{

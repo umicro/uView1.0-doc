@@ -88,29 +88,10 @@
 
 ### 事件回调
 
-- 每当输入内容发生改变，会回调一个`change`事件，内容为当前输入的字符串，如"395"
-- 当输入的内容长度(字符个数)达到`max-length`值后，会触发`finish`事件，同时也会触发`change`事件
+- `more-icon`参数为`true`时，点击向右图标会回调一个`getMore`事件
+- `close-icon`参数为`true`时，点击关闭箭头图标会触发一个`close`事件
+- 点击通告栏的文字时，会触发`click`事件，回调参数为当前文字所在`text`数组参数的索引值
 
-```html
-<template>
-	<view>
-		<u-message-input @change="change" @finish="finish"></u-message-input>
-	</view>
-</template>
-
-<script>
-	export default {
-		methods: {
-			change(e) {
-				console.log('内容改变，当前值为：' + e);
-			},
-			finish(e) {
-				console.log('输入结束，当前值为：' + e);
-			},
-		}
-	}
-</script>
-```
 
 ### API
 
@@ -118,21 +99,30 @@
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| max-length | 输入字符个数 | String \| Number | 4 | - |
-| dot-fill | 是否用圆点填充  | Boolean | false | true |
-| mode | 模式选择，见上方"基本使用"说明 | String | box | bottomLine / middleLine |
-| value | 预置值 | String \| Number | - | - |
-| breathe | 是否开启呼吸效果，见上方说明 | Boolean | true | false |
-| focus | 是否自动获取焦点 | Boolean | false | true |
-| bold | 字体和输入横线是否加粗 | Boolean | true | false |
-| font-size | 字体大小，单位rpx | String \| Number | 60 | - |
-| active-color | 当前激活输入框的样式 | String | #2979ff | - |
-| focus | 非激活输入框的样式，文字颜色同此值 | String | #606266 | - |
+| text | 滚动内容，数组形式 | Array | - | - |
+| type | 显示的主题  | String | warning | primary / info / error / success |
+| volume-icon | 是否显示小喇叭图标 | Boolean | true | false |
+| more-icon | 是否显示右边的向右箭头 | Boolean | false | true |
+| close-icon | 是否显示关闭图标 | Boolean | false | true |
+| autoplay | 是否自动播放 | Boolean | true | false |
+| color | 文字颜色 | String | - | - |
+| bg-color | 背景颜色 | String \| Number | 60 | - |
+| mode | 滚动模式 | String | horizontal(水平滚动) | vertical(垂直滚动) |
+| show | 是否显示 | Boolean | true | false |
+| font-size | 字体大小，单位rpx | String \| Number | 28 | - |
+| duration | 滚动周期时长，只对步进模式有效，横向衔接模式无效，单位ms | String \| Number | 2000 | - |
+| speed | 水平滚动时的滚动速度，即每秒移动多少距离，只对水平衔接方式有效，单位rpx | String \| Number | 160 | - |
+| font-size | 字体大小，单位rpx | String \| Number | 28 | - |
+| is-circular | `mode`为`horizontal`时，指明是否水平衔接滚动 | Boolean | true | false |
+| play-state | 播放状态，`paly`-播放，`paused`-暂停 | String | paly | paused |
 
 ### Events
 
+详细解释见上方说明
+
 | 事件名 | 说明 | 回调参数 | 版本 |
 | :- | :- | :- | :- |
-| change | 输入内容发生改变时触发，具体见上方说明 | value：当前输入的值 | - |
-| finish | 输入字符个数达`max-length`值时触发，见上方说明 | value：当前输入的值 | - |
+| click | 点击通告文字触发 | index：当前文字所在`text`数组的索引值 | - |
+| close | 点击右侧关闭图标触发 | - | - |
+| getMore | 点击右侧向右图标触发 | - | - |
 
