@@ -48,6 +48,8 @@ module.exports = {
 							'/components/picker',
 							'/components/messageInput',
 							'/components/numberBox',
+							'/components/rate',
+							'/components/search',
 						]
 					},
 					{
@@ -82,6 +84,7 @@ module.exports = {
 							'/components/grid',
 							'/components/indexList',
 							'/components/loadMore',
+							'/components/subsection',
 						]
 					},
 					{
