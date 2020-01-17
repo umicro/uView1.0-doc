@@ -96,6 +96,8 @@ module.exports = {
 							'/components/countTo',
 							'/components/collapse',
 							'/components/popup',
+							'/components/timeLine',
+							'/components/lazyLoad',
 						]
 					},
 				]
