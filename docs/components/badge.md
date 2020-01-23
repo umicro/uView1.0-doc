@@ -61,6 +61,6 @@
 | type | 使用预设的颜色 | String  | error | success / primary / warning / info |
 | show-zero | 当数值为 0 时，是否展示 Badge | Boolean  | false | true |
 | size | Badge的尺寸，设为`small`会得到小一号的Badge | String  | normal | small |
-| offset | 设置badge的位置偏移，格式为 [x, y]，也即设置的为`top`和`right`的值，单位upx | Array | [20, 20] | - |
+| offset | 设置badge的位置偏移，格式为 [x, y]，也即设置的为`top`和`right`的值，单位upx | Array | - | - |
 
 

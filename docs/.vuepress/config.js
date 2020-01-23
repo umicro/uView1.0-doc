@@ -35,7 +35,8 @@ module.exports = {
 							'/components/color',
 							'/components/icon',
 							'/components/button',
-							'/components/layout'
+							'/components/layout',
+							'/components/cell'
 						]
 					},
 					{
@@ -73,6 +74,8 @@ module.exports = {
 							'/components/toast',
 							'/components/noticeBar',
 							'/components/noNetwork',
+							'/components/topTips',
+							'/components/swipeAction',
 						]
 					},
 					{
@@ -85,6 +88,7 @@ module.exports = {
 							'/components/indexList',
 							'/components/loadMore',
 							'/components/subsection',
+							'/components/steps',
 						]
 					},
 					{
@@ -98,6 +102,7 @@ module.exports = {
 							'/components/popup',
 							'/components/timeLine',
 							'/components/lazyLoad',
+							'/components/skeleton',
 						]
 					},
 				]
