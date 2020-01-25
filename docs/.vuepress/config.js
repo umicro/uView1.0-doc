@@ -76,6 +76,7 @@ module.exports = {
 							'/components/noNetwork',
 							'/components/topTips',
 							'/components/swipeAction',
+							'/components/swipeAction',
 						]
 					},
 					{
@@ -89,6 +90,9 @@ module.exports = {
 							'/components/loadMore',
 							'/components/subsection',
 							'/components/steps',
+							'/components/link',
+							'/components/readMore',
+							'/components/swiper',
 						]
 					},
 					{
@@ -103,6 +107,8 @@ module.exports = {
 							'/components/timeLine',
 							'/components/lazyLoad',
 							'/components/skeleton',
+							'/components/sticky',
+							'/components/empty',
 						]
 					},
 				]
