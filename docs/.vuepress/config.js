@@ -51,6 +51,7 @@ module.exports = {
 							'/components/numberBox',
 							'/components/rate',
 							'/components/search',
+							'/components/upload',
 						]
 					},
 					{
@@ -62,6 +63,7 @@ module.exports = {
 							'/components/lineProgress',
 							'/components/badge',
 							'/components/tag',
+							'/components/table',
 						]
 					},
 					{
@@ -75,7 +77,6 @@ module.exports = {
 							'/components/noticeBar',
 							'/components/noNetwork',
 							'/components/topTips',
-							'/components/swipeAction',
 							'/components/swipeAction',
 						]
 					},
@@ -109,6 +110,7 @@ module.exports = {
 							'/components/skeleton',
 							'/components/sticky',
 							'/components/empty',
+							'/components/waterfall',
 						]
 					},
 				]

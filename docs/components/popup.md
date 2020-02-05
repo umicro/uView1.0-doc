@@ -27,7 +27,11 @@
 
 ```html
 <template>
-	<u-popup :show="true" mode="top"></u-popup>
+	<u-popup :show="true" mode="top">
+		<view>
+			人生若只如初见，何事秋风悲画扇
+		</view>
+	</u-popup>
 </template>
 ```
 

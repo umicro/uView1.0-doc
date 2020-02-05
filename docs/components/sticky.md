@@ -1,13 +1,7 @@
 ## Sticky 吸顶
 
-该组件一般用于左滑唤出操作菜单的场景，用的最多的是左滑删除操作。
-
-说明：该组件目前只能配置左滑唤出一个操作菜单
-
-::: warning 注意
-如果把该组件通过v-for用于左滑删除的列表，请保证循环的`:key`是一个唯一值，可以用数据的id或者title替代。
-不能是数组循环的index，否则删除的时候，可能会出现数据错乱
-:::
+该组件与CSS中`position: sticky`属性实现的效果一致，当组件超出预设的到顶部距离时，
+就会吸附在顶部，位置进入预设的顶部距离时，会重新按照正常的布局排列。
 
 ### 平台差异说明
 
@@ -17,89 +11,46 @@
 
 ### 基本使用
 
-通过slot传入内部内容即可，要传入props的`index`参数，用于点击时，在回调方法中对某一个数据进行操作
+通过`slot`，将需要吸顶的内容放在`Sticky`组件中即可，`slot`中只能有一个根元素
 
 ```html
 <template>
-	<view>
-		<u-swipe-action :index="index" v-for="(item, index) in listData" :key="item.title" @click="onRemove(index)">
-			<view class="cell u-border-bottom">
-				<view class="cell__hd">
-					<image mode="aspectFill" :src="item.images" />
-				</view>
-				<view class="cell__bd">
-					<view class="title u-line-2">{{ item.title }}</view>
-				</view>
+	<view class="container">
+		<u-sticky>
+			<!-- 只能有一个根元素 -->
+			<view class="sticky">
+				宝剑锋从磨砺出,梅花香自苦寒来
 			</view>
-		</u-swipe-action>
+		</u-sticky>
 	</view>
 </template>
 
-<script>
-	export default {
-		data() {
-			return {
-				listData: [{
-						title: '美国麻省理工学院科研团队19日宣布，其开发的人工智能程序“深度角色”',
-						images: '/static/logo.png'
-					},
-					{
-						title: '究人员让“深度角色”参与了超过4000轮在线桌游“抵抗组织',
-						images: '/static/logo.png'
-					},
-					{
-						title: '同时掩藏自己的身份。结果，不论作为“好人”还是“坏人”，“深度角色”都比人类玩家表现更加出色',
-						images: '/static/logo.png'
-					}
-				]
-			};
-		},
-		methods: {
-			onRemove(index) {
-				this.listData.splice(index, 1);
-				uni.showToast({
-					title: `删除了第${index}个cell`,
-					icon: 'none'
-				});
-			}
-		}
-	};
-</script>
-
 <style lang="scss" scoped>
-	.cell {
-		display: flex;
-		padding: 20rpx;
+	.container {
+		height: 200vh;
+		margin-top: 150rpx;
 	}
 	
-	image {
-		width: 120rpx;
+	.sticky {
+		width: 750rpx;
 		height: 120rpx;
-		margin-right: 20rpx;
-		border-radius: 12rpx;
-	}
-
-	.title {
-		overflow: hidden;
-		text-overflow: ellipsis;
-		display: -webkit-box;
-		line-clamp: 2;
-		font-size: 30rpx;
-		margin-top: 30rpx;
+		background-color: #2979ff;
+		color: #fff;
+		padding: 24rpx;
 	}
 </style>
 ```
 
-### 修改按钮样式
+### 吸顶距离
 
-- 默认左滑出来的按钮文字为"删除"，可以通过`btn-text`修改文字内容
-- 通过`btn-bg-color`修改按钮的背景颜色
-- 通过`btn-width`设置按钮的宽度，单位rpx
+通过`offset-top`参数设置组件在吸顶时与顶部的距离
 
 ```html
-<u-swipe-action btn-text="收藏">
-	...
-</u-swipe-action>
+<u-sticky offset-top="200">
+	<view>
+		塞下秋来风景异，衡阳雁去无留意
+	</view>
+</u-sticky>
 ```
 
 ### API
@@ -108,13 +59,12 @@
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| btn-text | 按钮文字  | String | 删除 | - |
-| btn-bg-color | 按钮背景颜色 | String  | #FF0033 | - |
-| index | 标识符，点击时候用于区分点击了哪一个，用循环的index即可 | String \| Number  | - | - |
-| btnWidth | 按钮宽度，单位rpx | String \| Number  | 90 | - |	
+| offset-top | 吸顶时与顶部的距离，单位rpx  | String \| Number | 0 | - |
+| index | 自定义标识，用于区分是哪一个组件 | String \| Number  | - | - |
+| enable | 是否开启吸顶功能 | Boolean  | true | false |
 
 ### Event
 
 |事件名|说明|回调参数|版本|
 |:-|:-|:-|:-|
-| click | 点击组件时触发 | index: 通过props传递的`index` | - |
+| fixed | 组件吸顶时触发 | index: 通过props传递的`index` | - |
