@@ -17,10 +17,11 @@ module.exports = {
 				collapsable: false,
 				sidebarDepth: 0,
 				children: [
-					['/', '安装'],
-					['/', '快速上手'],
-					['/', '全局配置'],
-					['/', '更新日志'],
+					['/guide/intro', '介绍'],
+					['/guide/install', '安装'],
+					['/guide/quickstart', '快速上手'],
+					['/guide/common', '内置样式'],
+					['/guide/changelog', '更新日志'],
 				]
 			},
 			{
