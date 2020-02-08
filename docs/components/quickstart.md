@@ -4,6 +4,11 @@
 
 下载uView，解压得到文件夹，放到项目根目录，进行如下简单配置即可使用：
 
+::: warning 注意
+uView依赖SCSS，相信您的项目在HBuilder X中已经安装scss插件，如果没有，请在HX菜单的 工具->插件安装中找到"scss/sass编译"插件进行安装，
+如不生效，重启HX即可。
+:::
+
 #### 1. 引入uView主JS库
 
 在项目根目录中的`main.js`中，引入并使用uView的JS库，注意这两行要放在`import Vue`之后

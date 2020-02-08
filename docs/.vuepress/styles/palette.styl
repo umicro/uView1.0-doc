@@ -1,3 +1,7 @@
+body,html {
+	font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
+}
+
 $code-color = #e2777a;
 
 div[class*="language-"] {
@@ -22,7 +26,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-	font-size: 28px;
+	font-size: 26px;
 }
 
 h3 {
@@ -168,4 +172,18 @@ body::-webkit-scrollbar-track {
 
 .sidebar-group.is-sub-group > .sidebar-group-items {
     padding-left: 0;
+}
+
+.sidebar > .sidebar-links > li > a.sidebar-link {
+	font-size: 16px!important;
+	line-height: 40px;
+	height: 40px;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	display: block;
+	position: relative;
+	transition: 0.15s ease-out;
+	border: none;
+	font-weight: 700!important;
 }

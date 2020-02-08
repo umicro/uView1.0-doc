@@ -10,113 +10,161 @@ module.exports = {
 		sidebarDepth: 0,
 		nav: [{
 			text: '指南',
-			link: '/'
-		}, ],
-		sidebar: [{
+			link: '/guide/note'
+		}, {
+			text: '组件',
+			link: '/components/intro'
+		}, {
+			text: '布局',
+			link: '/layout/intro'
+		}, {
+			text: 'JS',
+			link: '/js/intro'
+		}],
+		sidebar: {
+			'/components/': [{
+					title: '开发指南',
+					collapsable: false,
+					sidebarDepth: 0,
+					children: [
+						['/components/intro', '介绍'],
+						['/components/install', '安装'],
+						['/components/quickstart', '快速上手'],
+						['/components/common', '内置样式'],
+						['/components/comparison', '对比其他UI框架'],
+						['/components/changelog', '更新日志'],
+					]
+				},
+				{
+					title: '组件',
+					collapsable: false,
+					sidebarDepth: 0,
+					children: [{
+							title: 'Basic',
+							collapsable: false,
+							sidebarDepth: 0,
+							children: [
+								'/components/color',
+								'/components/icon',
+								'/components/button',
+								'/components/layout',
+								'/components/cell'
+							]
+						},
+						{
+							title: 'Form',
+							collapsable: false,
+							sidebarDepth: 0,
+							children: [
+								'/components/actionSheet',
+								'/components/keyboard',
+								'/components/picker',
+								'/components/messageInput',
+								'/components/numberBox',
+								'/components/rate',
+								'/components/search',
+								'/components/upload',
+							]
+						},
+						{
+							title: 'Data',
+							collapsable: false,
+							sidebarDepth: 0,
+							children: [
+								'/components/circleProgress',
+								'/components/lineProgress',
+								'/components/badge',
+								'/components/tag',
+								'/components/table',
+							]
+						},
+						{
+							title: 'Notice',
+							collapsable: false,
+							sidebarDepth: 0,
+							children: [
+								'/components/alertTips',
+								'/components/mask',
+								'/components/toast',
+								'/components/noticeBar',
+								'/components/noNetwork',
+								'/components/topTips',
+								'/components/swipeAction',
+							]
+						},
+						{
+							title: 'Navigation',
+							collapsable: false,
+							sidebarDepth: 0,
+							children: [
+								'/components/tabs',
+								'/components/grid',
+								'/components/indexList',
+								'/components/loadMore',
+								'/components/subsection',
+								'/components/steps',
+								'/components/link',
+								'/components/readMore',
+								'/components/swiper',
+							]
+						},
+						{
+							title: 'Others',
+							collapsable: false,
+							sidebarDepth: 0,
+							children: [
+								'/components/countDown',
+								'/components/countTo',
+								'/components/collapse',
+								'/components/popup',
+								'/components/timeLine',
+								'/components/lazyLoad',
+								'/components/skeleton',
+								'/components/sticky',
+								'/components/empty',
+								'/components/waterfall',
+							]
+						},
+					]
+				},
+			],
+			'/guide': [
+				'/guide/note',
+				'/guide/design'
+			],
+			'/layout': [{
 				title: '开发指南',
 				collapsable: false,
 				sidebarDepth: 0,
 				children: [
-					['/guide/intro', '介绍'],
-					['/guide/install', '安装'],
-					['/guide/quickstart', '快速上手'],
-					['/guide/common', '内置样式'],
-					['/guide/changelog', '更新日志'],
+					['/layout/intro', '介绍'],
 				]
-			},
-			{
-				title: '组件',
+			}],
+			'/js': [{
+				title: '开发指南',
 				collapsable: false,
 				sidebarDepth: 0,
-				children: [{
-						title: 'Basic',
-						collapsable: false,
-						sidebarDepth: 0,
-						children: [
-							'/components/color',
-							'/components/icon',
-							'/components/button',
-							'/components/layout',
-							'/components/cell'
-						]
-					},
-					{
-						title: 'Form',
-						collapsable: false,
-						sidebarDepth: 0,
-						children: [
-							'/components/actionSheet',
-							'/components/keyboard',
-							'/components/picker',
-							'/components/messageInput',
-							'/components/numberBox',
-							'/components/rate',
-							'/components/search',
-							'/components/upload',
-						]
-					},
-					{
-						title: 'Data',
-						collapsable: false,
-						sidebarDepth: 0,
-						children: [
-							'/components/circleProgress',
-							'/components/lineProgress',
-							'/components/badge',
-							'/components/tag',
-							'/components/table',
-						]
-					},
-					{
-						title: 'Notice',
-						collapsable: false,
-						sidebarDepth: 0,
-						children: [
-							'/components/alertTips',
-							'/components/mask',
-							'/components/toast',
-							'/components/noticeBar',
-							'/components/noNetwork',
-							'/components/topTips',
-							'/components/swipeAction',
-						]
-					},
-					{
-						title: 'Navigation',
-						collapsable: false,
-						sidebarDepth: 0,
-						children: [
-							'/components/tabs',
-							'/components/grid',
-							'/components/indexList',
-							'/components/loadMore',
-							'/components/subsection',
-							'/components/steps',
-							'/components/link',
-							'/components/readMore',
-							'/components/swiper',
-						]
-					},
-					{
-						title: 'Others',
-						collapsable: false,
-						sidebarDepth: 0,
-						children: [
-							'/components/countDown',
-							'/components/countTo',
-							'/components/collapse',
-							'/components/popup',
-							'/components/timeLine',
-							'/components/lazyLoad',
-							'/components/skeleton',
-							'/components/sticky',
-							'/components/empty',
-							'/components/waterfall',
-						]
-					},
+				children: [
+					['/js/intro', '介绍'],
 				]
-			},
-		],
+			}, {
+				title: '网络',
+				collapsable: false,
+				sidebarDepth: 0,
+				children: [
+					['/js/http', 'http请求'],
+				]
+			}, {
+				title: '工具库',
+				collapsable: false,
+				sidebarDepth: 0,
+				children: [
+					['/js/time', '时间格式'],
+					['/js/navigate', '路由跳转'],
+					['/js/randomArray', '数组乱序'],
+				]
+			}]
+		},
 		logo: '/logo.png',
 	}
 }
