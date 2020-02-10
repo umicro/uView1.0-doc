@@ -1,5 +1,10 @@
 ## 注意事项
 
+#### "$u"被占用
+
+uView有很多的自带的js工具函数，挂载在`$u`对象中，而`$u`又挂在载`Vue.prototype`中，所以，请勿使用`$u`变量并
+挂在到`Vue.prototype`。
+
 #### 技术点要求
 
 1. uView依赖SCSS预处理，所以您需要给HBuilder X安装"sass/scss编译"插件，详见[快速上手](/components/quickstart.html)

@@ -162,6 +162,11 @@ module.exports = {
 					['/js/time', '时间格式'],
 					['/js/navigate', '路由跳转'],
 					['/js/randomArray', '数组乱序'],
+					['/js/guid', '全局唯一标识符'],
+					['/js/colorSwitch', '颜色转换'],
+					['/js/color', '颜色值'],
+					['/js/queryParams', '对象转URL参数'],
+					['/js/test', '规则校验'],
 				]
 			}]
 		},
