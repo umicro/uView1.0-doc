@@ -5,19 +5,37 @@ body,html {
 $code-color = #e2777a;
 
 div[class*="language-"] {
-    background-color: rgb(40, 44, 52);
+    // background-color: rgb(40, 44, 52);
+	background-color: rgb(249, 249, 249);
 }
 
 .theme-default-content pre code, .theme-default-content pre[class*="language-"] code {
-    color: #bbbbbb;
+    // color: #bbbbbb;
+	color: #3182bd;
+}
+
+.token.tag, .token.attr-name, .token.namespace, .token.deleted {
+    // color: #e2777a;
+	color: #3182bd;
 }
 
 .token.punctuation {
-    color: $code-color;
+    // color: #e2777a;
+	color: #3182bd;
 }
 
 .token.attr-name {
-    color: #e5c07b;
+    // color: #e5c07b;
+	color: #e2777a;
+}
+
+.token.string, .token.char, .token.attr-value, .token.regex, .token.variable {
+    // color: #7ec699;
+	color: #42b983;
+}
+
+div[class*="language-"]::before {
+    color: #606266;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -81,6 +99,10 @@ table {
 	border-radius: 3px;
 	height: 18px;
 	line-height: 18px;
+}
+
+.token.selector, .token.important, .token.atrule, .token.keyword, .token.builtin {
+    color: #e2777a;
 }
 
 .custom-block a {

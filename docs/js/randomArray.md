@@ -1,4 +1,4 @@
-## 数组乱序
+## randomArray 数组乱序
 
 #### randomArray(array)
 

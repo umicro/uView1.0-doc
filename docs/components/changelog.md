@@ -55,7 +55,7 @@
 	}
 
 	.doc-update .u-timeline .u-timeline-item-content {
-		top: -5px;
+		top: -4px;
 	}
 
 	.u-timeline-item-content {

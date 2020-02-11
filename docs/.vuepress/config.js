@@ -139,6 +139,21 @@ module.exports = {
 				children: [
 					['/layout/intro', '介绍'],
 				]
+			}, {
+				title: '部件',
+				collapsable: false,
+				sidebarDepth: 0,
+				children: [
+					['/js/time', '时间格式'],
+				]
+			}, {
+				title: '页面',
+				collapsable: false,
+				sidebarDepth: 0,
+				children: [
+					['/layout/menu', '垂直分类'],
+					['/layout/SubmitBar', '提交订单栏'],
+				]
 			}],
 			'/js': [{
 				title: '开发指南',
@@ -160,13 +175,16 @@ module.exports = {
 				sidebarDepth: 0,
 				children: [
 					['/js/time', '时间格式'],
-					['/js/navigate', '路由跳转'],
+					['/js/route', '路由跳转'],
 					['/js/randomArray', '数组乱序'],
 					['/js/guid', '全局唯一标识符'],
 					['/js/colorSwitch', '颜色转换'],
 					['/js/color', '颜色值'],
 					['/js/queryParams', '对象转URL参数'],
 					['/js/test', '规则校验'],
+					['/js/md5', 'md5加密'],
+					['/js/random', '随机数值'],
+					['/js/trim', '去除空格'],
 				]
 			}]
 		},

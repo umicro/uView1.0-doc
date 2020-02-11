@@ -1,4 +1,4 @@
-## 路由跳转
+## route 路由跳转
 
 #### rute(Object)
 

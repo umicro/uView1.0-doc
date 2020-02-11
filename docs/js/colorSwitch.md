@@ -1,4 +1,4 @@
-## 颜色转换
+## colorSwitch 颜色转换
 
 ### RGB转十六进制Hex
 
