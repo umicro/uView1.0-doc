@@ -144,7 +144,7 @@ module.exports = {
 				collapsable: false,
 				sidebarDepth: 0,
 				children: [
-					['/js/time', '时间格式'],
+					['/layout/coupon', 'Coupon 优惠券'],
 				]
 			}, {
 				title: '页面',
@@ -152,7 +152,11 @@ module.exports = {
 				sidebarDepth: 0,
 				children: [
 					['/layout/menu', '垂直分类'],
-					['/layout/SubmitBar', '提交订单栏'],
+					['/layout/submitBar', '提交订单栏'],
+					['/layout/comment', '评论列表'],
+					['/layout/order', '订单列表'],
+					['/layout/login', '登录界面'],
+					['/layout/address', '收货地址'],
 				]
 			}],
 			'/js': [{
