@@ -111,6 +111,7 @@ table {
 
 .sidebar {
 	width: 250px;
+	padding-left: 30px;
 }
 
 .theme-container {
@@ -120,6 +121,7 @@ table {
 
 .page {
 	padding-left: 260px;
+	padding-right: 360px;
 }
 
 .sidebar {
@@ -208,4 +210,23 @@ body::-webkit-scrollbar-track {
 	transition: 0.15s ease-out;
 	border: none;
 	font-weight: 700!important;
+}
+
+@media screen and (max-width: 1367px) {
+    .theme-container {
+		width: 100%;
+	}
+	
+	.theme-default-content:not(.custom) {
+	    padding-right: 2rem;
+	    padding-left: 2rem;
+	}
+	
+	.sidebar {
+		width: 220px;
+	}
+	
+	.page {
+		padding-left: 220px;
+	}
 }
