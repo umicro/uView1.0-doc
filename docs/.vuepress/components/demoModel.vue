@@ -38,7 +38,7 @@
 
 	.model-content {
 		box-sizing: border-box;
-		padding: 35px 22px 14px 22px;
+		padding: 35px 20px 14px 20px;
 		width: 100%;
 		height: 100%;
 		border-bottom-left-radius: 30px;
