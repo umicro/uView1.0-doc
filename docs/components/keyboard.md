@@ -9,13 +9,13 @@
 
 ### 基本使用
 
-通过`mode`参数定义键盘的类型
+通过`mode`参数定义键盘的类型，`show`为`true`，打开键盘
 - mode = number(默认值)为数字键盘，此时顶部工具条中间的提示文字为"数字键盘"
 - mode = car为键汽车键盘，此时顶部工具条中间的提示文字为"车牌号键盘"
 - mode = card为身份证键盘，此时顶部工具条中间的提示文字为"身份证键盘"
 
 ```html
-<u-keyboard ref="uKeyboard" mode="car"></u-keyboard>
+<u-keyboard ref="uKeyboard" mode="car" :show="true"></u-keyboard>
 ```
 
 ### 控制键盘顶部的工具条
@@ -47,37 +47,28 @@
 
 ### 如何控制键盘的打开和关闭？
 
-通过`ref`调用组件，调用内部的`close`方法或者`open`方法来关闭或者打开键盘
+通过`show`参数设置为`true`或者`false`来打开或者关闭键盘
 
 ::: warning 注意
-如果想一进入页面就打开键盘，不能在onLoad生命周期中调用"this.$refs.uKeyboard.open()"，因为此时组件可能尚未
-创建完毕，调用"this.$refs.uKeyboard"会报错，应该在onReady生命周期调用
+1. 如果想一进入页面就打开键盘，不能在onLoad生命周期中调用打开键盘，因为此时组件可能尚未
+创建完毕，无法打开，应该在onReady生命周期调用  
+2. 由于`props`特性的限制，要在`keyboard`组件的`close`回调事件中设置`show`为`false`，否则无法再次唤起键盘
 :::
 
 ```html
 <template>
-	<u-keyboard ref="uKeyboard" mode="number"></u-keyboard>
+	<u-keyboard mode="number" @close="show = false"></u-keyboard>
 </template>
 
 <script>
 	export default {
 		onReady() {
 			// 如果想一进入页面就打开键盘，请在此生命周期调用
-			this.openKeyboard();
+			this.show = true;
 		},
 		onLoad() {
 			// 不应在此调用，因为此时u-keyboard组件尚未创建完成
-			// this.openKeyboard();
-		},
-		methods: {
-			// 打开键盘
-			openKeyboard() {
-				this.$refs.uKeyboard.open();
-			},
-			// 关闭键盘
-			closeKeyboard() {
-				this.$refs.uKeyboard.close();
-			}
+			// this.show = true;
 		}
 	}
 </script>
@@ -126,6 +117,7 @@
 |-----------|-----------|----------|----------|---------|
 | mode | 键盘类型，见上方`基本使用`的说明  | String | number | car / card |
 | dot-enable | 是否显示"."按键，只在mode=number时有效 | Boolean  | true | false |
+| show | 显示或隐藏键盘 | Boolean  | false | true |
 | tooltip | 是否显示键盘顶部工具条 | Boolean  | true | false |
 | tips | 工具条中间的提示文字，见上方`基本使用`的说明，如不需要，请传""空字符 | String  | - | - |
 | cancel-btn | 是否显示工具条左边的"取消"按钮 | Boolean  | true | false |
@@ -150,12 +142,4 @@
 |:-|:-|:-|
 | default | 内容将会显示键盘的工具条上面，可以结合`<u-message-input />`组件实现类似支付宝输入密码时，上方显示输入内容的功能 |  - |
 
-### Methods
-
-方法是通过`ref`调用的，参见上方说明
-
-|方法名|说明|参数|版本|
-|:-|:-|:-|:-|
-| open | 打开键盘，如需一进入页面就开打键盘，请在`onReady`生命周期调用 |  - |  -  |
-| close | 关闭键盘 |  - |  -  |
 

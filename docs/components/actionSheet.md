@@ -14,9 +14,13 @@
 - 通过`item-list`设置设置需要显示的菜单，该值为一个数组，元素为对象，对象至少要提供`text`属性，另外可选的有`fontSize`(字体大小)，`color`(颜色)
 - 通过`show`参数控制操作菜单的显示与否
 
+::: warning 注意
+需要在`close`回调事件中，设置`show`为`false`，否则无法弹起第二次ActionSheet，这是因为`props`传递参数特性限制导致的
+:::
+
 ```html
 <template>
-	<u-action-sheet :itemList="itemList" :show="show"></u-action-sheet>
+	<u-action-sheet :itemList="itemList" :show="show" @close="show = false"></u-action-sheet>
 </template>
 
 <script>
@@ -78,3 +82,11 @@
 | cancel-btn | 是否显示底部的取消按钮 | Boolean  | true | false |
 | mask-close-able | 点击遮罩是否可以关闭 | Boolean  | true | false |
 | safe-area-inset-bottom | 是否开启[底部安全区适配](/guide/safeAreaInset.html#关于uview某些组件safe-area-inset参数的说明) | Boolean  | false | true |
+
+
+### Event
+
+|事件名|说明|回调参数|版本|
+|:-|:-|:-|:-|
+| click | 点击ActionSheet列表项时触发 | index: 点击了第几个，从0开始 | - |
+
