@@ -54,8 +54,8 @@
 | round | 进度条两端是否为半圆  | Boolean | true | false |
 | type | 如设置，`active-color`值将会失效 | String  | - | success / primary / error / info / warning |
 | active-color | 进度条激活部分的颜色 | String  | #19be6b | - |
-| un-active-color | 进度条的底色，默认为灰色 | String  | #e6e7e8 | - |
+| un-active-color | 进度条的底色，默认为灰色 | String  | #ececec | - |
 | show-percent | 是否在进度条内部显示当前的百分比值 | Boolean  | true | false |
 | height | 进度条的高度，单位rpx | String \| Number  | 28 | - |
-| striped | 是否显示进度条激活部分的条纹 | Boolean  | 1500 | - |
+| striped | 是否显示进度条激活部分的条纹 | Boolean  | false | true |
 | striped-active | 条纹是否具有动态效果 | Boolean  | false | true |

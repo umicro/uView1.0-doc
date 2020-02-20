@@ -70,7 +70,7 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | shape | 搜索框形状，round-圆形，square-方形 | String | round | square |
-| bg-color | 默认选中的星星数量  | String \| Number | 0 | - |
+| bg-color | 搜索框背景颜色  | String | ##f2f2f2 | - |
 | placeholder | 占位文字内容 | String | 请输入关键字 | - |
 | clearabled | 是否启用清除控件 | Boolean | true | false |
 | focus | 是否自动获得焦点 | Boolean | false | true |
