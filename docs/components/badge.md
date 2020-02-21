@@ -13,6 +13,11 @@
 - 通过`type`设置主题。重申一次，uView中，所有组件的`type`参数都只有5个固定的可选值，分别是`primary`(蓝色-主色)，`warning`(黄色-警告)，
 `error`(红色-错误)，`success`(绿色-成功)，`info`(灰色-信息)
 
+::: warning 注意
+此组件内部默认为`absulote`绝对定位，所以需要给`badge`父组件设置`position: relative`相对定位，
+再通过调整`offset`偏移值(数组，两个元素，第一个元素为`top`值，第二个元素为`right`值，单位rpx，可为负值，如"[-10, -10]")设置到合适的位置即可
+:::
+
 ```html
 <u-badge type="error" count="7"></u-badge>
 ```
@@ -27,10 +32,10 @@
 
 ### 设置徽标的类型为一个圆点
 
-通过`dot`参数设置，该形式组件没有内容，只显示一个圆点
+通过`is-dot`参数设置，该形式组件没有内容，只显示一个圆点
 
 ```html
-<u-badge :dot="true" type="green"></u-badge>
+<u-badge :is-dot="true" type="green"></u-badge>
 ```
 
 ### 自定义徽标样式
@@ -56,11 +61,11 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | count | 展示的数字，大于 `overflowCount` 时显示为 `${overflowCount}+`，为 0 时隐藏  | String \| Number | - | - |
-| dot | 不展示数字，只有一个小点 | Boolean  | false | true |
+| is-dot | 不展示数字，只有一个小点 | Boolean  | false | true |
 | overflow-count | 展示封顶的数字值 | String \| Number  | 99 | - |
 | type | 使用预设的颜色 | String  | error | success / primary / warning / info |
 | show-zero | 当数值为 0 时，是否展示 Badge | Boolean  | false | true |
-| size | Badge的尺寸，设为`small`会得到小一号的Badge | String  | normal | small |
+| size | Badge的尺寸，设为`small`会得到小一号的Badge | String  | default | mini |
 | offset | 设置badge的位置偏移，格式为 [x, y]，也即设置的为`top`和`right`的值，单位upx | Array | - | - |
 
 

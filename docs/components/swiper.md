@@ -13,9 +13,9 @@
 
 ### 基本使用
 
-通过`banner`参数传入轮播图列表值，该值为一个数组，元素为对象，见如下：
-- `banner`的image属性为轮播图的图片路径
-- `banner`的title属性为需要显示的标题
+通过`list`参数传入轮播图列表值，该值为一个数组，元素为对象，见如下：
+- `list`的image属性为轮播图的图片路径
+- `list`的title属性为需要显示的标题
 
 ::: warning 注意
 如果需要显示标题，还需要设置`show-title`参数为`true`
@@ -24,7 +24,7 @@
 ```html
 <template>
 	<view class="wrap">
-		<u-swiper-banner :banner="banner"></u-swiper-banner>
+		<u-swiper :list="list"></u-swiper>
 	</view>
 </template>
 
@@ -32,16 +32,16 @@
 	export default {
 		data() {
 			return {
-				banner: [{
-						image: '/static/uView/swiper-banner/swiper1.jpg',
+				list: [{
+						image: '/static/uView/swiper/swiper1.jpg',
 						title: '蒹葭苍苍，白露为霜。所谓伊人，在水一方'
 					},
 					{
-						image: '/static/uView/swiper-banner/swiper2.jpg',
+						image: '/static/uView/swiper/swiper2.jpg',
 						title: '溯洄从之，道阻且长。溯游从之，宛在水中央'
 					},
 					{
-						image: '/static/uView/swiper-banner/swiper3.jpg',
+						image: '/static/uView/swiper/swiper3.jpg',
 						title: '蒹葭萋萋，白露未晞。所谓伊人，在水之湄'
 					}
 				]
@@ -78,7 +78,7 @@
 - `bottomRight`-指示器位于右下角
 
 ```html
-<u-swiper-banner :banner="banner" mode="dot" indicator-pos="bottomRight"></u-swiper-banner>
+<u-swiper :list="list" mode="dot" indicator-pos="bottomRight"></u-swiper>
 ```
 
 ### 是否开启3D效果
@@ -86,7 +86,7 @@
 配置`effect3d`为`true`即可，该效果左右两天可以预览前后一个swiper-item的一部分
 
 ```html
-<u-swiper-banner :banner="banner" :effect3d="true"></u-swiper-banner>
+<u-swiper :list="list" :effect3d="true"></u-swiper>
 ```
 
 ### 控制轮播效果
@@ -97,7 +97,7 @@
 - `circular`-是否衔接滑动，即到最后一张时，是否可以直接转到第一张
 
 ```html
-<u-swiper-banner :banner="banner" duration="3000" :circular="false"></u-swiper-banner>
+<u-swiper :list="list" duration="3000" :circular="false"></u-swiper>
 ```
 
 ### API
@@ -106,10 +106,10 @@
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| banner | 轮播图数据，见上方"基本使用"说明 | Array | - | - |
-| show-title | 是否显示标题文字，需要配合`banner`参数，见上方说明 | Boolean  | false | true |
+| list | 轮播图数据，见上方"基本使用"说明 | Array | - | - |
+| show-title | 是否显示标题文字，需要配合`list`参数，见上方说明 | Boolean  | false | true |
 | mode | 指示器模式，见上方说明 | String  | round | rect / dot / number / none |
-| height | 轮播图组件高度，单位rpx | String \| Number  | 220 | - |
+| height | 轮播图组件高度，单位rpx | String \| Number  | 250 | - |
 | indicator-pos | 指示器的位置 | String  | bottomCenter | topLeft / topCenter / topRight / bottomLeft / bottomRight |
 | effect3d | 是否开启3D效果 | Boolean  | false | true |
 | autoplay | 是否自动播放 | Boolean  | false | true |
@@ -118,3 +118,12 @@
 | duration | 切换一张轮播图所需的时间，单位ms | String \| Number  | 500 | - |
 | border-radius | 轮播图圆角值，单位rpx | String \| Number  | 8 | - |
 | title-style | 自定义标题样式 | Object  | - | - |
+| img-mode | 图片的裁剪模式，详见[image组件裁剪模式](https://uniapp.dcloud.io/component/image) | String  | widthFix | - |
+
+
+### Events
+
+|事件名|说明|回调参数|版本|
+|:-|:-|:-|:-|
+| click | 点击轮播图时触发 | index：点击的第几张图片，从0开始 | - |
+| click | 点击轮播图时触发 | index：点击的第几张图片，从0开始 | - |
