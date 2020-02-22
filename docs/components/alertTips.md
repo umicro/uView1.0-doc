@@ -1,4 +1,4 @@
-## Alert 警告提示
+## AlertTips 警告提示
 警告提示，展现需要关注的信息。
 
 ### 使用场景
@@ -47,9 +47,13 @@
 - `close-text`参数配置关闭的文字，默认为一个叉的icon图标。`close-able`为`true`时有效
 - `close-able`参数配置是否允许关闭的文字或图标
 
+::: warning 注意
+由于`props`传参的限制，您需要监听组件的`close`事件，并在此此事件中设置`show`参数为`false`，才能关闭组件。
+:::
+
 ```html
 <template>
-	<u-alert-tips type="error" :title="title" :close-able="true"></u-alert-tips>
+	<u-alert-tips :show="show" type="error" @close="show = false" :title="title" :close-able="true"></u-alert-tips>
 	
 	<u-alert-tips type="error" :title="title" close-text="close" :description="description" :close-able="true"></u-alert-tips>
 </template>
@@ -58,7 +62,8 @@
 	export default {
 		data() {
 			title: '寻隐者不遇',
-			description: '松下问童子，言师采药去。只在此山中，云深不知处。'
+			description: '松下问童子，言师采药去。只在此山中，云深不知处。',
+			show: true
 		}
 	}
 </script>
@@ -76,6 +81,7 @@
 | type | 使用预设的颜色 | String  | warning | success / primary / error / info |
 | close-text | 用文字替代关闭图标，`close-able`为`true`时有效 | String  | - | - |
 | show-icon | 是否显示左边的辅助图标 | Boolean  | false | true |
+| show | 显示或隐藏组件 | Boolean  | true | false |
 
 ### Events
 

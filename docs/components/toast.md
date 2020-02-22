@@ -49,8 +49,8 @@ this.$refs.uToast.show({
 	title: '操作成功',
 	// 不传此type参数，默认为default，也可以手动写上 type: 'default'
 	// type: 'success', 
-	// 如果不需要图标，请设置为'none'
-	// icon: 'none'
+	// 如果不需要图标，请设置为false
+	// icon: false
 })
 ```
 
@@ -81,9 +81,8 @@ this.$refs.uToast.show({
 | title | 显示的文本  | String | - | - |
 | type | 主题类型，不填默认为`default` | String  | default | primary / success / error / warning / info |
 | duration | toast的持续时间，单位ms | Nubmer  | 2000 | - |
-| tips | 工具条中间的提示文字，见上方`基本使用`的说明，如不需要，请传""空字符 | String  | - | - |
 | url | toast结束跳转的url，不填不跳转 | String  | - | - |
-| icon | 是否显示显示`type`对应的图标，`default`时无图标，为`none`不显示图标 | String  | - | - |
+| icon | 是否显示显示`type`对应的图标，为`false`不显示图标 | Boolean  | true | false |
 | postion | toast出现的位置 | String  | center | top / bottom |
 | isTab | toast结束后，跳转tab页面时需要配置为`true` | Boolean  | false | true |
 

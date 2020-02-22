@@ -12,15 +12,15 @@
 ### 基本使用
 
 - 通过`text`参数配置提示的文字内容
-- 通过`icon`(默认为`data`)参数配置要显示的图标
+- 通过`mode`(默认为`data`)参数配置要显示的图标
 
 ```html
-<u-empty text="所谓伊人，在水一方" icon="list"></u-empty>
+<u-empty text="所谓伊人，在水一方" mode="list"></u-empty>
 ```
 
 ### 内置图标
 
-这些图标已内置，直接通过`icon`参数引用即可
+这些图标已内置，直接通过`mode`参数引用即可
 
 | 名称         | 说明            | 
 |-------------  |---------------- |
@@ -48,9 +48,9 @@
 |-------------  |---------------- |---------------|------------------ |-------- |
 | color | 文字颜色 | String | #c0c4cc | - |
 | text | 文字提示 | String  | 无内容 | - |
-| src | 自定义图标路径，如定义，`icon`参数会失效 | String  | - | - |
+| src | 自定义图标路径，如定义，`mode`参数会失效 | String  | - | - |
 | font-size | 提示文字的大小，单位rpx | String \| Number  | 28 | - |
-| icon | 内置的图标，见上方说明 | String  | data | - |
+| mode | 内置的图标，见上方说明 | String  | data | - |
 | img-width | 图标的宽度，单位rpx | String \| Number  | 240 | - |
 | img-height | 图标的高度，单位rpx | String  | auto | - |
 | show | 是否显示组件 | Boolean  | true | false |
