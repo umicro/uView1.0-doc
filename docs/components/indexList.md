@@ -125,7 +125,9 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | use-slot | 是否使用自定义内容的插槽  | Boolean | false | true |
-| index | 索引字符，如果定义了`use-slot`，此参数自动失效   | String | Number | - | - |
+| index | 索引字符，如果定义了`use-slot`，此参数自动失效   | String \| Number | - | - |
+| custStyle | 自定义样式，对象形式，如"{color: 'red'}"  | Object | - | - |
+
 
 ### IndexBar Events
 
