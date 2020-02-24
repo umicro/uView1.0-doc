@@ -88,7 +88,7 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | timestamp | 倒计时，单位为秒 | String \| Number | 0 | - |
-| autopaly | 是否自动开始倒计时，如果为`false`，见上方说明  | Boolean | true | false |
+| autopaly | 是否自动开始倒计时，如果为`false`，需手动调用开始方法。见上方说明  | Boolean | true | false |
 | separator | 分隔符，`colon`为英文冒号，`zh`为中文 | String  | colon | zh |
 | separator-size | 分隔符的字体大小，单位rpx | String \| Number  | 30 | - |
 | separator-color | 分隔符的颜色 | String  | #303133 | - |

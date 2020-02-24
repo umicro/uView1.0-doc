@@ -49,7 +49,7 @@
 
 ### 滚动执行的时机
 
-可以通过`autoplay`设置是否需要初始化时就开始滚动，默认为`true`，如果设置为`false`，可以通过组件的`ref`去控制组件内部的`start()`和`pauseResume()`
+可以通过`autoplay`设置是否需要初始化时就开始滚动，默认为`true`，如果设置为`false`，可以通过组件的`ref`去控制组件内部的`start()`和`paused()`
 方法来开始或暂停。
 
 ```html
@@ -69,9 +69,12 @@
 			start() {
 				this.$refs.uCountTo.start();
 			},
-			pauseResume() {
-				this.$refs.uCountTo.pauseResume();
-			}
+			paused() {
+				this.$refs.uCountTo.paused();
+			},
+			reStart() {
+				this.$refs.uCountTo.reStart();
+			},
 		}
 	}
 </script>
@@ -83,12 +86,30 @@
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| start-val | 开始值  | Number | 0 | - |
-| end-val | 结束值 | Number  | 0 | - |
+| start-val | 开始值  | Number \| Number | 0 | - |
+| end-val | 结束值 | Number \| Number  | 0 | - |
 | duration | 滚动过程所需的时间，单位ms | String \| Number  | 2000 | - |
 | autoplay | 是否自动开始滚动 | Boolean  | true | - |
-| decimals | 要显示的小数位数，见上方说明 | String  | - | - |
+| decimals | 要显示的小数位数，见上方说明 | String \| Number  | - | - |
 | use-easing | 滚动结束时，是否缓动结尾，见上方说明 | Boolean  | true | false |
 | separator | 千位分隔符，见上方说明 | String  | - | - |
 | color | 字体颜色 | String  | - | - |
 | font-size | 字体大小，单位rpx | String \| Number  | - | - |
+
+
+### Methods
+
+此方法如要通过ref手动调用
+
+| 名称          | 说明            |
+|-------------  |---------------- |
+| start |  	`autoplay`为`false`时，通过此方法启动滚动 |
+| reStart |   暂停后重新开始滚动(从暂停前的值开始滚动) |
+| paused |   暂停滚动 |
+
+
+### Event
+
+|事件名|说明|回调参数|版本|
+|:-|:-|:-|:-|
+| end | 数值滚动到目标值时触发 | - | - |

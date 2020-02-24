@@ -90,7 +90,6 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | accordion | 是否手风琴模式  | Boolean | true | false |
-| bg-color | 面板背景颜色  | String	 | #ffffff | - |
 
 ### Collapse Item Props
 
@@ -112,4 +111,4 @@
 
 |事件名|说明|回调参数|版本|
 |:-|:-|:-|:-|
-| change | 当前激活面板改变时触发(如果是手风琴模式，参数activeNames类型为String，否则为Array) | activeNames: String / Array | - |
+| change | 当前激活面板展开时触发(如果是手风琴模式，参数activeNames类型为String，否则为Array) | activeNames: String / Array | - |
