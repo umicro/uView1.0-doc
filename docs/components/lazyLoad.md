@@ -94,6 +94,9 @@
 | duration | 图片加载成功时，淡入淡出时间，单位ms | String \| Number | 500 | - |
 | effect | 图片加载成功时，淡入淡出的css动画效果 | String | ease-in-out | linear /  ease / ease-in / ease-out |
 | is-effect | 图片加载成功时，是否启用淡入淡出效果 | Boolean | true | false |
+| border-radius | 图片圆角值，单位rpx | String \| Number | 0 | - |
+| height | 图片高度，注意：实际高度可能受`img-mode`参数影响 | String \| Number | auto | - |
+| img-mode | 图片的裁剪模式，详见[image组件裁剪模式](https://uniapp.dcloud.io/component/image) | String \| Number | widthFix | - |
 
 ### Events
 

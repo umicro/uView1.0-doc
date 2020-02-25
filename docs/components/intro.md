@@ -13,8 +13,8 @@
 uniapp自2018年初发布以来，一直蓬勃发展，一派欣欣向荣，社区也是人声鼎沸，众望所向。但是历时2年(目前是2020年2月)，
 除官方的Uni UI，一直没有一个像Element UI、View UI或者Antd-Vue一样自由、免费，组件完善，文档详细的UI框架出现。  
 于是，uView应运而生，uView的目标是做uniapp生态最优秀的UI框架。  
-关于uView的取名来由，首字母u来自于uniapp的首字母，uniapp又是基于Vue.js，Vue和View(可以理解为UI、视图之意)同音，故取名uView，
-是源于uniapp和Vue，同时在此也对它们表示感谢。
+关于uView的取名来由，首字母u来自于uniapp的首字母，uniapp又是基于Vue.js，Vue和View(延伸为UI、视图之意)同音，故取名uView，
+表达源于uniapp和Vue之意，同时在此也对它们表示感谢。
 
 
 #### 适用领域
