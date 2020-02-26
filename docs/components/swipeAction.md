@@ -17,18 +17,19 @@
 
 ### 基本使用
 
-通过slot传入内部内容即可，要传入props的`index`参数，用于点击时，在回调方法中对某一个数据进行操作
+通过slot传入内部内容即可，要传入props的`index`参数，用于点击时，在回调方法中对某一个数据进行操作  
+
+说明：有时候，我们在打开一个swipeAction的同时，需要自动关闭其他的swipeAction，这时需要通过`open`事件实现，见如下：
 
 ```html
 <template>
 	<view>
-		<u-swipe-action :index="index" v-for="(item, index) in listData" :key="item.title" @click="onRemove(index)">
-			<view class="cell u-border-bottom">
-				<view class="cell__hd">
-					<image mode="aspectFill" :src="item.images" />
-				</view>
-				<view class="cell__bd">
-					<view class="title u-line-2">{{ item.title }}</view>
+		<u-swipe-action :index="item.id" v-for="(item, index) in list" :key="item.id" @click="click" @open="open">
+			<view class="item u-border-bottom">
+				<image mode="aspectFill" :src="item.images" />
+				<!-- 此层wrap在此为必写的，否则可能会出现标题定位错误 -->
+				<view class="title-wrap">
+					<text class="title u-line-2">{{ item.title }}</text>
 				</view>
 			</view>
 		</u-swipe-action>
@@ -39,53 +40,67 @@
 	export default {
 		data() {
 			return {
-				listData: [{
-						title: '美国麻省理工学院科研团队19日宣布，其开发的人工智能程序“深度角色”',
-						images: '/static/logo.png'
+				list: [{
+						id: 1,
+						title: '长安回望绣成堆，山顶千门次第开，一骑红尘妃子笑，无人知是荔枝来',
+						images: '/static/uView/common/logo.png',
+						show: false,
 					},
 					{
-						title: '究人员让“深度角色”参与了超过4000轮在线桌游“抵抗组织',
-						images: '/static/logo.png'
+						id: 2,
+						title: '新丰绿树起黄埃，数骑渔阳探使回，霓裳一曲千峰上，舞破中原始下来',
+						images: '/static/uView/common/logo.png',
+						show: false
 					},
 					{
-						title: '同时掩藏自己的身份。结果，不论作为“好人”还是“坏人”，“深度角色”都比人类玩家表现更加出色',
-						images: '/static/logo.png'
+						id: 3,
+						title: '登临送目，正故国晚秋，天气初肃。千里澄江似练，翠峰如簇',
+						images: '/static/uView/common/logo.png',
+						show: false,
 					}
-				]
+				],
 			};
 		},
 		methods: {
-			onRemove(index) {
-				this.listData.splice(index, 1);
+			click(index) {
+				this.list.splice(index, 1);
 				uni.showToast({
 					title: `删除了第${index}个cell`,
 					icon: 'none'
 				});
+			},
+			// 如果打开一个的时候，不需要关闭其他，则无需实现本方法
+			open(index) {
+				// 先将正在被操作的swipeAction标记为打开状态，否则由于props的特性限制，
+				// 原本为'false'，再次设置为'false'会无效
+				this.list[index].show = true;
+				this.list.map((val, idx) => {
+					if(index != idx) this.list[idx].show = false;
+				})
 			}
 		}
 	};
 </script>
 
 <style lang="scss" scoped>
-	.cell {
+	.item {
 		display: flex;
 		padding: 20rpx;
 	}
 	
 	image {
 		width: 120rpx;
+		flex: 0 0 120rpx;
 		height: 120rpx;
 		margin-right: 20rpx;
 		border-radius: 12rpx;
 	}
-
+	
 	.title {
-		overflow: hidden;
-		text-overflow: ellipsis;
-		display: -webkit-box;
-		line-clamp: 2;
-		font-size: 30rpx;
-		margin-top: 30rpx;
+		text-align: left;
+		font-size: 28rpx;
+		color: $u-content-color;
+		margin-top: 20rpx;
 	}
 </style>
 ```
@@ -109,12 +124,16 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | btn-text | 按钮文字  | String | 删除 | - |
-| btn-bg-color | 按钮背景颜色 | String  | #FF0033 | - |
+| btn-bg-color | 按钮背景颜色 | String  | #ff0033 | - |
+| bg-color | 整个组件背景颜色 | String  | #ffffff | - |
 | index | 标识符，点击时候用于区分点击了哪一个，用循环的index即可 | String \| Number  | - | - |
-| btnWidth | 按钮宽度，单位rpx | String \| Number  | 90 | - |	
+| btnWidth | 按钮宽度，单位rpx | String \| Number  | 180 | - |	
+| disabled | 是否禁止某个swipeAction滑动 | Boolean  | false | true |	
 
 ### Event
 
 |事件名|说明|回调参数|版本|
 |:-|:-|:-|:-|
 | click | 点击组件时触发 | index: 通过props传递的`index` | - |
+| close | 组件触发关闭状态时 | index: 通过props传递的`index` | - |
+| click | 组件触发打开状态时 | index: 通过props传递的`index` | - |

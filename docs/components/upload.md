@@ -132,6 +132,166 @@
 <u-upload :max-size="5 * 1024 * 1024" max-count="6"></u-upload>
 ```
 
+### 自定义相关说明
+
+1. 组件内部样式
+组件默认选取图片会展示预览缩略图，包括默认的选取图片的按钮，他们的宽高都是`200rpx`，`border-radius`值为`10rpx`，
+另外预览图片的盒子有一个默认的边框，值为`border: 1px solid rgb(235, 236, 238)`。如果用户需要自定义上传按钮，可以参考这些值。
+
+2. 自定义上传按钮
+组件内部默认`slot`为自定义按钮，如下所示：
+```html
+<u-upload>
+	<view class="slot-btn" hover-class="slot-btn__hover" hover-stay-time="150">
+		<u-icon name="photo" size="60" :color="$u.color['lightColor']"></u-icon>
+	</view>
+</u-upload>
+
+<style>
+.slot-btn {
+	width: 329rpx;
+	height: 140rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgb(244, 245, 246);
+	border-radius: 10rpx;
+}
+
+.slot-btn__hover {
+	background-color: rgb(235, 236, 238);
+}
+</style>
+```
+
+3. 自定义预览列表
+首先需要设置`show-upload-list`为`false`来去除组件内部的默认预览列表，其次需要通过`ref`获取组件，进而
+操作组件内部的变量和方法，下面为一些组件内部的方法和变量说明：
+- `lists`(变量)，可以通过此值，构建自定义的预览列表，该变量内部如下：
+
+```js
+lists = [
+	{
+		url: 'xxx.png', // 预览图片的地址
+		error: false, // 上传失败，此值为true
+		progress: 100, // 0-100之间的值
+	},
+	......
+]
+```
+
+- `deleteItem(index)`(方法)，可以用此方法在自定义列表中通过`ref`删除某一张图片
+
+以下为完整的自定义图片预览列表示例：
+
+```html
+<template>
+	<view class="wrap">
+		<view class="pre-box" v-if="!showUploadList">
+			<view class="pre-item" v-for="(item, index) in uUpload.lists" :key="index">
+				<image class="pre-item-image" :src="item.url" mode="aspectFill"></image>
+				<view class="u-delete-icon" @tap.stop="uUpload.deleteItem(index)">
+					<u-icon name="close" size="20" color="#ffffff"></u-icon>
+				</view>
+				<u-line-progress v-if="item.progress > 0 && !item.error" :show-percent="false" height="16" class="u-progress"
+				 :percent="item.progress"></u-line-progress>
+			</view>
+		</view>
+		<u-upload ref="uUpload" :show-upload-list="showUploadList" :action="action"> 
+			<view class="slot-btn" hover-class="slot-btn__hover" hover-stay-time="150">
+				<u-icon name="photo" size="60" :color="$u.color['lightColor']"></u-icon>
+			</view>
+		</u-upload>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				action: 'http://192.168.100.17/index.php/index/index/upload', // 演示地址
+				showUploadList: false, 
+				uUpload: {}, // 组件实例
+			}
+		},
+		// 只有onReady生命周期才能调用refs操作组件
+		onReady() {
+			// 得到整个组件对象，内部图片列表变量为"lists"
+			this.uUpload = this.$refs.uUpload;
+		},
+		methods: {
+			
+		}
+	}
+</script>
+
+<style lang="scss">
+	.wrap {
+		padding: 24rpx;
+	}
+	
+	.slot-btn {
+		width: 341rpx;
+		height: 140rpx;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: rgb(244, 245, 246);
+		border-radius: 10rpx;
+	}
+
+	.slot-btn__hover {
+		background-color: rgb(235, 236, 238);
+	}
+
+	.pre-box {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	.pre-item {
+		flex: 0 0 48.5%;
+		border-radius: 10rpx;
+		height: 140rpx;
+		overflow: hidden;
+		position: relative;
+		margin-bottom: 20rpx;
+	}
+
+	.u-progress {
+		position: absolute;
+		bottom: 10rpx;
+		left: 8rpx;
+		right: 8rpx;
+		z-index: 9;
+		width: auto;
+	}
+
+	.pre-item-image {
+		width: 100%;
+		height: 140rpx;
+	}
+
+	.u-delete-icon {
+		position: absolute;
+		top: 10rpx;
+		right: 10rpx;
+		z-index: 10;
+		background-color: $u-type-error;
+		border-radius: 100rpx;
+		width: 44rpx;
+		height: 44rpx;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+</style>
+
+```
+
+
 ### API
 
 ### Props
@@ -156,6 +316,7 @@
 | upload-text | 选择图片按钮的提示文字 | Boolean  | 选择图片 | - |
 | auto-upload | 选择完图片是否自动上传，见上方说明 | Boolean  | true | false |
 | show-tips | 特殊情况下是否自动提示toast，见上方说明 | Boolean  | true | false |
+| show-upload-list | 是否显示组件内部的图片预览 | Boolean  | true | false |
 
 
 ### Methods
