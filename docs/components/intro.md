@@ -1,6 +1,6 @@
 ## 介绍
 
-<demo-model url="https://youzan.github.io/vant/mobile.html?hide_nav=1&weapp=1#/zh-CN/swipe-cell"></demo-model>
+<demo-model url="http://192.168.100.17:8080/#/pages/template/order/index"></demo-model>
 
 <div class="intro-logo">
 	<img class="logo" src="/logo.png" alt="uView" />

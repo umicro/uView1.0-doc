@@ -34,7 +34,7 @@ console.log(this.$u.test.mobile('13845678900'));
 
 #### url(url)
 
-校验是否邮箱号
+校验是否URL链接
 
 - `url` <String\> 字符串
 
