@@ -64,6 +64,7 @@ module.exports = {
 								'/components/rate',
 								'/components/search',
 								'/components/upload',
+								'/components/verificationCode',
 							]
 						},
 						{
@@ -76,6 +77,7 @@ module.exports = {
 								'/components/badge',
 								'/components/tag',
 								'/components/table',
+								'/components/avatarCropper',
 							]
 						},
 						{
