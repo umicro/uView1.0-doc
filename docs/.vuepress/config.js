@@ -1,6 +1,6 @@
 module.exports = {
 	title: 'uView', // 设置网站标题
-	description: 'uView是uniapp生态最优秀的UI框架',
+	description: 'uView UI，是uniapp生态最优秀的UI框架，全面的组件和便捷的工具会让你信手拈来，如鱼得水',
 	base: '/',
 	markdown: {
 		//lineNumbers: true
@@ -8,6 +8,7 @@ module.exports = {
 	plugins: ['@vuepress/back-to-top'],
 	themeConfig: {
 		sidebarDepth: 0,
+		lastUpdated: '上次更新时间',
 		nav: [{
 			text: '指南',
 			link: '/guide/note'
@@ -15,11 +16,11 @@ module.exports = {
 			text: '组件',
 			link: '/components/intro'
 		}, {
-			text: '布局',
-			link: '/layout/intro'
-		}, {
 			text: 'JS',
 			link: '/js/intro'
+		}, {
+			text: '布局',
+			link: '/layout/intro'
 		}],
 		sidebar: {
 			'/components/': [{

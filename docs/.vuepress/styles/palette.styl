@@ -2,6 +2,10 @@ body,html {
 	font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
 }
 
+* {
+	box-sizing border-box;
+}
+
 $code-color = #e2777a;
 
 div[class*="language-"] {
@@ -63,9 +67,9 @@ tr:nth-child(2n) {
     background-color: #FFFFFF;
 }
 
-.theme-default-content:not(.custom) {
-    max-width: 960px;
-}
+// .theme-default-content:not(.custom) {
+//     max-width: 960px;
+// }
 
 table {
 	width: 100%;
@@ -114,15 +118,24 @@ table {
 	padding-left: 30px;
 }
 
+table {
+	overflow: auto;
+	width: 100%;
+}
+
+table th {
+	white-space: nowrap;
+}
+
 .theme-container {
-	width: 1200px;
+	// width: 1200px;
 	margin: auto;
 }
 
-.page {
-	padding-left: 260px;
-	padding-right: 360px;
-}
+// .page {
+// 	padding-left: 260px;
+// 	padding-right: 360px;
+// }
 
 .sidebar {
 	left: auto;
@@ -212,13 +225,14 @@ body::-webkit-scrollbar-track {
 	font-weight: 700!important;
 }
 
-@media screen and (max-width: 1367px) {
+@media screen and (min-width: 1200px) {
     .theme-container {
 		width: 100%;
 	}
 	
 	.theme-default-content:not(.custom) {
 	    padding-right: 2rem;
+		max-width: none;
 	    padding-left: 2rem;
 	}
 	
@@ -229,4 +243,18 @@ body::-webkit-scrollbar-track {
 	.page {
 		padding-left: 220px;
 	}
+}
+
+.search-box input {
+	border-radius 5px;
+	background: #fff url(/search_icon.png) 10px 7px no-repeat;
+	background-size: 16px;
+}
+
+.navbar {
+    padding: 0.7rem 4em;
+}
+
+.navbar .links {
+	right: 4em;
 }

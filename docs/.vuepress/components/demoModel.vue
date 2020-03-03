@@ -1,7 +1,7 @@
 <template>
 	<div class="demo-model">
 		<div class="model-content">
-			<iframe class="iframe" frameborder="0" :src="url">
+			<iframe class="iframe" scrolling="no" frameborder="0" :src="url">
 
 			</iframe>
 		</div>
@@ -15,6 +15,13 @@
 				type: String,
 				default: 'http://www.uviewui.com'
 			}
+		},
+		beforeCreate() {
+			// 设置页面的右内边距，空出给模拟H5阅览的区域
+			document.getElementsByClassName('page')[0].style.setProperty('padding-right', '330px');
+		},
+		beforeDestroy() {
+			document.getElementsByClassName('page')[0].style.setProperty('padding-right', '0');
 		}
 	}
 </script>
@@ -50,10 +57,15 @@
 		border-radius: 0 0 30px 30px;
 	}
 	
-	@media screen and (max-width: 1367px) { 
+	@media screen and (min-width: 1200px) { 
 		.demo-model {
 			width: 321px;
 			height: 560px;
+		}
+	}
+	@media (max-width: 1200px) {
+		.demo-model {
+			display: none;
 		}
 	}
 </style>
