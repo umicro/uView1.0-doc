@@ -70,6 +70,7 @@ cell单元格一般用于一组列表的情况，比如个人中心页，设置�
 |-------------  |---------------- |---------------|------------------ |-------- |
 | title | 分组标题  | String | - | - |
 | border | 是否显示外边框 | Boolean  | true | false |
+| title-bg-color | 分组标题的背景颜色 | String  | #ffffff | - |
 
 ### CellItem Props
 
@@ -86,12 +87,13 @@ cell单元格一般用于一组列表的情况，比如个人中心页，设置�
 | title-style | 标题样式，对象形式 | Object | - | - |
 | value-style | 右侧内容样式，对象形式 | Object | - | - |
 | lable-style | 标题下方描述信息的样式，对象形式 | Object | - | - |
+| bg-color | 背景颜色 | String  | #ffffff | - |
 
 ### CellItem Slot
 
 | 名称          | 说明            |
 |-------------  |---------------- |
-| left | 自定义左侧标题部分你的内容  |
+| left | 自定义左侧标题部分的内容  |
 | icon | 自定义左侧的图标 |
 | right | 自定义右侧内容 |
 

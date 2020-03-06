@@ -41,7 +41,7 @@ module.exports = {
 					collapsable: false,
 					sidebarDepth: 0,
 					children: [{
-							title: 'Basic',
+							title: '基础组件',
 							collapsable: false,
 							sidebarDepth: 0,
 							children: [
@@ -49,83 +49,91 @@ module.exports = {
 								'/components/icon',
 								'/components/button',
 								'/components/layout',
-								'/components/cell'
+								'/components/cell',
+								'/components/badge',
+								'/components/tag'
 							]
 						},
 						{
-							title: 'Form',
+							title: '表单组件',
 							collapsable: false,
 							sidebarDepth: 0,
 							children: [
-								'/components/actionSheet',
 								'/components/keyboard',
 								'/components/picker',
-								'/components/messageInput',
-								'/components/numberBox',
 								'/components/rate',
 								'/components/search',
+								'/components/numberBox',
 								'/components/upload',
 								'/components/verificationCode',
 							]
 						},
 						{
-							title: 'Data',
+							title: '数据组件',
 							collapsable: false,
 							sidebarDepth: 0,
 							children: [
 								'/components/circleProgress',
 								'/components/lineProgress',
-								'/components/badge',
-								'/components/tag',
 								'/components/table',
-								'/components/avatarCropper',
+								'/components/countDown',
+								'/components/countTo',
 							]
 						},
 						{
-							title: 'Notice',
+							title: '反馈组件',
 							collapsable: false,
 							sidebarDepth: 0,
 							children: [
+								'/components/actionSheet',
 								'/components/alertTips',
-								'/components/mask',
 								'/components/toast',
 								'/components/noticeBar',
-								'/components/noNetwork',
 								'/components/topTips',
-								'/components/swipeAction',
+								'/components/collapse',
+								'/components/popup',
+								'/components/swiperAction',
 							]
 						},
 						{
-							title: 'Navigation',
+							title: '布局组件',
+							collapsable: false,
+							sidebarDepth: 0,
+							children: [
+								'/components/mask',
+								'/components/noNetwork',
+								'/components/grid',
+								'/components/swiper',
+								'/components/timeLine',
+								'/components/skeleton',
+								'/components/sticky',
+								'/components/waterfall',
+							]
+						},
+						{
+							title: '导航组件',
 							collapsable: false,
 							sidebarDepth: 0,
 							children: [
 								'/components/tabs',
-								'/components/grid',
 								'/components/indexList',
-								'/components/loadMore',
 								'/components/subsection',
 								'/components/steps',
+								'/components/empty',
 								'/components/link',
-								'/components/readMore',
-								'/components/swiper',
 							]
 						},
 						{
-							title: 'Others',
+							title: '其他组件',
 							collapsable: false,
 							sidebarDepth: 0,
 							children: [
-								'/components/countDown',
-								'/components/countTo',
-								'/components/collapse',
-								'/components/popup',
-								'/components/timeLine',
+								'/components/messageInput',
+								'/components/avatarCropper',
+								'/components/loadMore',
+								'/components/readMore',
 								'/components/lazyLoad',
-								'/components/skeleton',
-								'/components/sticky',
-								'/components/empty',
-								'/components/waterfall',
+								'/components/gap',
 							]
 						},
 					]
@@ -174,14 +182,14 @@ module.exports = {
 				collapsable: false,
 				sidebarDepth: 0,
 				children: [
-					['/js/http', 'http请求'],
+					['/js/http', 'Http请求'],
 				]
 			}, {
 				title: '工具库',
 				collapsable: false,
 				sidebarDepth: 0,
 				children: [
-					['/js/time', '时间格式'],
+					['/js/time', '时间格式化'],
 					['/js/route', '路由跳转'],
 					['/js/randomArray', '数组乱序'],
 					['/js/guid', '全局唯一标识符'],

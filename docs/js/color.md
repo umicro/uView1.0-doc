@@ -31,3 +31,16 @@ export default{
 }
 ```
 
+
+### 背景颜色
+
+uView提供了一个浅灰的背景颜色值，该值为`#f3f4f6`
+
+```js
+export default{
+	onLoad() {
+		console.log(this.$u.color['bgColor']);
+	}
+}
+```
+

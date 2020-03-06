@@ -47,6 +47,23 @@ uView为了更好编写css，使用了scss预处理器，使用uView之前，请
 	</div>
 </div>
 
+我们在全局样式中，通过`scss`提供了对应的颜色变量名，方便您在任何可写css的地方，调用这些变量，如下：
+
+```css
+/* 变量的定义，该部分uView已全局引入，无需您编写 */
+$u-type-primary: #2979ff;
+$u-type-primary-light: #ecf5ff;
+$u-type-primary-disabled: #a0cfff;
+$u-type-primary-dark: #2b85e4;
+
+
+/* 在您编写css的地方使用这些变量 */
+.title {
+	color: $u-type-primary;
+	......
+}
+```
+
 
 ### 辅助色
 
@@ -127,6 +144,38 @@ uView为了更好编写css，使用了scss预处理器，使用uView之前，请
 	</div>
 </div>
 
+我们在全局样式中，通过`scss`提供了对应的颜色变量名，方便您在任何可写css的地方，调用这些变量，如下：
+
+```css
+/* 变量的定义，该部分uView已全局引入，无需您编写 */
+
+$u-type-warning: #ff9900;
+$u-type-warning-disabled: #fcbd71;
+$u-type-warning-dark: #f29100;
+$u-type-warning-light: #fdf6ec;
+
+$u-type-success: #19be6b;
+$u-type-success-disabled: #71d5a1;
+$u-type-success-dark: #18b566;
+$u-type-success-light: #dbf1e1;
+
+$u-type-error: #fa3534;
+$u-type-error-disabled: #fab6b6;
+$u-type-error-dark: #dd6161;
+$u-type-error-light: #fef0f0;
+
+$u-type-info: #909399;
+$u-type-info-disabled: #c8c9cc;
+$u-type-info-dark: #82848a;
+$u-type-info-light: #f4f4f5;
+
+/* 在您编写css的地方使用这些变量 */
+.title {
+	color: $u-type-info;
+	......
+}
+```
+
 ### 文字颜色
 
 uView中，分别提炼了4种用于文字颜色，分别是：主要文字、常规文字、次要文字、占位文字颜色。
@@ -157,8 +206,6 @@ uView中，分别提炼了4种用于文字颜色，分别是：主要文字、�
 	</div>
 </div>
 
-我们在全局样式中，通过`scss`提供了对应的颜色变量名，方便您在任何可写css的地方，调用这些变量，如下：
-
 ```css
 /* 变量的定义，该部分uView已全局引入，无需您编写 */
 $u-main-color: #303133;
@@ -169,6 +216,30 @@ $u-light-color: #c0c4cc;
 /* 在您编写css的地方使用这些变量 */
 .title {
 	color: $u-main-color;
+}
+```
+
+
+### 背景颜色
+
+uView中，定义了一个背景颜色，如下：
+
+<div class="color-box">
+	<div class="color-item" style="background: #f3f4f6; color:#909399;">
+		背景颜色<br>
+		#f3f4f6
+	</div>
+</div>
+
+我们在全局样式中，通过`scss`提供了对应的颜色变量名，方便您在任何可写css的地方，调用这些变量，如下：
+
+```css
+/* 变量的定义，该部分uView已全局引入，无需您编写 */
+$u-bg-color: #f3f4f6;
+
+/* 在您编写css的地方使用这些变量 */
+.title {
+	color: $u-bg-color;
 }
 ```
 
