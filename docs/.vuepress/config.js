@@ -134,6 +134,7 @@ module.exports = {
 								'/components/readMore',
 								'/components/lazyLoad',
 								'/components/gap',
+								'/components/avatar',
 							]
 						},
 					]
