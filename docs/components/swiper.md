@@ -118,7 +118,7 @@
 | duration | 切换一张轮播图所需的时间，单位ms | String \| Number  | 500 | - |
 | border-radius | 轮播图圆角值，单位rpx | String \| Number  | 8 | - |
 | title-style | 自定义标题样式 | Object  | - | - |
-| img-mode | 图片的裁剪模式，详见[image组件裁剪模式](https://uniapp.dcloud.io/component/image) | String  | widthFix | - |
+| img-mode | 图片的裁剪模式，详见[image组件裁剪模式](https://uniapp.dcloud.io/component/image) | String  | aspectFill | - |
 
 
 ### Events

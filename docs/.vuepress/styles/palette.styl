@@ -67,9 +67,9 @@ tr:nth-child(2n) {
     background-color: #FFFFFF;
 }
 
-// .theme-default-content:not(.custom) {
-//     max-width: 960px;
-// }
+.theme-default-content:not(.custom) {
+    max-width: none!important;
+}
 
 table {
 	width: 100%;
@@ -257,4 +257,12 @@ body::-webkit-scrollbar-track {
 
 .navbar .links {
 	right: 4em;
+}
+
+.navbar .site-name {
+	display inline-block;
+	width: 62px;
+	overflow: hidden;
+	word-break: keep-all;
+	white-space:nowrap;
 }

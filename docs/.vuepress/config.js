@@ -1,5 +1,5 @@
 module.exports = {
-	title: 'uView', // 设置网站标题
+	title: 'uView - 多平台快速开发的UI框架', // 设置网站标题
 	description: 'uView UI，是uniapp生态最优秀的UI框架，全面的组件和便捷的工具会让你信手拈来，如鱼得水',
 	base: '/',
 	markdown: {
@@ -8,7 +8,7 @@ module.exports = {
 	plugins: ['@vuepress/back-to-top'],
 	themeConfig: {
 		sidebarDepth: 0,
-		lastUpdated: '上次更新时间',
+		// lastUpdated: '上次更新时间',
 		nav: [{
 			text: '指南',
 			link: '/guide/note'
@@ -92,7 +92,7 @@ module.exports = {
 								'/components/topTips',
 								'/components/collapse',
 								'/components/popup',
-								'/components/swiperAction',
+								'/components/swipeAction',
 							]
 						},
 						{
