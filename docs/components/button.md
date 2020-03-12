@@ -81,9 +81,13 @@ uniapp的`button`组件比较特殊，因为它有一些其他小程序平台的
 
 ### 如何修改按钮的样式
 
-组件的根元素就是uniapp的`button`组件，所以修改按钮的样式很容易，直接给组件定义`类名`或者嵌入`内联样式`即可
+1. 针对非微信小程序平台，组件的根元素就是uniapp的`button`组件，所以修改按钮的样式很容易，直接给组件定义`类名`或者嵌入`内联样式`即可  
+2. 如果是微信小程序，编译后页面会有组件同名的元素存在，导致样式传递有问题
+
+所以：我们提供了一个`custom-style`参数，推荐用户可以用对象形式传递样式给组件内部，注意驼峰命名
 
 ```html
+/* 以下形式在微信小程序会无效 */
 <u-button class="custom-style">雪月夜</u-button>
 
 <style scoped>
@@ -92,6 +96,17 @@ uniapp的`button`组件比较特殊，因为它有一些其他小程序平台的
 		width: 400rpx;
 	}
 </style>
+
+
+/* 推荐如下 */
+<u-button :custom-style="customStyle">雪月夜</u-button>
+
+<script>
+	customStyle: {
+		marginTop: '20px', // 注意驼峰命名，并且值必须用引号包括，因为这是对象
+		color: 'red'
+	}
+</script>
 ```
 
 ### API
@@ -115,6 +130,7 @@ uniapp的`button`组件比较特殊，因为它有一些其他小程序平台的
 |hover-class|指定按钮按下去的样式类。当 hover-class="none" 时，没有点击态效果|String|button-hover|-|App-nvue 平台暂不支持|
 |hover-start-time|按住后多久出现点击态，单位毫秒|Number|20|-|-|
 |hover-stay-time|手指松开后点击态保留时间，单位毫秒|Number|70|-|-|
+|custom-style|对按钮的自定义样式，对象形式，见上方说明|Object|-|-|-|
 
 ### Events
 

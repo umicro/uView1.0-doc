@@ -42,10 +42,18 @@
 ```html
 <template>
 	<view class="wrap">
-		<u-waterfall :flow-list="flowList">
-			<template v-slot:left="list">
-					<view class="demo-warter" v-for="(item, index) in list.leftList" :key="index">
+		<u-waterfall :flowList="flowList">
+			<template v-slot:left="{list}">
+					<view class="demo-warter" v-for="(item, index) in list" :key="index">
+						<!-- 警告：微信小程序不支持嵌入lazyload组件，请自行如下使用image标签 -->
+						<!-- #ifndef MP-WEIXIN -->
 						<u-lazy-load threshold="-450" border-radius="10" :image="item.image" :index="index"></u-lazy-load>
+						<!-- #endif -->
+						<!-- #ifdef MP-WEIXIN -->
+						<view class="demo-img-wrap">
+							<image class="demo-image" :src="item.image" mode="widthFix"></image>
+						</view>
+						<!-- #endif -->
 						<view class="demo-title">
 							{{item.title}}
 						</view>
@@ -65,9 +73,16 @@
 						</view>
 					</view>
 			</template>
-			<template v-slot:right="list">
-					<view class="demo-warter" v-for="(item, index) in list.rightList" :key="index">
+			<template v-slot:right="{list}">
+					<view class="demo-warter" v-for="(item, index) in list" :key="index">
+						<!-- #ifndef MP-WEIXIN -->
 						<u-lazy-load threshold="-450" border-radius="10" :image="item.image" :index="index"></u-lazy-load>
+						<!-- #endif -->
+						<!-- #ifdef MP-WEIXIN -->
+						<view class="demo-img-wrap">
+							<image class="demo-image" :src="item.image" mode="widthFix"></image>
+						</view>
+						<!-- #endif -->
 						<view class="demo-title">
 							{{item.title}}
 						</view>
@@ -206,6 +221,11 @@
 		margin: 5px;
 		background-color: #FFFFFF;
 		padding: 8px;
+	}
+	
+	.demo-image {
+		width: 100%;
+		border-radius: 4px;
 	}
 	
 	.demo-title {

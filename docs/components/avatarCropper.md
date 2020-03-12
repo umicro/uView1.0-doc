@@ -11,25 +11,17 @@
 ### 基本使用
 
 组件使用流程：
-1. 引用组件，将组件和页面其他内容分开为两个部分，裁剪的时候，隐藏页面其他结构页面
-2. 配置基本参数(已默认配置好最优参数)
-3. 选取图片，自动打开组件
-4. 调整图片合适位置和大小，确定裁剪并返回此裁剪结果
-
-这样注意的是使用了一个叫`isAvatar`的布尔变量来控制，页面主内容，为了避免裁剪后重新渲染，影响布局，使用了`display`而不是`v-if`控制显示，
-而头像裁剪的区域，建议使用`v-if`处理，如下所示：
+1. 打开头像裁剪页面，同时传递配置基本参数(已默认配置好最优参数)
+2. 选取图片，调整图片合适位置和大小，确定裁剪并返回此裁剪结果
+3. 在原始页面监听`uAvatarCropper`事件，获得裁剪结果
 
 ```html
 <template>
-	<view>
-		<view class="wrap" :style="{display: !isAvatar ? 'block' : 'none'}">
-			<u-toast ref="uToast"></u-toast>
-			<view class="u-avatar-wrap">
-				<image class="u-avatar-demo" v-if="avatar" :src="avatar" mode="aspectFill"></image>
-			</view>
-			<u-button @tap="chooseAvatar">选择图片</u-button>
+	<view class="wrap">
+		<view class="u-avatar-wrap">
+			<image class="u-avatar-demo" :src="avatar" mode="aspectFill"></image>
 		</view>
-		<u-avatar-cropper v-if="isAvatar" :src="src" @onload="cropperSuccess"></u-avatar-cropper>
+		<u-button @tap="chooseAvatar">进入裁剪页</u-button>
 	</view>
 </template>
 
@@ -37,22 +29,40 @@
 	export default {
 		data() {
 			return {
-				avatar: '/static/uView/common/logo.png',
-				src: '',
-				isAvatar: false,
+				avatar: '/static/uview/common/logo.png',
 			}
+		},
+		created() {
+			// 监听从裁剪页发布的事件，获得裁剪结果
+			uni.$on('uAvatarCropper', path => {
+				this.avatar = path;
+				// 可以在此上传到服务端
+				uni.uploadFile({
+					url: 'http://www.example.com/upload',
+					filePath: path,
+					name: 'file',
+					complete: (res) => {
+						console.log(res);
+					}
+				});
+			})
 		},
 		methods: {
 			chooseAvatar() {
-				uni.chooseImage({
-					count: 1,
-					sizeType: ['compressed'],
-					sourceType: ['album', 'camera'],
-					success: (res) => {
-						this.src = res.tempFilePaths[0];
-						this.isAvatar = true;
+				// 此为uView的跳转方法，详见"文档-JS"部分，也可以用uni的uni.navigateTo
+				this.$u.route({
+					// 关于此路径，请见下方"注意事项"
+					url: '/uview/components/u-avatar-cropper/u-avatar-cropper',
+					// 内部已设置以下默认参数值，可不传这些参数
+					params: {
+						// 输出图片宽度，高等于宽，单位px
+						destWidth: 300,
+						// 裁剪框宽度，高等于宽，单位px
+						rectWidth: 200,
+						// 输出的图片类型，如果'png'类型发现裁剪的图片太大，改成"jpg"即可
+						fileType: 'jpg',
 					}
-				});
+				})
 			},
 		}
 	}
@@ -60,15 +70,16 @@
 
 <style lang="scss" scoped>
 	.wrap {
-		padding: 24upx;
+		padding: 40rpx;
 	}
-	
+
 	.u-avatar-wrap {
+		margin-top: 80rpx;
 		overflow: hidden;
-		margin-bottom: 20rpx;
+		margin-bottom: 80rpx;
 		text-align: center;
 	}
-	
+
 	.u-avatar-demo {
 		width: 150rpx;
 		height: 150rpx;
@@ -80,52 +91,38 @@
 
 ### 注意事项
 
-- 以上演示中，默认用户在H5中使用系统的导航栏，而不是自定义的导航栏，进入裁剪页面，背景为黑色，故组件内部
-在期间通过`uni.setNavigationBarColor`将导航栏改称为黑底白字，裁剪结束后改成白底黑字，如果您的导航栏
-不是白底黑字，就需要您在裁剪完毕的`onload`事件回调中，手动通过`uni.setNavigationBarColor`调整为自己的样式，
-可见上方示例
-
-- 关于裁剪图片的来由，建议在页面打开裁剪区域之前，通过`uni.chooseImage`选取图片，通过`src`参数传递给组件内部，
-打开组件后，左下角也有一个重新选择图片的按钮，可以再次选取图片
-
-- 可以通过`file-type`设置生成的图片类型，默认为`jpg`，如果配置了`png`形式，发现生成的图片太大的话，请改回`jpg`
-
-### bound-style参数说明
-
-此为对象形式的样式，有三个属性，分别是：
-- `lineWidth`为裁剪框的边框宽度，单位rpx
-- `borderColor`为裁剪的边框颜色
-- `mask`为裁剪图片操作过程中，框内以外区域的遮罩透明度，建议使用`rgba`颜色值
-
-bound-style值默认如下：
+- 裁剪页面内置在uView中，由于打开页面，需要先在`pages.json`声明页面，故请把以下内容复制到项目根目录的`pages.json`中的`pages`数组中：
 
 ```js
 {
-	lineWidth: 4,
-	borderColor: 'rgb(245, 245, 245)',
-	mask: 'rgba(0, 0, 0, 0.35)'
+	"path": "uview/components/u-avatar-cropper/u-avatar-cropper",
+	"style": {
+		"navigationBarTitleText": "头像裁剪",
+		"navigationBarBackgroundColor": "#000000"
+	}
 }
 ```
 
+- 裁剪后的结果，通过`uni.$on`监听`uAvatarCropper`事件，由于uniapp的限制，H5端裁剪的结果为`base64`格式，其他端为`blod`二进制形式，
+如果后端对接收格式有要求，请自行处理
+
 
 ### API
+
+以下参数，需要通过URL的get参数传参到裁剪页，非props
 
 ### Props
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| rect-width | 裁剪框的宽度，单位rpx  | String \| Number | 400 | - |
-| rect-height | 裁剪框的高度，单位rpx  | String \| Number | 400 | - |
+| destWidth | 输出图片宽度，高等于宽，单位px  | String \| Number | 200 | - |
+| rectWidth | // 裁剪框宽度，高等于宽，单位px  | String \| Number | 200 | - |
 | dest-width | 裁剪生成的图片宽度，单位rpx  | String \| Number | 400 | - |
-| dest-height | 裁剪生成的图片高度，单位rpx  | String \| Number | 400 | - |
-| quality | 生成的图片质量  | String \| Number | 0.7 | (0, 1] |
-| file-type | 生成的图片类型，推荐用"jpg" | String  | jpg | png |
-| bound-style | 此为对象形式样式值，用于设置裁剪框的样式，见上方说明 | Object  | {} | - |
-| src | 用于裁剪的图片路径，建议通过`uni.chooseImage`选取图片 | String  | - | - |
+| fileType | 输出的图片类型，如果'png'类型发现裁剪的图片太大，改成"jpg"即可  | String | jpg | png |
 
 
 ### Event
 
 |事件名|说明|回调参数|版本|
 |:-|:-|:-|:-|
-| onload | 用户确认生成裁剪图片时触发 | path: 生成的图片数据 | - |
+| uAvatarCropper | 裁剪结束后的事件，通过`uni.$on`监听 | path: 裁剪的图片数据 | - |
