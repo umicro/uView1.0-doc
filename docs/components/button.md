@@ -38,13 +38,10 @@ uniapp的`button`组件比较特殊，因为它有一些其他小程序平台的
 
 ### 设置按钮为半圆形  
 
-`round`默认值为`false`(按钮为圆角矩形)，设置为`true`，则按钮两边为半圆形
+`shape`默认值为`square`(按钮为圆角矩形)，设置为`circle`，则按钮两边为半圆形
 
 ```html
-<u-button round>乌啼</u-button>
-
-<!-- 或者显式设置为true -->
-<u-button :round="true">霜满天</u-button>
+<u-button shape="square">乌啼</u-button>
 ```
 
 ### 设置尺寸
@@ -124,6 +121,7 @@ uniapp的`button`组件比较特殊，因为它有一些其他小程序平台的
 |type|按钮的样式类型|String|default|primary / success / info/ warning / error|-|
 |plain|按钮是否镂空，背景色透明|Boolean|false|true|-|
 |disabled|是否禁用|Boolean|false|true|-|
+|shape|按钮外观形状，见上方说明|String|square|circle|-|
 |loading|名称前是否带 loading 图标|Boolean|false|true|App-nvue 平台，在 ios 上为雪花，Android上为圆圈|
 |form-type|用于 ``<form>`` 组件，点击分别会触发 ``<form>`` 组件的 submit/reset 事件|String|-|submit / reset|-|
 |open-type|开放能力|String|请参考uniapp官方文档|-|-|

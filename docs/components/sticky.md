@@ -62,6 +62,7 @@
 | offset-top | 吸顶时与顶部的距离，单位rpx  | String \| Number | 0 | - |
 | index | 自定义标识，用于区分是哪一个组件 | String \| Number  | - | - |
 | enable | 是否开启吸顶功能 | Boolean  | true | false |
+| bg-color | 组件背景颜色 | String  | #ffffff | - |
 | h5-Nav-height | 导航栏高度，自定义导航栏时(无导航栏设置为`0`)，需要传入此值，单位px | Boolean  | 44 | - |
 
 ### Event
