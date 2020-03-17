@@ -157,10 +157,7 @@
 			}
 		},
 		created() {
-			document.querySelector(".search-box input").setAttribute("placeholder", "搜索文档");
-			// 导航栏的标题手动修改，不用.vuepress/config.js中title字段
-			// 因为它太长，同时又需要显示head标签中的title标签中
-			document.querySelector(".home-link span").innerHTML  = 'uView';
+			
 		}
 	}
 </script>

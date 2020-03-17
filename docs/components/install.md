@@ -2,13 +2,12 @@
 
 ### 下载
 
-
 #### 方式一
 
 这个方式，适用于已有现成uni-app项目的情形，解压后将uview文件夹，复制到项目根目录，再根据[快速上上手](/guide/quickstart.html)
 中的配置进行引用即可。
 
-[下载uView 1.0](http://www.uviewui.com/download/uView.1.0.zip)
+<!-- [下载uView 1.0](http://www.uviewui.com/download/uView.1.0.zip) -->
 
 
 #### 方式二
@@ -16,7 +15,7 @@
 此方式为一个完整的uni-app示例工程，它适用于新启动的项目，其中已包含了uview核心，并且做好了所有配置，
 让您无需任何配置，开箱即用。
 
-[下载uView-demo](http://www.uviewui.com/download/uView-demo.zip)
+<!-- [下载uView-demo](http://www.uviewui.com/download/uView-demo.zip) -->
 
 **说明：**
 

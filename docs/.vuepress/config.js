@@ -7,6 +7,7 @@ module.exports = {
 	},
 	plugins: ['@vuepress/back-to-top'],
 	themeConfig: {
+		searchPlaceholder: '搜索文档关键字',
 		sidebarDepth: 0,
 		// lastUpdated: '上次更新时间',
 		nav: [{
@@ -32,7 +33,7 @@ module.exports = {
 						['/components/install', '安装'],
 						['/components/quickstart', '快速上手'],
 						['/components/common', '内置样式'],
-						['/components/comparison', '对比其他UI框架'],
+						// ['/components/comparison', '对比其他UI框架'],
 						['/components/changelog', '更新日志'],
 					]
 				},
@@ -177,6 +178,7 @@ module.exports = {
 				sidebarDepth: 0,
 				children: [
 					['/js/intro', '介绍'],
+					['/js/fastUse', '便捷工具'],
 				]
 			}, {
 				title: '网络',
@@ -201,6 +203,7 @@ module.exports = {
 					['/js/md5', 'md5加密'],
 					['/js/random', '随机数值'],
 					['/js/trim', '去除空格'],
+					['/js/getRect', '节点布局信息'],
 				]
 			}]
 		},

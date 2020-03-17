@@ -13,9 +13,14 @@
 - 弹出层的内容通过`slot`传入，由用户自定义
 - 通过`show`参数控制弹出层的打开和收起
 
+:::warning 注意
+由于props单向流动的特性，您需要在popup组件的`close`事件回调中把`show`设置为`false`，否则无法第二次
+唤起popup
+:::
+
 ```html
 <template>
-	<u-popup :show="true">
+	<u-popup :show="show" @close="show = false">
 		<view>出淤泥而不染，濯清涟而不妖</view>
 	</u-popup>
 </template>

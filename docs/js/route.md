@@ -15,6 +15,7 @@ Object参数说明：
 | animationType | String | pop-in  | false | 只在APP生效，详见[窗口动画](https://uniapp.dcloud.io/api/router?id=animation) |
 | animationDuration | Number | 300  | false | 动画持续时间，单位ms |
 
+
 <br>
 
 ```js
@@ -30,4 +31,13 @@ export default{
 		}, 2000)
 	}
 }
+```
+
+
+### 简写
+
+注：为了方便简写和调用，可以直接传递一个`url`地址替代`Object`，它只能执行`uni.navigateTo`类型的地址，不支持跳转到Tab页面
+
+```js
+this.$u.rute('/pages/components/empty/index');
 ```

@@ -1,6 +1,5 @@
 ## 快速上手
 
-<demo-model url="https://youzan.github.io/vant/mobile.html?hide_nav=1&weapp=1#/zh-CN/swipe-cell"></demo-model>
 
 ### 引入
 

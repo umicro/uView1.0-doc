@@ -21,8 +21,7 @@
 过程中，该值为`false`，如果为`false`应该给予提示并不要再次向后端请求验证码，如果为`true`，则为获取验证码
 之前，或者倒计结束之后，可以再次向后端请求验证码。
 
-以下为完整示例，这里使用了"this.$u.success | this.$u.error | this.$u.warning"，由于uniapp不支持
-通过JS插入元素，要求页面必须引入了"\<u-toast ref="uToast">\</u-toast>"这一句，见如下： 
+以下为完整示例，见如下： 
 
 ```html
 <template>
@@ -61,19 +60,19 @@
 					setTimeout(() => {
 						uni.hideLoading();
 						// 这里此提示会被this.start()方法中的提示覆盖
-						this.$u.success('验证码已发送');
+						this.$u.toast('验证码已发送');
 						// 通知验证码组件内部开始倒计时
 						this.$refs.uCode.start();
 					}, 2000);
 				} else {
-					this.$u.error('倒计时结束后再发送');
+					this.$u.toast('倒计时结束后再发送');
 				}
 			},
 			end() {
-				this.$u.warning('倒计时结束');
+				this.$u.toast('倒计时结束');
 			},
 			start() {
-				this.$u.success('倒计时开始');
+				this.$u.toast('倒计时开始');
 			}
 		}
 	}

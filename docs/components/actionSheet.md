@@ -70,6 +70,41 @@
 </script>
 ```
 
+### 如何知道点了第几项
+
+`click`回调事件带有一个`index`值，这个索引值为传递的"itemList"数组的索引值，根据回调事件，能获得点击了
+第几项和该项的内容
+
+
+```html
+<template>
+	<u-action-sheet :itemList="itemList" @click="click" :show="show" @close="show = false"></u-action-sheet>
+</template>
+
+<script>
+	export default {
+		data() {
+			itemList: [{
+				text: '点赞',
+				color: 'blue',
+				fontSize: 28
+			}, {
+				text: '分享'
+			}, {
+				text: '评论'
+			}],
+			show: true
+		},
+		methods: {
+			click(index) {
+				console.log(`点击了第${index + 1}项，内容为：${this.itemList[index].text}`)
+			}
+		}
+	}
+</script>
+```
+
+
 ### API
 
 ### Props

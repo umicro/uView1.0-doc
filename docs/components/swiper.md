@@ -107,7 +107,7 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | list | 轮播图数据，见上方"基本使用"说明 | Array | - | - |
-| show-title | 是否显示标题文字，需要配合`list`参数，见上方说明 | Boolean  | false | true |
+| title | 是否显示标题文字，需要配合`list`参数，见上方说明 | Boolean  | false | true |
 | mode | 指示器模式，见上方说明 | String  | round | rect / dot / number / none |
 | height | 轮播图组件高度，单位rpx | String \| Number  | 250 | - |
 | indicator-pos | 指示器的位置 | String  | bottomCenter | topLeft / topCenter / topRight / bottomLeft / bottomRight |
@@ -125,5 +125,4 @@
 
 |事件名|说明|回调参数|版本|
 |:-|:-|:-|:-|
-| click | 点击轮播图时触发 | index：点击的第几张图片，从0开始 | - |
 | click | 点击轮播图时触发 | index：点击的第几张图片，从0开始 | - |

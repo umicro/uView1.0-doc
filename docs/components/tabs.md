@@ -54,10 +54,10 @@
 ### 控制tabs组件的活动tab样式
 
 1. 通过`active-color`和`un-active-color`控制tabs的激活和非激活颜色。
-2. `size`为tabs文字大小。
+2. `font-size`为tabs文字大小。
 3. `current`为初始化tabs的激活tab索引，默认为0。`gutter`为单个tab标签的左右内边距之和，即左右各占`gutter`的一半。
 ```html
-<u-tabs ref="tabs" :tabs="tabs" active-color="#2979ff" un-active-color="#606266" size="30" current="0"></u-tabs>
+<u-tabs ref="tabs" :tabs="tabs" active-color="#2979ff" un-active-color="#606266" font-size="30" current="0"></u-tabs>
 ```
 
 ### 使用案例
@@ -144,7 +144,7 @@
 | tabs | 标签数组，元素为对象，如[{name: '推荐'}] | Array  | - | - |
 | current | 制定哪个tab为激活状态 | String \| Number  | 0，即tabs的第一项 | - |
 | height | 导航栏的高度，单位rpx | String \| Number  | 80 | - |
-| size | tab文字大小，单位rpx | String \| Number  | 30 | - |
+| font-size | tab文字大小，单位rpx | String \| Number  | 30 | - |
 | swiper-width | tabs组件外部swiper的宽度，默认为屏幕宽度，单位rpx | string \| Number  | 750 | - |
 | active-color | 滑块和激活tab文字的颜色  | String | #2979ff | - |
 | un-active-color | tabs文字颜色 | String  | #303133 | - |

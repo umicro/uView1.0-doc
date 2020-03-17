@@ -14,22 +14,24 @@
 ### 基本使用
 
 - 通过`mode`参数设置为`time`或者`region`，区分时间和地区模式
-- 通过`ref`调用组件的`show`和`hide`方法，打开或者收起picker
+- 通过`show`参数为`true`或`false`值，打开或者收起picker
 
-::: warning 注意
-如果需要一进入页面就打开picker，不能在onLoad生命周期中调用组件的"show()"方法，因为此时组件可能尚未
-创建完毕，调用会出错，应该在onReady生命周期调用
+:::warning 注意
+由于props单向传值的限制，您需要在`picker`组件的`close`事件回调中把`show`值设置为`false`，否则
+下次您将无法唤起`picker`
 :::
 
 ```html
 <template>
-	<u-picker ref="uPicker" mode="time"></u-picker>
+	<u-picker :show="show" mode="time" @close="picker = false;"></u-picker>
 </template>
 
 <script>
 	export default {
-		onReady() {
-			this.$refs.uPicker.show();
+		data() {
+			return {
+				show: false
+			}
 		}
 	}
 </script>
@@ -45,9 +47,9 @@
 
 ```html
 <template>
-	<u-picker ref="uPicker" mode="time"  default-time="2025-07-02 13:01"></u-picker>
+	<u-picker mode="time"  default-time="2025-07-02 13:01"></u-picker>
 	
-	<u-picker ref="uPicker" mode="region"  :area-code='["13", "1303", "130304"]'></u-picker>
+	<u-picker mode="region"  :area-code='["13", "1303", "130304"]'></u-picker>
 </template>
 ```
 
@@ -61,7 +63,7 @@
 
 ```html
 <template>
-	<u-picker ref="uPicker" mode="time" :params="params"></u-picker>
+	<u-picker mode="time" :params="params"></u-picker>
 </template>
 
 <script>
@@ -90,6 +92,20 @@
 注意：`mode`为`region`时，回调对象属性为一个对象，分别有`label`和`value`属性，见如下说明：
 
 ```js
+// parmas默认值：
+let params = {
+	year: true,
+	month: true,
+	day: true,
+	hour: false,
+	minute: false,
+	second: false,
+	province: true,
+	city: true,
+	area: true
+}
+
+
 // 如果params值如下：
 let params = {
 	year: true,
@@ -149,6 +165,7 @@ let params = {
 | default-region | 默认选中的地区，中文形式，mode=region时有效  | String | - | - |
 | default-code | 默认选中的地区，编号形式，mode=region时有效  | String | - | - |
 | mask-close-able | 是否允许通过点击遮罩关闭Picker  | Boolean | true | false |
+
 
 ### Event
 

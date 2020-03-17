@@ -73,10 +73,10 @@ uniapp的`button`组件比较特殊，因为它有一些其他小程序平台的
 该效果通过给按钮绝对定位形式覆盖一个`view`，点击时改变`view`的`scale`，`opacity`样式属性，形成扩散再消失的水波纹效果。
 
 ```html
-<u-button rippleEffect>十年</u-button>
+<u-button :ripple="true">十年</u-button>
 
 <!-- 通过rippleBgColor设置水波纹的背景颜色 -->
-<u-button rippleEffect :rippleBgColor="#909399">之约</u-button>
+<u-button :ripple="true" ripple-bg-color="#909399">之约</u-button>
 ```
 
 ### 如何修改按钮的样式

@@ -1,7 +1,7 @@
 ---
 home: true
 heroText: null
-description: ''
+description: null
 ---
 
 <index></index>

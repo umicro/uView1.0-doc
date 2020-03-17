@@ -1,7 +1,5 @@
 ## 介绍
 
-<demo-model url="http://192.168.100.17:8080/#/pages/template/order/index"></demo-model>
-
 <div class="intro-logo">
 	<img class="logo" src="/logo.png" alt="uView" />
 	<h3>uView</h3>

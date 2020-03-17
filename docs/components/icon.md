@@ -12,7 +12,7 @@
 通过`<u-icon>`形式来调用，设置`name`参数为图标名即可
 
 ```html
-<icon name="photo"></icon>
+<u-icon name="photo"></u-icon>
 ```
 
 ### 修改图标的样式
@@ -21,7 +21,7 @@
 - 通过`size`参数修改图标的大小，单位为rpx
 
 ```html
-<icon name="photo" color="#2979ff" size="28"></icon>
+<u-icon name="photo" color="#2979ff" size="28"></u-icon>
 ```
 
 ### API
