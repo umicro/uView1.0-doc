@@ -132,7 +132,7 @@
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| gutter | 栅格间隔，左右各为此值的一半  | String \| Number | 0 | - |
+| gutter | 栅格间隔，左右各为此值的一半，单位rpx  | String \| Number | 0 | - |
 | justify | 水平排列方式  | String | start(或flex-start) | end(或flex-end) / center / around(或space-around) / between(或space-between) |
 | align | 垂直排列方式 | String | center | top / bottom |
 
@@ -141,5 +141,5 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | span | 栅格占据的列数，总12等分  | String \| Number | 0 | 1-12 |
-| offset | 分栏左边偏移  | String \| Number | 0 | - |
+| offset | 分栏左边偏移，计算方式与`span`相同  | String \| Number | 0 | - |
 

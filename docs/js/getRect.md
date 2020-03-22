@@ -137,3 +137,61 @@ export default {
 	}
 </script>
 ```
+
+
+#### 如何让让某个元素滚动到页面顶部
+
+这里说的顶部，指的是导航栏的下方，比如我们点击某个操作，页面自动滚动，指定元素位于导航栏下方时停止。  
+我们需要结合`onPageScroll`生命周期，获得实时的页面滚动条位置。
+
+
+```html
+<template>
+	<view class="wrap">
+		<view class="item">
+			uView UI
+		</view>
+		<view class="item">
+			uView UI
+		</view>
+		<view class="item">
+			uView UI
+		</view>
+		<view class="item">
+			uView UI
+		</view>
+		<view class="item object-item" @tap="scrollEl">
+			点我，我就会滚动到导航栏下方
+		</view>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				scrollTop: 0,
+			}
+		},
+		onPageScroll(e) {
+			this.scrollTop = e.scrollTop;
+		},
+		methods: {
+			scrollEl() {
+				this.$u.getRect('.object-item').then(res => {
+					uni.pageScrollTo({
+						scrollTop: this.scrollTop + res.top,
+						duration: 0
+					})
+				})
+			}
+		}
+	}
+</script>
+
+<style lang="scss" scoped>
+	.wrap {
+		height: 200vh;
+	}
+</style>
+```

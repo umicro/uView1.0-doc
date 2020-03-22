@@ -54,7 +54,7 @@
 ### 自定义样式
 
 - 通过`input-align`设置输入框内容的对其方式，和css的`text-align`同理
-- 通过`border`设置整个搜索组件的边框，要求类似"1px solid #dddddd"的形式
+- 通过`border-color`设置整个搜索组件的边框，只要配置了颜色，才会出现边框
 - 通过`height`设置组件高度
 - 通过`enabled`设置是否禁用输入框
 - 通过`bg-color`设置是搜索组件背景颜色
@@ -70,7 +70,8 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | shape | 搜索框形状，round-圆形，square-方形 | String | round | square |
-| bg-color | 搜索框背景颜色  | String | ##f2f2f2 | - |
+| bg-color | 搜索框背景颜色  | String | #f2f2f2 | - |
+| border-color | 边框颜色，配置了颜色，才会有边框  | String | - | - |
 | placeholder | 占位文字内容 | String | 请输入关键字 | - |
 | clearabled | 是否启用清除控件 | Boolean | true | false |
 | focus | 是否自动获得焦点 | Boolean | false | true |
@@ -79,7 +80,6 @@
 | input-align | 输入框内容水平对齐方式 | String | left | center / right |
 | enabled | 是否启用输入框 | Boolean | true | false |
 | animation | 是否开启动画，见上方说明 | Boolean | false | true |
-| border | 边框样式，如"1px solid #dddddd" | String | none | - |
 | value | 输入框初始值 | String | - | - |
 | height | 输入框高度，单位rpx | String \| Number | 64 | - |
 

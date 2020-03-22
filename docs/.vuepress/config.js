@@ -67,6 +67,7 @@ module.exports = {
 								'/components/numberBox',
 								'/components/upload',
 								'/components/verificationCode',
+								'/components/field',
 							]
 						},
 						{
@@ -204,6 +205,7 @@ module.exports = {
 					['/js/random', '随机数值'],
 					['/js/trim', '去除空格'],
 					['/js/getRect', '节点布局信息'],
+					['/js/mpShare', '小程序分享'],
 				]
 			}]
 		},
