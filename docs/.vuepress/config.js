@@ -68,6 +68,9 @@ module.exports = {
 								'/components/upload',
 								'/components/verificationCode',
 								'/components/field',
+								'/components/checkbox',
+								'/components/radio',
+								'/components/switch',
 							]
 						},
 						{

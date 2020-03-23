@@ -100,10 +100,10 @@
 | bg-color | 组件背景颜色，在页面是非白色时会用到  | String	 | #ffffff | - |
 | show-icon | 加载中时是否显示图标  | Boolean | true | false |
 | icon-type | 加载中时的图标类型， | String | circle | flower |
-| circle-color | `icon-type`为`circle`时，加载中的动画图标的颜色  | String | #19be6b | - |
+| icon-color | `icon-type`为`circle`时有效，加载中的动画图标的颜色  | String | #b7b7b7 | - |
 | is-dot |  `status`为`nomore`时，内容显示为一个"●" | Boolean | false | true |
 | color | 字体颜色  | String | #606266 | - |
-| font-size | 字体大小，单位rpx  | String \| Number | 26 | - |
+| font-size | 字体大小，单位rpx  | String \| Number | 28 | - |
 | load-text | 自定义显示的文字，见上方说明示例  | Object | - | - |
 
 
