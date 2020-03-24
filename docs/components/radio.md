@@ -111,7 +111,7 @@ export default {
 
 ### API
 
-### radio Props
+### Radio Props
 
 注意：需要给`radioGroup`组件通过`v-model`绑定一个布尔值，来初始化`radio`的状态，随后该值被双向绑定，
 当用户勾选复选框时，该值在`radio`内部被修改为`true`，并反映到父组件，否则为`false`，换言之，您无需监听`radio`的`change`事件，也能
