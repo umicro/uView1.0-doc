@@ -36,6 +36,7 @@ module.exports = {
 						// ['/components/comparison', '对比其他UI框架'],
 						['/components/changelog', '更新日志'],
 						['/components/customIcon', '扩展自定义图标库'],
+						['/components/globalVariable', '全局变量的实现'],
 					]
 				},
 				{
