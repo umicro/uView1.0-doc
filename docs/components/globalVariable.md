@@ -118,8 +118,12 @@ export default {
 
 ### globalData
 
-这个方式，最早是微信小程序特有的，它无法使用`vuex`进行全局状态的管理，就造了这么一个方式，当然，globalData也不是动态响应的，也就是说，你在`A.vue`修改了
-globalData中的某个值`username`，在`B.vue`中对这个值的引用是无法自动更新的，`vuex`却是可以做到的。
+这个方式，最早是微信小程序特有的，它无法使用`vuex`进行全局状态的管理，就造了这个方式。  
+
+可能你会问，为什么uniapp有了`vuex`还要有这个呢？
+
+globalData是微信小程序的特性，uniapp是对微信小程序的另一个实现，顺理成章的就有了globalData，另外的原因也是因为globalData使用简单，也有它存在的理由。
+当然，globalData也不是动态响应的，也就是说，你在`A.vue`修改了globalData中的某个值`username`，在`B.vue`中对这个值的引用是无法自动更新的，`vuex`却是可以做到的。
 
 由上，因为无法自动更新，为了做到这一点，所以我们需要在页面的`onShow`生命周期中获取globalData的值，或许你会问，为什么一定是`onShow`呢，`onLoad`不行吗？
 `onLoad`获取值是没问题的，但是当我们从`A.vue`进入`B.vue`中(假设A和B页面都通过globalData引用了某个`userName`)，在`B.vue`中修改了globalData的
@@ -144,4 +148,333 @@ export default {
 }
 ```
 
-2. 
+2. 定义好了globalData，我们进入`A.vue`，并使用`userName`值
+
+```html
+<!-- A.vue -->
+
+<template>
+	<view>
+		<!-- 注意，不能在模板中直接使用 getApp().globalData.userName -->
+		<<琵琶行>>的作者是：{{author}}
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				author: ''
+			}
+		},
+		onShow() {
+			// 每次A.vue出现在屏幕上时，都会触发onShow，从而更新author值
+			this.author = getApp().globalData.userName;
+		}
+	}
+</script>
+```
+
+3. 当我们从`A.vue`进入`B.vue`时，引用并修改`userName`的值
+
+```html
+<!-- A.vue -->
+
+<template>
+	<view>
+		<view>
+			<!-- 注意，不能在模板中直接使用 getApp().globalData.userName -->
+			<<卖炭翁>>的作者是：{{author}}
+		</view>
+		<view>
+			<u-button @click="modifyUserName">修改userName值</u-button>
+		</view>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				author: ''
+			}
+		},
+		onShow() {
+			// 每次A.vue出现在屏幕上时，都会触发onShow，从而更新author值
+			this.author = getApp().globalData.userName;
+		},
+		methods: {
+			modifyUserName() {
+				getApp().globalData.userName = "诗圣"；
+				// 修改userName后，本页的author依然不会自动刷新，因为globalData不是响应式的
+				// 我们仍然需要手动刷新本页的author值，由此可见globalData的弊端
+				this.author = getApp().globalData.userName;
+			}
+		}
+	}
+</script>
+```
+
+4. 假设我们从`B.vue`返回`A.vue`，这时`A.vue`出现在屏幕上，触发了它的`onShow`生命周期，执行了`this.author = getApp().globalData.userName;`，
+因而我们可以看到`A.vue`的值由`白居易`变成了在`B.vue`中修改后的`诗圣`。
+
+
+### Vuex的实现方式
+
+我们希望您使用`vuex`方式，但是也希望您对其他的实现方式有所了解，知己知彼，才能闲庭信步，了然于胸，所以把`vuex`的讲解放在最后。  
+
+这里介绍两个写法，一是传统的写法，类似于`web`中对`vuex`的使用，这里默认大家都会，只是举例，不进行过多解读。二是uView进行一定封装优化后的写法，
+新项目可以使用这个形式，它具体有简单易用的特点，当然它不是全能的，您依然可以补充自己的内容进去，它和传统的写法是不冲突的。
+
+#### (一) 传统实现方式
+
+1. 在uniapp项目根目录新建`store`文件夹，并在其中创建`index.js`，内容如下：
+
+为了避免和页面`data`变量混淆，可以给`state`中的变量添加一个特定的前缀，比如"vuex_"
+
+```js
+import Vue from 'vue'
+import Vuex from 'vuex'
+Vue.use(Vuex)
+
+const store = new Vuex.Store({
+	state: {
+		vuex_token: '123654789'
+	},
+	mutations: {
+		// payload为用户传递的值，可以是单一值或者对象
+		modifyToken(state, payload) {
+			state.vuex_token = payload.token;
+		}
+	}
+})
+
+export default store
+```
+
+2. 在uniapp项目根目录的`main.js`中，引入`vuex`
+
+```js
+// main.js
+
+import store from '@/store';
+
+// 将store放入Vue对象创建中
+const app = new Vue({
+	store,
+	...App
+})
+```
+
+3. 在`demo.vue`页面中使用并修改`state`中的`vuex_token`变量
+
+```html
+<template>
+	<view>
+		<view>
+			Token值为{{vuex_token}}
+		</view>
+		<u-button @click="btnClick">修改vuex_token</u-button>
+	</view>
+</template>
+
+<script>
+import {mapState, mapMutations} from 'vuex'; 
+export default {
+	computed: {  
+		...mapState(['vuex_token'])  
+	},  
+	methods: {  
+		...mapMutations(['modifyToken']),
+		
+		btnClick() {
+			// 这里第二个参数可以普通变量或者对象，自定义的，根据mutations需求处理
+			this.$store.commit('modifyToken', {token: 'xxxyyyzzz'})
+		}
+	}  
+}
+</script>
+```
+
+
+(二) uView进行一定改进后写法
+
+上面(一)中介绍的传统写法简单，但是也很繁琐：
+
+1. 我们需要在`vuex`中定义`state`和`mutations`
+2. 我们需要在每个用到`vuex`变量的地方，都引入`mapState`，同时还要解构到`computed`中去
+3. 修改`vuex`变量的时候，还需要通过`commit`提交
+4. 由于`vuex`变量是保存在运行内存中的，刷新浏览器`vuex`变量会消失，还需要通过其他手段实现变量的存续
+
+我们相信大家都会上面的用法，也肯定会想，有没有更简单的做法呢，答案是肯定的，uView专门对这个问题进行了优化，解决您一般情况下的苦恼。
+这个实现的方式，不是万能的，如果您需要自己的逻辑，可以融入传统的写法，是不冲突的。
+
+说明：确保您是新项目的情况下，或者您对这个实现方法很清楚，才使用这个方法。
+
+我们把实现的基本原理放到了另一个页面，如果您感兴趣，可以点击这里查看：[uView优化Vuex的写法的基本原理](/components/vuexDetail.html)
+
+
+
+#### **具体实现**
+
+1. uniapp项目根目录新建'/store/index.js'，并复制如下内容到其中
+
+注意：如果某个变量需要保存到APP的下一次启动中，或者需要H5刷新之后不消失，在`state`中声明后，还需要写入到`saveStateKeys`数组中，
+同时，在`state`中也需要写上`lifeData.xxx ? lifeData.xxx : yyy`的形式把从存储中获取的值赋值给变量，见如下：
+
+```js
+import Vue from 'vue'
+import Vuex from 'vuex'
+Vue.use(Vuex)
+
+let lifeData = {};
+
+try{
+	// 尝试获取本地是否存在lifeData变量，第一次启动APP时是不存在的
+	lifeData = uni.getStorageSync('lifeData');
+}catch(e){
+	
+}
+
+// 需要永久存储，且下次APP启动需要取出的，在state中的变量名
+let saveStateKeys = ['vuex_user', 'vuex_token'];
+
+const saveLifeData = function(key, value){
+	// 判断变量名是否在需要存储的数组中
+	if(saveStateKeys.indexOf(key) != -1) {
+		// 获取本地存储的lifeData对象，将变量添加到对象中
+		let tmp = uni.getStorageSync('lifeData');
+		// 第一次打开APP，不存在lifeData变量，故一个{}空对象
+		tmp = tmp ? tmp : {};
+		tmp[key] = value;
+		// 执行这一步后，所有需要存储的变量，都挂载在本地的lifeData对象中
+		uni.setStorageSync('lifeData', tmp);
+	}
+}
+const store = new Vuex.Store({
+	// 下面这些值仅为示例，使用过程中请删除
+	state: {
+		// 如果上面从本地获取的lifeData对象下有对应的属性，就赋值给state中对应的变量
+		// 加上vuex_前缀，是防止变量名冲突，也让人一目了然
+		vuex_user: lifeData.vuex_user ? lifeData.vuex_user : {name: '明月'},
+		vuex_token: lifeData.vuex_token ? lifeData.vuex_token : '',
+		// 如果vuex_version无需保存到本地永久存储，无需lifeData.vuex_version方式
+		vuex_version: '1.0.1',
+	},
+	mutations: {
+		$uStore(state, payload) {
+			// 判断是否多层级调用，state中为对象存在的情况，诸如user.info.score = 1
+			let nameArr = payload.name.split('.');
+			let saveKey = '';
+			let len = nameArr.length;
+			if(nameArr.length >= 2) {
+				let obj = state[nameArr[0]];
+				for(let i = 1; i < len - 1; i ++) {
+					obj = obj[nameArr[i]];
+				}
+				obj[nameArr[len - 1]] = payload.value;
+				saveKey = nameArr[0];
+			} else {
+				// 单层级变量，在state就是一个普通变量的情况
+				state[payload.name] = payload.value;
+				saveKey = payload.name;
+			}
+			// 保存变量到本地，见顶部函数定义
+			saveLifeData(saveKey, state[saveKey])
+		}
+	}
+})
+
+export default store
+```
+
+1. uniapp项目根目录新建'/store/$u.mixin.js'，并复制如下内容到其中，您**不需要**手动引入这个文件，uView会自动引入并`mixin`处理
+
+
+```js
+import { mapState } from 'vuex'
+import store from "@/store"
+
+// 尝试将用户在根目录中的store/index.js的vuex的state变量，全部加载到全局变量中
+let $uStoreKey = [];
+try{
+	$uStoreKey = store.state ? Object.keys(store.state) : [];
+}catch(e){
+	
+}
+
+module.exports = {
+	created() {
+		// 将vuex方法挂在到$u中
+		// 使用方法为：如果要修改vuex的state中的user.name变量为"史诗" => this.$u.vuex('user.name', '史诗')
+		// 如果要修改vuex的state的version变量为1.0.1 => this.$u.vuex('version', '1.0.1')
+		this.$u.vuex = (name, value) => {
+			this.$store.commit('$uStore', {
+				name,value
+			})
+		}
+	},
+	computed: {
+		// 将vuex的state中的所有变量，解构到全局混入的mixin中
+		...mapState($uStoreKey)
+	}
+}
+```
+
+3. 在项目根目录的`main.js`中，引入"/store/index.js"，并放到Vue示例中
+
+```js
+// main.js
+
+import store from '@/store';
+
+// 将store放入Vue对象创建中
+const app = new Vue({
+	store,
+	...App
+})
+```
+
+4. 在页面使用`vuex`变量
+
+假设我们在`vuex`的`state`中定义了`vuex_version`变量和`vuex_user`对象
+
+```js
+state: {
+	vuex_version: '1.0.0',
+	vuex_user: {
+		name: '白居易'
+	}
+}
+```
+
+在`demo.vue`页面使用和修改这些变量，他们是动态全局响应的。
+
+```html
+<!-- demo.vue -->
+
+<template>
+	<view>
+		<view>
+			版本号为：{{vuex_version}}
+		</view>
+		<view>
+			<<琵琶行>>的作者为{{vuex_user.name}}
+		</view>
+		<u-button @click="modifyVuex">修改变量</u-button>
+	</view>
+</template>
+
+<script>
+	export default {
+		methods: {
+			modifyVuex() {
+				this.$u.vuex('vuex_version', '1.0.1');
+				// 修改对象的形式，中间用"."分隔
+				this.$u.vuex('vuex_user.name', '诗圣');
+			}
+		}
+	}
+</script>
+```
+

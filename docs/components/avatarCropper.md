@@ -109,16 +109,15 @@
 
 ### API
 
-以下参数，需要通过URL的get参数传参到裁剪页，非props
+以下参数，需要通过URL的get参数传参到裁剪页，非props。uView很多组件传递值的单位为`rpx`，注意这里的`dest-width`和`rect-width`单位为`px`
 
-### Props
+### URL参数
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| destWidth | 输出图片宽度，高等于宽，单位px  | String \| Number | 200 | - |
-| rectWidth | // 裁剪框宽度，高等于宽，单位px  | String \| Number | 200 | - |
-| dest-width | 裁剪生成的图片宽度，单位rpx  | String \| Number | 400 | - |
-| fileType | 输出的图片类型，如果'png'类型发现裁剪的图片太大，改成"jpg"即可  | String | jpg | png |
+| dest-width | 输出图片宽度，高等于宽，单位**px**  | String \| Number | 200 | - |
+| rect-width | 裁剪框宽度，高等于宽，单位**px**  | String \| Number | 200 | - |
+| file-type | 输出的图片类型，如果'png'类型发现裁剪的图片太大，改成"jpg"即可  | String | jpg | png |
 
 
 ### Event

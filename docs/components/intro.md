@@ -3,7 +3,7 @@
 <div class="intro-logo">
 	<img class="logo" src="/logo.png" alt="uView" />
 	<h3>uView</h3>
-	<p class="slogan">有实力无畏惧</p>
+	<p class="slogan">多平台快速开发的UI框架</p>
 </div>
 
 #### 来由
