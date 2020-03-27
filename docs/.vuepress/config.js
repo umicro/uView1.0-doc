@@ -7,6 +7,7 @@ module.exports = {
 	},
 	plugins: ['@vuepress/back-to-top'],
 	themeConfig: {
+		search: true, // 是否显示顶部搜索框
 		searchPlaceholder: '搜索文档关键字',
 		sidebarDepth: 0,
 		// lastUpdated: '上次更新时间',

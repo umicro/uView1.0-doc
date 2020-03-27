@@ -46,18 +46,6 @@ export default {
 </script>
 
 <style lang="stylus">
-.foot {
-	margin: 140px -3em 0;
-	padding: 30px 0;
-	background-color: rgb(40, 44, 52);
-	color: #909399;
-	text-align: center;
-	font-size: 14px;
-}
-
-.foot a {
-	color: #909399;
-}
 .home
 	padding $navbarHeight 2rem 0
 	max-width 960px

@@ -1,7 +1,9 @@
 ---
-home: false
+home: true
 heroText: null
 description: ''
+footer: null
+editLink: null
 ---
 
 <index></index>

@@ -67,10 +67,6 @@ tr:nth-child(2n) {
     background-color: #FFFFFF;
 }
 
-.theme-default-content:not(.custom) {
-    max-width: 1200px!important;
-}
-
 table {
 	width: 100%;
 	font-size: 14px;
@@ -127,10 +123,7 @@ table th {
 	white-space: nowrap;
 }
 
-.theme-container {
-	width: 1200px;
-	margin: auto;
-}
+
 
 // .page {
 // 	padding-left: 260px;
@@ -234,9 +227,14 @@ body::-webkit-scrollbar-track {
 	// 	width: 100%;
 	// }
 	
+	.theme-container {
+		width: 1200px;
+		margin: auto;
+	}
+	
 	.theme-default-content:not(.custom) {
 	    padding-right: 2rem;
-		max-width: none;
+		max-width: 1200px!important;
 	    padding-left: 2rem;
 	}
 	

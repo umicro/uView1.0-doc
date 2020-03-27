@@ -66,7 +66,7 @@
 			<div class="card-box support">
 				<p class="card-title">一次编写，多端发布</p>
 				<ul class="row">
-					<li class="col-md-3 col-sm-6">
+					<li class="col-md-3 col-sm-6 col-xs-6">
 						<div class="card-item">
 							<img src="/index/android.png" />
 							<h3>
@@ -75,7 +75,7 @@
 							<span class="alias">Android</span>
 						</div>
 					</li>
-					<li class="col-md-3 col-sm-6">
+					<li class="col-md-3 col-sm-6 col-xs-6">
 						<div class="card-item">
 							<img src="/index/ios.png" />
 							<h3>
@@ -84,7 +84,7 @@
 							<span class="alias">IOS</span>
 						</div>
 					</li>
-					<li class="col-md-3 col-sm-6">
+					<li class="col-md-3 col-sm-6 col-xs-6">
 						<div class="card-item">
 							<img src="/index/weixin.png" />
 							<h3>
@@ -93,7 +93,7 @@
 							<span class="alias">Mini Program</span>
 						</div>
 					</li>
-					<li class="col-md-3 col-sm-6">
+					<li class="col-md-3 col-sm-6 col-xs-6">
 						<div class="card-item">
 							<img src="/index/h5.png" />
 							<h3>
@@ -104,7 +104,7 @@
 					</li>
 				</ul>
 				<ul class="row">
-					<li class="col-md-3 col-sm-6">
+					<li class="col-md-3 col-sm-6 col-xs-6">
 						<div class="card-item">
 							<img src="/index/qq.png" />
 							<h3>
@@ -113,7 +113,7 @@
 							<span class="alias">QQ Miniprogram</span>
 						</div>
 					</li>
-					<li class="col-md-3 col-sm-6">
+					<li class="col-md-3 col-sm-6 col-xs-6">
 						<div class="card-item">
 							<img src="/index/baidu.png" />
 							<h3>
@@ -122,7 +122,7 @@
 							<span class="alias">Smart Program</span>
 						</div>
 					</li>
-					<li class="col-md-3 col-sm-6">
+					<li class="col-md-3 col-sm-6 col-xs-6">
 						<div class="card-item">
 							<img src="/index/alipay.png" />
 							<h3>
@@ -131,7 +131,7 @@
 							<span class="alias">Alipay MiniProgram</span>
 						</div>
 					</li>
-					<li class="col-md-3 col-sm-6">
+					<li class="col-md-3 col-sm-6 col-xs-6">
 						<div class="card-item">
 							<img src="/index/toutiao.png" />
 							<h3>
@@ -144,7 +144,7 @@
 			</div>
 		</div>
 		<div class="foot">
-			Copyright © 2020 uView UI | <a target="_blank" href="http://www.beian.miit.gov.cn">粤ICP备19025822号-2</a>
+			Copyright 2020 uView UI | <a target="_blank" href="http://www.beian.miit.gov.cn">粤ICP备19025822号</a>
 		</div>
 	</div>
 </template>
@@ -164,16 +164,15 @@
 
 <style scoped>
 	.foot {
-		margin: 140px -3em 0;
 		padding: 30px 0;
-		background-color: rgb(40, 44, 52);
-		color: #909399;
+		/* background-color: rgb(40, 44, 52); */
+		color: #606266;
 		text-align: center;
 		font-size: 14px;
 	}
 
 	.foot a {
-		color: #909399;
+		color: #606266;
 	}
 
 	.banner {
@@ -265,6 +264,20 @@
 
 	.card-box.support img:hover {
 		transform: scale(1.2);
+	}
+	
+	@media (max-width: 992px) {
+		.banner .desc h1 {
+			font-size: 24px;
+		}
+		
+		.banner .desc-text {
+		    font-size: 15px;
+		}
+		
+		.card-box .card-title {
+		    font-size: 20px;
+		}
 	}
 
 
