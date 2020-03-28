@@ -1,5 +1,6 @@
 body,html {
 	font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
+	-webkit-overflow-scrolling: touch;
 }
 
 * {
@@ -55,9 +56,9 @@ h3 {
 	font-size: 22px;
 }
 
-td,th {
-	max-width: 250px;
-}
+// td,th {
+// 	max-width: 250px;
+// }
 
 thead th {
 	background-color: #f7f7f7;
@@ -70,7 +71,46 @@ tr:nth-child(2n) {
 table {
 	width: 100%;
 	font-size: 14px;
+	table-layout: fixed;
 	display: table;
+}
+
+table thead tr th,
+table tbody tr td{
+	white-space: nowrap;
+	
+}
+
+table tbody tr td:nth-child(2) {
+	word-break: break-all;
+	white-space: normal;
+}
+
+table thead tr th:nth-child(2) {
+	width: 40%;
+}
+
+h3[id="平台差异说明"] + table thead tr th:nth-child(2) {
+	width: auto;
+}
+
+@media (max-width: 768px) {
+	.search-box input:focus {
+		width: 10rem!important;
+	}
+	
+	table tbody tr td:nth-child(2) {
+		white-space: nowrap;
+	}
+	
+	table {
+		display: block!important;
+	}
+	
+	table thead tr th,
+	table tbody tr td{
+		white-space: nowrap;
+	}
 }
 
 .page p {
@@ -113,17 +153,6 @@ table {
 	width: 250px;
 	padding-left: 30px;
 }
-
-table {
-	overflow: auto;
-	width: 100%;
-}
-
-table th {
-	white-space: nowrap;
-}
-
-
 
 // .page {
 // 	padding-left: 260px;
@@ -253,6 +282,7 @@ body::-webkit-scrollbar-track {
 	background: #fff url(/search_icon.png) 0.55rem 0.55rem no-repeat!important;
 	font-size: 15px!important;
 	background-size: 16px!important;
+	line-height: normal!important;
 }
 
 .navbar {
