@@ -35,8 +35,8 @@
 
 <style lang="scss" scoped>
 	.u-text {
-		padding-top: 300upx;
-		font-size: 30upx;
+		padding-top: 300rpx;
+		font-size: 30rpx;
 		color: $u-type-primary;
 		text-align: center;
 	}

@@ -51,7 +51,7 @@
 
 <style lang="scss" scoped>
 	.wrap {
-		padding: 24upx;
+		padding: 24rpx;
 	}
 	
 	.item {

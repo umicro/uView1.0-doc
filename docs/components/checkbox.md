@@ -10,7 +10,7 @@
 
 ### 基本使用
 
-- 改组件一般需要搭配`checkboxGroup`组件使用，以便用户进行操作时，获得当前复选框组的选中情况，当然，你也可以单独对某个`checkbox`进行事件监听
+- 改组件一般需要搭配`checkboxGroup`组件使用，以便用户进行操作时，获得当前复选框组的选中情况，当然，您也可以单独对某个`checkbox`进行事件监听
 - 通过`v-model`给`checkboxGroup`绑定一个变量，这个绑定的变量是双向的(初始值只能是`true`或者`false`)，也就是说，您可以无需监听`checkbox`或者`checkboxGroup`组件的`change`事件，也能知道哪个
 被勾选了
 

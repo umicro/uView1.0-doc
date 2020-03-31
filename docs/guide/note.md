@@ -2,12 +2,20 @@
 
 #### "$u"被占用
 
-uView有很多的自带的js工具函数，挂载在`$u`对象中，而`$u`又挂在载`Vue.prototype`中，所以，请勿使用`$u`变量并
+uView有很多的自带的js工具函数，挂载在`$u`对象中，而`$u`又挂在载`Vue.prototype`中，所以，请勿占用`$u`变量名并
 挂在到`Vue.prototype`。
+
+
+#### uView对nvue的支持
+
+什么是`nvue`？见[关于nvue](/guide/design.html#关于nvue)  
+目前uView是`vue`版本，nvue版本正在开发中，如果您查看uView的源码的话，您会发现，内部的css类名都是不嵌套的，因为`nvue`不支持类名嵌套，uView这是
+为了兼容`nvue`做准备，我们后面会将`vue`和`nvue`打通在一个版本中。
+
 
 #### 技术点要求
 
-1. uView依赖SCSS预处理，所以您需要给HBuilder X安装"sass/scss编译"插件，详见[快速上手](/components/quickstart.html)
+1. uView依赖`SCSS`预处理器，所以您需要给HBuilder X安装"sass/scss编译"插件，详见[快速上手](/components/quickstart.html)
 2. uView目前没有兼容nvue，目前正在着手兼容，发布后nvue和vue将会是同一个版本，完全兼容
 3. uView基于HX的最新版本开发，目前(2020年2月)最新的稳定版为2.5.1，建议使用此版本，旧版本可能会不兼容
 4. uView要求项目开启uniapp的V3版本，V3有很大的优势，详见[V3版本介绍](https://ask.dcloud.net.cn/article/36599)
@@ -53,5 +61,5 @@ module.exports = {
 
 在iPhone X等机型，底部带有指示条，如果配置了`safearea`则会在底部生成一个原生的白色区块，好处是不会导致
 误触，缺点是颜色无法修改，有时候也影响美观。  
-uView在各个可能会受到指示条影响的地方都做了特别处理，比如弹窗，键盘组件等，详见[底部安全区适配](/guide/safeAreaInset.html)
+uView在各个可能会受到指示条影响的地方都做了特别处理，比如弹窗，键盘组件等，详见[底部安全区适配](/components/safeAreaInset.html)
 

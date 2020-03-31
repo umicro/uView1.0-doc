@@ -116,7 +116,7 @@
 | tips | 顶部的提示文字，见上方文档示例 | Object  | - | - |
 | cancel-btn | 是否显示底部的取消按钮 | Boolean  | true | false |
 | mask-close-able | 点击遮罩是否可以关闭 | Boolean  | true | false |
-| safe-area-inset-bottom | 是否开启[底部安全区适配](/guide/safeAreaInset.html#关于uview某些组件safe-area-inset参数的说明) | Boolean  | false | true |
+| safe-area-inset-bottom | 是否开启[底部安全区适配](/components/safeAreaInset.html#关于uview某些组件safe-area-inset参数的说明) | Boolean  | false | true |
 
 
 ### Event

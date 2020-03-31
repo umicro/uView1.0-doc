@@ -7,7 +7,7 @@
 ::: warning 注意
 此组件内部使用uniapp的`button`组件为基础，除了开头中所说的增加的功能，另外暴露出来的props属性和官方组件的属性完全一致，
 uniapp的`button`组件比较特殊，因为它有一些其他小程序平台的特定能力，请参考文档后面的参数列表，更详细说明请参考uniapp官方文档：  
-[uniapp官方`button`组件](https://uniapp.dcloud.io/component/button)
+[uniapp官方button组件](https://uniapp.dcloud.io/component/button)
 :::
 
 ### 平台差异说明
@@ -46,7 +46,7 @@ uniapp的`button`组件比较特殊，因为它有一些其他小程序平台的
 
 ### 设置尺寸
 
-相比uniapp官方`button`组件的`size`（可选值为`default`(默认)和`mini`）参数，uView多了个`medium`(中等尺寸)的可选值
+`button`组件的`size`（可选值为`default`(默认)，`mini`(小尺寸)和`medium`(中等尺寸)）
 
 ```html
 <u-button size="default">江湖</u-button>
@@ -78,13 +78,14 @@ uniapp的`button`组件比较特殊，因为它有一些其他小程序平台的
 
 ### 如何修改按钮的样式
 
-1. 针对非微信小程序平台，组件的根元素就是uniapp的`button`组件，所以修改按钮的样式很容易，直接给组件定义`类名`或者嵌入`内联样式`即可  
-2. 如果是微信小程序，编译后页面会有组件同名的元素存在，导致样式传递有问题
+1. 针对非微信小程序平台，组件的根元素就是uniapp的`button`组件，所以修改按钮的样式很容易，直接给组件定义`类名`或者嵌入`内联样式`即可。  
+2. 如果是微信小程序，编译后页面会有组件同名的元素存在，导致样式传递有问题。 
+3. 如果是为了修改按钮与其他元素之间的距离或者宽度等，可以给按钮外面套一个`view`元素，控制这个`view`与其他元素的距离或者宽度，即可达到同等效果。  
 
-所以：我们提供了一个`custom-style`参数，推荐用户可以用对象形式传递样式给组件内部，注意驼峰命名
+所以：我们提供了一个`custom-style`参数，推荐用户可以用对象形式传递样式给组件内部，注意驼峰命名。
 
 ```html
-/* 以下形式在微信小程序会无效 */
+/* 以下形式在微信小程序会无效，APP和H5有效 */
 <u-button class="custom-style">雪月夜</u-button>
 
 <style scoped>
@@ -111,7 +112,7 @@ uniapp的`button`组件比较特殊，因为它有一些其他小程序平台的
 ### Props
 
 如果此文档关于其他平台小程序的开放能力的说明无法满足您的需求，请参考uniapp官方文档：  
-[uniapp官方`button`组件](https://uniapp.dcloud.io/component/button)
+[uniapp官方button组件](https://uniapp.dcloud.io/component/button)
 
 |属性名|说明|类型|默认值|可选值|平台差异说明|
 |:-|:-|:-|:-|:-|:-|
@@ -122,8 +123,8 @@ uniapp的`button`组件比较特殊，因为它有一些其他小程序平台的
 |plain|按钮是否镂空，背景色透明|Boolean|false|true|-|
 |disabled|是否禁用|Boolean|false|true|-|
 |shape|按钮外观形状，见上方说明|String|square|circle|-|
-|loading|名称前是否带 loading 图标|Boolean|false|true|App-nvue 平台，在 ios 上为雪花，Android上为圆圈|
-|form-type|用于 ``<form>`` 组件，点击分别会触发 ``<form>`` 组件的 submit/reset 事件|String|-|submit / reset|-|
+|loading|按钮名称前是否带 loading 图标|Boolean|false|true|App-nvue 平台，在 ios 上为雪花，Android上为圆圈|
+|form-type|用于 `<form>` 组件，点击分别会触发 `<form>` 组件的 submit/reset 事件|String|-|submit / reset|-|
 |open-type|开放能力|String|请参考uniapp官方文档|-|-|
 |hover-class|指定按钮按下去的样式类。当 hover-class="none" 时，没有点击态效果|String|button-hover|-|App-nvue 平台暂不支持|
 |hover-start-time|按住后多久出现点击态，单位毫秒|Number|20|-|-|
@@ -131,6 +132,8 @@ uniapp的`button`组件比较特殊，因为它有一些其他小程序平台的
 |custom-style|对按钮的自定义样式，对象形式，见上方说明|Object|-|-|-|
 
 ### Events
+
+**说明**：目前经测试(Hbuilder X 2.6.8)，在H5，APP，微信小程序，可以直接对组件监听`tap`事件，等同组件内部发出的`click`事件效果。
 
 |属性名|说明|类型|默认值|可选值|平台差异说明|
 |:-|:-|:-|:-|:-|:-|

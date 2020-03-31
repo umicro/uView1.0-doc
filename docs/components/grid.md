@@ -34,8 +34,8 @@
 
 <style scoped lang="scss">
 	.grid-text {
-		font-size: 28upx;
-		margin-top: 4upx;
+		font-size: 28rpx;
+		margin-top: 4rpx;
 		color: $u-type-info;
 	}
 </style>
@@ -75,8 +75,8 @@
 	}
 	
 	.grid-text {
-		font-size: 28upx;
-		margin-top: 4upx;
+		font-size: 28rpx;
+		margin-top: 4rpx;
 		color: $u-type-info;
 	}
 </style>
@@ -132,8 +132,8 @@
 	}
 	
 	.grid-text {
-		font-size: 28upx;
-		margin-top: 4upx;
+		font-size: 28rpx;
+		margin-top: 4rpx;
 		color: $u-type-info;
 	}
 </style>

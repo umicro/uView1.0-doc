@@ -153,7 +153,7 @@
 |-------------  |---------------- |---------------|------------------ |-------- |
 | loading | 是否处于加载中  | Boolean | false | true |
 | disabled | 是否禁用  | Boolean | false | true |
-| size | 开关尺寸，单位rpx | String \| Number  | 60 | - |
+| size | 开关尺寸，单位rpx | String \| Number  | 50 | - |
 | active-color | 打开时的背景色 | String  | #2979ff | - |
 | un-active-color | 关闭时的背景色 | String  | #ffffff | - |
 

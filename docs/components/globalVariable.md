@@ -1,6 +1,6 @@
 ## 全局变量的实现方式
 
-我们这里说的全局变量，着重指的是能够**全局动态响应**的情况
+我们这里说的全局变量，着重指的是能够**全局动态响应**的情况。
 
 说到全局变量，我们首先想到的可能就是`vuex`，确实，这是最好的实现方式。在uniapp平台，我们还可以有其他的实现方式，这里我们做一个抛砖引玉的讨论，当然，我们
 推荐的，还是使用uView封装后的`vuex`的实现方式，它具有配置简单，使用方便的特点。  
@@ -21,7 +21,7 @@
 这是一种持久存储的方式，类似于`web`中的`Local Storage`，当我们需要将一个变量保存很长一段时间，比如用户的登录状态(Token)，才会使用这种方式，
 同时，频繁对这种方式进行存和取，是有性能消耗的，应用生命周期(应用从启动到关闭)内使用的变量，不应该使用此方式操作。
 
-此种存储方式，有同步和异步之分
+此种存储方式，有同步和异步之分：
 
 - 同步的意思是，下一步的操作要等获取存储的内容之后才能进行，一般获取变量的时候，都使用此种方式。
 
@@ -35,7 +35,7 @@ let key = uni.getStorageSync('key');
 let val = 1; 
 ```
 
-- 异步的意思是，执行取或存的过程中，先执行后面的代码，在回调中得到存储的结果
+- 异步的意思是，执行取或存的过程中，先执行后面的代码，而另一边在回调中得到存储的结果。
 
 ```js
 // 异步存储
@@ -70,11 +70,11 @@ APP之前，直到用户卸载APP，都需要存在的这样一些变量或者�
 ```js
 // config.js，根目录的common文件夹中
 export default {
-	domain: 'http://39.99.140.15',
+	domain: 'http://www.example.com',
 }
 ```
 
-需要使用的时候，我们通过`import`引入即可，这种方式，缺点是每次都需要引入文件，我们无法将挂载在到Vue.prototype上
+需要使用的时候，我们通过`import`引入即可，这种方式，缺点是每次都需要引入文件，我们无法将挂载在到Vue.prototype上。
 
 ```js
 import config from "./uview/libs/config/config.js"
@@ -120,12 +120,12 @@ export default {
 
 这个方式，最早是微信小程序特有的，它无法使用`vuex`进行全局状态的管理，就造了这个方式。  
 
-可能你会问，为什么uniapp有了`vuex`还要有这个呢？
+可能您会问，为什么uniapp有了`vuex`还要有这个呢？
 
 globalData是微信小程序的特性，uniapp是对微信小程序的另一个实现，顺理成章的就有了globalData，另外的原因也是因为globalData使用简单，也有它存在的理由。
-当然，globalData也不是动态响应的，也就是说，你在`A.vue`修改了globalData中的某个值`username`，在`B.vue`中对这个值的引用是无法自动更新的，`vuex`却是可以做到的。
+当然，globalData也不是动态响应的，也就是说，您在`A.vue`修改了globalData中的某个值`username`，在`B.vue`中对这个值的引用是无法自动更新的，`vuex`却是可以做到的。
 
-由上，因为无法自动更新，为了做到这一点，所以我们需要在页面的`onShow`生命周期中获取globalData的值，或许你会问，为什么一定是`onShow`呢，`onLoad`不行吗？
+由上，因为无法自动更新，为了做到这一点，所以我们需要在页面的`onShow`生命周期中获取globalData的值，或许您会问，为什么一定是`onShow`呢，`onLoad`不行吗？
 `onLoad`获取值是没问题的，但是当我们从`A.vue`进入`B.vue`中(假设A和B页面都通过globalData引用了某个`userName`)，在`B.vue`中修改了globalData的
 `userName`，当我们返回`A.vue`页面时，`onLoad`不会再次触发，但是`onShow`就如它的字面意思，是会再次触发的，所以我们需要把对globalData的获取放在`onShow`生命周期。
 
@@ -178,7 +178,7 @@ export default {
 3. 当我们从`A.vue`进入`B.vue`时，引用并修改`userName`的值
 
 ```html
-<!-- A.vue -->
+<!-- B.vue -->
 
 <template>
 	<view>
@@ -200,7 +200,7 @@ export default {
 			}
 		},
 		onShow() {
-			// 每次A.vue出现在屏幕上时，都会触发onShow，从而更新author值
+			// 每次B.vue出现在屏幕上时，都会触发onShow，从而更新author值
 			this.author = getApp().globalData.userName;
 		},
 		methods: {
@@ -304,14 +304,14 @@ export default {
 1. 我们需要在`vuex`中定义`state`和`mutations`
 2. 我们需要在每个用到`vuex`变量的地方，都引入`mapState`，同时还要解构到`computed`中去
 3. 修改`vuex`变量的时候，还需要通过`commit`提交
-4. 由于`vuex`变量是保存在运行内存中的，刷新浏览器`vuex`变量会消失，还需要通过其他手段实现变量的存续
+4. 由于`vuex`变量是保存在运行内存中的，H5中刷新浏览器`vuex`变量会消失，还需要通过其他手段实现变量的存续
 
 我们相信大家都会上面的用法，也肯定会想，有没有更简单的做法呢，答案是肯定的，uView专门对这个问题进行了优化，解决您一般情况下的苦恼。
 这个实现的方式，不是万能的，如果您需要自己的逻辑，可以融入传统的写法，是不冲突的。
 
 说明：确保您是新项目的情况下，或者您对这个实现方法很清楚，才使用这个方法。
 
-我们把实现的基本原理放到了另一个页面，如果您感兴趣，可以点击这里查看：[uView优化Vuex的写法的基本原理](/components/vuexDetail.html)
+我们把实现的基本原理放到了另一个独立的专题，如果您感兴趣，可以点击这里查看：[uView优化Vuex的写法的基本原理](/components/vuexDetail.html)
 
 
 
@@ -320,7 +320,7 @@ export default {
 1. uniapp项目根目录新建'/store/index.js'，并复制如下内容到其中
 
 注意：如果某个变量需要保存到APP的下一次启动中，或者需要H5刷新之后不消失，在`state`中声明后，还需要写入到`saveStateKeys`数组中，
-同时，在`state`中也需要写上`lifeData.xxx ? lifeData.xxx : yyy`的形式把从存储中获取的值赋值给变量，见如下：
+同时，在`state`中也需要写上`lifeData.xxx ? lifeData.xxx : yyy`的形式，保证应用启动时能把从存储中获取的值赋值给变量，见如下：
 
 ```js
 import Vue from 'vue'
@@ -339,12 +339,13 @@ try{
 // 需要永久存储，且下次APP启动需要取出的，在state中的变量名
 let saveStateKeys = ['vuex_user', 'vuex_token'];
 
+// 保存变量到本地存储中
 const saveLifeData = function(key, value){
 	// 判断变量名是否在需要存储的数组中
 	if(saveStateKeys.indexOf(key) != -1) {
 		// 获取本地存储的lifeData对象，将变量添加到对象中
 		let tmp = uni.getStorageSync('lifeData');
-		// 第一次打开APP，不存在lifeData变量，故一个{}空对象
+		// 第一次打开APP，不存在lifeData变量，故放一个{}空对象
 		tmp = tmp ? tmp : {};
 		tmp[key] = value;
 		// 执行这一步后，所有需要存储的变量，都挂载在本地的lifeData对象中
@@ -448,7 +449,12 @@ state: {
 }
 ```
 
-在`demo.vue`页面使用和修改这些变量，他们是动态全局响应的。
+在`demo.vue`页面使用和修改这些变量，他们是动态全局响应的。  
+
+这里用的修改方式为：this.$u.vuex(key, value)：  
+1) 如果要修改`state`中的`vuerx_version`变量为`1.0.3`，则：this.$u.vuex('verx_version', '1.0.3')。  
+2) 如果要修改`state`中的`vuerx_user`对象的`name`属性为`青柠`，则：this.$u.vuex('vuerx_user.name', '青柠')，与1中不同的是，对象的话，
+需要用点"."分隔开。
 
 ```html
 <!-- demo.vue -->

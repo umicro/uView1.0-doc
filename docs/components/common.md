@@ -3,7 +3,7 @@
 #### 说明
 
 uView组件功能的实现，并不依赖全局样式，内置的一些类名，只是提供一些基础且常用的样式，仅此而已。  
-注意：请根据[快速上手](/guide/quickstart.html)中的说明，引入uView提供的scss文件。
+注意：请根据[快速上手](/components/quickstart.html)中的说明，引入uView提供的scss文件。
 
 #### 文字省略
 
@@ -22,7 +22,7 @@ uniapp中，iOS和少数设备使用`1rpx`是能够得到类似`0.5px`的半像�
 故uView提供了一套兼容的css类名，方便用户使用。  
 `u-border`表示给元素添加四周的边框，`u-border-top`为上边框，`u-border-right`为右边框，
 `u-border-bottom`为下边框，`u-border-left`为左边框。  
-说明：如果想调整边框与内容的距离，调整盒子的内边距即可。
+说明：如果想调整边框与内容的距离，修改元素的内边距即可。
 
 ```html
 <view class="u-border-bottom">
@@ -38,7 +38,11 @@ uView提供了四个关于文字颜色的scss变量名，具体详见文档的[C
 - `$u-tips-color`提示颜色，可以用于浅颜色的提示语的场景
 - `$u-light-color`为比`$u-tips-color`更浅的颜色，可以和`$u-tips-color`搭配使用
 
+举个例子：  
+我们平时看到的APP的新闻列表，标题颜色可以用`$u-main-color`，简介部分颜色可以用`$u-content-color`，底部的发布时间文字等可以用`$u-tips-color`。
+
 ```html
+<!-- 请确保在style标签声明了"lang="scss"" -->
 <style lang="scss" scoped>
 	.box {
 		color: $u-main-color;

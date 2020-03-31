@@ -158,7 +158,7 @@ let params = {
 | mode | 模式选择，region-地区类型，time-时间类型  | String	 | time | region |
 | start-year | 开始的年份，mode=time时有效 | String \| Number | 1950 | - |
 | end-year | 结束的年份，mode=time时有效 | String \| Number | 2050 | - |
-| safe-area-inset-bottom | 是否开启[底部安全区适配](/guide/safeAreaInset.html#关于uview某些组件safe-area-inset参数的说明) | Boolean  | false | true |
+| safe-area-inset-bottom | 是否开启[底部安全区适配](/components/safeAreaInset.html#关于uview某些组件safe-area-inset参数的说明) | Boolean  | false | true |
 | cancel-color | 取消按钮的颜色  | String | #606266 | - |
 | confirm-color | 确认按钮的颜色  | String | #2979ff | - | 6
 | default-time | 默认选中的时间，mode=time时有效  | String | - | - |

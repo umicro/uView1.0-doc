@@ -76,7 +76,7 @@
 
 <style lang="scss" scoped>
 	.container {
-		padding: 20upx 60upx;
+		padding: 20rpx 60rpx;
 	}
 
 	.userinfo {

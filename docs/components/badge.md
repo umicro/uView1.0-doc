@@ -14,8 +14,9 @@
 `error`(红色-错误)，`success`(绿色-成功)，`info`(灰色-信息)
 
 ::: warning 注意
-此组件内部默认为`absulote`绝对定位，所以需要给`badge`父组件设置`position: relative`相对定位，
-再通过调整`offset`偏移值(数组，两个元素，第一个元素为`top`值，第二个元素为`right`值，单位rpx，可为负值，如"[-10, -10]")设置到合适的位置即可
+此组件内部默认为`absulote`绝对定位，所以需要给`badge`父组件(元素)设置`position: relative`相对定位，
+再通过调整`offset`偏移值(数组，两个元素，第一个元素为`top`值，第二个元素为`right`值，单位rpx，可为负值，如"[-10, -10]")设置到合适的位置即可。  
+如果不需要组件内容默认的自动绝对定位，设置`absolute`参数为`false`即可。
 :::
 
 ```html
@@ -24,10 +25,10 @@
 
 ### 设置徽标的尺寸
 
-参数是`size`，如果设置为`small`，将会得到一个小尺寸的徽标。组件内部是通过css的`scale`属性值进行缩放
+`size`参数默认为`default`，如果设置为`mini`，将会得到一个小尺寸的徽标，组件内部通过css的`scale`属性值进行缩放。
 
 ```html
-<u-badge size="small" type="green"></u-badge>
+<u-badge size="small" type="success"></u-badge>
 ```
 
 ### 设置徽标的类型为一个圆点
@@ -35,13 +36,13 @@
 通过`is-dot`参数设置，该形式组件没有内容，只显示一个圆点
 
 ```html
-<u-badge :is-dot="true" type="green"></u-badge>
+<u-badge :is-dot="true" type="success"></u-badge>
 ```
 
 ### 自定义徽标样式
 
 该组件内部通过一个`view`元素实现，是一个根元素，依据`vue-cli`的`vue-loader`特性，在引用的组件上直接写类名或者内联样式，可以作用于组件内部的
-根元素上，所以用户可以在组件引用时自定义修改样式 
+根元素上(微信小程序除外)，所以用户可以在组件引用时自定义修改样式 
 
 ```html
 <u-badge type="green" class="badge"></u-badge>
@@ -62,10 +63,11 @@
 |-------------  |---------------- |---------------|------------------ |-------- |
 | count | 展示的数字，大于 `overflowCount` 时显示为 `${overflowCount}+`，为 0 时隐藏  | String \| Number | - | - |
 | is-dot | 不展示数字，只有一个小点 | Boolean  | false | true |
+| absolute | 组件是否绝对定位，为`true`时，`offset`参数才有效 | Boolean  | true | false |
 | overflow-count | 展示封顶的数字值 | String \| Number  | 99 | - |
 | type | 使用预设的颜色 | String  | error | success / primary / warning / info |
 | show-zero | 当数值为 0 时，是否展示 Badge | Boolean  | false | true |
-| size | Badge的尺寸，设为`small`会得到小一号的Badge | String  | default | mini |
-| offset | 设置badge的位置偏移，格式为 [x, y]，也即设置的为`top`和`right`的值，单位upx | Array | - | - |
+| size | Badge的尺寸，设为`mini`会得到小一号的`Badge` | String  | default | mini |
+| offset | 设置badge的位置偏移，格式为 [x, y]，也即设置的为`top`和`right`的值，单位rpx。`absolute`为`true`时有效 | Array | [20, 20] | - |
 
 

@@ -1,6 +1,6 @@
 ## Cell 单元格
 
-cell单元格一般用于一组列表的情况，比如个人中心页，设置页等
+cell单元格一般用于一组列表的情况，比如个人中心页，设置页等。
 
 ### 平台差异说明
 
@@ -10,9 +10,9 @@ cell单元格一般用于一组列表的情况，比如个人中心页，设置�
 
 ### 基本使用
 
-- 该组件需要搭配`cell-group`使用，并由它实现列表组的上下边框
-- 通过`title`设置左侧标题，`value`设置右侧内容
-- 通过`icon`字段设置图标，值为uView自带的图标名
+- 该组件需要搭配`cell-group`使用，并由它实现列表组的上下边框。
+- 通过`title`设置左侧标题，`value`设置右侧内容。
+- 通过`icon`字段设置图标，值为uView自带的[Icon 图标](/components/icon.html)名。
 
 ```html
 <template>
@@ -33,12 +33,16 @@ cell单元格一般用于一组列表的情况，比如个人中心页，设置�
 <u-cell-group>
 	<u-cell-item  title="夕阳无限好" arrow-direction="down">
 		<u-icon slot="icon" size="32" name="search"></u-icon>
-		<u-badge count="99" slot="left"></u-badge>
-		<switch checked slot="right" />
+		<!-- <u-badge count="99" :absolute="false" slot="right"></u-badge> -->
+		<u-switch slot="right" v-model="checked"></u-switch>
 	</u-cell-item>
 	<u-cell-item icon="setting-fill" title="只是近黄昏"></u-cell-item>
 </u-cell-group>
 ```
+
+如上所示，可以给`cell-item`组件通过`slot="right"`设定右边uView自带的`badge`或者`switch`组件：
+- 如果搭配的是`badge`组件，注意设置`absolute`参数为`false`去掉绝对定位，否则其位于右侧的恰当位置，详见[Badge 徽标数](/components/badge.html)。
+- 如果搭配的是`switch`组件，注意要通过`v-model`绑定一个内容为布尔值的变量，否则无法操作`switch`，详见[Switch 开关选择器](/components/switch.html)。
 
 ### 展示右箭头
 
@@ -53,7 +57,7 @@ cell单元格一般用于一组列表的情况，比如个人中心页，设置�
 
 ### 分组标题
 
-通过`cell-group`的title属性可以指定分组标题
+通过`cell-group`的`title`参数可以指定分组标题
 
 ```html
 <u-cell-group title="设置喜好">
@@ -77,11 +81,11 @@ cell单元格一般用于一组列表的情况，比如个人中心页，设置�
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | title | 左侧标题  | String | - | - |
-| icon | 左侧图标名，只支持uView内置图标 | String  | - | - |
+| icon | 左侧图标名，只支持uView内置图标，见[Icon 图标](/components/icon.html) | String  | - | - |
 | value | 右侧内容 | String  | - | - |
 | label | 标题下方的描述信息 | String | - | - |
 | border | 是否显示每个cell的下边框 | Boolean  | true | false |
-| hover | 是否开启点击反馈，`hover-class`形式 | Boolean  | true | false |
+| hover | 是否开启点击反馈，`hover-class`形式，如果右侧通过`slot`传递`switch`进去的话，可以将此值设置为`false` | Boolean  | true | false |
 | arrow | 是否显示右侧箭头 | Boolean | true | false |
 | arrow-direction | 箭头方向，可选值为 | String  | right | top / bottom |
 | title-style | 标题样式，对象形式 | Object | - | - |

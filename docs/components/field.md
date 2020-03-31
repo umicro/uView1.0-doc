@@ -157,7 +157,7 @@
 
 某些场景，比如需要用用户选择性别，或者时间，地区选择等，我们可以结合uView的[ActionSheet](/components/actionSheet.html)和[Picker](/components/picker.html)组件解决，
 这种情况，一般都是要求`field`组件是不可输入内容的，我们需要设置`disabled`参数为`true`，既然是需要弹出选择框，`field`组件右边应该要有一个实心向下的
-三角形图标，配置为`right-icon`为`arrow-down-fill`，同时监听`click`即可。这一切，uView都帮你想到，并且做好了。  
+三角形图标，配置为`right-icon`为`arrow-down-fill`，同时监听`click`即可。这一切，uView都帮您想到，并且做好了。  
 
 
 
@@ -216,7 +216,7 @@ export default {
 | type | 输入框的类型 | String  | text | textarea |
 | icon | `label`左边的图标，限uView的图标名称 | String | - | - |
 | right-icon | 输入框右边的 | Boolean  | false | true |
-| required | 是否必填，左边你显示红色"*"号 | Boolean  | false | true |
+| required | 是否必填，左边您显示红色"*"号 | Boolean  | false | true |
 | label | 输入框左边的文字提示 | String  | - | - |
 | password | 是否密码输入方式(用点替换文字)，`type`为`text`是有效 | Boolean  | false | true |
 | clearable | 是否显示右侧清空内容的图标控件 | Boolean  | true | false |

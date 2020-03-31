@@ -1,8 +1,10 @@
 <template>
-	<div class="icon-box">
-		<div class="item" v-for="(item, index) in iconList" :key="index">
-			<i class="iconfont" :class="['uicon-' + item.name]"></i>
-			<div class="name">{{item.name}}</div>
+	<div class="icon-box container-fluid">
+		<div class="row">
+			<div class="item col-md-2 col-sm-3 col-xs-4" v-for="(item, index) in iconList" :key="index">
+				<i class="iconfont" :class="['uicon-' + item.name]"></i>
+				<div class="name">{{item.name}}</div>
+			</div>
 		</div>
 	</div>
 </template>
@@ -12,6 +14,13 @@
 		data() {
 			return {
 				iconList: [{
+						name: 'checkbox-mark'
+					},{
+						name: 'arrow-up-fill'
+					},
+					{
+						name: 'arrow-down-fill'
+					},{
 						name: 'backspace'
 					},
 					{
@@ -591,7 +600,7 @@
 </script>
 
 <style scoped>
-	@import url("//at.alicdn.com/t/font_1529455_598youm27ts.css");
+	@import url("//at.alicdn.com/t/font_1529455_54gy2dcj8lj.css");
 
 	.icon-box {
 		display: flex;
@@ -608,7 +617,12 @@
 		font-size: 13px;
 		border-right: 1px solid #eaeefb;
 		border-bottom: 1px solid #eaeefb;
-		padding: 30px 5px;
+		padding: 0 5px;
+		height: 120px;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
 		box-sizing: border-box;
 	}
 	

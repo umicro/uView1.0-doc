@@ -48,9 +48,9 @@
 
 <style lang="scss" scoped>
 	.u-node {
-		width: 44upx;
-		height: 44upx;
-		border-radius: 100upx;
+		width: 44rpx;
+		height: 44rpx;
+		border-radius: 100rpx;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -60,18 +60,18 @@
 	.u-order-title {
 		color: #333333;
 		font-weight: bold;
-		font-size: 32upx;
+		font-size: 32rpx;
 	}
 	
 	.u-order-desc {
 		color: rgb(150, 150, 150);
-		font-size: 28upx;
-		margin-bottom: 6upx;
+		font-size: 28rpx;
+		margin-bottom: 6rpx;
 	}
 	
 	.u-order-time {
 		color: rgb(200, 200, 200);
-		font-size: 26upx;
+		font-size: 26rpx;
 	}
 </style>
 ```

@@ -78,7 +78,7 @@
 		</view>
 		<swiper :current="swiperCurrent" @transition="transition" @animationfinish="animationfinish">
 			<swiper-item class="swiper-item" v-for="(item, index) in tabs" :key="index">
-				<scroll-view scroll-y style="height: 800upx;width: 100%;" @scrolltolower="onreachBottom">
+				<scroll-view scroll-y style="height: 800rpx;width: 100%;" @scrolltolower="onreachBottom">
 					...
 				</scroll-view>
 			</swiper-item>

@@ -9,15 +9,47 @@ uView已通过大量的实践中，收集了用户最有可能需要用到的图
 以下说明和演示，均针对[阿里字体图标库](https://www.iconfont.cn)，其他字体库源同理
 :::
 
-### 基础使用
+总的来说，我们要实现的时如下的效果：
+
+```css
+@font-face {
+	/* 声明"custom-icon"字体 */
+	font-family: "custom-icon";
+	src: url('data:application/x-font-woff2;charset=utf-8;base64,xxxxxxxx') format('woff2');
+}
+
+.custom-icon {
+	/* 引用上面声明的"custom-icon"字体 */
+	font-family: "custom-icon" !important;
+	font-size: 16px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* 字体图标的前缀为"custom-icon-" */
+.custom-icon-copy:before {
+  content: "\e641";
+}
+```
+
+通过如下方式引用：  
+
+通过`custom-prefix`指定类名为`custom-icon`
+
+```html
+<u-icon name="copy" custom-prefix=""></u-icon>
+```
+
+### 基础说明
 
 我们假定您一个项目中，需要扩展多个图标，所以您应该把各个图标收集进一个阿里图标库的项目中，这方便于您后面不断的扩展图标，却能让他们在同一个库中。
 
-一般情况下，我们建议您在收藏的项目中，使用"下载至本地"的功能(如下图)，而后解压，复制文件夹中的"iconfont.css"至uniapp项目中(其余的文件可忽略)
+一般情况下，我们建议您在收藏的项目中，使用"下载至本地"的功能，而后解压，复制文件夹中的"iconfont.css"至uniapp项目中(其余的文件可忽略)
 
 下面的操作默认您已进入阿里图标库的"图标管理"栏目中
 
-1. 我们建议，您应该修改这个图标图标前缀，这样以后有新图标加入的时候，不用每次频繁修改前缀，在右上角的"更多操作"中，进入"编辑项目"：
+1. 我们建议，您应该修改这个图标的前缀，这样以后有新图标加入的时候，不用每次频繁修改前缀，在右上角的"更多操作"中，进入"编辑项目"：
 
 <img src="/custom_icon_3.png" />
 
@@ -35,7 +67,7 @@ uView已通过大量的实践中，收集了用户最有可能需要用到的图
 
 <img src="/custom_icon_2.png" />
 
-5. 复制到uniapp项目根目录的`static`目录后(也可以为其他目录)，打开"iconfont.css"，内部如下
+5. 复制"iconfont.css"文件到uniapp项目根目录的`static`目录后(也可以为其他目录)，打开"iconfont.css"，内部如下：
 
 删掉下图圈出的部分，记得把"src: url('data:application/x-font-woff2......"最后的逗号`,`改成分号`;`。
 
@@ -46,8 +78,8 @@ uView已通过大量的实践中，收集了用户最有可能需要用到的图
 <img src="/custom_icon_6.png" />
 
 
-7. 倒数第二步，在项目根目录的"App.vue"中，引入上述的"iconfont.css"，注意自己存放的路径，且通过"@import"引入的外部样式，目前只能用相对路径，
-且引入的样式，需要写在`style`标签内容中的最前面，如下：
+7. 在项目根目录的"App.vue"中，引入上述的"iconfont.css"，注意自己存放的路径，且通过"@import"引入的外部样式，为了兼容性建议使用相对路径，
+且引入的样式，需要写在`style`标签有效内容中的最前面，如下：
 
 ```css
 /* App.vue */
@@ -59,12 +91,13 @@ uView已通过大量的实践中，收集了用户最有可能需要用到的图
 	......
 }
 
-/* 下面为错误示例，因为这里不是style标签内容的最前面 */
+/* 下面为错误示例，因为这里不是style标签内容的最前面，前面还有个".view"的样式 */
 /* @import "./static/iconfont.css"; */
 </style>
 ```
 
-8. 在页面通过uView的[Icon](/components/icon.html)组件使用图标，图标名称为您在阿里图标库中点击"编辑图标"时的"Font Class / Symbol"(该值可修改，每次修改都需重新下载放到uniapp项目中)
+8. 在页面通过uView的[Icon](/components/icon.html)组件使用图标，图标名称为您在阿里图标库中点击"编辑图标"时的"Font Class / Symbol"(该值可修改，每次修改都需重新下载"iconfont.css"放到uniapp项目中，
+覆盖原来的"iconfont.css")
 
 <img src="/custom_icon_7.png" />
 
@@ -78,8 +111,8 @@ uView已通过大量的实践中，收集了用户最有可能需要用到的图
 <br><br><br><br>
 
 **注意**：执行完上面的操作后，您就可以随心所欲的扩展自己的图标了，最重要的是第二步，修改了它，就免了以后每次都要修改"iconfont.css"的多处细节。
-当然，每次新增图标，当您把"iconfont.css"复制至项目中覆盖原来的"iconfont.css"后，都需要执行一遍第5步，别忘了修改最后的`,`为`;`。 
+当然，每次新增图标，当您把"iconfont.css"复制至项目中覆盖原来的"iconfont.css"后，都需要执行一遍第5步删掉多余的内容，别忘了修改最后的`,`为`;`。 
 
-最后提一下，为了多平台兼容性，您应该仅把单色图标图标添加到阿里图标库的项目中，即使添加了多色的图标，在使用中，也会被转成单色。
+最后提一下，为了多平台兼容性，您应该仅把单色图标添加到阿里图标库的项目中，即使添加了多色的图标，在使用中，也会被转成单色。
 
 祝您使用愉快！

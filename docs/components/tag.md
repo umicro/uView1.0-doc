@@ -41,8 +41,8 @@
 
 ### 设置标签是否可以关闭
 
-设置`closeable`参数为`true`，会在标签上添加一个关闭图标  
-设置可关闭后，点击关闭按钮，会发出`close`事件，回调中手动设置`show`参数为`false`，可以隐藏tag
+设置`closeable`参数为`true`，会在标签上自动添加一个关闭图标  
+设置可关闭后，点击关闭按钮，会发出`close`事件，回调中手动设置`show`参数为`false`，可以隐藏`Tag`
 
 ```html
 <template>
@@ -75,13 +75,12 @@
 | size | 标签大小  | String	 | default | mini |
 | shape | 标签形状 | String | square | circle / circleLeft / circleRight |
 | text | 标签的文字内容 | String | - | - |
-| zoom | 是否开启缩放动画，只在`mode`为`center`时有效  | Boolean | true | false |
 | bg-color | 自定义标签的背景颜色 | String  | - | - |
 | border-color | 标签的边框颜色  | String | - | - |
 | close-color | 关闭按钮的颜色  | String | - | - |
 | index | 点击标签时，会通过`click`事件返回该值  | String \| Number | - | - |
 | mode | 模式选择，见上方说明 | String | light | dark / plain |
-| closeable | 是否可关闭，设置为`true`，会出现一个关闭图标  | Boolean | false | true |
+| closeable | 是否可关闭，设置为`true`，文字右边会出现一个关闭图标  | Boolean | false | true |
 | show | 标签显示与否  | Boolean | true | false |
 
 ### Event
