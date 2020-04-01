@@ -218,8 +218,8 @@ export default {
 | right-icon | 输入框右边的 | Boolean  | false | true |
 | required | 是否必填，左边您显示红色"*"号 | Boolean  | false | true |
 | label | 输入框左边的文字提示 | String  | - | - |
-| password | 是否密码输入方式(用点替换文字)，`type`为`text`是有效 | Boolean  | false | true |
-| clearable | 是否显示右侧清空内容的图标控件 | Boolean  | true | false |
+| password | 是否密码输入方式(用点替换文字)，`type`为`text`时有效 | Boolean  | false | true |
+| clearable | 是否显示右侧清空内容的图标控件(输入框有内容，且获得焦点时才显示)，点击可清空输入框内容 | Boolean  | true | false |
 | lable-width | `lable`的宽度，单位rpx | Number \| String | 130 | - |
 | label-align | `label`的文字对齐方式 | String  | left | center / right |
 | input-align | 输入框内容对齐方式 | String | left | center / right |
@@ -244,14 +244,32 @@ export default {
 | right | 自定义右侧内容 |
 
 
-### CellItem Event
+### CellItem Events
 
-|事件名|说明|回调参数|版本|
+|事件名|说明|回调参数|
 |:-|:-|:-|:-|
-| input | 输入框内容发生变化时触发 | value：输入框的内容，建议通过`v-model`双向绑定输入值，而不是监听此事件的形式 | - |
-| focus | 输入框获得焦点时触发 | - | - |
-| blur | 输入框失去焦点时触发 | - | - |
-| confirm | 点击完成按钮时触发 | value：输入框的内容，建议通过`v-model`双向绑定输入值，而不是监听此事件的形式 | - |
-| right-icon-click | 通过`right-icon`生成的图标被点击时触发 | - | - |
-| click | 输入框被点击或者通过`right-icon`生成的图标被点击时触发，这样设计是考虑到传递右边的图标，一般都为需要弹出"picker"等操作时的场景，点击倒三角图标，理应发出此事件，见上方说明| - | - |
+| input | 输入框内容发生变化时触发 | value：输入框的内容，建议通过`v-model`双向绑定输入值，而不是监听此事件的形式 |
+| focus | 输入框获得焦点时触发 | - |
+| blur | 输入框失去焦点时触发 | - |
+| confirm | 点击完成按钮时触发 | value：输入框的内容，建议通过`v-model`双向绑定输入值，而不是监听此事件的形式 | 
+| right-icon-click | 通过`right-icon`生成的图标被点击时触发 |
+| click | 输入框被点击或者通过`right-icon`生成的图标被点击时触发，这样设计是考虑到传递右边的图标，一般都为需要弹出"picker"等操作时的场景，点击倒三角图标，理应发出此事件，见上方说明| - |
 
+
+<style scoped>
+h3[id=props] + table thead tr th:nth-child(2){
+	width: 40%;
+}
+
+h3[id='cellitem-slot'] + table thead tr th:nth-child(2){
+	width: 50%;
+}
+
+h3[id='cellitem-events'] + table thead tr th:nth-child(2){
+	width: 40%;
+}
+
+h3[id='cellitem-events'] + table thead tr th:nth-child(3){
+	width: 40%;
+}
+</style>

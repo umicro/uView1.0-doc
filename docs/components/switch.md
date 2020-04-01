@@ -11,7 +11,7 @@
 ### 基本使用
 
 通过`v-model`绑定一个`布尔值`变量，这个变量是双向绑定的，当用户开或关选择器的时候，在父组件的该值也会相应的变为`true`或者`false`，也就是说，
-您不用监听`change`事件，也能知道选择器当前处于开或者关的状态。
+您不用监听`change`事件，也能知道选择器当前处于**开**或者**关**的状态。
 
 
 ```html
@@ -28,6 +28,7 @@
 		},
 		methods: {
 			// switch打开或者关闭时触发，值为true或者false
+			// 即使不监听此事件，this.checked此时也会相应的变成true或者false
 			change(status) {
 				// console.log(status);
 			},
@@ -49,7 +50,7 @@
 
 ### 加载中
 
-通过设置`loading`变量为`true`，可以让`switch`处于加载中的状态，这是`switch`是不可操作的
+通过设置`loading`变量为`true`，可以让`switch`处于加载中的状态，这时`switch`是不可操作的
 
 ```html
 <u-switch v-model="checked" :loading="true"></u-switch>
@@ -61,13 +62,13 @@
 ### 自定义颜色
 
 ```html
-<u-switch v-model="checked" active-color="red" un-active-color="#eee"></u-switch>
+<u-switch v-model="checked" active-color="red" inactive-color="#eee"></u-switch>
 ```
 
 
 ### 异步控制
 
-这种场景，一般发生在用户打开或者关闭选择时，需要本地或者向后端请求判断，是否允许用户打开或者关闭。  
+这种场景，一般发生在用户打开或者关闭选择器时，需要本地或者向后端请求判断，是否允许用户打开或者关闭的场景。  
 
 - 假设原来是打开状态
 
@@ -146,7 +147,7 @@
 ### Switch Props
 
 注意：需要给`switch`组件通过`v-model`绑定一个布尔值，来初始化`switch`的状态，随后该值被双向绑定，
-当用打开选择器时，该值在`switch`内部被修改为`true`，并反映到父组件，否则为`false`，换言之，您无需监听`switch`的`change`事件，也能
+当用打开选择器时，该值在`switch`组件内部被修改为`true`，并反映到父组件，否则为`false`，换言之，您无需监听`switch`的`change`事件，也能
 知道某一个`switch`是否被选中的状态
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
@@ -155,11 +156,11 @@
 | disabled | 是否禁用  | Boolean | false | true |
 | size | 开关尺寸，单位rpx | String \| Number  | 50 | - |
 | active-color | 打开时的背景色 | String  | #2979ff | - |
-| un-active-color | 关闭时的背景色 | String  | #ffffff | - |
+| inactive-color | 关闭时的背景色 | String  | #ffffff | - |
 
 
 ### Switch Event
 
-|事件名|说明|回调参数|版本|
+|事件名|说明|回调参数|
 |:-|:-|:-|:-|
-| change | 在`switch`打开或关闭时触发 | status：`true` 或者 `false` | - |
+| change | 在`switch`打开或关闭时触发 | status：`true` 或者 `false` |

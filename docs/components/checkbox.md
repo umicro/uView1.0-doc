@@ -10,8 +10,8 @@
 
 ### 基本使用
 
-- 改组件一般需要搭配`checkboxGroup`组件使用，以便用户进行操作时，获得当前复选框组的选中情况，当然，您也可以单独对某个`checkbox`进行事件监听
-- 通过`v-model`给`checkboxGroup`绑定一个变量，这个绑定的变量是双向的(初始值只能是`true`或者`false`)，也就是说，您可以无需监听`checkbox`或者`checkboxGroup`组件的`change`事件，也能知道哪个
+- 该组件一般需要搭配`checkboxGroup`组件使用，以便用户进行操作时，获得当前复选框组的选中情况，当然，您也可以单独对某个`checkbox`进行事件监听
+- 通过`v-model`给`checkboxGroup`绑定一个变量，这个绑定的变量是双向的(初始值只能是`true`或者`false`)，也就是说，您可以无需监听`checkbox`或者`checkboxGroup`组件的`change`事件，也能知道哪个复选框
 被勾选了
 
 
@@ -69,10 +69,10 @@ export default {
 ### 禁用checkbox
 
 设置`disabled`为`true`，即可禁用某个组件，让用户无法点击，禁用分为两种状态，一是未勾选前禁用，这时只显示一个灰色的区域。二是已勾选后
-再禁用，会有灰色的勾选的图标，但此时依然是不可操作的。
+再禁用，会有灰色的已勾选的图标，但此时依然是不可操作的。
 
 ```html
-<u-checkbox v-model="checked" :disabled="false">{{item.name}}</u-checkbox>
+<u-checkbox v-model="checked" :disabled="false">天涯</u-checkbox>
 ```
 
 ### 自定义形状
@@ -81,7 +81,7 @@ export default {
 
 
 ```html
-<u-checkbox v-model="checked" square="circle">{{item.name}}</u-checkbox>
+<u-checkbox v-model="checked" square="circle">明月</u-checkbox>
 ```
 
 
@@ -91,7 +91,7 @@ export default {
 
 
 ```html
-<u-checkbox v-model="checked" active-color="red">{{item.name}}</u-checkbox>
+<u-checkbox v-model="checked" active-color="red">光影</u-checkbox>
 ```
 
 
@@ -102,7 +102,7 @@ export default {
 
 
 ```html
-<u-checkbox v-model="checked" :label-disabled="false">{{item.name}}</u-checkbox>
+<u-checkbox v-model="checked" :label-disabled="false">剑舞</u-checkbox>
 ```
 
 
@@ -110,7 +110,7 @@ export default {
 
 ### Checkbox Props
 
-注意：需要给`checkbox`组件通过`v-model`绑定一个布尔值，来初始化`checkbox`的状态，随后该值被双向绑定，
+注意：需要给`checkbox`组件通过`v-model`绑定一个**布尔值**，来初始化`checkbox`的状态，随后该值被双向绑定，
 当用户勾选复选框时，该值在`checkbox`内部被修改为`true`，并反映到父组件，否则为`false`，换言之，您无需监听`checkbox`的`change`事件，也能
 知道某一个`checkbox`是否被选中的状态
 

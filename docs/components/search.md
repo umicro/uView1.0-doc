@@ -1,6 +1,6 @@
 ## Search 搜索
 
-搜索组件，集成了常见搜索框所需功能，用户可以一键引入，开箱即用
+搜索组件，集成了常见搜索框所需功能，用户可以一键引入，开箱即用。
 
 ### 平台差异说明
 
@@ -41,7 +41,7 @@
 
 - `show-action`配置是否开启右边按钮控件
 - `actiona-text`配置控件内容
-- `animation`(默认为`true`)设置为`true`的话，输入框获得焦点，失去焦点，或者点击控件按钮时，控件自动消失，并且带有动画效果
+- `animation`(默认为`true`)设置为`true`的话，失去焦点，或者点击控件按钮时，控件自动消失，并且带有动画效果
 
 ::: warning 说明
 如果不想点击右侧控件时自动消失，请把`animation`设置为`false`
@@ -78,12 +78,14 @@
 | show-action | 是否显示右侧控件 | Boolean | true | false |
 | action-atext | 右侧控件文字 | String | 搜索 | - |
 | input-align | 输入框内容水平对齐方式 | String | left | center / right |
-| enabled | 是否启用输入框 | Boolean | true | false |
+| disabled | 是否启用输入框 | Boolean | true | false |
 | animation | 是否开启动画，见上方说明 | Boolean | false | true |
 | value | 输入框初始值 | String | - | - |
 | height | 输入框高度，单位rpx | String \| Number | 64 | - |
 
 ### Events
+
+建议您可以通过监听`change`事件，在回调中将返回的结果绑定一个变量去获得用户的输入内容
 
 | 事件名 | 说明 | 回调参数 | 版本 |
 | :- | :- | :- | :- |

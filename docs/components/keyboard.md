@@ -145,3 +145,16 @@
 | default | 内容将会显示键盘的工具条上面，可以结合[MessageInput 验证码输入](/components/messageInput.html)组件实现类似支付宝输入密码时，上方显示输入内容的功能 |  - |
 
 
+<style scoped>
+h3[id=props] + table thead tr th:nth-child(2){
+	width: 40%;
+}
+
+h3[id=events] + table thead tr th:nth-child(2){
+	width: 40%;
+}
+
+h3[id=slot] + table thead tr th:nth-child(2){
+	width: 60%;
+}
+</style>

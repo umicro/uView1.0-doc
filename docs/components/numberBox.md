@@ -12,7 +12,7 @@
 
 ### 基本使用
 
-通过`value`(默认为1)参数输入初始值，通过`change`事件监听组件输入值的变化，回调参数为一个对象，有两个属性，分别是：
+通过`value`(默认为1)参数绑定初始值，通过`change`事件监听组件输入值的变化，回调参数为一个对象，有两个属性，分别是：
 - `value`，表示当前输入值
 - `index`，额外字段，由用户通过Props的`index`字段传入，回调时用以区分当前发生变化的是哪个输入框
 
@@ -36,13 +36,15 @@
 
 - 通过`step`属性设置每次点击增加或减少按钮时变化的值，默认为1
 
+下面示例每次都会加2或者减2
+
 ```html
 <u-number-box :step="2"></u-number-box>
 ```
 
 ### 限制输入范围
 
-通过`min`和`max`参数限制输入值最小值和最大值
+通过`min`和`max`参数限制输的入值最小值和最大值
 
 ```html
 <u-number-box :min="1" :max="100"></u-number-box>
@@ -74,22 +76,35 @@
 | value | 输入框初始值 | Number | 1 | - |
 | bg-color | 输入框和按钮的背景颜色  | String | #F2F3F5 | - |
 | min | 用户可输入的最小值 | Number | 0 | - |
-| max | 用户可输入的最大值 | Number | 99 | - |
+| max | 用户可输入的最大值 | Number | 99999 | - |
 | step | 步长，每次加或减的值 | Number | 1 | - |
-| disabled | 是否禁用操作，禁用后无法加减或修改输入框的值 | Boolean | false | true |
+| disabled | 是否禁用操作，禁用后无法加减或手动修改输入框的值 | Boolean | false | true |
 | size | 输入框文字和按钮字体大小，单位rpx | String \| Number | 26 | - |
-| color | 输入框文字和加减按钮颜色 | String | #323233 | - |
+| color | 输入框文字和加减按钮图标的颜色 | String | #323233 | - |
 | input-width | 输入框宽度，单位rpx | String \| Number | 80 | - |
 | input-height | 输入框和按钮的高度，单位rpx | String \| Number | 50 | - |
 | index | 事件回调时用以区分当前发生变化的是哪个输入框 | String \| Number | - | - |
 
 ### Events
 
-详细解释见上方说明
-
 | 事件名 | 说明 | 回调参数 | 版本 |
 | :- | :- | :- | :- |
-| change | 输入框内容发生变化时触发 | value：输入框当前值，index：通过props传递的`index`值 | - |
-| blur | 输入框失去焦点时触发 | value：输入框当前值，index：通过props传递的`index`值 | - |
-| minus | 点击减少按钮时触发(按钮可点击情况下) | value：输入框当前值，index：通过props传递的`index`值 | - |
-| plus | 点击增加按钮时触发(按钮可点击情况下) | value：输入框当前值，index：通过props传递的`index`值 | - |
+| change | 输入框内容发生变化时触发，对象形式 | value：输入框当前值，index：通过props传递的`index`值 | - |
+| blur | 输入框失去焦点时触发，对象形式 | value：输入框当前值，index：通过props传递的`index`值 | - |
+| minus | 点击减少按钮时触发(按钮可点击情况下)，对象形式 | value：输入框当前值，index：通过props传递的`index`值 | - |
+| plus | 点击增加按钮时触发(按钮可点击情况下)，对象形式 | value：输入框当前值，index：通过props传递的`index`值 | - |
+
+
+<style scoped>
+h3[id=props] + table thead tr th:nth-child(2){
+	width: 40%;
+}
+
+h3[id=events] + table thead tr th:nth-child(2){
+	width: 40%;
+}
+
+h3[id=events] + table thead tr th:nth-child(3){
+	width: 40%;
+}
+</style>

@@ -13,17 +13,17 @@
 
 ### 基本使用
 
-- 通过`mode`参数设置为`time`或者`region`，区分时间和地区模式
-- 通过`show`参数为`true`或`false`值，打开或者收起picker
+- 通过`mode`参数设置为`time`或者`region`，区分时间和地区模式。
+- 通过`show`参数为`true`或`false`值，打开或者收起picker。
 
 :::warning 注意
-由于props单向传值的限制，您需要在`picker`组件的`close`事件回调中把`show`值设置为`false`，否则
+由于props单向传值的限制，您需要在`picker`组件的`close`事件回调中把`show`参数设置为`false`，否则
 下次您将无法唤起`picker`
 :::
 
 ```html
 <template>
-	<u-picker :show="show" mode="time" @close="picker = false;"></u-picker>
+	<u-picker :show="show" mode="time" @close="show = false;"></u-picker>
 </template>
 
 <script>
@@ -43,27 +43,27 @@
 - 如果`mode`为`region`，可以通过`default-region`(Array格式)中文的省市区名称，如：["河北省", "秦皇岛市", "北戴河区"]，或者代号的
 省市区，如：["13", "1303", "130304"]。
 
-注意：这些省市区的名称和代码，须是uView自身提供的，否则可能无法匹配
+**注意**：这些省市区的名称和代码，须是uView的`Picker`组件自身提供的，否则可能无法匹配
 
 ```html
 <template>
-	<u-picker mode="time"  default-time="2025-07-02 13:01"></u-picker>
+	<u-picker mode="time" :show="show"  default-time="2025-07-02 13:01"></u-picker>
 	
-	<u-picker mode="region"  :area-code='["13", "1303", "130304"]'></u-picker>
+	<u-picker mode="region" :show="show"  :area-code='["13", "1303", "130304"]'></u-picker>
 </template>
 ```
 
 ### 设置需要显示的参数
 
-- 时间模式时：通过`params`参数传入一个对象给组件，给需要的参数属性置为`true`，可选的参数有：`year`、`month`、`day`、`hour`、`minute`、`second`。
-其中，`second`值默认为`false`，其他值默认为`true`
+- 时间模式时：通过`params`参数传入一个对象给组件，给需要显示的参数属性置为`true`，可选的参数有：`year`、`month`、`day`、`hour`、`minute`、`second`。
+其中，`hour`、`minute`、`second`值默认为`false`，其他值默认为`true`
 - 地区模式时：可选的参数有：`province`、`city`、`area`，默认都为`true`
 
-下方示例时间模式，只会显示年，月，日可选
+下方示例时间模式，只会显示年，月，日3个参数可供选择：
 
 ```html
 <template>
-	<u-picker mode="time" :params="params"></u-picker>
+	<u-picker mode="time" :show="show" :params="params"></u-picker>
 </template>
 
 <script>
@@ -77,7 +77,8 @@
 					hour: false,
 					minute: false,
 					second: false
-				}
+				},
+				show: false
 			}
 		}
 	}
@@ -86,13 +87,13 @@
 
 ### 回调参数
 
-当点击picker的"取消"或者"确定"按钮时，会分别产生回调事假`cancel`和`confirm`，这两个事件的同时，会
+当点击picker的"取消"或者"确定"按钮时，会分别产生回调事件`cancel`和`confirm`，这两个事件的同时，会
 触发一个`close`事件，是为了更方便的获取组件的值。
-回调的参数为一个对象，值为传递给`picker`组件的`params`参数的属性一致  
+回调的参数为一个对象，属性和传递给`picker`组件的`params`对象为`true`的属性一致。  
 注意：`mode`为`region`时，回调对象属性为一个对象，分别有`label`和`value`属性，见如下说明：
 
 ```js
-// parmas默认值：
+// 组件内部parmas参数默认值：
 let params = {
 	year: true,
 	month: true,
@@ -106,7 +107,7 @@ let params = {
 }
 
 
-// 如果params值如下：
+// 如果params值如下(时间选择模式)：：
 let params = {
 	year: true,
 	month: true,
@@ -156,8 +157,8 @@ let params = {
 |-------------  |---------------- |---------------|------------------ |-------- |
 | params | 需要显示的参数，见上方说明  | Object | - | - |
 | mode | 模式选择，region-地区类型，time-时间类型  | String	 | time | region |
-| start-year | 开始的年份，mode=time时有效 | String \| Number | 1950 | - |
-| end-year | 结束的年份，mode=time时有效 | String \| Number | 2050 | - |
+| start-year | 可选的开始年份，mode=time时有效 | String \| Number | 1950 | - |
+| end-year | 可选的结束年份，mode=time时有效 | String \| Number | 2050 | - |
 | safe-area-inset-bottom | 是否开启[底部安全区适配](/components/safeAreaInset.html#关于uview某些组件safe-area-inset参数的说明) | Boolean  | false | true |
 | cancel-color | 取消按钮的颜色  | String | #606266 | - |
 | confirm-color | 确认按钮的颜色  | String | #2979ff | - | 6
@@ -173,4 +174,4 @@ let params = {
 |:-|:-|:-|:-|
 | confirm | 点击确定按钮，返回当前选择的值 | Object: 见上方"回调参数"部分说明 | - |
 | cancel | 点击确定按钮，返回当前选择的值 | Object: 见上方"回调参数"部分说明 | - |
-| close | cancel和confirm事件的同时，会触发close事件 | Object: 见上方"回调参数"部分说明 | - |
+| close | cancel和confirm事件的同时，会触发close事件，可以在此事件监听回调值 | Object: 见上方"回调参数"部分说明 | - |
