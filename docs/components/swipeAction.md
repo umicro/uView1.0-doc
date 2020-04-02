@@ -17,14 +17,14 @@
 
 ### 基本使用
 
-通过slot传入内部内容即可，要传入props的`index`参数，用于点击时，在回调方法中对某一个数据进行操作  
+通过slot传入内部内容即可，可以将`v-for`的"index"索引值传递给`index`参数，用于点击时，在回调方法中对某一个数据进行操作(点击回调时会返回此索引值)  
 
 说明：有时候，我们在打开一个swipeAction的同时，需要自动关闭其他的swipeAction，这时需要通过`open`事件实现，见如下：
 
 ```html
 <template>
 	<view>
-		<u-swipe-action :index="item.id" v-for="(item, index) in list" :key="item.id" @click="click" @open="open">
+		<u-swipe-action :index="index" v-for="(item, index) in list" :key="item.id" @click="click" @open="open">
 			<view class="item u-border-bottom">
 				<image mode="aspectFill" :src="item.images" />
 				<!-- 此层wrap在此为必写的，否则可能会出现标题定位错误 -->
@@ -126,14 +126,14 @@
 | btn-text | 按钮文字  | String | 删除 | - |
 | btn-bg-color | 按钮背景颜色 | String  | #ff0033 | - |
 | bg-color | 整个组件背景颜色 | String  | #ffffff | - |
-| index | 标识符，点击时候用于区分点击了哪一个，用循环的index即可 | String \| Number  | - | - |
-| btnWidth | 按钮宽度，单位rpx | String \| Number  | 180 | - |	
+| index | 标识符，点击时候用于区分点击了哪一个，用`v-for`循环时的index即可 | String \| Number  | - | - |
+| btn-width | 按钮宽度，单位rpx | String \| Number  | 180 | - |	
 | disabled | 是否禁止某个swipeAction滑动 | Boolean  | false | true |	
 
 ### Event
 
-|事件名|说明|回调参数|版本|
-|:-|:-|:-|:-|
-| click | 点击组件时触发 | index: 通过props传递的`index` | - |
-| close | 组件触发关闭状态时 | index: 通过props传递的`index` | - |
-| click | 组件触发打开状态时 | index: 通过props传递的`index` | - |
+|事件名|说明|回调参数|
+|:-|:-|:-|
+| click | 点击组件时触发 | index: 通过props传递的`index` |
+| close | 组件触发关闭状态时 | index: 通过props传递的`index` | 
+| open | 组件触发打开状态时 | index: 通过props传递的`index` | 

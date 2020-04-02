@@ -12,7 +12,7 @@
 
 该组件通过`ref`调用，使用简单，只需`title`参数设置显示的内容即可  
 
-注意：不要在onLoad中调用，因为onLoad生命周期尚未创建完成组件
+注意：不要在onLoad中调用，应在onReady生命周期调用，因为onLoad生命周期组件尚未创建完成
 
 ```html
 <template>
@@ -33,7 +33,7 @@
 ### 其他设置
 
 - `type`值可选的有`primary`(默认)、`success`、`info`、`warning`、`error`
-- `duration`值设置现实的时间，单位ms
+- `duration`值设置显示的时间，单位ms
 
 ```html
 <u-top-tips ref="uTips" type="success" duration="1500"></u-top-tips>

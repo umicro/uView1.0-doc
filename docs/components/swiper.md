@@ -14,8 +14,8 @@
 ### 基本使用
 
 通过`list`参数传入轮播图列表值，该值为一个数组，元素为对象，见如下：
-- `list`的image属性为轮播图的图片路径
-- `list`的title属性为需要显示的标题
+- `list`的"image"属性为轮播图的图片路径
+- `list`的"title"属性为需要显示的标题
 
 ::: warning 注意
 如果需要显示标题，还需要设置`show-title`参数为`true`
@@ -83,7 +83,7 @@
 
 ### 是否开启3D效果
 
-配置`effect3d`为`true`即可，该效果左右两天可以预览前后一个swiper-item的一部分
+配置`effect3d`为`true`即可，该效果左右两边可以缩略形式预览前后一个swiper-item的一部分
 
 ```html
 <u-swiper :list="list" :effect3d="true"></u-swiper>

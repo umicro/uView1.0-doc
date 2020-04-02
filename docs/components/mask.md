@@ -10,7 +10,7 @@
 
 ### 基本使用
 
-- 通过`show`参数参数配置是否显示遮罩  
+- 通过`show`参数配置是否显示遮罩  
 - 遮罩被点击时，会发送一个`click`事件，如不需要此事件，请设置`mask-click-able`参数为`false`
 
 ```html
@@ -32,7 +32,7 @@
 ### 嵌入内容
 
 通过默认插槽可以在遮罩层上嵌入任意内容  
-注意：如果不想让`slot`插槽内容的点击事件冒泡到遮罩，请给制定元素添加上`@tap.stop`
+注意：如果不想让`slot`插槽内容的点击事件冒泡到遮罩，请给指定元素添加上`@tap.stop`
 
 ```html
 <template>
@@ -73,7 +73,7 @@
 
 - 通过`duration`设置遮罩淡入淡出的时长，单位`ms`
 - 通过`zoom`设置遮罩淡入淡出时是否带有轻微的缩放效果，内部通过`transform: scale(1.2, 1.2)`实现
-- 通过`custom-style`出入一个对象，自定义样式
+- 通过`custom-style`传入一个对象，自定义样式，如"{backgroundColor: 'red', color: 'blue'}"
 
 ```html
 <u-mask :show="show" :duration="400" :zoom="true" :custom-style="{background: 'rgba(0, 0, 0, 0.5)'}"></u-mask>
@@ -87,21 +87,31 @@
 |-----------|-----------|----------|----------|---------|
 | show | 是否显示遮罩  | Boolean | false | true |
 | z-index | z-index 层级 | String \| Number  | 1001 | - |
-| custom-style | 自定义样式对象 | Object  | - | - |
+| custom-style | 自定义样式对象，见上方说明 | Object  | - | - |
 | duration | 动画时长，单位毫秒 | String \| Number  | 300 | - |
-| zoom | 是否使用进行`scale`进行缩放 | Boolean  | true | false |
+| zoom | 是否使用`scale`对这招进行缩放 | Boolean  | true | false |
 | mask-click-able | 遮罩是否可点击，为`false`时点击不会发送`click`事件 | Boolean  | true | false |
 
 ### Events
 
-|事件名|说明|回调参数|版本|
-|:-|:-|:-|:-|
-| click | `mask-click-able`为`true`时，点击遮罩发送此事件 | - | - |
+|事件名|说明|回调参数|
+|:-|:-|:-|
+| click | `mask-click-able`为`true`时，点击遮罩发送此事件 | - |
 
 ### Slot
 
-|名称|说明|版本|
-|:-|:-|:-|
-| default | 默认插槽，用于在遮罩层上方嵌入内容 |  - |
+|名称|说明|
+|:-|:-|
+| default | 默认插槽，用于在遮罩层上方嵌入内容 |
 
 
+
+<style scoped>
+h3[id=events] + table thead tr th:nth-child(2){
+	width: 50%;
+}
+
+h3[id=slot] + table thead tr th:nth-child(2){
+	width: 50%;
+}
+</style>

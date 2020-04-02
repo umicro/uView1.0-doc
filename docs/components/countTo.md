@@ -41,7 +41,7 @@
 ### 千分位分隔符
 
 通过`separator`配置千分位分隔符，默认为空字符串，可以设置英文逗号","，此参数表现为`end-val`值超过1000时，比如为"1257"，那么滚动后会变成"1,245"，在金额数值时，
-该参数会用上。
+该参数可能会用上。
 
 ```html
 <u-count-to :end-val="1542" separator=","></u-count-to>
@@ -89,12 +89,12 @@
 | start-val | 开始值  | Number \| Number | 0 | - |
 | end-val | 结束值 | Number \| Number  | 0 | - |
 | duration | 滚动过程所需的时间，单位ms | String \| Number  | 2000 | - |
-| autoplay | 是否自动开始滚动 | Boolean  | true | - |
-| decimals | 要显示的小数位数，见上方说明 | String \| Number  | - | - |
+| autoplay | 是否自动开始滚动 | Boolean  | true | false |
+| decimals | 要显示的小数位数，见上方说明 | String \| Number  | 0 | - |
 | use-easing | 滚动结束时，是否缓动结尾，见上方说明 | Boolean  | true | false |
 | separator | 千位分隔符，见上方说明 | String  | - | - |
-| color | 字体颜色 | String  | - | - |
-| font-size | 字体大小，单位rpx | String \| Number  | - | - |
+| color | 字体颜色 | String  | #303133 | - |
+| font-size | 字体大小，单位rpx | String \| Number  | 50 | - |
 
 
 ### Methods
@@ -113,3 +113,14 @@
 |事件名|说明|回调参数|版本|
 |:-|:-|:-|:-|
 | end | 数值滚动到目标值时触发 | - | - |
+
+
+<style scoped>
+h3[id=methods] + p + table thead tr th:nth-child(1) {
+	width: 50%;
+}
+
+h3[id=methods] + p + table thead tr th:nth-child(2) {
+	width: 50%;
+}
+</style>

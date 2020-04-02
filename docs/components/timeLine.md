@@ -98,4 +98,12 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | bg-color | 左边节点的背景颜色，一般通过slot内容自定义背景颜色即可 | String | #ffffff | - |
-| node-top | 节点左边图标绝对定位的top值 | String \| Number | - | - |
+| node-top | 节点左边图标绝对定位的top值，单位rpx | String \| Number | - | - |
+
+
+
+<style scoped>
+h3[id=tiemlimeitem-props] + table thead tr th:nth-child(2){
+	width: 40%;
+}
+</style>

@@ -53,7 +53,7 @@
 
 - 通过`color`设置倒计数字的颜色
 - `font-size`设置倒计数字的大小，重申一次：uView中，所有`font-size`，`width`，`height`，`padding`，`margin`等props参数
-的单位默认都是`rpx`，而不rpxxrpx别说明除外。关于`rpx`单位的说明，请参考uni官方文档：[尺寸单位](https://uniapp.dcloud.io/frame?id=%e5%b0%ba%e5%af%b8%e5%8d%95%e4%bd%8d)
+的单位默认都是`rpx`，特别说明除外(极少数场景会要求px单位)。关于`rpx`单位的说明，请参考uni官方文档：[尺寸单位](https://uniapp.dcloud.io/frame?id=%e5%b0%ba%e5%af%b8%e5%8d%95%e4%bd%8d)
 - `show-border`参数设置倒计数字是否添加边框，`border-color`参数设置边框的颜色
 
 ```html
@@ -62,7 +62,7 @@
 
 ### 倒计时执行的时机
 
-通过`autopaly`配置倒计时是否在组件的`created`生命周期进行初始化(在`timestamp`有值前提下)，如果设置`autopaly`为`false`，就需要手动通过
+通过`autopaly`配置倒计时是否在组件的`mounted`生命周期进行初始化(在`timestamp`有值前提下)，如果设置`autopaly`为`false`，就需要手动通过
 `refs`的形式通知倒计时开始执行，调用的是组件内部的`start()`方法
 
 ```html
@@ -92,7 +92,7 @@
 | separator | 分隔符，`colon`为英文冒号，`zh`为中文 | String  | colon | zh |
 | separator-size | 分隔符的字体大小，单位rpx | String \| Number  | 30 | - |
 | separator-color | 分隔符的颜色 | String  | #303133 | - |
-| font-size | 倒计时字体大小 | String \| Number  | 30 | - |
+| font-size | 倒计时字体大小，单位rpx | String \| Number  | 30 | - |
 | show-border | 是否显示倒计时数字的边框 | Boolean | false | true |
 | border-color | 数字边框的颜色 | String  | #303133 | - |
 | bg-color | 倒计时数字的背景颜色 | String  | #ffffff | - |
@@ -106,6 +106,16 @@
 
 ### Events
 
-|事件名|说明|回调参数|版本|
-|:-|:-|:-|:-|
-|end|倒计时结束|-|-|
+|事件名|说明|回调参数|
+|:-|:-|:-|
+|end|倒计时结束|-|
+
+
+
+### Methods
+
+需要通过ref获取倒计时组件才能调用，见上方"倒计时执行的时机"说明
+
+| 名称          | 说明            |
+|-------------  |---------------- |
+| start | 开始倒计时  |

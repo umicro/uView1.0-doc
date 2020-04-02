@@ -29,7 +29,7 @@
 					head: "赏识在于角度的转换",
 					body: "只要我们正确择取一个合适的参照物乃至稍降一格去看待他人，值得赏识的东西便会扑面而来",
 					open: true,
-					enable: false
+					disabled: true
 				},{
 					head: "生活中不是缺少美，而是缺少发现美的眼睛",
 					body: "学会欣赏，实际是一种积极生活的态度，是生活的调味品，会在欣赏中发现生活的美",
@@ -48,12 +48,12 @@
 ### 控制面板的初始状态，以及是否可以操作
 
 - 设置`u-collapse-item`的`open`参数为`true`，可以让面板初始化时为打开状态
-- 如果设置`u-collapse-item`的`enable`参数为`false`，那么面板会保持初始状态，无法关闭或打开
+- 如果设置`u-collapse-item`的`disabled`参数为`true`，那么面板会保持初始状态，无法关闭或打开
 
 ```html
 <template>
 	<u-collapse>
-		<u-collapse-item :title="item.head" v-for="(item, index) in itemList" :key="index" :open="item.open" :enable="item.enable">
+		<u-collapse-item :title="item.head" v-for="(item, index) in itemList" :key="index" :open="item.open" :disabled="item.disabled">
 			{{item.body}}
 		</u-collapse-item>
 	</u-collapse>
@@ -67,7 +67,7 @@
 					head: "赏识在于角度的转换",
 					body: "只要我们正确择取一个合适的参照物乃至稍降一格去看待他人，值得赏识的东西便会扑面而来",
 					open: true,
-					enable: false
+					disabled: true
 				},{
 					head: "生活中不是缺少美，而是缺少发现美的眼睛",
 					body: "学会欣赏，实际是一种积极生活的态度，是生活的调味品，会在欣赏中发现生活的美",
@@ -98,7 +98,7 @@
 | title | 面板标题  | String | - | - |
 | head-bg-color | 标题的背景颜色  | String | #ffffff | - |
 | body-bg-color | 主体内容的背景颜色  | String | #ffffff | - |
-| enable | 面板是否可以打开或收起  | Boolean | true | false |
+| disabled | 面板是否可以打开或收起  | Boolean | false | true |
 | arrow | 是否显示标题右侧的箭头  | Boolean | true | false |
 | arrow-color | 标题右侧箭头的颜色 | String | #909399 | - |
 | open | 设置某个面板的初始状态是否打开  | Boolean | false | true |

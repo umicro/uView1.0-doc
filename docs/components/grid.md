@@ -12,7 +12,7 @@
 
 - 该组件外层为`u-grid`组件包裹，通过`col`设置内部宫格的列数
 - 内部通过`ugrid-item`组件的`slot`设置宫格的内容
-- 如果不需要宫格的边框，可以设置`show-border`为`false`
+- 如果不需要宫格的边框，可以设置`border`为`false`
 
 ```html
 <template>
@@ -43,7 +43,7 @@
 
 ### 给宫格设置右上角的角标和图标
 
-可以通过uView的`badge`或者`image`设置宫格有右上角的内容
+可以通过uView的`badge`(注意Badge在此需要设置相关定位属性，详见[Badge](/components/badge.html))或者`image`设置宫格有右上角的内容
 
 ```html
 <template>
@@ -82,15 +82,15 @@
 </style>
 ```
 
-### 结合uni的`swiper`实现左右滑动的宫格
+### 结合uni的swiper组件实现宫格的左右滑动
 
 因为`swiper`特性的关系，请指定`swiper`的高度 ，否则`swiper`的高度不会被内容撑开，可以自定义`swiper`的指示器，达到更高的灵活度
 
 ```html
 <template>
-	<swiper class="swiper" :indicator-dots="true">
+	<swiper class="swiper" @change="change">
 		<swiper-item>
-			<u-grid :col="3">
+			<u-grid :col="3" @click="click" hover-class="hover-class">
 				<u-grid-item v-for="(item, index) in list" :index="index" :key="index">
 					<u-icon :name="item" :size="46"></u-icon>
 					<text class="grid-text">{{ '宫格' + (index + 1) }}</text>
@@ -98,43 +98,78 @@
 			</u-grid>
 		</swiper-item>
 		<swiper-item>
-			<u-grid :col="3">
-				<u-grid-item v-for="(item, index) in list" :index="index" :key="index">
+			<u-grid :col="3" @click="click">
+				<u-grid-item v-for="(item, index) in list" :index="index + 9" :key="index">
 					<u-icon :name="item" :size="46"></u-icon>
 					<text class="grid-text">{{ '宫格' + (index + 1) }}</text>
 				</u-grid-item>
 			</u-grid>
 		</swiper-item>
 		<swiper-item>
-			<u-grid :col="3">
-				<u-grid-item v-for="(item, index) in list" :index="index" :key="index">
+			<u-grid :col="3" @click="click">
+				<u-grid-item v-for="(item, index) in list" :index="index + 18" :key="index">
 					<u-icon :name="item" :size="46"></u-icon>
 					<text class="grid-text">{{ '宫格' + (index + 1) }}</text>
 				</u-grid-item>
 			</u-grid>
 		</swiper-item>
 	</swiper>
+	<view class="indicator-dots" v-if="isSwiper">
+		<view class="indicator-dots-item" :class="[current == 0 ? 'indicator-dots-active' : '']">
+		</view>
+		<view class="indicator-dots-item" :class="[current == 1 ? 'indicator-dots-active' : '']">
+		</view>
+		<view class="indicator-dots-item" :class="[current == 2 ? 'indicator-dots-active' : '']">
+		</view>
+	</view>
 </template>
 
 <script>
 	export default {
 		data() {
 			return {
+				current: 0,
 				list: ['integral', 'kefu-ermai', 'coupon', 'gift', 'scan', 'pause-circle', 'wifi', 'email', 'list']
 			};
+		},
+		methods: {
+			change(e) {
+				this.current = e.detail.current;
+			}
 		}
 	};
 </script>
 
 <style scoped lang="scss">
-	.swiper {
-		height: 500rpx;
-	}
-	
+	/* 下方这些scss变量为uView内置变量，详见开发  组件-指南-内置样式 */
+
 	.grid-text {
 		font-size: 28rpx;
 		margin-top: 4rpx;
 		color: $u-type-info;
+	}
+	
+	.swiper {
+		height: 480rpx;
+	}
+	
+	.indicator-dots {
+		margin-top: 40rpx;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.indicator-dots-item {
+		background-color: $u-tips-color;
+		height: 6px;
+		width: 6px;
+		border-radius: 10px;
+		margin: 0 3px;
+	}
+	
+	.indicator-dots-active {
+		background-color: $u-type-primary;
 	}
 </style>
 ```
@@ -146,7 +181,7 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | col | 宫格的列数  | String \| Number | 3 | - |
-| show-border | 是否显示宫格的边框  | Boolean	 | true | false |
+| border | 是否显示宫格的边框  | Boolean	 | true | false |
 | hover-class | 点击宫格的时候，添加的类，一般用于设置按下的样式(背景颜色) | String  | - | - |
 
 ### Grid-item Props
@@ -160,6 +195,6 @@
 
 注意：请在`<u-grid></u-grid>`上监听此事件
 
-|事件名|说明|回调参数|版本|
-|:-|:-|:-|:-|
-|click|点击宫格触发|index: `u-grid-item`通过`props`传递的`index`值|-|
+|事件名|说明|回调参数|
+|:-|:-|:-|
+|click|点击宫格触发|index: `u-grid-item`通过`props`传递的`index`值|

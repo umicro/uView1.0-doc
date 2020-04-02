@@ -47,7 +47,7 @@
 ``` js
 this.$refs.uToast.show({
 	title: '操作成功',
-	// 不传此type参数，默认为default，也可以手动写上 type: 'default'
+	// 如果不传此type参数，默认为default，也可以手动写上 type: 'default'
 	// type: 'success', 
 	// 如果不需要图标，请设置为false
 	// icon: false

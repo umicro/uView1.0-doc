@@ -49,7 +49,7 @@
 | show | 是否打开弹出层  | Boolean | false | true |
 | mode | 弹出方向  | String	 | left | top / right / bottom / center |
 | mask | 是否显示遮罩  | Boolean | true | false |
-| length | 抽屉的宽度(mode=left \| right)，或者高度(mode=top \| bottom)，单位rpx。如果为"auto"，表示由内容撑开高度或者宽度 | String \| Number | 400 | - |
+| length | mode=left \| right时表现为弹出层的宽度，mode=top \| bottom时表现为弹出层高度，单位rpx。如果为"auto"，表示由内容撑开高度或者宽度 | String \| Number | auto | - |
 | zoom | 是否开启缩放动画，只在`mode`为`center`时有效  | Boolean | true | false |
 | safe-area-inset-bottom | 是否开启[底部安全区适配](/components/safeAreaInset.html#关于uview某些组件safe-area-inset参数的说明) | Boolean  | false | true |
 | mask-close-able | 点击遮罩是否可以关闭弹出层  | Boolean | true | false |

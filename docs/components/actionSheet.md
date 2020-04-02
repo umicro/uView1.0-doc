@@ -1,7 +1,7 @@
 ## ActionSheet 操作菜单
 
 本组件用于从底部弹出一个操作菜单，供用户选择并返回结果。  
-本组件功能类似于uni的`uni.showActionSheet`API，优点是配置更加灵活，所有平台都表现一致。缺点是在vue上，遮罩是无法覆盖原生组件的，如`map`，`video`等。
+本组件功能类似于uni的`uni.showActionSheet`API，配置更加灵活，所有平台都表现一致。
 
 ### 平台差异说明
 
@@ -11,7 +11,7 @@
 
 ### 基本使用
 
-- 通过`item-list`设置需要显示的菜单，该值为一个数组，元素为对象，对象至少要提供`text`属性，另外可选的有`fontSize`(字体大小)，`color`(颜色)
+- 通过`list`设置需要显示的菜单，该值为一个数组，元素为对象，对象至少要提供`text`属性，另外可选的有`fontSize`(字体大小)，`color`(颜色)
 - 通过`show`参数控制操作菜单的显示与否
 
 ::: warning 注意
@@ -20,13 +20,13 @@
 
 ```html
 <template>
-	<u-action-sheet :itemList="itemList" :show="show" @close="show = false"></u-action-sheet>
+	<u-action-sheet :list="list" :show="show" @close="show = false"></u-action-sheet>
 </template>
 
 <script>
 	export default {
 		data() {
-			itemList: [{
+			list: [{
 				text: '点赞',
 				color: 'blue',
 				fontSize: 28
@@ -48,7 +48,7 @@
 
 ```html
 <template>
-	<u-action-sheet :itemList="itemList" :show="show" :tips="tips" :cancel-btn="true"></u-action-sheet>
+	<u-action-sheet :list="list" :show="show" :tips="tips" :cancel-btn="true"></u-action-sheet>
 </template>
 
 <script>
@@ -59,7 +59,7 @@
 				color: '#909399',
 				fontSize: 24
 			},
-			itemList: [{
+			list: [{
 				text: '点赞',
 				color: 'blue',
 				fontSize: 28
@@ -72,19 +72,19 @@
 
 ### 如何知道点了第几项
 
-`click`回调事件带有一个`index`值，这个索引值为传递的"itemList"数组的索引值，根据回调事件，能获得点击了
+`click`回调事件带有一个`index`值，这个索引值为传递的`list`数组的索引值，根据回调事件，能获得点击了
 第几项和该项的内容
 
 
 ```html
 <template>
-	<u-action-sheet :itemList="itemList" @click="click" :show="show" @close="show = false"></u-action-sheet>
+	<u-action-sheet :list="list" @click="click" :show="show" @close="show = false"></u-action-sheet>
 </template>
 
 <script>
 	export default {
 		data() {
-			itemList: [{
+			list: [{
 				text: '点赞',
 				color: 'blue',
 				fontSize: 28
@@ -97,7 +97,7 @@
 		},
 		methods: {
 			click(index) {
-				console.log(`点击了第${index + 1}项，内容为：${this.itemList[index].text}`)
+				console.log(`点击了第${index + 1}项，内容为：${this.list[index].text}`)
 			}
 		}
 	}
@@ -112,7 +112,7 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | show | 操作菜单的显示与否  | Boolean | false | true |
-| item-list | 按钮的文字数组，见上方文档示例  | Array\<Object\>	 | [ ] | - |
+| list | 按钮的文字数组，见上方文档示例  | Array\<Object\>	 | [ ] | - |
 | tips | 顶部的提示文字，见上方文档示例 | Object  | - | - |
 | cancel-btn | 是否显示底部的取消按钮 | Boolean  | true | false |
 | mask-close-able | 点击遮罩是否可以关闭 | Boolean  | true | false |
@@ -124,5 +124,5 @@
 |事件名|说明|回调参数|版本|
 |:-|:-|:-|:-|
 | click | 点击ActionSheet列表项时触发 | index: 点击了第几个，从0开始 | - |
-| close | 点击取消按钮时触发 | - | - |
+| close | 点击取消按钮时触发，需再此回调中设置`show`的值为false，见上方说明 | - | - |
 
