@@ -12,8 +12,8 @@
 
 - 通过`mode`参数模式，可取如下值：
 - `box`(默认)-输入位置位一个方框
-- `bottomLine`-底部显示一条下划线
-- `middleLine`-中部显示一条下划线
+- `bottomLine`-底部显示一条横线
+- `middleLine`-中部显示一条横线
 
 ```html
 <u-message-input mode="bottomLine"></u-message-input>
@@ -21,11 +21,11 @@
 
 ### 设置最大长度和初始值
 
-- 通过`max-length`参数配置可输入的方框个数，如5位验证码，该值设置为5即可
+- 通过`maxlength`参数配置可输入的方框个数，如5位验证码，该值设置为5即可
 - 如果需要显示默认值，请通过`value`参数配置
 
 ```html
-<u-message-input max-length="5" value="46821"></u-message-input>
+<u-message-input maxlength="5" value="46821"></u-message-input>
 ```
 
 ### 是否自动获取焦点
@@ -55,7 +55,7 @@
 ### 事件回调
 
 - 每当输入内容发生改变，会回调一个`change`事件，内容为当前输入的字符串，如"395"
-- 当输入的内容长度(字符个数)达到`max-length`值后，会触发`finish`事件，同时也会触发`change`事件
+- 当输入的内容长度(字符个数)达到`maxlength`值后，会触发`finish`事件，同时也会触发`change`事件
 
 ```html
 <template>
@@ -84,7 +84,7 @@
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| max-length | 输入字符个数 | String \| Number | 4 | - |
+| maxlength | 输入字符个数 | String \| Number | 4 | - |
 | dot-fill | 是否用圆点填充  | Boolean | false | true |
 | mode | 模式选择，见上方"基本使用"说明 | String | box | bottomLine / middleLine |
 | value | 预置值 | String \| Number | - | - |
@@ -100,5 +100,5 @@
 | 事件名 | 说明 | 回调参数 | 版本 |
 | :- | :- | :- | :- |
 | change | 输入内容发生改变时触发，具体见上方说明 | value：当前输入的值 | - |
-| finish | 输入字符个数达`max-length`值时触发，见上方说明 | value：当前输入的值 | - |
+| finish | 输入字符个数达`maxlength`值时触发，见上方说明 | value：当前输入的值 | - |
 

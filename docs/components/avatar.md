@@ -71,7 +71,15 @@
 
 ### Event
 
-|事件名|说明|回调参数|版本|
-|:-|:-|:-|:-|
-| click | 头像被点击 | index: 用户传递的标识符 | - |
+|事件名|说明|回调参数|
+|:-|:-|:-|
+| click | 头像被点击 | index: 用户传递的标识符 |
 
+
+
+
+<style scoped>
+h3[id=props] + table thead tr th:nth-child(2){
+	width: 50%;
+}
+</style>

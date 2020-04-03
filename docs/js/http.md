@@ -14,10 +14,11 @@
 #### get | post(url, params, header).then(res => {}).catch(res => {})
 
 - `url` <String\> 请求的URL，可以完整的URL(http开头)，或者是路径的一部分，这时会自动拼接上`baseUrl`(一般为api的域名部分)
-- `params` <Object\> 请求的参数，对象形式，如"{name: lisa, age: 23}"，该参数是可选的
+- `params` <Object\> 请求的参数，对象形式，如"{name: 'lisa', age: 23}"，该参数是可选的
 - `header` <Object\> 请求的header，对象形式，如果token等字段，建议通过配置写入，该参数是可选的
 
-`get`和`post`都挂载在`$u`对象下，其中`get`和`post`使用方法完全一致，只是一个为`this.$u.get`，一个为`this.$u.post`,使用如下：
+`get`和`post`都挂载在`$u`对象下，其中`get`和`post`使用方法完全一致，只是一个为`this.$u.get`，一个为`this.$u.post`,使用如下：  
+
 一般来说，只在`then`中接收返回值即可，`catch`无特殊情况，无需编写和理会，因为如果服务端返回的不是200状态，插件内部会弹出model提示
 
 ```html
@@ -72,7 +73,7 @@ config =
 }
 ```
 
-具体写法，建议在根目录App.vue的onLaunch生命周期中(一次配置，全局通过)：
+具体写法，建议在根目录App.vue的onLaunch生命周期中(一次配置，全局通用)：
 
 ```js
 export default {
@@ -190,7 +191,7 @@ export default {
 				return false;
 			} else {
 				// 如果返回false，则会调用Promise的reject回调，
-				// 并将进入this.$u.post(url).then().catch(res=>{})的catch回调中，res会服务端的返回值
+				// 并将进入this.$u.post(url).then().catch(res=>{})的catch回调中，res为服务端的返回值
 				return false;
 			}
 		}
@@ -232,7 +233,7 @@ export default {
 如不理解这个写法，可直接使用，或者搜索相关知识。  
 说明：我们在某个地方使用`await`，意味着调用的函数本身或者生命周期，必须要加上`async`前缀，否则出错  
 
-此为在onLoad生命周期中请求示例：
+此为在onLoad生命周期中的请求示例：
 
 ```js
 export default {
@@ -262,7 +263,7 @@ export default {
 ```
 
 :::warning 注意
-如果需要同时进行多个请求，右开启loading效果的话，必须要await进行处理，否则loading不会关闭，
+如果需要同时进行多个请求，有开启loading效果的话，必须要await进行处理，否则loading不会关闭，
 但一个页面有多个请求，如果不同时进行的无需处理
 :::
 

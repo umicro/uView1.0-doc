@@ -1,7 +1,7 @@
 ## loadMore 加载更多
 
 此组件一般用于标识页面底部加载数据时的状态，共有三种状态：
-- 加载前，显示"上拉或点击加载更多"，加入点击可选，是因为数据不够一页时，无法触发页面的`onReachBottom`生命周期
+- 加载前，显示"加载更多"，加入点击可选，是因为数据不够一页时，无法触发页面的`onReachBottom`生命周期
 - 加载中，显示"正在加载..."，2种动画可选
 - 加载后，如果还有数据，回到"加载前"状态，否则加载结束，显示"没有更多了"
 
@@ -64,7 +64,7 @@
 
 ### 控制组件的提示以及动画效果
 
-- 可以通过`icon-type`设置加载中的图标为`flower`或者`circle`，如果不需要图标，可以设置`show-icon`为`false`
+- 可以通过`icon-type`设置加载中的图标为`flower`或者`circle`，如果不需要图标，可以设置`icon`为`false`
 - 可以设置`is-dot`为`true`，在没有数据时，内容显示为一个"●"替代默认的"没有更多了"
 - 可以通过配置`load-text`配置提示的文字，该参数为一个对象值，可以修改默认的文字提示，见如下：
 
@@ -90,6 +90,13 @@
 </script>
 ```
 
+
+### 手动触发加载更多
+
+有时候可能会因为网络，或者数据不满一页的原因，导致无法上拉触发`onReachBottom`生命周期，这时候(需`status`为`loadmore`状态)，用户点击组件，就会触发`loadmore`
+事件，可以在回调中，进行状态的控制和数据的加载，同时也可以修改`loadText`的`loadmore`为"上拉或点击加载更多"进行更加人性化的提示。
+
+
 ### API
 
 ### Props
@@ -98,7 +105,7 @@
 |-------------  |---------------- |---------------|------------------ |-------- |
 | status | 组件状态  | String | loadmore | loading / nomore |
 | bg-color | 组件背景颜色，在页面是非白色时会用到  | String	 | #ffffff | - |
-| show-icon | 加载中时是否显示图标  | Boolean | true | false |
+| icon | 加载中时是否显示图标  | Boolean | true | false |
 | icon-type | 加载中时的图标类型， | String | circle | flower |
 | icon-color | `icon-type`为`circle`时有效，加载中的动画图标的颜色  | String | #b7b7b7 | - |
 | is-dot |  `status`为`nomore`时，内容显示为一个"●" | Boolean | false | true |

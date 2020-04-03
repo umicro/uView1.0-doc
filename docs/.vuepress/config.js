@@ -136,6 +136,7 @@ module.exports = {
 								'/components/steps',
 								'/components/empty',
 								'/components/link',
+								'/components/section',
 							]
 						},
 						{

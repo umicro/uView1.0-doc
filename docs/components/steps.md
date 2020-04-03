@@ -10,13 +10,13 @@
 
 ### 基本使用
 
-- 通过`steps`参数传入一个数组，标识步骤的总数
+- 通过`list`参数传入一个数组，标识步骤的总数
 - 通过`current`参数标识目前处于第几步，从0开始
 
 ```html
 <template>
 	<view>
-		<u-steps :steps="numList" :current="1"></u-steps>
+		<u-steps :list="numList" :current="1"></u-steps>
 	</view>
 </template>
 
@@ -45,7 +45,7 @@
 - `type`值和`active-color`(默认为空)为互斥关系，如果设置了`active-color`，会优先起作用
 
 ```html
-<u-steps :steps="numList" active-color="#fa3534"></u-steps>
+<u-steps :list="numList" active-color="#fa3534"></u-steps>
 ```
 
 ### 设置步骤条的模式
@@ -53,7 +53,7 @@
 `mode`可以设置为`dot`(圆点，默认值)或者`number`(数字)，二者有不同形式，见示例
 
 ```html
-<u-steps :steps="numList" mode="number"></u-steps>
+<u-steps :list="numList" mode="number"></u-steps>
 ```
 
 ### API
@@ -63,8 +63,11 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | mode | 设置模式  | String | dot | number |
-| steps | 数轴条数据，数组。具体见上方示例  | Array | [ ] | - |
+| list | 数轴条数据，数组。具体见上方示例  | Array | [ ] | - |
 | type | type主题 | String  | primary | info / success / error / warning |
 | current | 设置当前处于第几步 | Number \| String  | 0 | - |
 | active-color | 已完成步骤的激活颜色，如设置，`type`值会失效 | String  | - | - |
 | un-active-color | 未激活的颜色，用于表示未完成步骤的颜色 | String  | #606266 | - |
+
+
+

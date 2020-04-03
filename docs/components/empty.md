@@ -54,3 +54,11 @@
 | img-width | 图标的宽度，单位rpx | String \| Number  | 240 | - |
 | img-height | 图标的高度，单位rpx | String  | auto | - |
 | show | 是否显示组件 | Boolean  | true | false |
+
+
+
+<style scoped>
+h3[id=内置图标] + p + table thead tr th:nth-child(2){
+	width: 50%;
+}
+</style>
