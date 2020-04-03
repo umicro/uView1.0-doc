@@ -6,7 +6,7 @@
 此组件目前为uView的`vue`版本，非`nvue`版本(制作中)，内部使用uniapp的`swiper`组件为基础，`swiper`是单页组件，
 适合做简单列表左右滑动，因为性能问题，用swiper做复杂长列表，需要较高的优化技巧以及接受一些限制。如果要实现类似腾讯新闻APP首页可以左右
 滑动复杂的多个tab切换，不建议使用本组件，如果使用，请自行测试列表很长时的切换流畅度。后续uView会对`nvue`进行兼容，增强此组件在APP上的能力。  
-官方有一个简单又"复杂"的`nvue`新闻模板示例，注意：该示例没有滚动居中，颜色渐变，滑块跟随等效果。具体参考：  
+官方有一个`nvue`新闻模板示例，内有左右滑动tab功能，具体参考：  
 [插件市场新闻模板示例](https://ext.dcloud.net.cn/plugin?id=103)
 :::
 
@@ -53,11 +53,11 @@
 
 ### 控制tabs组件的活动tab样式
 
-1. 通过`active-color`和`un-active-color`控制tabs的激活和非激活颜色。
+1. 通过`active-color`和`inactive-color`控制tabs的激活和非激活颜色。
 2. `font-size`为tabs文字大小。
 3. `current`为初始化tabs的激活tab索引，默认为0。`gutter`为单个tab标签的左右内边距之和，即左右各占`gutter`的一半。
 ```html
-<u-tabs ref="tabs" :tabs="tabs" active-color="#2979ff" un-active-color="#606266" font-size="30" current="0"></u-tabs>
+<u-tabs ref="tabs" :tabs="tabs" active-color="#2979ff" inactive-color="#606266" font-size="30" current="0"></u-tabs>
 ```
 
 ### 使用案例
@@ -147,7 +147,7 @@
 | font-size | tab文字大小，单位rpx | String \| Number  | 30 | - |
 | swiper-width | tabs组件外部swiper的宽度，默认为屏幕宽度，单位rpx | string \| Number  | 750 | - |
 | active-color | 滑块和激活tab文字的颜色  | String | #2979ff | - |
-| un-active-color | tabs文字颜色 | String  | #303133 | - |
+| inactive-color | tabs文字颜色 | String  | #303133 | - |
 | bar-width | 滑块宽度，单位rpx | String \| Number  | 40 | - |
 | bar-height | 滑块高度，单位rpx | String \| Number  | 6 | - |
 | gutter | 单个tab标签的左右内边距之和，单位rpx | String \| Number  | 40 | - |

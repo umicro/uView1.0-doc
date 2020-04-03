@@ -18,7 +18,7 @@ uniapp可以通过配置`pages.json`生成原生元素的导航栏，简要说�
 nvue源自于uniapp引入的阿里weex开源原生渲染引擎，单weex来说，是不推荐使用的，因为它没有周边的生态和第三方的功能。  
 uniapp引入weex之后，一直在整合，但也没有对weex进行定制开发，在APP端某些需要性能相关的可以使用nvue，以下是我们对nvue的一些见解：
 - nvue具有媲美`react native`的性能，uniapp一直在打通vue和nvue的壁垒
-- nvue页面中还不能像写vue一样便利，比如对样式的限制(目前还看不到uniapp有对它进行改进的计划)，api还不能和vue完全互通等
+- nvue页面中还不能像写vue一样便利，比如对样式的限制，api还不能和vue完全互通等
 
 建议：uniapp一直在强化vue，重心不在nvue，如果不是特别复杂的应用，可以直接使用vue开发，应用的首页(V3版本)使用`nvue`，渲染的速度会有显著的提升，
 如果有需要进一步了解，请参见[nvue开发与vue开发的常见区别](https://uniapp.dcloud.io/use-weex?id=nvue开发与vue开发的常见区别)
