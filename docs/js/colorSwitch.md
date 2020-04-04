@@ -48,7 +48,7 @@ export default{
 
 #### colorGradient(startColor, endColor, step)
 
-该函数实现两个颜色值之间等分取值，返回一个数组，元素为`rgb`形式的颜色值，数组长度为`step`值。 
+该函数实现两个颜色值之间等分取值，返回一个数组，元素为十六进制形式的颜色值，数组长度为`step`值。 
 例如：colorGradient('rgb(250, 250, 250)', 'rgb(252, 252, 252)', 3)，得到的结果为["#fafafa", "#fafafa", "#fbfbfb"]
 
 - `startColor` <String\> 开始颜色值，可以是HEX或者RGB颜色值，如`#0afdce`或者`rgb(120, 130, 150)`

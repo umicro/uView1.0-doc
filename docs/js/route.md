@@ -2,7 +2,7 @@
 
 #### route(Object)
 
-此为一个路由跳转方法，内部为uni对多个路由跳转api的封装，更方便使用
+此为一个路由跳转方法，内部是对uni多个路由跳转api的封装，更方便使用
 
 Object参数说明：
 
@@ -36,8 +36,29 @@ export default{
 
 ### 简写
 
-注：为了方便简写和调用，可以直接传递一个`url`地址替代`Object`，它只能执行`uni.navigateTo`类型的地址，不支持跳转到Tab页面
+注：为了方便简写和调用，可以直接传递一个`url`地址替代`Object`，它只能执行`uni.navigateTo`类型的地址，**不支持跳转到Tabbar页面**，
+如果有参数需要携带，以对象形式写到方法的第二个参数中。
 
 ```js
+// 无参数
 this.$u.rute('/pages/components/empty/index');
+
+
+// 带参数
+this.$u.rute('/pages/components/empty/index', {
+	name: 'lisa',
+	age: 20
+});
 ```
+
+
+<style scoped>
+h4[id=route-object] + p + p + table thead tr th:nth-child(5){
+	width: 40%;
+}
+
+h4[id=route-object] + p + p + table thead tr th:nth-child(2){
+	width: 12%;
+}
+
+</style>

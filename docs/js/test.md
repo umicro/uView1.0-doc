@@ -51,7 +51,7 @@ console.log(this.$u.test.url('http://www.uviewui.com'));
 如下为错误：
 - `2020年02月10日`、`2020-02-10 25:32`
 
-总的来说，年月日之间可以用"/"或者"-"分隔，时分秒之间用":"分别，数值不能超出范围，如月份不能为13，则检验成功，否则失败。
+总的来说，年月日之间可以用"/"或者"-"分隔(不能用中文分隔)，时分秒之间用":"分隔，数值不能超出范围，如月份不能为13，则检验成功，否则失败。
 
 #### date(date)
 
@@ -189,7 +189,7 @@ console.log(this.$u.test.contains('uView', 'View'));
 - `range` <Array\> 如"[25-35]"
 
 ```js
-console.log(this.$u.test.range(35, [30,34]));
+console.log(this.$u.test.range(35, [30, 34]));
 ```
 
 
@@ -200,7 +200,7 @@ console.log(this.$u.test.range(35, [30,34]));
 #### rangeLength(str, range)
 
 - `number` <Number\> 数值
-- `range` <Array\> 如"[25-35]"
+- `range` <Array\> 如"[25, 35]"
 
 ```js
 console.log(this.$u.test.rangeLength('abc', [3, 10]));

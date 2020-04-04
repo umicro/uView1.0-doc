@@ -10,7 +10,7 @@
 该函数需要传入两个参数，一个是时间戳，另一个是时间的格式，返回一个格式化好的时间。
 
 - `timestamp` <String\> 时间戳
-- `format` <String\> 时间格式，默认为`yyyy-mm-dd`，年为"yyyy"，月为"mm"，日为"dd"，时为"hh"，分为"MM"，秒为"ss"，格式可以自由搭配，如：
+- `format` <String\> 时间格式，可选。默认为`yyyy-mm-dd`，年为"yyyy"，月为"mm"，日为"dd"，时为"hh"，分为"MM"，秒为"ss"，格式可以自由搭配，如：
 `yyyy:mm:dd`，`yyyy-mm-dd`，`yyyy年mm月dd日`，`yyyy年mm月dd日 hh时MM分ss秒`，`yyyy/mm/dd/`，`MM:ss`等组合
 
 ```html
@@ -42,7 +42,7 @@
 
 ### 过滤器式写法
 
-uView同时把timeFormat(date)注册到了全局过滤器中，方便您在模板中使用：
+uView同时把timeFormat()注册到了全局过滤器中，方便您在模板中使用：
 
 ```html
 <view>
@@ -102,3 +102,18 @@ this.$u.date('1585926095536', 'yyyy-mm')
 </script>
 ```
 
+### 过滤器式写法
+
+uView同时把timeFrom()注册到了全局过滤器中，方便您在模板中使用：
+
+```html
+<view>
+	<!-- 因为默认参数为yyyy-mm-dd，所以这里可以不用写时间格式 -->
+	时间为：{{'1585926095536' | timeFrom}}
+</view>
+
+<view>
+	<!-- 因为默认参数为yyyy-mm-dd，所以这里可以不用写时间格式 -->
+	时间为：{{'1585926095536' | timeFrom('yyyy-mm')}}
+</view>
+```

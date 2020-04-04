@@ -5,7 +5,6 @@
 
 #### queryParams(data, isPrefix = true)
 
-该函数可以将一个Hex的十六进制颜色值转换成一个RGB颜色值
 
 - `data` <Object\> 对象值，如`{name: 'lisa', age: 20}`  
 - `isPrefix` <Boolean\> 是否在返回的字符串前加上"?"，默认为`true`
