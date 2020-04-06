@@ -31,6 +31,10 @@ module.exports = {
 			text: '布局',
 			link: '/layout/intro'
 		}],
+		// {
+		// 	// text: '合作',
+		// 	// link: '/cooperation/sponsor'
+		// }
 		sidebar: {
 			'/components/': [{
 					title: '开发指南',
