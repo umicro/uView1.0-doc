@@ -3,7 +3,7 @@
 #### "$u"被占用
 
 uView有很多的自带的js工具函数，挂载在`$u`对象中，而`$u`又挂载在`Vue.prototype`中，所以，请勿占用`$u`变量名并
-挂在到`Vue.prototype`。
+挂载到`Vue.prototype`。
 
 
 #### uView对nvue的支持

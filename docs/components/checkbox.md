@@ -121,7 +121,7 @@ export default {
 | shape | 形状，见上方说明 | String  | circle | square |
 | disabled | 是否禁用 | Boolean  | false | true |
 | label-disabled | 点击文本是否可以操作`checkbox` | Boolean  | true | false |
-| active-color | 选中时的颜色 | String  | #2979ff | - |
+| active-color | 选中时的颜色，如设置`CheckboxGroup`的`active-color`将失效 | String  | - | - |
 
 
 
@@ -131,6 +131,7 @@ export default {
 |-------------  |---------------- |---------------|------------------ |-------- |
 | max | 最多能选中多少个`checkbox`  | String \ Number | 999 | - |
 | disabled | 是否禁用所有`checkbox`  | Boolean | false | true |
+| active-color | 选中时的颜色，应用到所有子`Checkbox`组件 | String  | #2979ff | - |
 
 
 ### Checkbox Event
