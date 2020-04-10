@@ -1,5 +1,8 @@
 ## LazyLoad 懒加载
 
+<demo-model url="/pages/componentsA/lazyload/index"></demo-model>
+
+
 懒加载使用的场景为：页面有很多图片时，APP会同时加载所有的图片，导致页面卡顿，各个位置的图片出现前后不一致等   
 本组件高度封装和集成，创新性地使用`uni.createIntersectionObserver`
 接口，保证高性能的同时，还有其他友好的可配置参数，比如预加载占位图，加载错误占位图，加载位置参数(threshold)，各种事件等。

@@ -1,5 +1,8 @@
 ## Avatar 头像
 
+<demo-model url="/pages/componentsA/avatar/index"></demo-model>
+
+
 本组件一般用于展示头像的地方，如个人中心，或者评论列表页的用户头像展示等场所。
 
 ### 平台差异说明

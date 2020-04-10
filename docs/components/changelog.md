@@ -1,5 +1,8 @@
 ## 更新日志
 
+<demo-model url="/"></demo-model>
+
+
 <div class="doc-update">
 	<ul class="u-timeline u-timeline-pending">
 		<li class="u-timeline-item">

@@ -1,5 +1,8 @@
 ## Toast 消息提示
 
+<demo-model url="/pages/componentsA/toast/index"></demo-model>
+
+
 此组件表现形式类似uni的`uni.showToast`API，但也有不同的地方，具体表现在：
 - uView的`toast`有5中主题可选
 - 可以配置toast结束后，跳转相应URL

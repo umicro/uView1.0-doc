@@ -1,5 +1,8 @@
 ## Empty 内容为空
 
+<demo-model url="/pages/componentsA/empty/index"></demo-model>
+
+
 该组件用于需要加载内容，但是加载的第一页数据就为空，提示一个"没有内容"的场景，
 我们精心挑选了十几个场景的图标，方便您使用。
 

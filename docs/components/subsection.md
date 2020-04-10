@@ -1,5 +1,8 @@
 ## Subsection 分段器
 
+<demo-model url="/pages/componentsC/subsection/index"></demo-model>
+
+
 该分段器一般用于用户从几个选项中选择某一个的场景
 
 ### 平台差异说明

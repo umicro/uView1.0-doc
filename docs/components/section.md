@@ -1,5 +1,8 @@
 ## Section 查看更多
 
+<demo-model url="/pages/componentsC/section/index"></demo-model>
+
+
 该组件一般用于分类信息有很多，但是限于篇幅只能列出一部分，让用户通过"查看更多"获得更多信息的场景，实际效果见演示。
 
 

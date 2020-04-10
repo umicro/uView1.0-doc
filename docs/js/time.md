@@ -1,5 +1,8 @@
 ## time 时间格式
 
+<demo-model url="/pages/library/timeFormat/index"></demo-model>
+
+
 ### 格式化时间
 
 #### timeFormat | date(timestamp, format)

@@ -1,5 +1,8 @@
 ## SwipeAction 滑动操作
 
+<demo-model url="/pages/componentsB/swipeAction/index"></demo-model>
+
+
 该组件一般用于左滑唤出操作菜单的场景，用的最多的是左滑删除操作。
 
 说明：该组件目前只能配置左滑唤出一个操作菜单

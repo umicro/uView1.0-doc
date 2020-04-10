@@ -1,4 +1,8 @@
 ## Divider 分割线
+
+<demo-model url="/pages/componentsC/divider/index"></demo-model>
+
+
 区隔内容的分割线，一般用于页面底部"没有更多"的提示。
 
 ### 平台差异说明

@@ -1,5 +1,8 @@
 ## Http请求
 
+<demo-model url="/pages/library/http/index"></demo-model>
+
+
 该插件适用于一般的请求场景，只有`post`和`get`请求，目前不适用于其他的请求形式，比如上传，下载等。插件定位为
 小而美，而不是大而全，目标是切合实际，开箱即用。  
 

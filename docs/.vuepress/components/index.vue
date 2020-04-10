@@ -6,9 +6,9 @@
 					<h1>
 						多平台快速开发的UI框架
 					</h1>
-					<p class="desc-text">
+					<h2 class="desc-text">
 						uView UI，是uniapp生态最优秀的UI框架，全面的组件和便捷的工具会让您信手拈来，如鱼得水
-					</p>
+					</h2>
 					<div class="banner-img">
 						<img src="/index/banner_1920x1080.png" />
 					</div>
@@ -181,18 +181,19 @@
 
 	.banner {
 		text-align: center;
-		margin-top: 50px;
+		margin-top: 4rem;
 	}
 
 	.banner .desc h1 {
 		font-weight: 700;
 		color: #303133;
-		font-size: 32px;
+		font-size: 2rem;
 	}
 
 	.banner .desc-text {
 		color: #606266;
-		font-size: 18px;
+		font-size: 1.1rem;
+		border: none;
 	}
 
 	li {

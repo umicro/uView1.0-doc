@@ -1,5 +1,8 @@
 ## TopTips 顶部提示
 
+<demo-model url="/pages/componentsA/topTips/index"></demo-model>
+
+
 该组件一般用于页面顶部向下滑出一个提示，尔后自动收起的场景。
 
 ### 平台差异说明

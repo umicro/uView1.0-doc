@@ -1,5 +1,8 @@
 ## Checkbox 复选框
 
+<demo-model url="/pages/componentsB/checkbox/index"></demo-model>
+
+
 复选框组件一般用于需要多个选择的场景，该组件功能完整，使用方便
 
 ### 平台差异说明

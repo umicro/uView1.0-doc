@@ -1,5 +1,8 @@
 ## Switch 开关选择器
 
+<demo-model url="/pages/componentsB/switch/index"></demo-model>
+
+
 选择开关一般用于只有两个选择，且只能选其一的场景。
 
 ### 平台差异说明

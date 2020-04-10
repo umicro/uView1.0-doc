@@ -1,6 +1,9 @@
 ## Badge 徽标数
 该组件一般用于图标右上角显示未读的消息数量，提示用户点击，有圆点和圆包含文字两种形式。
 
+<demo-model url="/pages/componentsC/badge/index"></demo-model>
+
+
 ### 平台差异说明
 
 |App|H5|微信小程序|支付宝小程序|百度小程序|头条小程序|QQ小程序|

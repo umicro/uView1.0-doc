@@ -1,5 +1,8 @@
 ## Search 搜索
 
+<demo-model url="/pages/componentsB/search/index"></demo-model>
+
+
 搜索组件，集成了常见搜索框所需功能，用户可以一键引入，开箱即用。
 
 ### 平台差异说明

@@ -1,5 +1,8 @@
 ## Upload 上传
 
+<demo-model url="/pages/componentsB/upload/index"></demo-model>
+
+
 该组件用于上传图片场景
 
 ### 平台差异说明

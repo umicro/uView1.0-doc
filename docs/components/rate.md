@@ -1,5 +1,8 @@
 ## Rate 评分
 
+<demo-model url="/pages/componentsB/rate/index"></demo-model>
+
+
 该组件一般用于满意度调查，星型评分的场景。
 
 ### 平台差异说明

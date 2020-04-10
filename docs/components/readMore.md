@@ -1,5 +1,8 @@
 ## ReadMore 展开阅读更多
 
+<demo-model url="/pages/componentsB/readMore/index"></demo-model>
+
+
 该组件一般用于内容较长，预先收起一部分，点击展开全部内容的场景。
 
 ### 平台差异说明

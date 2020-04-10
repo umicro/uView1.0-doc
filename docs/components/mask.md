@@ -1,5 +1,8 @@
 ## Mask 遮罩层
 
+<demo-model url="/pages/componentsC/mask/index"></demo-model>
+
+
 创建一个遮罩层，用于强调特定的页面元素，并阻止用户对遮罩下层的内容进行操作，一般用于弹窗场景
 
 ### 平台差异说明

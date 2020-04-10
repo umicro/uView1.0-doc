@@ -1,5 +1,8 @@
 ## Link 超链接
 
+<demo-model url="/pages/componentsC/link/index"></demo-model>
+
+
 该组件为超链接组件，在不同平台有不同表现形式：
 - 在APP平台会通过`plus`环境打开内置浏览器
 - 在小程序中把链接复制到粘贴板，同时提示信息

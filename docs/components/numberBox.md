@@ -1,5 +1,8 @@
 ## NumberBox 步进器
 
+<demo-model url="/pages/componentsC/numberBox/index"></demo-model>
+
+
 该组件一般用于商城购物选择物品数量的场景
 
 注意：该输入框只能输入大于或等于0的整数，不支持小数输入

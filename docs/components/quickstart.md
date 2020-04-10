@@ -1,5 +1,8 @@
 ## 快速上手
 
+<demo-model url="/"></demo-model>
+
+
 
 ### 引入
 
@@ -53,7 +56,7 @@ uView的样式文件中类名没有使用类似`.box .item {...}`的嵌套形式
 
 easycom功能可以让用户无需安装、引用、注册，三个步骤后才能使用组件，详见[easycom文档](https://uniapp.dcloud.io/collocation/pages?id=easycom)
 
-Hbuilder X自2.5.1版开始正式支持`easycom`特性，HX2.5.5版支持自动引入`components/组件名称/组件名称.vue`，考虑到用户的一些自定义组件
+Hbuilder X自2.5.1版开始正式支持`easycom`特性，**HX2.5.5**版支持自动引入`components/组件名称/组件名称.vue`，考虑到用户的一些自定义组件
 都会放在`components`目录中，为了不和用户的自定义组件混淆，同时也是为了能让用户一键升级uView，所以我们把uView相关的所有内容都放在了根目录的
 `uview`文件夹中。
 
@@ -100,7 +103,7 @@ Hbuilder X自2.5.1版开始正式支持`easycom`特性，HX2.5.5版支持自动�
 <br>
 
 ::: warning 注意
-此`easycom`功能需要Hbuilder X 2.5.1版本及以上，如果HX低于此版本，要使用某个组件，需要通过手动`import`引入
+此`easycom`功能需要**Hbuilder X 2.5.5**版本及以上，如果HX低于此版本，要使用某个组件，需要通过手动`import`引入
 :::
 
 ```html

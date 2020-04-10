@@ -1,5 +1,7 @@
 ## 安装
 
+<demo-model url="/"></demo-model>
+
 
 :::danger 说明
 uView尚未正式发布，暂不提供下载途径，预计在2020-04-12前发布，敬请期待！

@@ -1,5 +1,8 @@
 ## Tag 标签
 
+<demo-model url="/pages/componentsA/tag/index"></demo-model>
+
+
 该组件一般用于标记和选择，有如下特点：
 - `mode`参数可以设置3种模式，`dark`(深色背景)、`light`(浅色背景)、`plain`(白色背景)
 - `shape`参数可以设置多种形状，`circle`（两边半圆形）, `square`（方形，带圆角），`circleLeft`（左边半圆），`circleRight`（右边半圆）

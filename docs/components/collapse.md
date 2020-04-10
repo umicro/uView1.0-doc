@@ -1,5 +1,8 @@
 ## Collapse 折叠面板
 
+<demo-model url="/pages/componentsC/collapse/index"></demo-model>
+
+
 通过折叠面板收纳内容区域
 
 ### 平台差异说明

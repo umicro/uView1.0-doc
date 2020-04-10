@@ -1,5 +1,8 @@
 ## Grid 宫格布局
 
+<demo-model url="/pages/componentsC/grid/index"></demo-model>
+
+
 宫格组件一般用于同时展示多个同类项目的场景，可以给宫格的项目设置徽标组件([badge](/components/badge.html))，或者图标等，也可以扩展为左右滑动的轮播形式。
 
 ### 平台差异说明

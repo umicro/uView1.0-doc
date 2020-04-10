@@ -1,5 +1,8 @@
 ## mpShare 小程序分享
 
+<demo-model url="/pages/library/mpShare/index"></demo-model>
+
+
 此功能，是对uni的[onShareAppMessage 生命周期](https://uniapp.dcloud.io/api/plugins/share?id=onshareappmessage)的封装。  
 
 这里说的小程序，指的是"微信小程序、百度小程序、头条小程序、QQ小程序，支付宝小程序等"。  

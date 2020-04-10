@@ -1,5 +1,8 @@
 ## Layout 布局
 
+<demo-model url="/pages/componentsC/layout/index"></demo-model>
+
+
 通过基础的 12 分栏，迅速简便地创建布局  
 
 ::: warning 注意

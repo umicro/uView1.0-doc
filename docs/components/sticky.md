@@ -1,5 +1,8 @@
 ## Sticky 吸顶
 
+<demo-model url="/pages/componentsB/sticky/index"></demo-model>
+
+
 该组件与CSS中`position: sticky`属性实现的效果一致，当组件达到预设的到顶部距离时，
 就会固定在指定位置，组件位置大于预设的顶部距离时，会重新按照正常的布局排列。
 

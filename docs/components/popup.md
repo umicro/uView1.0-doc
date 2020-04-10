@@ -1,5 +1,8 @@
 ## Popup 弹出层
 
+<demo-model url="/pages/componentsC/popup/index"></demo-model>
+
+
 弹出层容器，用于展示弹窗、信息提示等内容，支持上、下、左、右和中部弹出。组件只提供容器，内部内容由用户自定义
 
 ### 平台差异说明

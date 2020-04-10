@@ -1,5 +1,8 @@
 ## TimeLine 时间轴
 
+<demo-model url="/pages/componentsA/timeLine/index"></demo-model>
+
+
 时间轴组件一般用于物流信息展示，各种跟时间相关的记录等场景。
 
 ### 平台差异说明

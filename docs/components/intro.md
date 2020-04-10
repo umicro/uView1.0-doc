@@ -1,5 +1,7 @@
 ## 介绍
 
+<demo-model url="/"></demo-model>
+
 <div class="intro-logo">
 	<img class="logo" src="/logo.png" alt="uView" />
 	<h3>uView</h3>

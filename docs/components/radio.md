@@ -1,5 +1,8 @@
 ## Radio 单选框
 
+<demo-model url="/pages/componentsB/radio/index"></demo-model>
+
+
 单选框用于有一个选择，用户只能选择其中一个的场景。
 
 ### 平台差异说明

@@ -1,4 +1,7 @@
 ## AlertTips 警告提示
+
+<demo-model url="/pages/componentsC/alertTips/index"></demo-model>
+
 警告提示，展现需要关注的信息。
 
 ### 使用场景

@@ -1,5 +1,8 @@
 ## Waterfall 瀑布流
 
+<demo-model url="/pages/componentsB/waterfall/index"></demo-model>
+
+
 这是一个瀑布流形式的组件，内容分为左右两列，结合uView的`懒加载`组件效果更佳。  
 相较于某些只是奇偶数左右分别，或者没有利用vue作用域插槽的做法，uView的瀑布流实现了真正的
 组件化，搭配[LazyLoad 懒加载](/components/lazyLoad.html)和[loadMore 加载更多](/components/loadMore.html)组件，让您开箱即用，眼前一亮。

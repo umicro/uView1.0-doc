@@ -1,5 +1,8 @@
 ## CustomIcon 扩展自定义图标库
 
+<demo-model url="/pages/componentsA/icon/index"></demo-model>
+
+
 uView已通过大量的实践中，收集了用户最有可能需要用到的图标，见[Icon 图标](/components/icon.html)，但我们也相信，它肯定无法覆盖所有的场景和需求。  
 
 用户也可以使用标签的方式，自行引入字体图标，为何要通过扩展的方式集成呢？  

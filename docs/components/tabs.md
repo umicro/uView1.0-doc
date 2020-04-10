@@ -1,4 +1,8 @@
 ## Tabs 标签
+
+<demo-model url="/pages/template/order/index"></demo-model>
+
+
 该组件内部实现主要依托于uniapp的`scroll-view`和`swiper`组件，主要特色是切换过程中，tabs文字的颜色可以渐变，底部滑块可以
 跟随式滑动，活动tab滚动居中等。应用场景可以用于需要左右切换页面，比如商城的订单中心(待收货-待付款-待评价-已退货)等应用场景。
 

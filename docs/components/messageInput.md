@@ -1,5 +1,8 @@
 ## MessageInput 验证码输入
 
+<demo-model url="/pages/componentsC/messageInput/index"></demo-model>
+
+
 该组件一般用于验证用户短信验证码的场景，也可以结合uView的[键盘组件](/components/keyboard.html)使用
 
 ### 平台差异说明

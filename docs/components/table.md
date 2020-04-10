@@ -1,5 +1,8 @@
 ## Table 表格
 
+<demo-model url="/pages/componentsB/table/index"></demo-model>
+
+
 表格组件一般用于展示大量结构化数据的场景
 
 ### 平台差异说明

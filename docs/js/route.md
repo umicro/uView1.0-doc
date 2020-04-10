@@ -1,5 +1,8 @@
 ## route 路由跳转
 
+<demo-model url="/pages/library/route/index"></demo-model>
+
+
 #### route(Object)
 
 此为一个路由跳转方法，内部是对uni多个路由跳转api的封装，更方便使用

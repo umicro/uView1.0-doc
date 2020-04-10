@@ -1,5 +1,8 @@
 ## Swiper 轮播图
 
+<demo-model url="/pages/componentsB/swiper/index"></demo-model>
+
+
 该组件一般用于导航轮播，广告展示等场景,可开箱即用，具有如下特点：
 - 内置多种指示器模式，可配置指示器位置
 - 3D轮播图效果

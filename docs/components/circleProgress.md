@@ -1,4 +1,9 @@
 ## CircleProgress 圆形进度条
+
+
+<demo-model url="/pages/componentsC/progress/index"></demo-model>
+
+
 展示操作或任务的当前进度，比如上传文件，是一个圆形的进度条。  
 注意：此组件的`percent`值只能动态增加，不能动态减少。
 

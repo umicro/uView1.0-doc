@@ -1,5 +1,7 @@
 ## random 随机数值
 
+<demo-model url="/pages/library/random/index"></demo-model>
+
 
 #### random(min, max)
 

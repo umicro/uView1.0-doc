@@ -1,5 +1,8 @@
 ## loadMore 加载更多
 
+<demo-model url="/pages/componentsC/loadmore/index"></demo-model>
+
+
 此组件一般用于标识页面底部加载数据时的状态，共有三种状态：
 - 加载前，显示"加载更多"，加入点击可选，是因为数据不够一页时，无法触发页面的`onReachBottom`生命周期
 - 加载中，显示"正在加载..."，2种动画可选

@@ -1,5 +1,8 @@
 ## Picker 选择器
 
+<demo-model url="/pages/componentsB/picker/index"></demo-model>
+
+
 此选择器有两种弹出模式
 
 1. 一是时间模式，可以配置年，日，月，时，分，秒参数

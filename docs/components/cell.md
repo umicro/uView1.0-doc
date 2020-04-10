@@ -1,5 +1,8 @@
 ## Cell 单元格
 
+<demo-model url="/pages/componentsC/cell/index"></demo-model>
+
+
 cell单元格一般用于一组列表的情况，比如个人中心页，设置页等。
 
 ### 平台差异说明

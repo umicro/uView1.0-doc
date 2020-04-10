@@ -1,4 +1,9 @@
 ## LineProgress 线形进度条
+
+
+<demo-model url="/pages/componentsC/progress/index"></demo-model>
+
+
 展示操作或任务的当前进度，比如上传文件，是一个线形的进度条。
 
 ### 平台差异说明

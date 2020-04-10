@@ -1,5 +1,8 @@
 ## Field 输入框
 
+<demo-model url="/pages/componentsA/field/index"></demo-model>
+
+
 借助此组件，可以实现表单的输入， 有"text"和"textarea"类型的，此外，借助uView的`picker`和`actionSheet`组件可以快速实现上拉菜单，时间，地区选择等，
 为表单解决方案的利器。
 

@@ -1,5 +1,8 @@
 ## AvatarCropper 头像裁剪
 
+<demo-model url="/pages/componentsA/avatarCropper/index"></demo-model>
+
+
 该组件一般的图片裁剪需求场景，尤其适合于头像裁剪方面。
 
 ### 平台差异说明
