@@ -15,6 +15,7 @@ module.exports = {
 	],
 	
 	themeConfig: {
+		baseUrl: 'https://api.uviewui.com',
 		search: true, // 是否显示顶部搜索框
 		searchPlaceholder: '搜索文档关键字',
 		sidebarDepth: 0,
@@ -31,11 +32,13 @@ module.exports = {
 		}, {
 			text: '布局',
 			link: '/layout/intro'
+		}, {
+			text: '演示',
+			link: '/components/demo'
+		}, {
+			text: '关于我们',
+			link: '/cooperation/about'
 		}],
-		// {
-		// 	// text: '合作',
-		// 	// link: '/cooperation/sponsor'
-		// }
 		sidebar: {
 			'/components/': [{
 					title: '开发指南',
@@ -45,6 +48,7 @@ module.exports = {
 						['/components/intro', '介绍'],
 						['/components/install', '安装'],
 						['/components/quickstart', '快速上手'],
+						['/components/demo', '效果演示'],
 						['/components/common', '内置样式'],
 						// ['/components/comparison', '对比其他UI框架'],
 						['/components/changelog', '更新日志'],

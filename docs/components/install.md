@@ -4,7 +4,7 @@
 
 
 :::danger 说明
-uView尚未正式发布，暂不提供下载途径，预计在2020-04-12前发布，敬请期待！
+uView已正式发布公测版，欢迎[交流反馈](/cooperation/about.html)，如有问题，我们会紧急修复。
 :::
 
 
@@ -12,10 +12,15 @@ uView尚未正式发布，暂不提供下载途径，预计在2020-04-12前发�
 
 #### 方式一
 
-这个方式，适用于已有现成uni-app项目的情形，解压后将`uview`文件夹，复制到项目根目录，再根据[快速上上手](/guide/quickstart.html)
+这个方式，适用于已有现成uni-app项目的情形，解压后将`uview`文件夹，复制到项目根目录，再根据[快速上上手](/components/quickstart.html)
 中的配置进行引用即可。
 
-
+<br>
+<div @click="downloadPost(2)" class="download-link">
+	下载地址：<a href="https://download.uviewui.com/uView_1.0.0.rar">uView_1.0.0.rar</a>
+</div>
+<br>
+<br>
 
 
 #### 方式二
@@ -30,6 +35,13 @@ uView尚未正式发布，暂不提供下载途径，预计在2020-04-12前发�
 - 此示例工程，基于最新的稳定版Hbuilder X(2.6.5)创建，默认开启V3编译器配置
 - 如果运行出现问题，可能是您的HX版本太低，请升级至最新稳定版尝试解决
 
+<br>
+<div @click="downloadPost(1)" class="download-link">
+	下载地址：<a href="https://download.uviewui.com/uView_demo_1.0.0.rar">uView_demo_1.0.0.rar</a>
+</div>
+<br>
+<br>
+
 
 #### 方式三
 
@@ -37,7 +49,70 @@ uView尚未正式发布，暂不提供下载途径，预计在2020-04-12前发�
 此项目运行用于查看UI演示效果，或者通过里面的示例和文档，可以快速掌握某一个组件的用法。
 
 <br>
+<div @click="downloadPost(3)" class="download-link">
+	下载地址：<a href="https://download.uviewui.com/uView_1.0.0_full.rar">uView_1.0.0_full.rar</a>
+</div>
+<br>
+<br>
+
+<br>
 
 :::tip 注意
 方式三不适用于直接开发中，它只是演示用的，可以直接运行并查看效果。
 :::
+
+<br>
+<br>
+
+### 版本查询
+
+有两种方式可以查询到正在使用的uView的版本：  
+
+- 通过`console.log`打印的形式
+
+```js
+console.log(this.$u.config.v);
+
+// 或者(二者等价)
+console.log(this.$u.config.version);
+```
+
+
+- 通过源码查看的形式
+
+可以查阅uView的配置文件得知当前版本号，具体位置为"/uview/libs/config/config.js"。
+
+
+<script>
+import axios from "axios";
+export default {
+	data() {
+		return {
+			
+		}
+	},
+	methods: {
+		downloadPost(type) {
+			console.log(this.$themeConfig.baseUrl)
+			let url = this.$themeConfig.baseUrl + '/index/index/download';
+			axios.post(url, {
+			    type: type,
+			})
+			.then(function (response) {
+			    // console.log(response);
+			})
+			.catch(function (error) {
+			   // console.log(error);
+			});
+		}
+	}
+}
+</script>
+
+
+<style scoped>
+.download-link {
+	font-size: 14px;
+	color: #5e6d82;
+}
+</style>
