@@ -25,7 +25,7 @@ Object参数说明：
 export default{
 	onLoad() {
 		setTimeout(() => {
-			this.$u.rute({
+			this.$u.route({
 				url: 'pages/components/empty/index',
 				params: {
 					name: 'lisa'
@@ -44,11 +44,11 @@ export default{
 
 ```js
 // 无参数
-this.$u.rute('/pages/components/empty/index');
+this.$u.route('/pages/components/empty/index');
 
 
 // 带参数
-this.$u.rute('/pages/components/empty/index', {
+this.$u.route('/pages/components/empty/index', {
 	name: 'lisa',
 	age: 20
 });

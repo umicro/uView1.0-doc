@@ -46,6 +46,7 @@ uView会将各个版本的演示在此展示，目前演示的版本有H5，安�
 			<img src="/common/android_qrcode.png" />
 			<div class="platform-name">
 				安卓
+				<p class="platform-tips">安卓不能使用微信扫码</p>
 			</div>
 		</div>
 	</div>
@@ -78,6 +79,18 @@ uView会将各个版本的演示在此展示，目前演示的版本有H5，安�
 	.demo-item .platform-name {
 		color: #606266;
 		font-size: 18px;
+		position: relative;
 		margin: 20px 0;
+	}
+	
+	.demo-item .platform-tips {
+		text-align: center;
+		position: absolute;
+		font-size: 14px;
+		bottom: -50px;
+		left: auto;
+		width: 100%;
+		right: auto;
+		color: #909399;
 	}
 </style>

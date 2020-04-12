@@ -2,6 +2,7 @@
 
 <demo-model url="/pages/componentsB/search/index"></demo-model>
 
+<custom-block text="由于右侧的演示是通过iframe引入的，缺少移动端的@touchstart事件，故清除控件无效，请在右上角的“演示”中用手机扫码查看效果。"></custom-block>
 
 搜索组件，集成了常见搜索框所需功能，用户可以一键引入，开箱即用。
 

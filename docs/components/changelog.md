@@ -10,10 +10,32 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>1.0.1</h2>
+				</div>
+				<p><code>2020-04-12</code></p>
+				<!-- <h2>修复Bug，整理文档的多处友好提示</h2> -->
+				<ul>
+					<li>修复swipeAction演示可能由于操作引起的错误</li>
+					<li>完善文档对checkbox，radio的描述</li>
+					<li>
+						添加文档对演示效果的友好提示，详见<a target="_blank" href="/components/sticky.html">Sticky 吸顶</a>(电脑端查看)
+					</li>
+					<li>修改某些图标名，把中划线改成下划线，统一风格</li>
+					<li>修复宫格组件在某些特定机型可能会混乱的问题</li>
+					<li>改正文档的多处错别字，感谢同学们的细心观察</li>
+					<li>其他多项修复和特性的更新</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>1.0.0</h2>
 				</div>
 				<p><code>2020-04-11</code></p>
-				<h2>正式发布，进入公测阶段，如需交流反馈，请加QQ群：1042987248，249718512</h2>
+				<h2>正式发布，进入公测阶段，如需交流反馈，请加QQ群：1042987248</h2>
 				<ul>
 					<li>包含50+组件</li>
 					<li>众多JS工具库</li>

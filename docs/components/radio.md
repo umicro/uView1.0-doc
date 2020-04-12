@@ -5,6 +5,7 @@
 
 单选框用于有一个选择，用户只能选择其中一个的场景。
 
+
 ### 平台差异说明
 
 |App|H5|微信小程序|支付宝小程序|百度小程序|头条小程序|QQ小程序|
@@ -14,8 +15,12 @@
 ### 基本使用
 
 - 该组件一般需要搭配`radioGroup`组件使用，以便用户进行操作时，获得当前单选框组的选中情况，当然，您也可以单独对某个`radio`进行事件监听
-- 通过`v-model`给`radioGroup`绑定一个变量，这个绑定的变量是双向的(初始值只能是`true`或者`false`)，也就是说，您可以无需监听`radio`或者`radioGroup`组件的`change`事件，也能知道哪个
+- 通过`v-model`给`radioGroup`组件绑定一个变量，这个绑定的变量是双向的(初始值只能是`true`或者`false`)，也就是说，您可以无需监听`radio`或者`radioGroup`组件的`change`事件，也能知道哪个
 被勾选了
+
+
+**注意：** 由于`radio`组件需要由`radioGroup`组件提供参数值，这些父子组件间通过Vue的"provide/inject"特性注入依赖，
+所以您必须使用`radio`包裹`radioGroup`组件才能正常使用。
 
 
 ```html
@@ -78,8 +83,9 @@ export default {
 再禁用，会有灰色的勾选的图标，但此时依然是不可操作的。
 
 ```html
-<u-radio v-model="value" :disabled="true">明月几时有</u-radio>
-<u-radio v-model="value" :disabled="false">把酒问青天</u-radio>
+<u-radio-group v-model="value"
+	<u-radio :disabled="true">明月几时有</u-radio>
+<u-radio-group>
 ```
 
 ### 自定义形状
@@ -88,7 +94,9 @@ export default {
 
 
 ```html
-<u-radio v-model="value" square="circle">月明人倚楼</u-radio>
+<u-radio-group v-model="value">
+	<u-radio shape="circle">月明人倚楼</u-radio>
+<u-radio-group>
 ```
 
 
@@ -98,7 +106,9 @@ export default {
 
 
 ```html
-<u-radio v-model="value" active-color="red">思悠悠，恨悠悠，恨到归时方始休</u-radio>
+<u-radio-group v-model="value">
+	<u-radio active-color="red">思悠悠，恨悠悠，恨到归时方始休</u-radio>
+<u-radio-group>
 ```
 
 
@@ -108,7 +118,9 @@ export default {
 
 
 ```html
-<u-radio v-model="value" :label-disabled="false">门掩黄昏，无计留春住</u-radio>
+<u-radio-group v-model="value">
+	<u-radio :label-disabled="false">门掩黄昏，无计留春住</u-radio>
+<u-radio-group>
 ```
 
 

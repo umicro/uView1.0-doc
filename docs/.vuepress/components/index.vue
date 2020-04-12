@@ -194,6 +194,7 @@
 		color: #606266;
 		font-size: 1.1rem;
 		border: none;
+		line-height: 1.7;
 	}
 
 	li {

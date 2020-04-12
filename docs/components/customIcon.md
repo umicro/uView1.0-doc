@@ -41,7 +41,7 @@ uView已通过大量的实践中，收集了用户最有可能需要用到的图
 通过`custom-prefix`指定类名为`custom-icon`
 
 ```html
-<u-icon name="copy" custom-prefix=""></u-icon>
+<u-icon name="copy" custom-prefix="custom-icon"></u-icon>
 ```
 
 ### 基础说明

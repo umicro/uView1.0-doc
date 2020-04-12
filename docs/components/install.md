@@ -4,7 +4,11 @@
 
 
 :::danger 说明
-uView已正式发布公测版，欢迎[交流反馈](/cooperation/about.html)，如有问题，我们会紧急修复。
+uView已正式发布**公测版**，欢迎[交流反馈](/cooperation/about.html)，如有问题，我们会紧急修复。
+:::
+
+:::tip 说明
+由于uView使用`easycom`模式，让您无需引入组件即可直接使用，但是此功能需要Hbuilder X 2.5.5及以上版本才支持，详见[配置easycom组件模式](/components/quickstart.html#_3-配置easycom组件模式)
 :::
 
 
@@ -17,7 +21,7 @@ uView已正式发布公测版，欢迎[交流反馈](/cooperation/about.html)，
 
 <br>
 <div @click="downloadPost(2)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_1.0.0.rar">uView_1.0.0.rar</a>
+	下载地址：<a href="https://download.uviewui.com/uView_1.0.1.rar">uView_1.0.1.rar</a>
 </div>
 <br>
 <br>
@@ -37,7 +41,7 @@ uView已正式发布公测版，欢迎[交流反馈](/cooperation/about.html)，
 
 <br>
 <div @click="downloadPost(1)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_demo_1.0.0.rar">uView_demo_1.0.0.rar</a>
+	下载地址：<a href="https://download.uviewui.com/uView_demo_1.0.1.rar">uView_demo_1.0.1.rar</a>
 </div>
 <br>
 <br>
@@ -50,7 +54,7 @@ uView已正式发布公测版，欢迎[交流反馈](/cooperation/about.html)，
 
 <br>
 <div @click="downloadPost(3)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_1.0.0_full.rar">uView_1.0.0_full.rar</a>
+	下载地址：<a href="https://download.uviewui.com/uView_1.0.1_full.rar">uView_1.0.1_full.rar</a>
 </div>
 <br>
 <br>

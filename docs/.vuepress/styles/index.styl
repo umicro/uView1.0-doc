@@ -7,10 +7,6 @@ body,html {
 	box-sizing border-box;
 }
 
-img {
-	display: block;
-}
-
 $code-color = #e2777a;
 
 div[class*="language-"] {
@@ -272,6 +268,10 @@ body::-webkit-scrollbar-track {
 	.demo-model {
 		display: none;
 	}
+	
+	.custom-block-for-no-api {
+		display: none;
+	}
 }
 	
 @media screen and (min-width: 1301px) and (max-width: 1449px) {
@@ -282,6 +282,10 @@ body::-webkit-scrollbar-track {
 	.demo-model {
 		display: block;
 		right: 20px;
+	}
+	
+	.custom-block-for-no-api {
+		display: block;
 	}
 	
 	.theme-container {
@@ -319,6 +323,10 @@ body::-webkit-scrollbar-track {
 		padding-right: 350px;
 	}
 	
+	.custom-block-for-no-api {
+		display: block;
+	}
+	
 	.page {
 		padding-left: 250px;
 	}
@@ -338,6 +346,10 @@ body::-webkit-scrollbar-track {
 	.demo-model {
 		display: block;
 		right: calc((100% - 1680px) / 2);
+	}
+	
+	.custom-block-for-no-api {
+		display: block;
 	}
 	
 	.page {

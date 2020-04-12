@@ -7,6 +7,8 @@
 本组件高度封装和集成，创新性地使用`uni.createIntersectionObserver`
 接口，保证高性能的同时，还有其他友好的可配置参数，比如预加载占位图，加载错误占位图，加载位置参数(threshold)，各种事件等。
 
+<custom-block></custom-block>
+
 ### 平台差异说明
 
 |App|H5|微信小程序|支付宝小程序|百度小程序|头条小程序|QQ小程序|
