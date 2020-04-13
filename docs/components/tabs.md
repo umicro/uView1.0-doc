@@ -23,16 +23,17 @@
 ### 基本使用
 
 通过设置`is-scroll`(默认为`true`)，配置tabs组件的内容是否可以左右拖动，一般4个标签以下时，无需拖动，设置为false，5个标签以上，建议可以左右拖动。
-具体的标签，通过`tabs`参数配置，该参数要求为数组，元素为对象，对象要有`name`属性，见示例：
+具体的标签，通过`list`参数配置，该参数要求为数组，元素为对象，对象要有`name`属性，见示例：
+
 
 ```html
-<u-tabs ref="tabs" :tabs="tabs" :is-scrool="false"></u-tabs>
+<u-tabs ref="tabs" :list="list" :is-scroll="false"></u-tabs>
 
 <script>
 	export default {
 		data() {
 			return {
-				tabs: [{
+				list: [{
 					name: '待收货'
 				}, {
 					name: '待付款'
@@ -45,6 +46,33 @@
 </script>
 ```
 
+### 控制组件读取的数组元素属性名
+
+某些情况下，数据可能是从后端获取的，`list`所需的数组中不一定会有`name`属性，比如可能为`cate_name`，如果这种情况还需一定要提供`name`属性
+会导致用户需要循环一遍，把`cate_name`改成`name`，显然不人性的，所以uView给tabs组件提供了一个`name`参数，您可以设置其值为`cate_name`，组件内部
+会读取数组中的`cate_name`属性，而不是默认的`name`属性。
+
+```html
+<u-tabs ref="tabs" name="cate_name" :list="list" :is-scroll="false"></u-tabs>
+
+<script>
+	export default {
+		data() {
+			return {
+				list: [{
+					cate_name: '待收货'
+				}, {
+					cate_name: '待付款'
+				}, {
+					cate_name: '待评价'
+				}],
+			}
+		}
+	}
+</script>
+```
+
+
 ### 控制底部滑块的样式
 
 1. 可以通过`active-color`控制颜色(同时为当前活动tab文字颜色和滑块的颜色)。
@@ -52,7 +80,7 @@
 3. `bar-height`控制滑块高度。
 
 ```html
-<u-tabs ref="tabs" :tabs="tabs" bar-height="6" bar-width="40" active-color="#2979ff"></u-tabs>
+<u-tabs ref="tabs" :list="list" bar-height="6" bar-width="40" active-color="#2979ff"></u-tabs>
 ```
 
 ### 控制tabs组件的活动tab样式
@@ -61,7 +89,7 @@
 2. `font-size`为tabs文字大小。
 3. `current`为初始化tabs的激活tab索引，默认为0。`gutter`为单个tab标签的左右内边距之和，即左右各占`gutter`的一半。
 ```html
-<u-tabs ref="tabs" :tabs="tabs" active-color="#2979ff" inactive-color="#606266" font-size="30" current="0"></u-tabs>
+<u-tabs ref="tabs" :list="list" active-color="#2979ff" inactive-color="#606266" font-size="30" current="0"></u-tabs>
 ```
 
 ### 使用案例
@@ -77,7 +105,7 @@
 <template>
 	<view>
 		<view>
-			<u-tabs ref="uTabs" :tabs="tabs" :current="current" @change="tabsChange" :isScrool="false"
+			<u-tabs ref="uTabs" :list="list" :current="current" @change="tabsChange" :is-scroll="false"
 			 swiperWidth="750"></u-tabs>
 		</view>
 		<swiper :current="swiperCurrent" @transition="transition" @animationfinish="animationfinish">
@@ -98,7 +126,7 @@
 		},
 		data() {
 			return {
-				tabs: [{
+				list: [{
 					name: '十年'
 				}, {
 					name: '青春'
@@ -145,8 +173,8 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | is-scroll | tabs是否可以左右拖动  | Boolean | true | false |
-| tabs | 标签数组，元素为对象，如[{name: '推荐'}] | Array  | - | - |
-| current | 制定哪个tab为激活状态 | String \| Number  | 0，即tabs的第一项 | - |
+| list | 标签数组，元素为对象，如[{name: '推荐'}] | Array  | - | - |
+| current | 指定哪个tab为激活状态 | String \| Number  | 0，即`list`的第一项 | - |
 | height | 导航栏的高度，单位rpx | String \| Number  | 80 | - |
 | font-size | tab文字大小，单位rpx | String \| Number  | 30 | - |
 | swiper-width | tabs组件外部swiper的宽度，默认为屏幕宽度，单位rpx | string \| Number  | 750 | - |
@@ -156,6 +184,7 @@
 | bar-height | 滑块高度，单位rpx | String \| Number  | 6 | - |
 | gutter | 单个tab标签的左右内边距之和，单位rpx | String \| Number  | 40 | - |
 | bg-color | tabs导航栏的背景颜色 | string  | #ffffff | - |
+| name | 组件内部读取的`list`参数中的属性名，见上方说明 | string  | name | - |
 
 ### Events
 

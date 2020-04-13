@@ -28,16 +28,18 @@
 <script>
 	export default {
 		data() {
-			list: [{
-				text: '点赞',
-				color: 'blue',
-				fontSize: 28
-			}, {
-				text: '分享'
-			}, {
-				text: '评论'
-			}],
-			show: true
+			return {
+				list: [{
+					text: '点赞',
+					color: 'blue',
+					fontSize: 28
+				}, {
+					text: '分享'
+				}, {
+					text: '评论'
+				}],
+				show: true
+			}
 		}
 	}
 </script>
@@ -56,17 +58,19 @@
 <script>
 	export default {
 		data() {
-			tips: {
-				text: '在水一方',
-				color: '#909399',
-				fontSize: 24
-			},
-			list: [{
-				text: '点赞',
-				color: 'blue',
-				fontSize: 28
-			}],
-			show: true
+			return {
+				tips: {
+					text: '在水一方',
+					color: '#909399',
+					fontSize: 24
+				},
+				list: [{
+					text: '点赞',
+					color: 'blue',
+					fontSize: 28
+				}],
+				show: true
+			}
 		}
 	}
 </script>
@@ -86,16 +90,18 @@
 <script>
 	export default {
 		data() {
-			list: [{
-				text: '点赞',
-				color: 'blue',
-				fontSize: 28
-			}, {
-				text: '分享'
-			}, {
-				text: '评论'
-			}],
-			show: true
+			return {
+				list: [{
+					text: '点赞',
+					color: 'blue',
+					fontSize: 28
+				}, {
+					text: '分享'
+				}, {
+					text: '评论'
+				}],
+				show: true
+			}
 		},
 		methods: {
 			click(index) {

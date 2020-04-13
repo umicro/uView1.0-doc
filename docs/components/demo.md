@@ -30,6 +30,7 @@ uView会将各个版本的演示在此展示，目前演示的版本有H5，安�
 			<img src="/common/weixin_mini_qrcode.png" />
 			<div class="platform-name">
 				微信小程序
+				<p class="platform-tips">只能微信扫码</p>
 			</div>
 		</div>
 	</div>
@@ -38,6 +39,7 @@ uView会将各个版本的演示在此展示，目前演示的版本有H5，安�
 			<img src="/common/h5_qrcode.png" />
 			<div class="platform-name">
 				H5
+				<p class="platform-tips">微信或浏览器扫码</p>
 			</div>
 		</div>
 	</div>
@@ -46,7 +48,7 @@ uView会将各个版本的演示在此展示，目前演示的版本有H5，安�
 			<img src="/common/android_qrcode.png" />
 			<div class="platform-name">
 				安卓
-				<p class="platform-tips">安卓不能使用微信扫码</p>
+				<p class="platform-tips">浏览器扫码安装(微信扫码无效)</p>
 			</div>
 		</div>
 	</div>

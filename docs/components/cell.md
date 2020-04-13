@@ -77,7 +77,7 @@ cell单元格一般用于一组列表的情况，比如个人中心页，设置�
 |-------------  |---------------- |---------------|------------------ |-------- |
 | title | 分组标题  | String | - | - |
 | border | 是否显示外边框 | Boolean  | true | false |
-| title-bg-color | 分组标题的背景颜色 | String  | #ffffff | - |
+| title-style | 分组标题的的样式，对象形式，如{'font-size': '24rpx'} 或 {'fontSize': '24rpx'} | object  | - | - |
 
 ### CellItem Props
 
@@ -93,7 +93,7 @@ cell单元格一般用于一组列表的情况，比如个人中心页，设置�
 | arrow-direction | 箭头方向，可选值为 | String  | right | top / bottom |
 | title-style | 标题样式，对象形式 | Object | - | - |
 | value-style | 右侧内容样式，对象形式 | Object | - | - |
-| lable-style | 标题下方描述信息的样式，对象形式 | Object | - | - |
+| label-style | 标题下方描述信息的样式，对象形式 | Object | - | - |
 | bg-color | 背景颜色 | String  | #ffffff | - |
 
 ### CellItem Slot
@@ -109,3 +109,19 @@ cell单元格一般用于一组列表的情况，比如个人中心页，设置�
 |事件名|说明|回调参数|版本|
 |:-|:-|:-|:-|
 | click | 点击cell列表时触发 | - | - |
+
+
+
+<style scoped>
+h3[id=cellgroup-props] + table thead tr th:nth-child(2){
+	width: 40%;
+}
+
+h3[id=cellitem-props] + table thead tr th:nth-child(2){
+	width: 40%;
+}
+
+h3[id=cellitem-slot] + table thead tr th:nth-child(2){
+	width: 50%;
+}
+</style>

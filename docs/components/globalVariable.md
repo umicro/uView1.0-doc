@@ -89,31 +89,41 @@ export default {
 }
 ```
 
-如果我们试图在`main.js`中将从`config.js`中获取的值挂载到Vue.prototype，再在页面通过`this.xxx`形式获取，在APP和H5有效，
-但在**微信小程序**中是无效的。
+我们可以在`main.js`中将从`config.js`中获取的值挂载到Vue.prototype，再在页面通过`this.xxx`形式获取。
+
+**注意：** 这种挂载的方式，在**微信小程序**中，无法在模板中直接读取`xxx`值(结果为undefined)，只能在js中读取(HX 2.6.11，当前最新稳定版)。
 
 ```js
 // main.js
 import config from "./uview/libs/config/config.js"
 
-Vue.prototype.config = config.domain;
+Vue.prototype.domain = config.domain;
 ```
 
-```js
+```html
 // demo.vue
-export default {
-	onLoad() {
-		// 微信小程序中值为undefined，其他端有效，HX版本：2.6.5稳定版
-		console.log(this.config)
+
+<template>
+	<!-- 微信小程序中值为undefined，其他端有效 -->
+	<view>
+		值为：{{this.domain}}
+	</view>
+</template>
+
+<script>
+	export default {
+		onLoad() {
+			console.log(this.domain)
+		}
 	}
-}
+</script>
 ```
 
 
 ### 挂载到Vue.prototype
 
-使用挂载到Vue.prototype的方式，都是需要在根目录的`main.js`中进行的，在页面中，我们可以使用`this.xxx`的形式获取变量，除了上面说的微信小程序
-中无效外(Hbuilder X 2.6.5稳定版)。
+使用挂载到Vue.prototype的方式，需要在根目录的`main.js`中进行，在页面中，我们可以使用`this.xxx`的形式获取变量，注意上面说的，在微信小程序模板
+无法读取挂在的值，只能在js中使用。
 
 具体使用，见上方的`配置文件`中的介绍
 

@@ -85,9 +85,9 @@
 </style>
 ```
 
-### 结合uni的swiper组件实现宫格的左右滑动
+### 实现宫格的左右滑动
 
-因为`swiper`特性的关系，请指定`swiper`的高度 ，否则`swiper`的高度不会被内容撑开，可以自定义`swiper`的指示器，达到更高的灵活度
+结合uni的swiper组件可以实现宫格的左右滑动，因为`swiper`特性的关系，请指定`swiper`的高度 ，否则`swiper`的高度不会被内容撑开，可以自定义`swiper`的指示器，达到更高的灵活度
 
 ```html
 <template>

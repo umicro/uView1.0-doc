@@ -131,6 +131,7 @@ export default {
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | icon-size | 图标大小，单位rpx  | String \ Number | 24 | - |
+| size | 组件整体的大小，单位rpx  | String \ Number | 40 | - |
 | name | `checkbox`组件的标示符  | String \ Number | - | - |
 | shape | 形状，见上方说明 | String  | circle | square |
 | disabled | 是否禁用 | Boolean  | false | true |

@@ -3,10 +3,12 @@
 <demo-model url="/pages/componentsB/swiper/index"></demo-model>
 
 
+
 该组件一般用于导航轮播，广告展示等场景,可开箱即用，具有如下特点：
 - 内置多种指示器模式，可配置指示器位置
 - 3D轮播图效果
 - 可配置是否显示标题
+
 
 ### 平台差异说明
 
@@ -21,7 +23,7 @@
 - `list`的"title"属性为需要显示的标题
 
 ::: warning 注意
-如果需要显示标题，还需要设置`show-title`参数为`true`
+如果需要显示标题，还需要设置`title`参数为`true`
 :::
 
 ```html
@@ -121,6 +123,7 @@
 | duration | 切换一张轮播图所需的时间，单位ms | String \| Number  | 500 | - |
 | border-radius | 轮播图圆角值，单位rpx | String \| Number  | 8 | - |
 | title-style | 自定义标题样式 | Object  | - | - |
+| effect3d-previous-margin | mode = true模式的情况下，激活项与前后项之间的距离，单位rpx | String \| Number  | 50 | - |
 | img-mode | 图片的裁剪模式，详见[image组件裁剪模式](https://uniapp.dcloud.io/component/image) | String  | aspectFill | - |
 
 

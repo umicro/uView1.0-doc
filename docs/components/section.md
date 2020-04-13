@@ -44,3 +44,11 @@
 | font-size | 主标题的字体大小 | String \| Number  | 28 | - |
 | bold | 主标题是否加粗 | Boolean  | true | false |
 | color | 主标题颜色 | String  | #303133 | - |
+
+
+### Events
+
+
+| 事件名 | 说明 | 回调参数 | 版本 |
+| :- | :- | :- | :- |
+| click | 组件右侧的内容被点击时触发，用于跳转"更多" | - | - |

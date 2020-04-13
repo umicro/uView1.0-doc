@@ -22,7 +22,7 @@
 
 ```html
 <template>
-	<u-search :placeholder="日照香炉生紫烟" v-model="keyword"></u-search>
+	<u-search placeholder="日照香炉生紫烟" v-model="keyword"></u-search>
 </template>
 
 <script>
@@ -41,7 +41,7 @@
 通过`shape`设置输入框两端的形状，`square`(默认)-方形带圆角，`round`-半圆形
 
 ```html
-<u-search :shape="round"></u-search>
+<u-search shape="round"></u-search>
 ```
 
 ### 是否开启清除控件
@@ -77,7 +77,7 @@
 - 通过`bg-color`设置是搜索组件背景颜色
 
 ```html
-<u-search :input-align="center" :height="70"></u-search>
+<u-search :input-align="center" height="70"></u-search>
 ```
 
 ### API

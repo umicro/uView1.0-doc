@@ -113,10 +113,10 @@ Hbuilder X自2.5.1版开始正式支持`easycom`特性，**HX2.5.5**版支持自
 
 <script>
 	import uActionSheet from "@/uView/components/u-action-sheet.vue";
-	components: {
-		uActionSheet
-	},
 	export default {
+		components: {
+			uActionSheet
+		},
 		data() {
 			itemList: [{
 				text: '点赞',

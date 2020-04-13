@@ -84,4 +84,15 @@
 			top: calc((100vh - 310px * 143.6 / 70.9 - 3.6rem) / 2 + 3.6rem);
 		}
 	}
+	
+	@media screen and (min-width: 1920px) {
+		.demo-model {
+			width: 350px;
+			height: calc(350px * 143.6 / 70.9);
+		}
+		
+		.demo-model {
+			top: calc((100vh - 350px * 143.6 / 70.9 - 3.6rem) / 2 + 3.6rem);
+		}
+	}
 </style>
