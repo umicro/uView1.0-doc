@@ -402,10 +402,22 @@ const store = new Vuex.Store({
 export default store
 ```
 
-1. uniapp项目根目录新建'/store/$u.mixin.js'，并复制如下内容到其中，您**不需要**手动引入这个文件，uView会自动引入并`mixin`处理
+1. uniapp项目根目录新建'/store/$u.mixin.js'，并复制如下内容到其中，由于HX某些版本的限制，我们无法帮您自动引入"$u.mixin.js"，您需要在`main.js`
+中手动引入，并mixin处理。
 
+以下为"main.js"文件：
 
 ```js
+// main.js
+vuexStore = require("@/store/$u.mixin.js");
+Vue.mixin(vuexStore);
+```
+
+以下为"$u.mixin.js"文件：
+
+```js
+// $u.mixin.js
+
 import { mapState } from 'vuex'
 import store from "@/store"
 

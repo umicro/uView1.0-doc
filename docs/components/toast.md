@@ -7,7 +7,11 @@
 - uView的`toast`有5中主题可选
 - 可以配置toast结束后，跳转相应URL
 - 目前没有加载中的状态，请用uni的`uni.showLoading`，这个需求uni已经做得很好
-- 由于uni中无法通过js创建元素，所以需要在页面中调用`<toast />`组件，再通过`ref`开启
+
+
+:::warning 注意：
+由于uni中无法通过js创建元素，所以需要在页面中调用`<toast />`组件，再通过`ref`开启
+:::
 
 ### 基本使用
 

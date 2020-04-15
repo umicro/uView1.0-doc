@@ -22,6 +22,9 @@
 - `list`的"image"属性为轮播图的图片路径
 - `list`的"title"属性为需要显示的标题
 
+**说明：** 某些情况下，您从服务端获取的数据，里面的数组对于图片的属性名不一定为`image`，如果让您再历遍修改为`image`属性，显示是不人性的，
+所以uView提供了一个`name`参数，比如您数组中的图片名称为`img`，您可以设置`u-swiper`组件的`name`参数为`img`值。
+
 ::: warning 注意
 如果需要显示标题，还需要设置`title`参数为`true`
 :::
@@ -117,7 +120,7 @@
 | height | 轮播图组件高度，单位rpx | String \| Number  | 250 | - |
 | indicator-pos | 指示器的位置 | String  | bottomCenter | topLeft / topCenter / topRight / bottomLeft / bottomRight |
 | effect3d | 是否开启3D效果 | Boolean  | false | true |
-| autoplay | 是否自动播放 | Boolean  | false | true |
+| autoplay | 是否自动播放 | Boolean  | true | false |
 | interval | 自动轮播时间间隔，单位ms | String \| Number  | 2500 | - |
 | circular | 是否衔接播放，见上方说明 | Boolean  | true | false |
 | duration | 切换一张轮播图所需的时间，单位ms | String \| Number  | 500 | - |

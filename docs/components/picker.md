@@ -23,7 +23,7 @@
 
 :::warning 注意
 由于props单向传值的限制，您需要在`picker`组件的`close`事件回调中把`show`参数设置为`false`，否则
-下次您将无法唤起`picker`
+下次您将无法唤起`picker`，`close`事件只用于修改`show`变量，不能用于获取结果。
 :::
 
 ```html
@@ -173,10 +173,22 @@ let params = {
 | mask-close-able | 是否允许通过点击遮罩关闭Picker  | Boolean | true | false |
 
 
-### Event
+### Events
 
 |事件名|说明|回调参数|版本|
 |:-|:-|:-|:-|
 | confirm | 点击确定按钮，返回当前选择的值 | Object: 见上方"回调参数"部分说明 | - |
 | cancel | 点击取消按钮，返回当前选择的值 | Object: 见上方"回调参数"部分说明 | - |
-| close | cancel和confirm事件的同时，会触发close事件，可以在此事件监听回调值 | Object: 见上方"回调参数"部分说明 | - |
+| close | 点击遮罩收起picker组件，和点击cancel和confirm事件的同时，会触发close事件，无返回值，可以在此修改`show`参数为`false` | - | - |
+
+
+
+<style scoped>
+h3[id=props] + table thead tr th:nth-child(2){
+	width: 35%;
+}
+
+h3[id=events] + table thead tr th:nth-child(2){
+	width: 40%;
+}
+</style>

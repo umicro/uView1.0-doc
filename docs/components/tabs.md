@@ -1,18 +1,18 @@
-## Tabs 标签
+## tabs 标签
 
-<demo-model url="/pages/template/order/index"></demo-model>
+该组件，是一个tabs标签组件，在标签多的时候，可以配置为左右滑动，标签少的时候，可以禁止滑动。 
+该组件的一个特点是配置为滚动模式时，激活的tab会自动移动到组件的中间位置。
+<br>
 
+<demo-model url="/pages/componentsA/tabs/index"></demo-model>
 
-该组件内部实现主要依托于uniapp的`scroll-view`和`swiper`组件，主要特色是切换过程中，tabs文字的颜色可以渐变，底部滑块可以
-跟随式滑动，活动tab滚动居中等。应用场景可以用于需要左右切换页面，比如商城的订单中心(待收货-待付款-待评价-已退货)等应用场景。
+uView中，共有2个组件可以实现tabs标签切换，分别是`tabs`组件，`tabsSwiper`组件，他们的异同点是：  
 
-::: warning 注意
-此组件目前为uView的`vue`版本，非`nvue`版本(制作中)，内部使用uniapp的`swiper`组件为基础，`swiper`是单页组件，
-适合做简单列表左右滑动，因为性能问题，用swiper做复杂长列表，需要较高的优化技巧以及接受一些限制。如果要实现类似腾讯新闻APP首页可以左右
-滑动复杂的多个tab切换，不建议使用本组件，如果使用，请自行测试列表很长时的切换流畅度。后续uView会对`nvue`进行兼容，增强此组件在APP上的能力。  
-官方有一个`nvue`新闻模板示例，内有左右滑动tab功能，具体参考：  
-[插件市场新闻模板示例](https://ext.dcloud.net.cn/plugin?id=103)
-:::
+- `tabs`组件可以不结合uniapp的`swiper`轮播组件使用，`tabsSwiper`组件是必须要结合uniapp的`swiper`轮播组件才能使用的。
+- `tabs`组件使用更简洁明了(这也是其存在的理由)，`tabsSwiper`组件配置相对复杂一些。
+- `tabsSwiper`组件相比`tabs`组件，由于搭配了uniapp的`swiper`轮播组件，获得了滑块跟随，标签颜色渐变等效果(请在演示中扫码查看效果)，而`tabs`组件是不具备的。
+
+总的来说，二者配置参数和功能都差不多，看用户的需求自行衡量该使用哪一个组件。
 
 ### 平台差异说明
 
@@ -22,8 +22,12 @@
 
 ### 基本使用
 
-通过设置`is-scroll`(默认为`true`)，配置tabs组件的内容是否可以左右拖动，一般4个标签以下时，无需拖动，设置为false，5个标签以上，建议可以左右拖动。
+通过设置`is-scroll`(默认为`true`)，配置tabs组件的内容是否可以左右拖动，一般4个标签以下时，无需拖动，设置为`false`，5个标签以上，建议可以左右拖动。
 具体的标签，通过`list`参数配置，该参数要求为数组，元素为对象，对象要有`name`属性，见示例：
+
+:::tip 说明
+`is-scroll`参数很重要，如果您的tabs项只有几个，且不想tabs导航栏可以被左右滑动的话，请一定要设置`is-scroll`为`false`，因为它默认为`true`。
+:::
 
 
 ```html
@@ -46,10 +50,11 @@
 </script>
 ```
 
+
 ### 控制组件读取的数组元素属性名
 
 某些情况下，数据可能是从后端获取的，`list`所需的数组中不一定会有`name`属性，比如可能为`cate_name`，如果这种情况还需一定要提供`name`属性
-会导致用户需要循环一遍，把`cate_name`改成`name`，显然不人性的，所以uView给tabs组件提供了一个`name`参数，您可以设置其值为`cate_name`，组件内部
+会导致用户需要循环一遍，把`cate_name`改成`name`，显然不人性的，所以uView给tabsSwiper组件提供了一个`name`参数，您可以设置其值为`cate_name`，组件内部
 会读取数组中的`cate_name`属性，而不是默认的`name`属性。
 
 ```html
@@ -73,6 +78,27 @@
 ```
 
 
+### 手动配置激活的标签
+
+可以通过`current`控制tabs当前的第几个tab处于激活状态
+
+```html
+<u-tabs ref="tabs" :list="list" current="2"></u-tabs>
+```
+
+
+### 控制tabs组件的宽度
+
+有时候我们并不想让tabs组件占满整个屏幕的宽度，如果有此需求，可以给tabs外面嵌套一个view元素，控制这个view的宽度或者内外边距，view里面的tabs组件
+宽度也会相应的发生变化。
+
+```html
+<view style="width: 400rpx;">
+	<u-tabs ref="tabs" :list="list" current="2"></u-tabs>
+</view>
+```
+
+
 ### 控制底部滑块的样式
 
 1. 可以通过`active-color`控制颜色(同时为当前活动tab文字颜色和滑块的颜色)。
@@ -88,83 +114,11 @@
 1. 通过`active-color`和`inactive-color`控制tabs的激活和非激活颜色。
 2. `font-size`为tabs文字大小。
 3. `current`为初始化tabs的激活tab索引，默认为0。`gutter`为单个tab标签的左右内边距之和，即左右各占`gutter`的一半。
-```html
-<u-tabs ref="tabs" :list="list" active-color="#2979ff" inactive-color="#606266" font-size="30" current="0"></u-tabs>
-```
-
-### 使用案例
-一般可以搭配uniapp的`swiper`组件实现左右滑动，同时搭配uView的`loadmore`实现底部加载更多的功能，注意：
-- 必须要给组件设置`ref`属性，因为结合uni的`swiper`组件时需要调用tabs内部的方法，详见示例。   
-- 本示例中在`swiper-item`中嵌套了`可选`的uniapp的`scroll-view`组件，uni官方不建议在APP-vue和小程序中`scroll-view`中使用map、video等原生组件，
-具体请参考：[uni的scroll-view组件文档](https://uniapp.dcloud.io/component/scroll-view)    
-
-注意：由于tabs组件需要结合uni的`swiper`组件使用，过程较为复杂，故此示例代码仅作参考使用，请勿直接复制粘贴使用，
-具体使用方法请下载查阅uView的tabs案例。
 
 ```html
-<template>
-	<view>
-		<view>
-			<u-tabs ref="uTabs" :list="list" :current="current" @change="tabsChange" :is-scroll="false"
-			 swiperWidth="750"></u-tabs>
-		</view>
-		<swiper :current="swiperCurrent" @transition="transition" @animationfinish="animationfinish">
-			<swiper-item class="swiper-item" v-for="(item, index) in tabs" :key="index">
-				<scroll-view scroll-y style="height: 800rpx;width: 100%;" @scrolltolower="onreachBottom">
-					...
-				</scroll-view>
-			</swiper-item>
-		</swiper>
-	</view>
-</template>
-
-<script>
-	import uTabs from '@/uview/components/tabs/index.vue';
-	export default {
-		components: {
-			uTabs
-		},
-		data() {
-			return {
-				list: [{
-					name: '十年'
-				}, {
-					name: '青春'
-				}, {
-					name: '之约'
-				}],
-				// 因为内部的滑动机制限制，请将tabs组件和swiper组件的current用不同变量赋值
-				current: 0, // tabs组件的current值，表示当前活动的tab选项
-				swiperCurrent: 0, // swiper组件的current值，表示当前那个swiper-item是活动的
-				dx: 0, // 切换过程中，百度小程序不支持此值
-			};
-		},
-		methods: {
-			// tabs通知swiper切换
-			tabsChange(index) {
-				this.swiperCurrent = index;
-			},
-			// swiper-item左右移动，通知tabs的滑块跟随移动
-			transition(e) {
-				let dx = e.detail.dx;
-				this.$refs.uTabs.setDx(dx);
-			},
-			// 由于swiper的内部机制问题，快速切换swiper不会触发dx的连续变化，需要在结束时重置状态
-			// swiper滑动结束，分别设置tabs和swiper的状态
-			animationfinish(e) {
-				let current = e.detail.current;
-				this.$refs.uTabs.setFinishCurrent(current);
-				this.swiperCurrent = current;
-				this.current = current;
-			},
-			// scroll-view到底部加载更多
-			onreachBottom() {
-				
-			}
-		}
-	};
-</script>
+<u-tabs ref="tabs" :list="list" active-color="#2979ff" inactive-color="#606266" font-size="30" :current="current"></u-tabs>
 ```
+
 
 ### API
 
@@ -177,7 +131,7 @@
 | current | 指定哪个tab为激活状态 | String \| Number  | 0，即`list`的第一项 | - |
 | height | 导航栏的高度，单位rpx | String \| Number  | 80 | - |
 | font-size | tab文字大小，单位rpx | String \| Number  | 30 | - |
-| swiper-width | tabs组件外部swiper的宽度，默认为屏幕宽度，单位rpx | string \| Number  | 750 | - |
+| duration | 滑块移动一次所需的时间，单位**秒** | String \| Number  | 0.5 | - |
 | active-color | 滑块和激活tab文字的颜色  | String | #2979ff | - |
 | inactive-color | tabs文字颜色 | String  | #303133 | - |
 | bar-width | 滑块宽度，单位rpx | String \| Number  | 40 | - |
@@ -185,6 +139,7 @@
 | gutter | 单个tab标签的左右内边距之和，单位rpx | String \| Number  | 40 | - |
 | bg-color | tabs导航栏的背景颜色 | string  | #ffffff | - |
 | name | 组件内部读取的`list`参数中的属性名，见上方说明 | string  | name | - |
+| bold | 激活选项的字体是否加粗 | Boolean | true | false |
 
 ### Events
 

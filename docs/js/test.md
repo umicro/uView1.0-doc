@@ -21,7 +21,7 @@ console.log(this.$u.test.email('123465798@gmail.com'));
 
 #### mobile(mobile)
 
-校验是否邮箱号
+校验是否手机号
 
 - `mobile` <String\> 字符串
 

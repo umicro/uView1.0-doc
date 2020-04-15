@@ -66,7 +66,7 @@
 ### 获取上传的图片列表
 
 图片选择或者上传成功后，会保存在组件内部的`lists`数组中，数组元素为对象，有如下属性：
-- src: 图片地址
+- url: 图片地址
 - error：组件内部使用，不应根据此值判断上传是否成功，而应根据`progress`属性
 - progress：如果值为100，表示图片上传成功
 - response：上传成功后，服务器返回的数据，这是最有用的了
@@ -76,7 +76,7 @@
 ```html
 <template>
 	<view>
-		<u-upload ref="uUpload" on-uploaded="onUploaded" :action="action" :auto-upload="false" ></u-upload>
+		<u-upload ref="uUpload" @on-uploaded="onUploaded" :action="action" :auto-upload="false" ></u-upload>
 		<u-button @click="submit">提交</u-button>
 	</view>
 </template>
@@ -324,7 +324,7 @@ lists = [
 | multiple | 是否开启图片多选，部分安卓机型不支持  | Boolean  | true | false |
 | deletable | 是否显示删除图片的按钮 | Boolean  | true | false |
 | max-size | 选择单个文件的最大大小，单位B(byte)，默认不限制 | String \| Number  | Number.MAX_VALUE | - |
-| file-list | 默认显示的图片列表，数组元素为对象，必须提供`src`属性 | Array\<Object\>  | - | - |
+| file-list | 默认显示的图片列表，数组元素为对象，必须提供`url`属性 | Array\<Object\>  | - | - |
 | upload-text | 选择图片按钮的提示文字 | Boolean  | 选择图片 | - |
 | auto-upload | 选择完图片是否自动上传，见上方说明 | Boolean  | true | false |
 | show-tips | 特殊情况下是否自动提示toast，见上方说明 | Boolean  | true | false |

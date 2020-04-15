@@ -49,9 +49,10 @@
 
 ### 配置参数
 
-配置参数的时候，需要调用`this.$u.http.setConfig()`方法，传递一个对象作为参数，强烈建议在此配置统一请求的`baseUrl`，
-同时看情况是否开启(默认关闭)请求加载中的loading，该功能需要设置一个时间(默认800ms)，如果超过此时间，请求尚未
-返回，则显示一个loading，直至返回后，取消loading。  
+配置参数的时候，需要调用`this.$u.http.setConfig()`方法，传递一个对象作为参数。
+- 强烈建议在此配置统一请求的`baseUrl`
+- 同时看情况是否开启(默认关闭)请求加载中的loading，该功能需要设置一个时间(默认800ms)，如果超过此时间，请求尚未返回，则显示一个loading，直至返回后，取消loading。   
+
 
 说明：请求loading超时时间的意义为，一般情况下，请求会在几十毫秒返回，时间极短，无需loading，如果显示loading，会导致
 动画一闪而过，体验不好。如果用户网络慢，或者服务器堵塞，可能一个请求需要几秒钟，这时请求达到设定时间(800ms)，
@@ -73,6 +74,7 @@ config =
 	showLoading: true, // 是否显示请求中的loading
 	loadingText: '请求中...', // 请求loading中的文字提示
 	loadingTime: 800, // 在此时间内，请求还没回来的话，就显示加载中动画，单位ms
+	originalData: false, // 是否在拦截器中返回服务端的原始数据
 }
 ```
 
@@ -155,6 +157,12 @@ export default {
 提示，并跳转到登录页。 
 该拦截，建议写在项目根目录的App.vue的onLaunch生命周期中，如下：
 
+:::tip 注意
+响应拦截器中默认返回的是`response.data`，如果您的需求比较特殊，需要返回`response`，请在"this.$u.http.setConfig"配置
+`originalData`为`true`，如果配置了，服务端返回的"response.statusCode"不为"200"的时候，将不会自动弹出"modal"框，请自行
+在响应拦截器中配置相关行为。
+:::
+
 #### this.$u.http.interceptor.response = (res) => { ... }
 
 - `res` <Object\> 该参数为服务器返回的数据，具体可打印查看
@@ -178,6 +186,7 @@ export default {
 			if(res.code == 200) {
 				// res为服务端返回值，可能有code，result等字段
 				// 这里对res.result进行返回，将会在this.$u.post(url).then(res => {})的then回调中的res的到
+				// 如果配置了originalData为true，请留意这里的返回值
 		 		return res.result;
 			} else if(res.code == 201) {
 				// 假设201为token失效，这里跳转登录
@@ -188,7 +197,7 @@ export default {
 				setTimeout(() => {
 					// 此为uView的方法，详见路由相关文档
 					this.$u.route({
-						url: '/page/user/login'
+						url: '/pages/user/login'
 					})
 				}, 1500)
 				return false;

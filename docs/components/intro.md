@@ -3,7 +3,7 @@
 <demo-model url="/"></demo-model>
 
 <div class="intro-logo">
-	<img class="logo" src="/logo.png" alt="uView" />
+	<img class="logo" src="/common/logo.png" alt="uView" />
 	<h3>uView</h3>
 	<p class="slogan">多平台快速开发的UI框架</p>
 </div>

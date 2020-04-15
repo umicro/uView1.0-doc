@@ -54,31 +54,31 @@ uView已通过大量的实践中，收集了用户最有可能需要用到的图
 
 1. 我们建议，您应该修改这个图标的前缀，这样以后有新图标加入的时候，不用每次频繁修改前缀，在右上角的"更多操作"中，进入"编辑项目"：
 
-<img src="/custom_icon_3.png" />
+<img src="/custom_icon/custom_icon_3.png" />
 
 
 2. 修改"FontClass/Symbol 前缀"项为"custom-icon-"，修改"Font Family"为"custom-icon"，如下图：
 
-<img src="/custom_icon_4.png" />
+<img src="/custom_icon/custom_icon_4.png" />
 
 
 3. 下载项目至本地
 
-<img src="/custom_icon_1.png" />
+<img src="/custom_icon/custom_icon_1.png" />
 
 4. 复制"iconfont.css"至项目，一般放在根目录的`static`文件夹下
 
-<img src="/custom_icon_2.png" />
+<img src="/custom_icon/custom_icon_2.png" />
 
 5. 复制"iconfont.css"文件到uniapp项目根目录的`static`目录后(也可以为其他目录)，打开"iconfont.css"，内部如下：
 
 删掉下图圈出的部分，记得把"src: url('data:application/x-font-woff2......"最后的逗号`,`改成分号`;`。
 
-<img src="/custom_icon_5.png" />
+<img src="/custom_icon/custom_icon_8.png" />
 
 6. 最终如下图：
 
-<img src="/custom_icon_6.png" />
+<img src="/custom_icon/custom_icon_9.png" />
 
 
 7. 在项目根目录的"App.vue"中，引入上述的"iconfont.css"，注意自己存放的路径，且通过"@import"引入的外部样式，为了兼容性建议使用相对路径，
@@ -102,7 +102,7 @@ uView已通过大量的实践中，收集了用户最有可能需要用到的图
 8. 在页面通过uView的[Icon](/components/icon.html)组件使用图标，图标名称为您在阿里图标库中点击"编辑图标"时的"Font Class / Symbol"(该值可修改，每次修改都需重新下载"iconfont.css"放到uniapp项目中，
 覆盖原来的"iconfont.css")
 
-<img src="/custom_icon_7.png" />
+<img src="/custom_icon/custom_icon_7.png" />
 
 如上图，我们得到"backspace"值，使用如下：
 

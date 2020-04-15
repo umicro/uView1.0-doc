@@ -68,9 +68,11 @@
 | is-dot | 不展示数字，只有一个小点 | Boolean  | false | true |
 | absolute | 组件是否绝对定位，为`true`时，`offset`参数才有效 | Boolean  | true | false |
 | overflow-count | 展示封顶的数字值 | String \| Number  | 99 | - |
-| type | 使用预设的颜色 | String  | error | success / primary / warning / info |
+| type | 使用预设的背景颜色 | String  | error | success / primary / warning / info |
 | show-zero | 当数值为 0 时，是否展示 Badge | Boolean  | false | true |
 | size | Badge的尺寸，设为`mini`会得到小一号的`Badge` | String  | default | mini |
 | offset | 设置badge的位置偏移，格式为 [x, y]，也即设置的为`top`和`right`的值，单位rpx。`absolute`为`true`时有效 | Array | [20, 20] | - |
+| color | 字体颜色 | String  | #ffffff | - |
+| bgColor | 背景颜色，优先级比`type`高，如设置，`type`参数会失效 | String  | - | - |
 
 

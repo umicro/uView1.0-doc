@@ -10,6 +10,55 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>1.0.3</h2>
+				</div>
+				<p><code>2020-04-14</code></p>
+				<ul>
+					<li>新增u-button组件对uniapp的button组件开放能力的对接</li>
+					<li>新增允许field组件的maxlength参数为字符串数值形式</li>
+					<li>
+						修复文档关于upload组件的参数错误
+					</li>
+					<li>修复cell组件右箭头方向参数无效的问题</li>
+					<li>调整icon图标的使用，防止图标可能存在不垂直居中的情况</li>
+					<li>文档添加右侧的tabs组件演示</li>
+					<li>修复tabs组件演示可能会产生混乱的问题</li>
+					<li>修复HX2.6.11版报"@/store/$u.mixin.js"不存在的警告</li>
+					<li>其他多项修复和特性的更新</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
+					<h2>1.0.2</h2>
+				</div>
+				<p><code>2020-04-13</code></p>
+				<!-- <h2>修复Bug，整理文档的多处友好提示</h2> -->
+				<ul>
+					<li>修复文档对section组件右侧内容点击事件的遗漏</li>
+					<li>修复tabs组件文档参数描述错误</li>
+					<li>
+						快速上手中示例有误
+					</li>
+					<li>swiper的show-title参数改为title，增加3d模式对两边边距的控制参数</li>
+					<li>验证规则对手机号的正则有误</li>
+					<li>修复文档演示中swiper无法鼠标滑动的问题</li>
+					<li>调整cell-group对标题样式的定义方式</li>
+					<li>增加参数可以控制radio和checkbox的大小</li>
+					<li>增加文档演示区域在宽屏下的尺寸</li>
+					<li>调整原tabs组件为tabsSwiper组件，新增简洁版tabs组件</li>
+					<li>其他多项修复和特性的更新</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>1.0.1</h2>
 				</div>
 				<p><code>2020-04-12</code></p>

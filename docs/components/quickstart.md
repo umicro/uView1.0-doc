@@ -14,6 +14,11 @@ uView依赖SCSS，相信您的项目在HBuilder X中已经安装scss插件，如
 如不生效，重启HX即可。
 :::
 
+### 关于easycom的说明
+
+uView采用easycom自动按需引入组件的方式，这意味着即使您引入了整个uView组件库，只用到了其中一个组件，最终打包的时候，只有被引用了的这个组件才会被打包编译，
+其余的组件不会被打包，也就是说不会造成打包后体积变大或者性能下降的问题，请放心引入整个uView核心库。
+
 #### 1. 引入uView主JS库
 
 在项目根目录中的`main.js`中，引入并使用uView的JS库，注意这两行要放在`import Vue`之后。
@@ -102,9 +107,10 @@ Hbuilder X自2.5.1版开始正式支持`easycom`特性，**HX2.5.5**版支持自
 
 <br>
 
-::: warning 注意
-此`easycom`功能需要**Hbuilder X 2.5.5**版本及以上，如果HX低于此版本，要使用某个组件，需要通过手动`import`引入
-:::
+
+### 如何不使用easycom而单独引用某一个组件
+
+某些情况下，您可能不想通过easycom引用组件(虽然我们极力推荐您使用easycom)，那么您可以使用`import`这个常规的引入方式，如下：
 
 ```html
 <template>
@@ -112,7 +118,7 @@ Hbuilder X自2.5.1版开始正式支持`easycom`特性，**HX2.5.5**版支持自
 </template>
 
 <script>
-	import uActionSheet from "@/uView/components/u-action-sheet.vue";
+	import uActionSheet from "@/uView/components/u-action-sheet/u-action-sheet.vue";
 	export default {
 		components: {
 			uActionSheet

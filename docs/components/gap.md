@@ -18,7 +18,7 @@
 - 通过`bg-color`配置背景颜色
 
 ```html
-<gap height="80" bg-color="#bbb"></gap>
+<u-gap height="80" bg-color="#bbb"></u-gap>
 ```
 
 ### API

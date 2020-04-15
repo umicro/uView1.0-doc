@@ -47,7 +47,6 @@
 
 通过`mode`设置分段器的模式
 - 值为`button`时为按钮类型
-- 值为`tabs`时为下划线类型，此时表现形式类似uView的[Tabs 标签](/components/tabs.html)组件，但是也有区别：`tabs`组件更强大，灵活，适用于一些复杂的场景。此组件适用于一些简单的场景
 - 值为`subsection`时为分段器形式
 
 ```html
@@ -64,21 +63,12 @@
 
 ### 颜色配置
 
-通过`active-color`配置激活选项的文字颜色，`mode`为`subsection`时无效，此时默认为白色  
-`mode`为`button`时  
+- 通过`active-color`配置激活选项的文字颜色，`mode`为`subsection`时无效，此时默认为白色：
 - 通过`bgColor`配置背景颜色
-- 通过`buttonColor`配置按钮颜色
+- 通过`buttonColor`配置按钮颜色，`mode`为`button`时有效
 
 ```html
 <u-subsection active-color="#ff9900"></u-subsection>
-```
-
-### 设置滑块长度
-
-只有`mode`为`tabs`时，可以设置底部的滑块长度，单位rpx
-
-```html
-<u-subsection :bar-width="50"></u-subsection>
 ```
 
 
@@ -132,10 +122,9 @@
 | current | 初始化时默认选中的选项索引值  | String \| Number | 0 | - |
 | active-color | 激活时的颜色，`mode`为`subsection`时固定为白色 | String | #ff9900 | - |
 | inactive-color | 未激活时字体的颜色，`mode`为`subsection`时无效 | String | #303133 | true |
-| mode | 模式选择，，见上方说明 | String | button | text |
+| mode | 模式选择，见上方"模式选择"说明 | String | button | subsection |
 | font-size | 字体大小，单位rpx | String \| Number | 28 | - |
 | animation | 是否开启动画效果，见上方说明 | Boolean | true | false |
-| bar-width | `mode`为`text`时，底部滑块的长度，单位rpx | String \| Number | 40 | - |
 | bold | 激活选项的字体是否加粗 | Boolean | true | false |
 | bg-color | 组件背景颜色，`mode`为`button`时有效 | String | #eeeeef | - |
 | button-color | 按钮背景颜色，`mode`为`button`时有效 | String | #ffffff | - |

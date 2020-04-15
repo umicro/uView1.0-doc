@@ -35,10 +35,10 @@
 
 ### 是否显示键盘的点(".")按键
 
-该按键通过`dot-enable`(默认为`true`)参数配置，只在"mode = number"时生效，因为车牌号和身份证键盘，用不到"."这个按键
+该按键通过`dot-enabled`(默认为`true`)参数配置，只在"mode = number"时生效，因为车牌号和身份证键盘，用不到"."这个按键
 
 ```html
-<u-keyboard ref="uKeyboard" mode="number" :dot-enable="false"></u-keyboard>
+<u-keyboard ref="uKeyboard" mode="number" :dot-enabled="false"></u-keyboard>
 ```
 
 ### 是否打乱按键的顺序
@@ -122,7 +122,7 @@
 | 参数      | 说明        | 类型     |  默认值  |  可选值   |
 |-----------|-----------|----------|----------|---------|
 | mode | 键盘类型，见上方`基本使用`的说明  | String | number | car / card |
-| dot-enable | 是否显示"."按键，只在mode=number时有效 | Boolean  | true | false |
+| dot-enabled | 是否显示"."按键，只在mode=number时有效 | Boolean  | true | false |
 | show | 显示或隐藏键盘 | Boolean  | false | true |
 | tooltip | 是否显示键盘顶部工具条 | Boolean  | true | false |
 | tips | 工具条中间的提示文字，见上方`基本使用`的说明，如不需要，请传""空字符 | String  | - | - |

@@ -23,7 +23,7 @@
 
 ```html
 <template>
-	<view class="">
+	<view>
 		<u-cell-group>
 			<u-field
 				v-model="mobile"
@@ -234,7 +234,7 @@ export default {
 | focus | 是否自动获得焦点 | Boolean | false | true |
 | fixed | 如果`type`为`textarea`，且在一个"position:fixed"的区域，需要指明为`true` | Boolean | false | true |
 | disabled | 是否不可输入 | Boolean | false | true |
-| maxlength | 最大输入长度，设置为 -1 的时候不限制最大长度 | Number | 140 | - |
+| maxlength | 最大输入长度，设置为 -1 的时候不限制最大长度 | Number \| String | 140 | - |
 | confirm-type | 设置键盘右下角按钮的文字，仅在type="text"时生效 | String | done | - |
 
 

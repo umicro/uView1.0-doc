@@ -16,12 +16,14 @@ uView已正式发布**公测版**，欢迎[交流反馈](/cooperation/about.html
 
 #### 方式一
 
-这个方式，适用于已有现成uni-app项目的情形，解压后将`uview`文件夹，复制到项目根目录，再根据[快速上上手](/components/quickstart.html)
+这个方式，适用于已有现成uni-app项目的情形，解压后将`uview`文件夹，复制到项目根目录，再根据[快速上手](/components/quickstart.html)
 中的配置进行引用即可。
+
+**注意：** 此下载方式必须要按照[快速上手](/components/quickstart.html)中的说明配置了才可用。
 
 <br>
 <div @click="downloadPost(2)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_1.0.1.rar">uView_1.0.1.rar</a>
+	下载地址：<a href="https://download.uviewui.com/uView_1.0.3.rar">uView_1.0.3.rar</a>
 </div>
 <br>
 <br>
@@ -41,7 +43,7 @@ uView已正式发布**公测版**，欢迎[交流反馈](/cooperation/about.html
 
 <br>
 <div @click="downloadPost(1)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_demo_1.0.1.rar">uView_demo_1.0.1.rar</a>
+	下载地址：<a href="https://download.uviewui.com/uView_demo_1.0.3.rar">uView_demo_1.0.3.rar</a>
 </div>
 <br>
 <br>
@@ -54,7 +56,7 @@ uView已正式发布**公测版**，欢迎[交流反馈](/cooperation/about.html
 
 <br>
 <div @click="downloadPost(3)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_1.0.1_full.rar">uView_1.0.1_full.rar</a>
+	下载地址：<a href="https://download.uviewui.com/uView_1.0.3_full.rar">uView_1.0.3_full.rar</a>
 </div>
 <br>
 <br>

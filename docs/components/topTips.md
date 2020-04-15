@@ -33,10 +33,19 @@
 </script>
 ```
 
-### 其他设置
+### 主题设置
+
+可以通过配置`type`参数设置显示的背景颜色：
 
 - `type`值可选的有`primary`(默认)、`success`、`info`、`warning`、`error`
-- `duration`值设置显示的时间，单位ms
+
+```html
+<u-top-tips ref="uTips" type="success" duration="1500"></u-top-tips>
+```
+
+### 显示时间设置
+
+- `duration`值设置显示的时间，单位ms：
 
 ```html
 <u-top-tips ref="uTips" type="success" duration="1500"></u-top-tips>

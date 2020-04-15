@@ -5,12 +5,12 @@
 
 ### 格式化时间
 
-#### timeFormat | date(timestamp, format)
+#### timeFormat | date(timestamp, format = "yyyy-mm-dd")
 
 
 **注**：date和timeFormat为同功能不同名函数，无论用哪个方法名，都是一样的。  
 
-该函数需要传入两个参数，一个是时间戳，另一个是时间的格式，返回一个格式化好的时间。
+该函数必须传入第一个参数，第二个参数是可选的，函数返回一个格式化好的时间。
 
 - `timestamp` <String\> 时间戳
 - `format` <String\> 时间格式，可选。默认为`yyyy-mm-dd`，年为"yyyy"，月为"mm"，日为"dd"，时为"hh"，分为"MM"，秒为"ss"，格式可以自由搭配，如：
@@ -69,9 +69,9 @@ this.$u.date('1585926095536', 'yyyy-mm')
 
 ### 多久以前
 
-#### timeFrom(timestamp, format)
+#### timeFrom(timestamp, format = "yyyy-mm-dd")
 
-该函数需要传入两个参数，一个是时间戳，另一个是时间的格式，返回的值类似`刚刚`，`25分钟前`，`3小时前`，`7天前`
+该函数必须传入第一个参数，第二个参数是可选的，一个是时间戳，另一个是时间的格式(用于在时间戳离目前时间很大时返回一个格式化好的时间)，返回的值类似`刚刚`，`25分钟前`，`3小时前`，`7天前`
 
 - `timestamp` <String\> 时间戳
 - `format` <String\> 时间格式，默认为`yyyy-mm-dd`，年为"yyyy"，月为"mm"，日为"dd"，时为"hh"，分为"MM"，秒为"ss"，格式可以自由搭配，如：

@@ -93,19 +93,21 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | accordion | 是否手风琴模式  | Boolean | true | false |
+| arrow | 是否显示标题右侧的箭头  | Boolean | true | false |
+| arrow-color | 标题右侧箭头的颜色 | String | #909399 | - |
+| head-bg-color | 标题的背景颜色  | String | #ffffff | - |
+| body-bg-color | 主体内容的背景颜色  | String | #ffffff | - |
 
 ### Collapse Item Props
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | title | 面板标题  | String | - | - |
-| head-bg-color | 标题的背景颜色  | String | #ffffff | - |
-| body-bg-color | 主体内容的背景颜色  | String | #ffffff | - |
 | disabled | 面板是否可以打开或收起  | Boolean | false | true |
-| arrow | 是否显示标题右侧的箭头  | Boolean | true | false |
-| arrow-color | 标题右侧箭头的颜色 | String | #909399 | - |
 | open | 设置某个面板的初始状态是否打开  | Boolean | false | true |
 | name | 唯一标识符，如不设置，默认用当前`collapse-item`的索引值 | String \/ Number | - | - |
+| align | 标题的对齐方式  | String | left | - |
+| active-style | 不显示箭头时，可以添加当前选择的collapse-item活动样式，对象形式  | Object | - | - |
 
 
 ### Collapse Event

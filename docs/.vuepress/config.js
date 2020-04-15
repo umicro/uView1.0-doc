@@ -140,8 +140,9 @@ module.exports = {
 							sidebarDepth: 0,
 							children: [
 								'/components/tabs',
-								'/components/indexList',
+								'/components/tabsSwiper',
 								'/components/subsection',
+								'/components/indexList',
 								'/components/steps',
 								'/components/empty',
 								'/components/link',
@@ -233,7 +234,7 @@ module.exports = {
 				]
 			}]
 		},
-		logo: '/logo.png',
+		logo: '/common/logo.png',
 		// 需要显示H5预览的地址集合
 		simulatorUrl: [
 			'/components/intro',
@@ -258,6 +259,7 @@ module.exports = {
 			'/components/upload',
 			'/components/verificationCode',
 			'/components/field',
+			'/components/tabsSwiper',
 			'/components/checkbox',
 			'/components/radio',
 			'/components/switch',

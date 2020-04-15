@@ -111,12 +111,15 @@ uniapp的`button`组件比较特殊，因为它有一些其他小程序平台的
 </script>
 ```
 
+
+### 各家小程序开放能力的对接
+
+uView已对接uniapp文档关于[uniapp官方button组件](https://uniapp.dcloud.io/component/button)的所有开放能力(截止2020-04-14)，按照uniapp文档说明使用即可，如果有发现遗漏的地方，请加群反馈。
+
 ### API
 
 ### Props
 
-如果此文档关于其他平台小程序的开放能力的说明无法满足您的需求，请参考uniapp官方文档：  
-[uniapp官方button组件](https://uniapp.dcloud.io/component/button)
 
 |属性名|说明|类型|默认值|可选值|平台差异说明|
 |:-|:-|:-|:-|:-|:-|
@@ -134,6 +137,15 @@ uniapp的`button`组件比较特殊，因为它有一些其他小程序平台的
 |hover-start-time|按住后多久出现点击态，单位毫秒|Number|20|-|-|
 |hover-stay-time|手指松开后点击态保留时间，单位毫秒|Number|70|-|-|
 |custom-style|对按钮的自定义样式，对象形式，见上方说明|Object|-|-|-|
+|app-parameter|指定是否阻止本节点的祖先节点出现点击态|Boolean|false|true|微信小程序、QQ小程序|
+|hover-stop-propagation|打开 APP 时，向 APP 传递的参数，open-type=launchApp时有效|Boolean|false|true|微信小程序|
+|lang|指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文|String|en|zh_CN \ zh_TW  |微信小程序|
+|session-from|会话来源，open-type="contact"时有效|String|-|-|微信小程序|
+|send-message-title|会话内消息卡片标题，open-type="contact"时有效|String|当前标题|-|微信小程序|
+|send-message-path|会话内消息卡片点击跳转小程序路径，open-type="contact"时有效	|String|当前分享路径|-|微信小程序|
+|send-message-img|会话内消息卡片图片，open-type="contact"时有效	|String|当前页面截图|-|微信小程序|
+|show-message-card|是否显示会话内消息卡片，设置此参数为 true，用户进入客服会话会在右下角显示"可能要发送的小程序"提示，用户点击后可以快速发送小程序消息，open-type="contact"时有效|String|-|-|微信小程序|
+
 
 ### Events
 
@@ -141,9 +153,9 @@ uniapp的`button`组件比较特殊，因为它有一些其他小程序平台的
 
 |属性名|说明|类型|默认值|可选值|平台差异说明|
 |:-|:-|:-|:-|:-|:-|
-|click|按钮点击|Handler|-|-|-|
-|getphonenumber|open-type="getPhoneNumber"|Handler|请参考uniapp官方文档|-|微信小程序|
-|getuserinfo|用户点击该按钮时，会返回获取到的用户信息，从返回参数的detail中获取到的值同uni.getUserInfo|Handler|请参考uniapp官方文档|-|微信小程序|
-|error|当使用开放能力时，发生错误的回调|Handler|请参考uniapp官方文档|-|微信小程序|
-|opensetting|在打开授权设置页并关闭后回调|Handler|请参考uniapp官方文档|-|微信小程序|
-|launchapp|打开 APP 成功的回调|Handler|请参考uniapp官方文档|-|微信小程序|
+|click|按钮点击|Handler|-|
+|getphonenumber|open-type="getPhoneNumber"时有效|Handler|微信小程序|
+|getuserinfo|用户点击该按钮时，会返回获取到的用户信息，从返回参数的detail中获取到的值同uni.getUserInfo|Handler|微信小程序|
+|error|当使用开放能力时，发生错误的回调|Handler|微信小程序|
+|opensetting|在打开授权设置页并关闭后回调|Handler|微信小程序|
+|launchapp|打开 APP 成功的回调|Handler|微信小程序|

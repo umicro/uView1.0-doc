@@ -47,5 +47,5 @@ uView是uniapp生态的UI框架，uniapp有专门针对底部安全区域的解�
 为`false`和`true`的表现：
 
 <div>
-	<img src="/keyboard.png" alt="uView" class="logo">
+	<img src="/common/keyboard.png" alt="uView" class="logo">
 </div>
