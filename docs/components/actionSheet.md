@@ -14,15 +14,11 @@
 ### 基本使用
 
 - 通过`list`设置需要显示的菜单，该值为一个数组，元素为对象，对象至少要提供`text`属性，另外可选的有`fontSize`(字体大小)，`color`(颜色)
-- 通过`show`参数控制操作菜单的显示与否
-
-::: warning 注意
-需要在`close`回调事件中，设置`show`为`false`，否则无法弹起第二次ActionSheet，这是因为`props`传递参数特性限制导致的
-:::
+- 通过`v-model`绑定一个值为布尔值的变量控制组件的弹出与收起，`v-model`的值是双向绑定的
 
 ```html
 <template>
-	<u-action-sheet :list="list" :show="show" @close="show = false"></u-action-sheet>
+	<u-action-sheet :list="list" v-model="show"></u-action-sheet>
 </template>
 
 <script>
@@ -52,7 +48,7 @@
 
 ```html
 <template>
-	<u-action-sheet :list="list" :show="show" :tips="tips" :cancel-btn="true"></u-action-sheet>
+	<u-action-sheet :list="list" v-model="show" :tips="tips" :cancel-btn="true"></u-action-sheet>
 </template>
 
 <script>
@@ -84,7 +80,7 @@
 
 ```html
 <template>
-	<u-action-sheet :list="list" @click="click" :show="show" @close="show = false"></u-action-sheet>
+	<u-action-sheet :list="list" @click="click" v-model="show"></u-action-sheet>
 </template>
 
 <script>
@@ -117,9 +113,10 @@
 
 ### Props
 
+注意：props中没有控制组件弹出与收起的参数，因为这是通过v-model绑定变量实现的，见上方说明。
+
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| show | 操作菜单的显示与否  | Boolean | false | true |
 | list | 按钮的文字数组，见上方文档示例  | Array\<Object\>	 | [ ] | - |
 | tips | 顶部的提示文字，见上方文档示例 | Object  | - | - |
 | cancel-btn | 是否显示底部的取消按钮 | Boolean  | true | false |
@@ -132,5 +129,5 @@
 |事件名|说明|回调参数|版本|
 |:-|:-|:-|:-|
 | click | 点击ActionSheet列表项时触发 | index: 点击了第几个，从0开始 | - |
-| close | 点击取消按钮时触发，需再此回调中设置`show`的值为false，见上方说明 | - | - |
+| close | 点击取消按钮时触发 | - | - |
 

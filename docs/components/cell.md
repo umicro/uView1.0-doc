@@ -17,6 +17,9 @@ cell单元格一般用于一组列表的情况，比如个人中心页，设置�
 - 通过`title`设置左侧标题，`value`设置右侧内容。
 - 通过`icon`字段设置图标，值为uView自带的[Icon 图标](/components/icon.html)名。
 
+**注意：** 由于`cell`组件需要由`cellGroup`组件提供参数值，这些父子组件间通过Vue的"provide/inject"特性注入依赖，
+所以您必须使用`cellGroup`包裹`cell`组件才能正常使用。
+
 ```html
 <template>
 	<u-cell-group>

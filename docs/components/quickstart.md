@@ -49,6 +49,10 @@ uView组件本身不依赖全局css样式实现，各样式都写在自身组件
 uView的样式文件中类名没有使用类似`.box .item {...}`的嵌套形式，是为了向后兼容nvue做准备(nvue不支持类名嵌套)。  
 在项目根目录下的`uni.scss`的首行引入即可(如果没有此文件，创建即可)。
 
+:::danger 警告
+这里是要在项目根目录下的`uni.scss`中引入，而非根目录的`App.vue`中引入，uniapp不会解析`App.vue`中的通过文件引入的`scss`变量，所以会导致报错！
+:::
+
 ```css
 @import '@/uview/index.scss';
 
@@ -68,15 +72,21 @@ Hbuilder X自2.5.1版开始正式支持`easycom`特性，**HX2.5.5**版支持自
 为了能使用`easycom`特性，在项目根目录下的`pages.json`前面引入如下配置即可：
 
 ```json
-"easycom": {
-	"u-(.*)": "@/uview/components/u-$1/u-$1.vue"
-},
+// pages.json
 
-// 其他配置
-"pages": [
-	......
-]
+{
+	// 此为需要加入的内容
+	"easycom": {
+		"^u-(.*)": "@/uview/components/u-$1/u-$1.vue"
+	},
+	
+	// 此为本身已有的内容
+	"pages": [
+		// ......
+	]
+}
 ```
+
 
 ### 如何使用
 
@@ -84,7 +94,7 @@ Hbuilder X自2.5.1版开始正式支持`easycom`特性，**HX2.5.5**版支持自
 
 ```html
 <template>
-	<u-action-sheet :list="list" :show="show"></u-action-sheet>
+	<u-action-sheet :list="list" v-model="show"></u-action-sheet>
 </template>
 
 <script>
@@ -135,6 +145,51 @@ Hbuilder X自2.5.1版开始正式支持`easycom`特性，**HX2.5.5**版支持自
 			}],
 			show: true
 		}
+	}
+</script>
+```
+
+<br>
+
+### 关于uView组件的esaycom规则可能和其他组件引入名称冲突的问题
+
+uView的组件引入是通过easycom形式的，写在pages.json中，以`u-`开头，这可能和其他UI组件，或者uniapp插件市场的[uParse修复版-html富文本加载](https://ext.dcloud.net.cn/plugin?id=364)组件名冲突而**报错**，
+原因是此`uParse`的组件引用名为`u-parse`，也是`u-`开头，即使您在页面中显式地配置了组件引入，但uniapp依然认为easycom配置的规则优先级比页面引入的组件规则高。
+
+以下为`uParse`第三方插件的官方写法：
+
+```html
+<template>
+    <u-parse :content="xxx"></u-parse>
+</template>
+
+<script>
+	import uParse from '@/components/gaoyia-parse/parse.vue'
+	export default {
+		 components: {
+			uParse
+		 }
+	}
+</script>
+```
+
+可以看到，上方虽然通过`import`声明了此组件，最终引用的组件名称为`<u-parse>`("u-"开头)，但是uniapp依然忽视了，而认为uView在`pages.json`配置的easycom规则的优先级更高，因而去uView的组件库
+中查找`u-parse`，因为找不到而报错，这是不合理的。
+
+解决办法也很简单，给冲突的插件换一个名字即可，比如上面的`uParse`插件，我们在`import`和`components`声明的时候换一个名字即可，比如这里让其为字母`a`开头：
+
+```html
+<template>
+    <a-parse :content="xxx"></a-parse>
+</template>
+
+<script>
+	// 记得同时修改引入的名称，以及components中的名称
+	import aParse from '@/components/gaoyia-parse/parse.vue'
+	export default {
+		 components: {
+			aParse
+		 }
 	}
 </script>
 ```

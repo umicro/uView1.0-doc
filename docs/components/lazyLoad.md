@@ -19,6 +19,16 @@
 
 通过`image`参数传入图片的`src`路径即可
 
+:::warning 注意
+由于uniapp默认给了image组件的`height`为225px，同时也只有uniapp的image组件的`mode`参数为`widthFix`时，image才会自动计算出一个高度值
+覆盖默认的`height`(225px)。其他`mode`参数下，如果设置`height`为`auto`，或者`100%`的话，图片将会无法显示。  
+
+所以：当您使用uView的`lazyload`组件时，如果设置`height`参数为`auto`，或者`100%`，而`img-mode`参数又不为`widthFix`的话，图片将会不显示，这不是uView的BUG。  
+
+结论：如果`img-mode`参数不为`widthFix`的话，必须设置`height`参数为一个固定的高度(单位rpx)，否则无效。
+:::
+
+
 ```html
 <template>
 	<view>
@@ -84,6 +94,7 @@
 ```html
 <u-lazy-load :image="image" threshold="300"></u-lazy-load>
 ```
+
 
 ### API
 

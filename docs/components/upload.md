@@ -362,6 +362,7 @@ lists = [
 | on-error | 图片上传失败时触发 | (res, index, lists)，res为服务器返回的信息 |
 | on-progress | 图片上传过程中的进度变化过程触发 | (res, index, lists)，res为服务器返回的信息，具体参数请打印查看 |
 | on-uploaded | 所有图片上传完毕触发 | (lists)，可以通过此事件，将lists参数获取，提交给后端使用 |
+| on-choose-complete | 每次选择图片后触发，只是让外部可以得知每次选择后，内部的文件列表 | (lists)，内部当前的文件列表 |
 
 
 <style scoped>

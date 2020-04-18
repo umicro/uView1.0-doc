@@ -10,6 +10,154 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>1.0.6</h2>
+				</div>
+				<p><code>2020-04-19</code></p>
+				<ul>
+					<li>
+						<span class="add">新增</span>
+						增加top-tips组件对自定义导航栏适配的说明，详见<a target="_blank" href="/components/topTips.html#自定义导航栏使用本组件的问题">自定义导航栏使用本组件的问题</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						增加文档对引入scss变量的提示，详见<a target="_blank" href="/components/common.html#说明">说明</a>
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化easycom的引入规则，减少和其他组件库冲突的可能性，提供和"uParse"插件名称冲突的解决方案，详见<a target="_blank" href="/components/quickstart.html#_3-配置easycom组件模式">说明</a>
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复tabs组件延后赋值，组件无效果的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复picker组件时间模式只显示部分参数时，默认值不对的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						改正navbar组件的title-size参数无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复search组件文档关于disabled的描述错误
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
+					<h2>1.0.5</h2>
+				</div>
+				<p><code>2020-04-17</code></p>
+				<ul>
+					<li>
+						<span class="add">新增</span>
+						重磅推出自定义导航栏组件，详见<a target="_blank" href="/components/navbar.html">Navbar 自定义导航栏</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						增加控制弹窗组件圆角的参数
+					</li>
+					<li>
+						<span class="add">新增</span>
+						upload上传组件新增每次选择完图片后抛出on-choose-complte事件
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						为更强的自定义性，collapse组件的头部和主体样式改为用对象形式传入，请留意
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						给tabsSwiper组件添加加载更多的示例，同时修复一些问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复collapse的props参数类型问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复tabsSwiper组件延后赋值list参数报错的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复Picker在小程序上默认值可能无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复collapse的active-style参数报错的问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
+					<h2>1.0.4</h2>
+				</div>
+				<p><code>2020-04-15</code></p>
+				<ul>
+					<li>
+						<span class="add">新增</span>
+						badge组件可以自定义字体和背景颜色
+					</li>
+					<li>
+						<span class="add">新增</span>
+						新增<a target="_blank" href="/components/divider.html">Divider 分割线</a>组件
+					</li>
+					<li>
+						<span class="add">新增</span>
+						添加参数控制<a target="_blank" href="/js/http.html#何谓响应拦截？">Http请求</a>响应拦截器的返回数据格式
+					</li>
+					<li>
+						<span class="add">新增</span>
+						车牌号键盘新增"挂"字按键
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						修改演示中的图片引用为https资源
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						调整actionSheet组件的开关通过v-model绑定，方便使用
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						调整keyboard组件的开关通过v-model绑定，方便使用
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						调整popup弹出组件的开关通过v-model绑定，方便使用
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						调整picker选择组件的开关通过v-model绑定，方便使用
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						条件编译抵消tabs组件在微信小程序上watch初始化时自动触发的bug
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复keyboard键盘组件数字模式时点按钮配置无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						改正文档关于自定义图标库中截图的错误
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>1.0.3</h2>
 				</div>
 				<p><code>2020-04-14</code></p>
@@ -189,5 +337,35 @@
 		padding: 0 0 12px;
 		list-style: none;
 		position: relative;
+	}
+	
+	.u-timeline-item span {
+		display: inline-block;
+		padding: 4px 8px;
+		border-radius: 4px;
+		color: #fff;
+		font-size: 12px;
+		border-width: 1px;
+		border-style: solid;
+		line-height: 1;
+		margin-right: 5px;
+	}
+	
+	.u-timeline-item span.fix {
+		color: rgb(255, 153, 0);
+		background-color: rgb(253, 246, 236);
+		border-color: rgb(252, 189, 113);
+	}
+	
+	.u-timeline-item span.add {
+		color: rgb(25, 190, 107);
+		background-color: rgb(219, 241, 225);
+		border-color: rgb(113, 213, 161);
+	}
+	
+	.u-timeline-item span.optimize {
+		color: rgb(41, 121, 255);
+		background-color: rgb(236, 245, 255);
+		border-color: rgb(160, 207, 255);
 	}
 </style>

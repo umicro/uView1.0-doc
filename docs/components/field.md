@@ -223,7 +223,7 @@ export default {
 | label | 输入框左边的文字提示 | String  | - | - |
 | password | 是否密码输入方式(用点替换文字)，`type`为`text`时有效 | Boolean  | false | true |
 | clearable | 是否显示右侧清空内容的图标控件(输入框有内容，且获得焦点时才显示)，点击可清空输入框内容 | Boolean  | true | false |
-| lable-width | `lable`的宽度，单位rpx | Number \| String | 130 | - |
+| label-width | `label`的宽度，单位rpx | Number \| String | 130 | - |
 | label-align | `label`的文字对齐方式 | String  | left | center / right |
 | input-align | 输入框内容对齐方式 | String | left | center / right |
 | icon-color | 左边通过`icon`配置的图标的颜色 | String  | #606266 | - |

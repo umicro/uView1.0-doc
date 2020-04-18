@@ -11,7 +11,11 @@ module.exports = {
 		['meta', {
 			name: 'viewport',
 			content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
-		}]
+		}],
+		['meta', {
+			name: 'keywords',
+			content: 'uview,uView,uviewui,uview ui,uviewUI,uViewui,uViewUI,uView UI,uni ui,uni UI,uniapp ui,ui,UI框架,uniapp ui框架,uniapp UI'
+		}],
 	],
 	
 	themeConfig: {
@@ -132,6 +136,7 @@ module.exports = {
 								'/components/skeleton',
 								'/components/sticky',
 								'/components/waterfall',
+								'/components/divider',
 							]
 						},
 						{
@@ -139,6 +144,7 @@ module.exports = {
 							collapsable: false,
 							sidebarDepth: 0,
 							children: [
+								'/components/navbar',
 								'/components/tabs',
 								'/components/tabsSwiper',
 								'/components/subsection',
@@ -250,6 +256,7 @@ module.exports = {
 			'/components/layout',
 			'/components/cell',
 			'/components/badge',
+			'/components/divider',
 			'/components/tag',
 			'/components/keyboard',
 			'/components/picker',
@@ -323,6 +330,7 @@ module.exports = {
 			'/js/trim',
 			'/js/getRect', 
 			'/js/mpShare',
+			'/components/navbar',
 		],
 	}
 }

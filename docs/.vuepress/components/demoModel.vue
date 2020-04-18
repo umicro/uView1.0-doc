@@ -19,6 +19,7 @@
 		data() {
 			return {
 				baseUrl: 'https://h5.uviewui.com'
+				// baseUrl: 'http://192.168.100.7:8080'
 			}
 		}
 	}

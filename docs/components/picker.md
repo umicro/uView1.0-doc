@@ -19,16 +19,11 @@
 ### 基本使用
 
 - 通过`mode`参数设置为`time`或者`region`，区分时间和地区模式。
-- 通过`show`参数为`true`或`false`值，打开或者收起picker。
-
-:::warning 注意
-由于props单向传值的限制，您需要在`picker`组件的`close`事件回调中把`show`参数设置为`false`，否则
-下次您将无法唤起`picker`，`close`事件只用于修改`show`变量，不能用于获取结果。
-:::
+- 通过v-model双向绑定一个值为布尔值的变量，来打开或者收起picker。
 
 ```html
 <template>
-	<u-picker :show="show" mode="time" @close="show = false;"></u-picker>
+	<u-picker v-model="show" mode="time"></u-picker>
 </template>
 
 <script>
@@ -52,9 +47,9 @@
 
 ```html
 <template>
-	<u-picker mode="time" :show="show"  default-time="2025-07-02 13:01"></u-picker>
+	<u-picker mode="time" v-model="show"  default-time="2025-07-02 13:01"></u-picker>
 	
-	<u-picker mode="region" :show="show"  :area-code='["13", "1303", "130304"]'></u-picker>
+	<u-picker mode="region" v-model="show"  :area-code='["13", "1303", "130304"]'></u-picker>
 </template>
 ```
 
@@ -68,7 +63,7 @@
 
 ```html
 <template>
-	<u-picker mode="time" :show="show" :params="params"></u-picker>
+	<u-picker mode="time" v-model="show" :params="params"></u-picker>
 </template>
 
 <script>
@@ -92,8 +87,7 @@
 
 ### 回调参数
 
-当点击picker的"取消"或者"确定"按钮时，会分别产生回调事件`cancel`和`confirm`，这两个事件的同时，会
-触发一个`close`事件，是为了更方便的获取组件的值。
+当点击picker的"取消"或者"确定"按钮时，会分别产生回调事件`cancel`和`confirm`，均为会返回组件内部的当前值。
 回调的参数为一个对象，属性和传递给`picker`组件的`params`对象为`true`的属性一致。  
 注意：`mode`为`region`时，回调对象属性为一个对象，分别有`label`和`value`属性，见如下说明：
 
@@ -158,6 +152,8 @@ let params = {
 
 ### Props
 
+注意：props中没有控制Picker打开与收起的参数，因为这是通过v-model绑定变量实现的，见上方说明。
+
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | params | 需要显示的参数，见上方说明  | Object | - | - |
@@ -179,7 +175,6 @@ let params = {
 |:-|:-|:-|:-|
 | confirm | 点击确定按钮，返回当前选择的值 | Object: 见上方"回调参数"部分说明 | - |
 | cancel | 点击取消按钮，返回当前选择的值 | Object: 见上方"回调参数"部分说明 | - |
-| close | 点击遮罩收起picker组件，和点击cancel和confirm事件的同时，会触发close事件，无返回值，可以在此修改`show`参数为`false` | - | - |
 
 
 

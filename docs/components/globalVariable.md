@@ -409,8 +409,10 @@ export default store
 
 ```js
 // main.js
-vuexStore = require("@/store/$u.mixin.js");
+
+let vuexStore = require("@/store/$u.mixin.js");
 Vue.mixin(vuexStore);
+
 ```
 
 以下为"$u.mixin.js"文件：

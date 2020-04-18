@@ -14,13 +14,13 @@
 
 ### 基本使用
 
-- 该组件一般需要搭配`radioGroup`组件使用，以便用户进行操作时，获得当前单选框组的选中情况，当然，您也可以单独对某个`radio`进行事件监听
+- 该组件需要搭配`radioGroup`组件使用，以便用户进行操作时，获得当前单选框组的选中情况，当然，您也可以单独对某个`radio`进行事件监听
 - 通过`v-model`给`radioGroup`组件绑定一个变量，这个绑定的变量是双向的(初始值只能是`true`或者`false`)，也就是说，您可以无需监听`radio`或者`radioGroup`组件的`change`事件，也能知道哪个
 被勾选了
 
 
 **注意：** 由于`radio`组件需要由`radioGroup`组件提供参数值，这些父子组件间通过Vue的"provide/inject"特性注入依赖，
-所以您必须使用`radio`包裹`radioGroup`组件才能正常使用。
+所以您必须使用`radioGroup`包裹`radio`组件才能正常使用。
 
 
 ```html
@@ -85,7 +85,7 @@ export default {
 ```html
 <u-radio-group v-model="value"
 	<u-radio :disabled="true">明月几时有</u-radio>
-<u-radio-group>
+</u-radio-group>
 ```
 
 ### 自定义形状
@@ -96,7 +96,7 @@ export default {
 ```html
 <u-radio-group v-model="value">
 	<u-radio shape="circle">月明人倚楼</u-radio>
-<u-radio-group>
+</u-radio-group>
 ```
 
 
@@ -108,7 +108,7 @@ export default {
 ```html
 <u-radio-group v-model="value">
 	<u-radio active-color="red">思悠悠，恨悠悠，恨到归时方始休</u-radio>
-<u-radio-group>
+</u-radio-group>
 ```
 
 
@@ -120,7 +120,7 @@ export default {
 ```html
 <u-radio-group v-model="value">
 	<u-radio :label-disabled="false">门掩黄昏，无计留春住</u-radio>
-<u-radio-group>
+</u-radio-group>
 ```
 
 

@@ -61,7 +61,8 @@
 - `animation`(默认为`true`)设置为`true`的话，失去焦点，或者点击控件按钮时，控件自动消失，并且带有动画效果
 
 ::: warning 说明
-如果不想点击右侧控件时自动消失，请把`animation`设置为`false`
+1. 如果不想点击右侧控件时自动消失，请把`animation`设置为`false`
+2. 右侧控件的默认文字为"搜索"(它本意为控件，碰巧内容为"搜索"二字，并非说它就是一个搜索按钮)，点击它的时候触发的是`custom`事件，而不是`search`事件
 :::
 
 ```html
@@ -93,9 +94,10 @@
 | clearabled | 是否启用清除控件 | Boolean | true | false |
 | focus | 是否自动获得焦点 | Boolean | false | true |
 | show-action | 是否显示右侧控件 | Boolean | true | false |
-| action-atext | 右侧控件文字 | String | 搜索 | - |
+| action-text | 右侧控件文字 | String | 搜索 | - |
+| action-style | 右侧控件的样式，对象形式 | Object | - | - |
 | input-align | 输入框内容水平对齐方式 | String | left | center / right |
-| disabled | 是否启用输入框 | Boolean | true | false |
+| disabled | 是否启用输入框 | Boolean | false | true |
 | animation | 是否开启动画，见上方说明 | Boolean | false | true |
 | value | 输入框初始值 | String | - | - |
 | height | 输入框高度，单位rpx | String \| Number | 64 | - |
