@@ -58,6 +58,13 @@
 </style>
 ```
 
+### 如何让组件中心点与父组件右上角重合
+
+某些特殊的场景下，特别是`badge`内容值是通过后端获取，长度未知时，会导致最终渲染出来的`badge`组件的位置与父组件右上角的位置有出入，
+为了解决这个问题，uView提供了一个`is-center`(默认为`false`)，如果设置为`true`，`offset`参数将会失效，同时`badge`组件的中心点
+将会和父组件的右上角重合。
+
+
 ### API
 
 ### Props
@@ -74,5 +81,12 @@
 | offset | 设置badge的位置偏移，格式为 [x, y]，也即设置的为`top`和`right`的值，单位rpx。`absolute`为`true`时有效 | Array | [20, 20] | - |
 | color | 字体颜色 | String  | #ffffff | - |
 | bgColor | 背景颜色，优先级比`type`高，如设置，`type`参数会失效 | String  | - | - |
+| is-center | 组件中心点是否和父组件右上角重合，优先级比`offset`高，如设置，`offset`参数会失效 | Boolean  | false | true |
 
 
+
+<style scoped>
+h3[id=props] + table thead tr th:nth-child(2){
+	width: 40%;
+}
+</style>

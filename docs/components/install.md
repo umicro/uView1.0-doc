@@ -24,7 +24,7 @@ uView已正式发布**公测版**，欢迎[交流反馈](/cooperation/about.html
 
 <br>
 <div @click="downloadPost(2)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_1.0.6.rar">uView_1.0.6.rar</a>
+	下载地址：<a href="https://download.uviewui.com/uView_1.0.7.rar">uView_1.0.7.rar</a>
 </div>
 <br>
 <br>
@@ -39,12 +39,12 @@ uView已正式发布**公测版**，欢迎[交流反馈](/cooperation/about.html
 **说明：**
 
 - 此方式，依然需要Hbuilder X已安装`sass/scss编译`插件
-- 此示例工程，基于最新的稳定版Hbuilder X(2.6.5)创建，默认开启V3编译器配置
+- 此示例工程，默认开启V3编译器配置，以及自定义组件模式
 - 如果运行出现问题，可能是您的HX版本太低，请升级至最新稳定版尝试解决
 
 <br>
 <div @click="downloadPost(1)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_demo_1.0.6.rar">uView_demo_1.0.6.rar</a>
+	下载地址：<a href="https://download.uviewui.com/uView_demo_1.0.7.rar">uView_demo_1.0.7.rar</a>
 </div>
 <br>
 <br>
@@ -57,7 +57,7 @@ uView已正式发布**公测版**，欢迎[交流反馈](/cooperation/about.html
 
 <br>
 <div @click="downloadPost(3)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_1.0.6_full.rar">uView_1.0.6_full.rar</a>
+	下载地址：<a href="https://download.uviewui.com/uView_1.0.7_full.rar">uView_1.0.7_full.rar</a>
 </div>
 <br>
 <br>

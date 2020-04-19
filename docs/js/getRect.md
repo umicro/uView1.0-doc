@@ -93,7 +93,7 @@ export default {
 		},
 		methods: {
 			getElInfo() {
-				this.$u.poast('http://www.example.com/user/info').then(res => {
+				this.$u.post('http://www.example.com/user/info').then(res => {
 					this.userName = res.name;
 					this.$nextTick(() => {
 						this.$u.getRect('.user-avatar').then(rect => {

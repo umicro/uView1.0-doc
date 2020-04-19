@@ -10,6 +10,34 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>1.0.7</h2>
+				</div>
+				<p><code>2020-04-20</code></p>
+				<ul>
+					<li>
+						<span class="add">新增</span>
+						给badge组件添加"is-center"参数，让badge中心点与父组件右上角重合，详见<a target="_blank" href="/components/badge.html#如何让组件中心点与父组件右上角重合">说明</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						JS工具对象转Get参数方法新增对数组属性的多种解析模式，详见<a target="_blank" href="/js/queryParams.html#arrayformat参数说明">说明</a>
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						在"manifest.json"添加声明对自定义组件的支持
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复picker确认按钮向下滑可能报错的问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>1.0.6</h2>
 				</div>
 				<p><code>2020-04-19</code></p>

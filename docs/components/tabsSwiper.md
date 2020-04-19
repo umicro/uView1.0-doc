@@ -1,4 +1,4 @@
-## tabsSwiper 轮播标签
+## tabsSwiper 全屏选项卡
 
 <demo-model url="/pages/template/order/index"></demo-model>
 

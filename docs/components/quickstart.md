@@ -100,16 +100,18 @@ Hbuilder X自2.5.1版开始正式支持`easycom`特性，**HX2.5.5**版支持自
 <script>
 	export default {
 		data() {
-			list: [{
-				text: '点赞',
-				color: 'blue',
-				fontSize: 28
-			}, {
-				text: '分享'
-			}, {
-				text: '评论'
-			}],
-			show: true
+			return {
+				list: [{
+					text: '点赞',
+					color: 'blue',
+					fontSize: 28
+				}, {
+					text: '分享'
+				}, {
+					text: '评论'
+				}],
+				show: true
+			}
 		}
 	}
 </script>
@@ -124,7 +126,7 @@ Hbuilder X自2.5.1版开始正式支持`easycom`特性，**HX2.5.5**版支持自
 
 ```html
 <template>
-	<u-action-sheet :itemList="itemList" :show="show"></u-action-sheet>
+	<u-action-sheet :list="list" v-model="show"></u-action-sheet>
 </template>
 
 <script>
@@ -134,16 +136,18 @@ Hbuilder X自2.5.1版开始正式支持`easycom`特性，**HX2.5.5**版支持自
 			uActionSheet
 		},
 		data() {
-			itemList: [{
-				text: '点赞',
-				color: 'blue',
-				fontSize: 28
-			}, {
-				text: '分享'
-			}, {
-				text: '评论'
-			}],
-			show: true
+			return {
+				list: [{
+					text: '点赞',
+					color: 'blue',
+					fontSize: 28
+				}, {
+					text: '分享'
+				}, {
+					text: '评论'
+				}],
+				show: true
+			}
 		}
 	}
 </script>
