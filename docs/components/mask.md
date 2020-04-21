@@ -28,7 +28,7 @@
 				show: true
 			}
 		}
-	},
+	}
 </script>
 ```
 

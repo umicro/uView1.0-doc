@@ -63,6 +63,23 @@
 </template>
 ```
 
+
+### 控制弹窗的宽度 | 高度
+
+这里说的宽度，指的是左边，右边，中部弹出的场景，高度指的是顶部和底部弹出的场景(因为这两个场景宽度都是100%)。  
+uView提供了`length`来控制此种情况，此值可以是`数值`(单位rpx)，`auto`，`百分比`等，内部会自动处理对应的逻辑。
+如果为`auto`的时候，表示弹窗的宽度 | 高度由内容撑开。
+
+```html
+<template>
+	<u-popup v-model="show" mode="top" length="60%">
+		<view>
+			等闲变却故人心，却道故人心易变
+		</view>
+	</u-popup>
+</template>
+```
+
 ### API
 
 ### Props
@@ -73,7 +90,7 @@
 |-------------  |---------------- |---------------|------------------ |-------- |
 | mode | 弹出方向  | String	 | left | top / right / bottom / center |
 | mask | 是否显示遮罩  | Boolean | true | false |
-| length | mode=left \| right时表现为弹出层的宽度，mode=top \| bottom时表现为弹出层高度，单位rpx。如果为"auto"，表示由内容撑开高度或者宽度 | String \| Number | auto | - |
+| length | mode=left \| 见上方说明 | String \| Number | auto | - |
 | zoom | 是否开启缩放动画，只在`mode`为`center`时有效  | Boolean | true | false |
 | safe-area-inset-bottom | 是否开启[底部安全区适配](/components/safeAreaInset.html#关于uview某些组件safe-area-inset参数的说明) | Boolean  | false | true |
 | mask-close-able | 点击遮罩是否可以关闭弹出层  | Boolean | true | false |

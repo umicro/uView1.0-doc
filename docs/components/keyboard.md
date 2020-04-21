@@ -122,6 +122,15 @@
 </script>
 ```
 
+
+### 是否显示遮罩
+
+当您使用键盘时，可能会不想显示遮罩，这时可以配置`mask`参数为`false`即可
+
+```html
+<u-keyboard mode="number" v-model="show" :mask="false"></u-keyboard>
+```
+
 ### API
 
 ### Props
@@ -136,6 +145,7 @@
 | tips | 工具条中间的提示文字，见上方`基本使用`的说明，如不需要，请传""空字符 | String  | - | - |
 | cancel-btn | 是否显示工具条左边的"取消"按钮 | Boolean  | true | false |
 | confirm-btn | 是否显示工具条右边的"完成"按钮 | Boolean  | true | false |
+| mask | 是否显示遮罩 | Boolean  | true | false |
 | random | 是否打乱键盘按键的顺序 | Boolean  | false | true |
 | safe-area-inset-bottom | 是否开启[底部安全区适配](/components/safeAreaInset.html#关于uview某些组件safe-area-inset参数的说明) | Boolean  | false | true |
 | mask-close-able | 是否允许点击遮罩收起键盘 | Boolean  | true | false |

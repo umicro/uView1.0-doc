@@ -10,6 +10,59 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>1.0.8</h2>
+				</div>
+				<p><code>2020-04-21 凌晨1点20分</code></p>
+				<h2>uView已趋于稳定，进入新增和优化阶段</h2>
+				<ul>
+					<li>
+						<span class="add">新增</span>
+						给noticeBar组件新增end事件和disable-touch参数
+					</li>
+					<li>
+						<span class="add">新增</span>
+						给collapse-item手风琴组件添加change事件
+					</li>
+					<li>
+						<span class="add">新增</span>
+						给keyboard键盘组件新增可控制遮罩是否显示的参数
+					</li>
+					<li>
+						<span class="add">新增</span>
+						给popup弹窗的length参数添加百分比控制单位
+					</li>
+					<li>
+						<span class="add">新增</span>
+						给grid-item组件添加单独的事件
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化field组件的`error-message`参数，加入Boolean类型
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化popup弹窗中部弹出时的逻辑，减少用户额外的工作量
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						增大自定义导航栏返回按钮的点击区域
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						自定导航栏演示完善功能
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复badge组件逻辑，"点"类型时，为0不显示的问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>1.0.7</h2>
 				</div>
 				<p><code>2020-04-20</code></p>

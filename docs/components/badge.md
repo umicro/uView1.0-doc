@@ -71,7 +71,7 @@
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| count | 展示的数字，大于 `overflowCount` 时显示为 `${overflowCount}+`，为 0 时隐藏  | String \| Number | - | - |
+| count | 展示的数字，大于 `overflowCount` 时显示为 `${overflowCount}+`，为`0`且`show-zero`为`false`时隐藏  | String \| Number | - | - |
 | is-dot | 不展示数字，只有一个小点 | Boolean  | false | true |
 | absolute | 组件是否绝对定位，为`true`时，`offset`参数才有效 | Boolean  | true | false |
 | overflow-count | 展示封顶的数字值 | String \| Number  | 99 | - |

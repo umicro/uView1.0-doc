@@ -83,7 +83,7 @@
 | active-color | 选中的星星颜色 | String | #FA3534 | - |
 | gutter | 星星之间的距离 | String | #323233 | - |
 | min-count | 最少选中星星的个数 | String \| Number | 0 | - |
-| allow-half | 是否允许半星选择 | Boolean | false | true |
+<!-- | allow-half | 是否允许半星选择 | Boolean | false | true | -->
 
 ### Events
 

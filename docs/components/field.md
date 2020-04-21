@@ -16,7 +16,7 @@
 
 ### 基本使用
 
-- 如果是表单组(连在一起的有多个`field`组件)，建议结合uView的`u-cell-group`组件使用，可以给`field`表单组提供上下边框
+- 如果是表单组(连在一起的有多个`field`组件)，目前必须要结合uView的`u-cell-group`组件使用，可以给`field`表单组提供上下边框
 - 通过`v-model`，可以双向绑定输入框的值
 - 通过`label`设置输入框左边的提示文字
 - 通过`placeholder`指定个性化的提示语
@@ -93,11 +93,21 @@
 			v-model="mobile"
 			label="手机号"
 			required
-			error-message="手机号有误"
+			:error-message="errorMessage"
 		>
 		</u-field>
 	</view>
 </template>
+
+<script>
+	export default {
+		data() {
+			return {
+				errorMessage: '剑未配妥，出门已是江湖'
+			}
+		}
+	}
+</script>
 ```
 
 
@@ -228,7 +238,7 @@ export default {
 | input-align | 输入框内容对齐方式 | String | left | center / right |
 | icon-color | 左边通过`icon`配置的图标的颜色 | String  | #606266 | - |
 | auto-height | 是否自动增高输入区域，`type`为`textarea`时有效 | Boolean | true | false |
-| error-message | 显示的错误提示内容 | String  | - | - |
+| error-message | 显示的错误提示内容，如果为空字符串或者`false`，则不显示错误信息 | String \ Boolean  | - | - |
 | placeholder | 输入框的提示文字 | String | - | - |
 | placeholder-style | `placeholder`的样式(内联样式，字符串)，如"color: #ddd" | String | - | - |
 | focus | 是否自动获得焦点 | Boolean | false | true |

@@ -118,6 +118,7 @@
 | font-size | 字体大小，单位rpx | String \| Number | 28 | - |
 | is-circular | `mode`为`horizontal`时，指明是否水平衔接滚动 | Boolean | true | false |
 | play-state | 播放状态，paly - 播放，paused - 暂停 | String | paly | paused |
+| disable-touch | 是否禁止通过手动滑动切换通知，只有mode = vertical，或者mode = horizontal且is-circular = false时有效| Boolean | true | false |
 
 ### Events
 
@@ -125,7 +126,7 @@
 
 | 事件名 | 说明 | 回调参数 | 版本 |
 | :- | :- | :- | :- |
-| click | 点击通告文字触发 | index：当前文字所在`list`数组的索引值 | - |
+| click | 点击通告文字触发，只有mode = vertical，或者mode = horizontal且is-circular = false时有效 | index：当前文字所在`list`数组的索引值 | - |
 | close | 点击右侧关闭图标触发 | - | - |
 | getMore | 点击右侧向右图标触发 | - | - |
-
+| end | 列表的消息每次被播放一个周期时触发，只有mode = vertical，或者mode = horizontal且is-circular = false时有效 | - | - |

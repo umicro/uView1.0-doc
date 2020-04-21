@@ -185,7 +185,7 @@
 |-------------  |---------------- |---------------|------------------ |-------- |
 | col | 宫格的列数  | String \| Number | 3 | - |
 | border | 是否显示宫格的边框  | Boolean	 | true | false |
-| hover-class | 点击宫格的时候，添加的类，一般用于设置按下的样式(背景颜色) | String  | - | - |
+| hover-class | 点击宫格的时候，是否显示按下的灰色背景 | Boolean  | false | true |
 
 ### Grid-item Props
 
@@ -197,6 +197,15 @@
 ### Grid Event
 
 注意：请在`<u-grid></u-grid>`上监听此事件
+
+|事件名|说明|回调参数|
+|:-|:-|:-|
+|click|点击宫格触发|index: `u-grid-item`通过`props`传递的`index`值|
+
+
+### Grid Event
+
+注意：请在`<u-grid-item></u-grid-item>`上监听此事件
 
 |事件名|说明|回调参数|
 |:-|:-|:-|

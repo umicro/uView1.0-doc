@@ -103,6 +103,7 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | title | 面板标题  | String | - | - |
+| index | 主要用于事件的回调，标识那个Item被点击  | String \/ Number | - | - |
 | disabled | 面板是否可以打开或收起  | Boolean | false | true |
 | open | 设置某个面板的初始状态是否打开  | Boolean | false | true |
 | name | 唯一标识符，如不设置，默认用当前`collapse-item`的索引值 | String \/ Number | - | - |
@@ -114,6 +115,30 @@
 
 注意：请在`<u-collapse></u-collapse>`上监听此事件
 
-|事件名|说明|回调参数|版本|
+|事件名|说明|回调参数|
 |:-|:-|:-|:-|
-| change | 当前激活面板展开时触发(如果是手风琴模式，参数activeNames类型为String，否则为Array) | activeNames: String / Array | - |
+| change | 当前激活面板展开时触发(如果是手风琴模式，参数activeNames类型为String，否则为Array) | activeNames: String / Array |
+
+
+### Collapse Item Event
+
+注意：请在`<u-collapse-item></u-collapse-item>`上监听此事件
+
+|事件名|说明|回调参数|
+|:-|:-|:-|:-|
+| change | 某个item被打开或者收起时触发 | 对象，{index: index, show: true \| false }，index为`collapse-item`的`index`参数，show为`true`表示被打开，`false`表示被收起 |
+
+
+<style scoped>
+h3[id=collapse-item-props] + table thead tr th:nth-child(2){
+	width: 40%;
+}
+
+h3[id=collapse-event] + p + table thead tr th:nth-child(2){
+	width: 50%;
+}
+
+h3[id=collapse-item-event] + p + table thead tr th:nth-child(3){
+	width: 50%;
+}
+</style>
