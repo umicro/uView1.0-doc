@@ -96,6 +96,7 @@ uView提供了`length`来控制此种情况，此值可以是`数值`(单位rpx)
 | mask-close-able | 点击遮罩是否可以关闭弹出层  | Boolean | true | false |
 | custom-style | 用户自定义样式  | Object | - | - |
 | border-radius | 弹窗圆角值  | Number \| String | 0 | - |
+| z-index | 弹出内容的`z-index`值  | Number \| String | 1075 | - |
 
 ### Event
 

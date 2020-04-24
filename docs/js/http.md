@@ -3,7 +3,7 @@
 <demo-model url="/pages/library/http/index"></demo-model>
 
 
-该插件适用于一般的请求场景，只有`post`和`get`请求，目前不适用于其他的请求形式，比如上传，下载等。插件定位为
+该插件适用于一般的请求场景，只支持`post`、`get`、`put`和`delete`请求，目前不适用于其他的请求形式，比如上传，下载等。插件定位为
 小而美，而不是大而全，目标是切合实际，开箱即用。  
 
 ### 平台差异说明
@@ -12,9 +12,13 @@
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |√|√|√|√|√|√|√|
 
+由于某些小程序平台的限制：
+- delete请求，不支持支付宝和头条小程序(HX2.6.15)
+- put请求，不支持支付宝小程序(HX2.6.15)
+
 ### 基本使用
 
-#### get | post(url, params, header).then(res => {}).catch(res => {})
+#### get | post | put | delete(url, params, header).then(res => {}).catch(res => {})
 
 - `url` <String\> 请求的URL，可以完整的URL(http开头)，或者是路径的一部分，这时会自动拼接上`baseUrl`(一般为api的域名部分)
 - `params` <Object\> 请求的参数，对象形式，如"{name: 'lisa', age: 23}"，该参数是可选的
@@ -49,7 +53,7 @@
 
 ### 配置参数
 
-配置参数的时候，需要调用`this.$u.http.setConfig()`方法，传递一个对象作为参数。
+配置参数的时候，需要调用`$u.http.setConfig()`方法，传递一个对象作为参数。
 - 强烈建议在此配置统一请求的`baseUrl`
 - 同时看情况是否开启(默认关闭)请求加载中的loading，该功能需要设置一个时间(默认800ms)，如果超过此时间，请求尚未返回，则显示一个loading，直至返回后，取消loading。   
 
@@ -58,16 +62,22 @@
 动画一闪而过，体验不好。如果用户网络慢，或者服务器堵塞，可能一个请求需要几秒钟，这时请求达到设定时间(800ms)，
 就会显示loading，几秒钟后请求返回，loading消失。
 
-以下为可选的配置参数，建议在App.vue的onLaunch生命周期中配置，**这个配置是一次配置，全局通用的**。
+<br>
+
+:::tip 提示
+uView在**1.1.0**版本后，建议将拦截器内容部分，写入到独立的外部JS文件中，而不是写在App.vue中，这样有更好的可读性，可维护性。  
+uView已经为用户考虑好了所有的情况，并详细指导您如何在外部JS中引用vuex变量以及Vue的`this`实例等。  
+建议在根目录下新建`/common/http.interceptor.js`文件，也即创建`common`目录(如果没有的话)，再创建`http.interceptor.js`文件，将拦截器相关代码写在里面。
+:::
+
+<br>
+
+以下为可选的配置参数，**这个配置是一次配置，全局通用的**。
 
 ```js
 config = 
 {
 	baseUrl: '', // 请求的本域名
-	// 默认的请求头
-	header: {
-		'content-type': 'application/json;charset=UTF-8'
-	},
 	method: 'POST',
 	// 设置为json，返回后会对数据进行一次JSON.parse()
 	dataType: 'json',
@@ -75,23 +85,52 @@ config =
 	loadingText: '请求中...', // 请求loading中的文字提示
 	loadingTime: 800, // 在此时间内，请求还没回来的话，就显示加载中动画，单位ms
 	originalData: false, // 是否在拦截器中返回服务端的原始数据
+	loadingMask: true, // 展示loading的时候，是否给一个透明的蒙层，防止触摸穿透
 }
 ```
 
-具体写法，建议在根目录App.vue的onLaunch生命周期中(一次配置，全局通用)：
+
+具体写法，建议在写在`/common/http.interceptor.js`(如无此文件夹和文件，请手动创建，一次配置，全局通用)，写完之后，请在根目录的`main.js`最末尾
+引入此文件，在最末尾的原因是，外部JS文件需要引用vue的实例，也即`this`对象，要等`main.js`中通过`new`创建了实例之后才能引用。
+
+以下为在`main.js`中的引入示例：
 
 ```js
+// main.js
+
+// 此为main.js本身已有内容
+const app = new Vue({
+  store,
+  ...App
+})
+app.$mount()
+
+// http拦截器，此为需要加入的内容，如果不是写在common目录，请自行修改引入路径
+import httpInterceptor from '@/common/http.interceptor.js'
+// 这里需要写在最后，是为了等Vue创建对象完成，引入"app"对象(也即页面的"this"实例)
+Vue.use(httpInterceptor, app)
+```
+
+下面为拦截器的具体内容：
+
+```js
+// common/http.interceptor.js
+
+// 这里的Vue为Vue对象(非创建出来的实例)，vm为main.js中“Vue.use(httpInterceptor, app)”这一句的第二个参数，
+// 为一个Vue的实例，也即每个页面的"this"
+// 如果需要了解这个install方法是什么，请移步：https://uviewui.com/components/vueuse.html
+const install = (Vue, vm) => {
+	// 此为自定义配置参数，具体参数见上方说明
+	Vue.prototype.$u.http.setConfig({
+		baseUrl: 'https://api.example.com',
+		loadingText: '努力加载中~',
+		loadingTime: 800,
+		// ......
+	});
+}
+
 export default {
-	onLaunch() {
-		this.$u.http.setConfig({
-			baseUrl: 'https://api.example.com',
-			header: {
-				'content-type': 'application/json;charset=UTF-8'
-			},
-			loadingText: '努力加载中~',
-			// ......
-		});
-	}
+	install
 }
 ```
 
@@ -100,115 +139,142 @@ export default {
 
 **此两个拦截，是可选配置的**
 
-##### 何谓请求拦截？  
+#### 何谓请求拦截？  
 
 顾名思义，就是在请求发出之前，对请求做一些额外处理，比如对不同api接口，携带不同的`header`参数，或者(也是最重要)
-配置统一的token到`header`中，这样就不用每次请求，都写token相关的部分到`this.$u.post()`的第三个请求头参数中，
-建议此配置，写在项目根目录App.vue的onLaunch生命周期中，在上一步“配置参数”的后边，如下：
+配置统一的token到`header`中，这样就不用每次请求，都写token相关的部分到`this.$u.post()`的第三个请求头参数中，如下：
 
-#### this.$u.http.interceptor.request = (config) => { ... }
+#### $u.http.interceptor.request = (config) => { ... }
 
 - `config` <Object\> 此`config`参数，带有header和url属性，header属性是为了添加请求头信息，url属性是为了对某些url进行特别处理
 
 一般建议对此进行token的配置，说明：**由于本拦截是每次请求都会调用的，如果在此写入token到header中，即使再次您重新登录，token发生变化，也无需再次调用本拦截**
 
 ```js
-export default {
-	onLaunch() {
-		// 配置参数
-		this.$u.http.setConfig({
-			// ......
-		});
+// common/http.interceptor.js
+
+const install = (Vue, vm) => {
+	// 此为自定义配置参数，具体参数见上方说明
+	Vue.prototype.$u.http.setConfig({
+		// ......
+	});
+	
+	// 请求拦截部分，如配置，每次请求前都会执行
+	Vue.prototype.$u.http.interceptor.request = (config) => {
+		// 引用token
+		// 方式一，存放在vuex的token，假设使用了uView封装的vuex方式
+		// 见：https://uviewui.com/components/globalVariable.html
+		// config.header.token = vm.token;
 		
-		// 请求拦截部分，如配置，每次请求前都会执行
-		this.$u.http.interceptor.request = (config) => {
-			// 这里假设token放在globalData中
-			config.header.Token = getApp().globalData.token;
-			// 可以对某个url进行特别处理，此url参数为this.$u.get(url)中的url值
-			if(config.url == '/user/login') config.header.noToken = true;
-			// 最后需要将config进行return
-			return config;
-			// 如果return一个false值，则会取消本次请求
-			// if(config.url == '/user/rest') return false; // 取消某次请求
-		}
+		// 方式二，如果没有使用uView封装的vuex方法，那么需要使用$store.state获取
+		// config.header.token = vm.$store.state.token;
+		
+		// 方式三，如果token放在了globalData，通过getApp().globalData获取
+		// config.header.token = getApp().globalData.username;
+		
+		// 方式四，如果token放在了Storage本地存储中，拦截是每次请求都执行的
+		// 所以哪怕您重新登录修改了Storage，下一次的请求将会是最新值
+		// const token = uni.getStorageSync('token');
+		// config.header.token = token;
+		config.header.Token = 'xxxxxx';
+		
+		// 可以对某个url进行特别处理，此url参数为this.$u.get(url)中的url值
+		if(config.url == '/user/login') config.header.noToken = true;
+		// 最后需要将config进行return
+		return config;
+		// 如果return一个false值，则会取消本次请求
+		// if(config.url == '/user/rest') return false; // 取消某次请求
 	}
 }
 
-// login.vue中，执行操作登录
 export default {
-	methods: {
-		login() {
-			this.$u.post('/user/login', {
-				username: '李商隐',
-				password: 'gierrLi'
-			}).then(res => {
-				// 这里假设token放在globalData中
-				getApp().globalData.token = res.token;
-			})
-		}
-	}
+	install
 }
 ```
 
-##### 何谓响应拦截？  
+
+#### 何谓响应拦截？  
 	
 响应拦截，意味着是在请求返回时，对返回的数据进行一些处理，如不同的状态对应的关系，比如约定状态码200为成功，
 则把返回数据返回到`this.$u.post().then()`的`then`中，如果为201(约定为token失效，需要登录)，则可以在在拦截中进行toast
 提示，并跳转到登录页。 
-该拦截，建议写在项目根目录的App.vue的onLaunch生命周期中，如下：
 
 :::tip 注意
-响应拦截器中默认返回的是`response.data`，如果您的需求比较特殊，需要返回`response`，请在"this.$u.http.setConfig"配置
+响应拦截器中默认返回的是`response.data`，如果您的需求比较特殊，需要返回`response`，请在"$u.http.setConfig"配置
 `originalData`为`true`，如果配置了，服务端返回的"response.statusCode"不为"200"的时候，将不会自动弹出"modal"框，请自行
 在响应拦截器中配置相关行为。
 :::
 
-#### this.$u.http.interceptor.response = (res) => { ... }
+#### $u.http.interceptor.response = (res) => { ... }
 
 - `res` <Object\> 该参数为服务器返回的数据，具体可打印查看
 
 ```js
-export default {
-	onLaunch() {
-		// 配置参数
-		this.$u.http.setConfig({
-			// ......
-		});
-		
-		// 请求拦截部分，如配置，每次请求前都会执行本方法
-		this.$u.http.interceptor.request = (config) => {
-			// ......
-			return config;
-		}
-		
-		// 响应拦截，如配置，每次请求结束都会执行本方法
-		this.$u.http.interceptor.response = (res) => {
-			if(res.code == 200) {
-				// res为服务端返回值，可能有code，result等字段
-				// 这里对res.result进行返回，将会在this.$u.post(url).then(res => {})的then回调中的res的到
-				// 如果配置了originalData为true，请留意这里的返回值
-		 		return res.result;
-			} else if(res.code == 201) {
-				// 假设201为token失效，这里跳转登录
-				uni.showToast({
-					title: '验证失败，请重新登录',
-					icon: 'none'
-				})
-				setTimeout(() => {
-					// 此为uView的方法，详见路由相关文档
-					this.$u.route({
-						url: '/pages/user/login'
-					})
-				}, 1500)
-				return false;
-			} else {
-				// 如果返回false，则会调用Promise的reject回调，
-				// 并将进入this.$u.post(url).then().catch(res=>{})的catch回调中，res为服务端的返回值
-				return false;
-			}
+// common/http.interceptor.js
+
+const install = (Vue, vm) => {
+	// 此为自定义配置参数，具体参数见上方说明
+	Vue.prototype.$u.http.setConfig({
+		// ......
+	});
+	
+	// 请求拦截部分，如配置，每次请求前都会执行，见上方说明
+	Vue.prototype.$u.http.interceptor.request = (config) => {
+		// ......
+		return config;
+	}
+	
+	// 响应拦截，如配置，每次请求结束都会执行本方法
+	Vue.prototype.$u.http.interceptor.response = (res) => {
+		if(res.code == 200) {
+			// res为服务端返回值，可能有code，result等字段
+			// 这里对res.result进行返回，将会在this.$u.post(url).then(res => {})的then回调中的res的到
+			// 如果配置了originalData为true，请留意这里的返回值
+			return res.result;
+		} else if(res.code == 201) {
+			// 假设201为token失效，这里跳转登录
+			vm.$u.toast('验证失败，请重新登录');
+			setTimeout(() => {
+				// 此为uView的方法，详见路由相关文档
+				vm.$u.route('/pages/user/login')
+			}, 1500)
+			return false;
+		} else {
+			// 如果返回false，则会调用Promise的reject回调，
+			// 并将进入this.$u.post(url).then().catch(res=>{})的catch回调中，res为服务端的返回值
+			return false;
 		}
 	}
 }
+
+export default {
+	install
+}
+```
+
+
+**实践：** 上面写完了请求配置(强烈建议)，请求拦截(可选，推荐)，响应拦截(可选，推荐)，下面为`post`何`get`请求的示例：
+
+```html
+// /pages/index/index.vue
+
+<script>
+	export default {
+		onLoad() {
+			this.$u.get('/ebapi/store_api/hot_search', {
+				id: 2
+			}).then(res => {
+				this.result = res;
+			})
+			
+			this.$u.post('/ebapi/public_api/index', {
+				id: 1
+			}).then(res => {
+				this.result = res;
+			})
+		}
+	}
+</script>
 ```
 
 
@@ -226,7 +292,7 @@ export default {
 				console.log(res);
 			})
 			
-			// 错误，如果想要使用同步的形式，无需then回调
+			// 错误，如果想要使用同步的形式，无需then回调，且需要await关键字
 			let result = this.$u.post('/user/login').then(res => {
 				console.log(res);
 			})
@@ -274,78 +340,80 @@ export default {
 }
 ```
 
-:::warning 注意
-如果需要同时进行多个请求，有开启loading效果的话，必须要await进行处理，否则loading不会关闭，
-但一个页面有多个请求，如果不同时进行的无需处理
-:::
-
-这里同时进行多个请求，又开启了loading效果的话，loading不会关闭，需要async/await处理
-
-```js
-export default {
-	methods: {
-		user() {
-			this.$u.post('/user/login').then(res => {
-				// .....
-			})
-			this.$u.post('/user/info').then(res => {
-				// .....
-			})
-		}
-	}
-}
-```
-
-同时多个请求，又在配置中开启了loading效果的正确做法
-
-```js
-export default {
-	methods: {
-		async user() {
-			await this.$u.post('/user/login').then(res => {
-				// .....
-			})
-			await this.$u.post('/user/info').then(res => {
-				// .....
-			})
-		}
-	}
-}
-```
-
 ### 完整示例
 
 如果您不想阅读上方的内容的，或者觉得繁琐，下面给出一个完整的示例，复制修改某些提示的值即可直接使用
 
 ```js
-// App.vue
-export default {
-	onLaunch() {
-		// 配置参数
-		this.$u.http.setConfig({
-			// 修改此处baseUrl
-			baseUrl: 'https://api.example.com'
-		});
+// /common/http.interceptor.js
+
+// 这里的vm，就是我们在vue文件里面的this，所以我们能在这里获取vuex的变量，比如存放在里面的token变量
+const install = (Vue, vm) => {
+	// 此为自定义配置参数，具体参数见上方说明
+	Vue.prototype.$u.http.setConfig({
+		baseUrl: 'https://api.example.com',
+		loadingText: '努力加载中~',
+		loadingTime: 800,
+		// ......
+	});
+	
+	// 请求拦截，配置Token等参数
+	Vue.prototype.$u.http.interceptor.request = (config) => {
+		// 引用token
+		// 方式一，存放在vuex的token，假设使用了uView封装的vuex方式
+		// 见：https://uviewui.com/components/globalVariable.html
+		// config.header.token = vm.token;
 		
-		// 请求拦截部分
-		this.$u.http.interceptor.request = (config) => {
-			// 修改此处，添加header的认证
-			config.header.Token = getApp().globalData.token;
-			return config;
-		}
+		// 方式二，如果没有使用uView封装的vuex方法，那么需要使用$store.state获取
+		// config.header.token = vm.$store.state.token;
 		
-		// 响应拦截
-		this.$u.http.interceptor.response = (res) => {
-			// 修改此处，判断状态码，和返回最终想要得到的数据
-			if(res.code == 200) {
-		 		return res.result;
-			} else {
-				return false;
-			}
+		// 方式三，如果token放在了globalData，通过getApp().globalData获取
+		// config.header.token = getApp().globalData.username;
+		
+		// 方式四，如果token放在了Storage本地存储中，拦截是每次请求都执行的
+		// 所以哪怕您重新登录修改了Storage，下一次的请求将会是最新值
+		// const token = uni.getStorageSync('token');
+		// config.header.token = token;
+		config.header.Token = 'xxxxxx';
+		
+		// 可以对某个url进行特别处理，此url参数为this.$u.get(url)中的url值
+		if(config.url == '/user/login') config.header.noToken = true;
+		// 最后需要将config进行return
+		return config;
+		// 如果return一个false值，则会取消本次请求
+		// if(config.url == '/user/rest') return false; // 取消某次请求
+	}
+	
+	// 响应拦截，判断状态码是否通过
+	Vue.prototype.$u.http.interceptor.response = (res) => {
+		if(res.code == 200) {
+			// res为服务端返回值，可能有code，result等字段
+			// 这里对res.result进行返回，将会在this.$u.post(url).then(res => {})的then回调中的res的到
+			// 如果配置了originalData为true，请留意这里的返回值
+			return res.result;
+		} else if(res.code == 201) {
+			// 假设201为token失效，这里跳转登录
+			vm.$u.toast('验证失败，请重新登录');
+			setTimeout(() => {
+				// 此为uView的方法，详见路由相关文档
+				vm.$u.route('/pages/user/login')
+			}, 1500)
+			return false;
+		} else {
+			// 如果返回false，则会调用Promise的reject回调，
+			// 并将进入this.$u.post(url).then().catch(res=>{})的catch回调中，res为服务端的返回值
+			return false;
 		}
 	}
 }
+
+export default {
+	install
+}
 ```
+
+具体请求使用示例：
+
 
 ```js
 // login.vue

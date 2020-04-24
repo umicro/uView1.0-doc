@@ -122,5 +122,6 @@ export default {
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| navbar-height | 导航栏高度(包含状态栏高度在内)，单位<span style="color: red">PX</span>  | String \ Number | - | - |
+| navbar-height | 导航栏高度(包含状态栏高度在内)，单位<span style="color: red">PX</span>  | String \| Number | - | - |
+| z-index | `z-index`值 | String \| Number | 975 | - |
 

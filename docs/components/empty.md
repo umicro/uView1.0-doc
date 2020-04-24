@@ -60,6 +60,13 @@
 
 
 
+### Slot
+
+| 名称          | 说明            |
+|-------------  |---------------- |
+| bottom |  给组件底部传入`slot`内容  |
+
+
 <style scoped>
 h3[id=内置图标] + p + table thead tr th:nth-child(2){
 	width: 50%;

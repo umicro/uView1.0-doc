@@ -10,9 +10,131 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>1.1.0</h2>
+				</div>
+				<p><code>2020-04-24</code></p>
+				<ul>
+					<li>
+						<span class="add">新增</span>
+						<strong>重磅推出！</strong>uView新增对HbuilderX的提示代码提示功能，用户可以在HX中通过快捷键调出组件，查看参数，事件说明等，还可以一键跳转对应组件的官方文档。
+						详见<a target="_blank" href="/components/codeHint.html">uView在HX的提示代码</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						新增Modal模态框组件，详见<a target="_blank" href="/components/modal.html">模态框</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						新增压窗屏组件，可以在APP上以弹窗的形式遮盖导航栏和底部tabbar，详见<a target="_blank" href="/components/fullScreen.html">压窗屏</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						新增内容为空的判断规则，在"$u.test.empty"中，可对各种“空”类型进行判断，详见<a target="_blank" href="/js/test.html#是否为空">empty方法</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						http请求库新增"put"和"delete"请求
+					</li>
+					<li>
+						<span class="add">新增</span>
+						给MessageInput验证码输入组件添加width参数，可以控制输入框的大小
+					</li>
+					<li>
+						<span class="add">新增</span>
+						给upload增加width参数，可控制预览图片的大小
+					</li>
+					<li>
+						<span class="add">新增</span>
+						给noticebar组件增加圆角，内边距，为空隐藏等参数
+					</li>
+					<li>
+						<span class="add">新增</span>
+						tabs和tabsSwiper组件添加控制滑块和活动item样式的参数
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						移除divider组件的默认高度，添加上下边距控制参数
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						移除loadmore组件的默认高度，添加上下边距控制参数
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化请求库同时多个请求loading无法关闭的问题，将App.vue的拦截器移动到独立的js文件，并交给用户多种在js文件中读取vue的this实例的方法。
+						详见<a target="_blank" href="/js/http.html">Http请求</a>
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化countDown倒计时组件不显示天的时候小时该显示的值
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						调整小程序分享方法为手动调用
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化navbar自定义导航栏组件在小程序的适配
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复badge组件的size参数无效问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复键盘组件在微信小程序上遮罩无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复商城分类模板(左右联动)某些特情况下左边菜单点击无效的问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
+					<h2>1.0.9</h2>
+				</div>
+				<p><code>2020-04-21</code></p>
+				<ul>
+					<li>
+						<span class="add">新增</span>
+						新增红包，订单图标
+					</li>
+					<li>
+						<span class="add">新增</span>
+						给empty加入slot插槽
+					</li>
+					<li>
+						<span class="add">新增</span>
+						放开grid宫格组件对列数的限制，最大可为12列
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化popup弹出可能会导致底层内容会滑动的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						顶层设计处理组件fixed定位可能会互相覆盖的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复自定义导航栏在安卓小程序上可能会出现的高度误差
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>1.0.8</h2>
 				</div>
-				<p><code>2020-04-21 凌晨1点20分</code></p>
+				<p><code>2020-04-20 凌晨1点20分</code></p>
 				<h2>uView已趋于稳定，进入新增和优化阶段</h2>
 				<ul>
 					<li>
@@ -65,7 +187,7 @@
 				<div class="anchor">
 					<h2>1.0.7</h2>
 				</div>
-				<p><code>2020-04-20</code></p>
+				<p><code>2020-04-19</code></p>
 				<ul>
 					<li>
 						<span class="add">新增</span>
@@ -93,7 +215,7 @@
 				<div class="anchor">
 					<h2>1.0.6</h2>
 				</div>
-				<p><code>2020-04-19</code></p>
+				<p><code>2020-04-18</code></p>
 				<ul>
 					<li>
 						<span class="add">新增</span>

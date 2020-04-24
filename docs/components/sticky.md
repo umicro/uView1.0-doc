@@ -68,7 +68,8 @@
 | index | 自定义标识，用于区分是哪一个组件 | String \| Number  | - | - |
 | enable | 是否开启吸顶功能 | Boolean  | true | false |
 | bg-color | 组件背景颜色 | String  | #ffffff | - |
-| h5-nav-height | 导航栏高度，自定义导航栏时(无导航栏时需设置为`0`)，需要传入此值，单位**px** | Boolean  | 44 | - |
+| z-index | 吸顶时的`z-index`值 | String \| Number  | 970 | - |
+| h5-nav-height | 导航栏高度，自定义导航栏时(无导航栏时需设置为`0`)，需要传入此值，单位**px** | String \| Number  | 44 | - |
 
 ### Event
 

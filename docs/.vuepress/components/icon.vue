@@ -13,14 +13,26 @@
 	export default {
 		data() {
 			return {
-				iconList: [{
+				iconList: [
+					{
+						name: 'red-packet'
+					},
+					{
+						name: 'red-packet-fill'
+					},
+					{
+						name: 'order'
+					},
+					{
 						name: 'checkbox-mark'
-					},{
+					},
+					{
 						name: 'arrow-up-fill'
 					},
 					{
 						name: 'arrow-down-fill'
-					},{
+					},
+					{
 						name: 'backspace'
 					},
 					{
@@ -36,16 +48,16 @@
 						name: 'lock-fill'
 					},
 					{
-						name: 'lock_open'
+						name: 'lock-open'
 					},
 					{
-						name: 'lock_opened-fill'
+						name: 'lock-opened-fill'
 					},
 					{
 						name: 'hourglass'
 					},
 					{
-						name: 'hourglass_half-fill'
+						name: 'hourglass-half-fill'
 					},
 					{
 						name: 'home'
@@ -216,9 +228,6 @@
 						name: 'eye-off'
 					},
 					{
-						name: 'eye-fill'
-					},
-					{
 						name: 'file-text'
 					},
 					{
@@ -324,12 +333,6 @@
 						name: 'skip-forward-right'
 					},
 					{
-						name: 'trash'
-					},
-					{
-						name: 'trash-fill'
-					},
-					{
 						name: 'search'
 					},
 					{
@@ -337,18 +340,6 @@
 					},
 					{
 						name: 'setting-fill'
-					},
-					{
-						name: 'file-text'
-					},
-					{
-						name: 'file-text-fill'
-					},
-					{
-						name: 'email'
-					},
-					{
-						name: 'email-fill'
 					},
 					{
 						name: 'volume'
@@ -364,12 +355,6 @@
 					},
 					{
 						name: 'more-circle-fill'
-					},
-					{
-						name: 'bell'
-					},
-					{
-						name: 'bell-fill'
 					},
 					{
 						name: 'bag'

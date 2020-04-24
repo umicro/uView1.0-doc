@@ -29,3 +29,5 @@
 |-------------  |---------------- |---------------|------------------ |-------- |
 | bg-color |  背景颜色 | String	 | #f3f4f6 | - |
 | height | 分割槽高度，单位rpx  | String \| Number | 30 | - |
+| margin-top | 与前一个元素的距离，单位rpx | String \| Number  | 0 | - |
+| margin-bottom | 与后一个元素的距离，单位rpx | String \| Number  | 0 | - |

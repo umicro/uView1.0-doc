@@ -167,6 +167,7 @@ let params = {
 | default-region | 默认选中的地区，中文形式，mode=region时有效  | String | - | - |
 | default-code | 默认选中的地区，编号形式，mode=region时有效  | String | - | - |
 | mask-close-able | 是否允许通过点击遮罩关闭Picker  | Boolean | true | false |
+| z-index | 弹出时的`z-index`值 | String \| Number | 1075 | - |
 
 
 ### Events

@@ -57,7 +57,7 @@
 该控件为类似按钮形式，可以设置为"搜索"或者"取消"等内容，如果开启动画效果，用户确认搜索后，该控件会自动消失
 
 - `show-action`配置是否开启右边按钮控件
-- `actiona-text`配置控件内容
+- `action-text`配置控件内容
 - `animation`(默认为`true`)设置为`true`的话，失去焦点，或者点击控件按钮时，控件自动消失，并且带有动画效果
 
 ::: warning 说明
@@ -66,7 +66,7 @@
 :::
 
 ```html
-<u-search :show-action="true" actiona-text="搜索" :animation="true"></u-search>
+<u-search :show-action="true" action-text="搜索" :animation="true"></u-search>
 ```
 
 ### 自定义样式

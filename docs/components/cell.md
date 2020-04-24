@@ -98,6 +98,7 @@ cell单元格一般用于一组列表的情况，比如个人中心页，设置�
 | value-style | 右侧内容样式，对象形式 | Object | - | - |
 | label-style | 标题下方描述信息的样式，对象形式 | Object | - | - |
 | bg-color | 背景颜色 | String  | #ffffff | - |
+| index | 用于在`click`事件回调中返回，标识当前是第几个Item  | String \| Number | - | - |
 
 ### CellItem Slot
 
@@ -109,9 +110,9 @@ cell单元格一般用于一组列表的情况，比如个人中心页，设置�
 
 ### CellItem Event
 
-|事件名|说明|回调参数|版本|
+|事件名|说明|回调参数|
 |:-|:-|:-|:-|
-| click | 点击cell列表时触发 | - | - |
+| click | 点击cell列表时触发 | index: 通过`props`传递的`index`参数 |
 
 
 

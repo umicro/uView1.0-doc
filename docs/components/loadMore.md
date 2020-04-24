@@ -115,6 +115,8 @@
 | color | 字体颜色  | String | #606266 | - |
 | font-size | 字体大小，单位rpx  | String \| Number | 28 | - |
 | load-text | 自定义显示的文字，见上方说明示例  | Object | - | - |
+| margin-top | 与前一个元素的距离，单位rpx | String \| Number  | 0 | - |
+| margin-bottom | 与后一个元素的距离，单位rpx | String \| Number  | 0 | - |
 
 
 ### Event

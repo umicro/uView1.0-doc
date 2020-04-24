@@ -118,7 +118,7 @@
 |-------------  |---------------- |---------------|------------------ |-------- |
 | scroll-top | 当前滚动高度，自定义组件无法获得滚动条事件，所以依赖接入方传入 | Number \| String | - | - |
 | index-list | 索引字符列表，数组  | Array[string \| number] | A-Z | - |
-| z-index | 层级  | Number \| String | 1 | - |
+| z-index | 锚点吸顶时的层级  | Number \| String | 965 | - |
 | sticky | 是否开启锚点自动吸顶  | Boolean | true | false |
 | offset-top | 锚点自动吸顶时与顶部的距离  | Number \| String | 0 | - |
 | highlight-color | 锚点和右边索引字符高亮颜色  | String | #2979ff | - |

@@ -22,7 +22,9 @@ uView中，共有2个组件可以实现tabs标签切换，分别是`tabs`组件�
 
 ### 基本使用
 
-通过设置`is-scroll`(默认为`true`)，配置tabs组件的内容是否可以左右拖动，一般4个标签以下时，无需拖动，设置为`false`，5个标签以上，建议可以左右拖动。
+- 通过设置`is-scroll`(默认为`true`)，配置tabs组件的内容是否可以左右拖动，一般4个标签以下时，无需拖动，设置为`false`，5个标签以上，建议可以左右拖动。  
+- tabs标签的切换，需要绑定`current`值，在`change`事件回调中可以得到`index`，将其赋值给`current`即可。
+
 具体的标签，通过`list`参数配置，该参数要求为数组，元素为对象，对象要有`name`属性，见示例：
 
 :::tip 说明
@@ -31,7 +33,7 @@ uView中，共有2个组件可以实现tabs标签切换，分别是`tabs`组件�
 
 
 ```html
-<u-tabs ref="tabs" :list="list" :is-scroll="false"></u-tabs>
+<u-tabs :list="list" :is-scroll="false" :current="current" @change="change"></u-tabs>
 
 <script>
 	export default {
@@ -44,6 +46,12 @@ uView中，共有2个组件可以实现tabs标签切换，分别是`tabs`组件�
 				}, {
 					name: '待评价'
 				}],
+				current: 0
+			}
+		},
+		methods: {
+			change(index) {
+				this.current = index;
 			}
 		}
 	}
@@ -58,7 +66,7 @@ uView中，共有2个组件可以实现tabs标签切换，分别是`tabs`组件�
 会读取数组中的`cate_name`属性，而不是默认的`name`属性。
 
 ```html
-<u-tabs ref="tabs" name="cate_name" :list="list" :is-scroll="false"></u-tabs>
+<u-tabs name="cate_name" :list="list" :is-scroll="false" :current="current" @change="change"></u-tabs>
 
 <script>
 	export default {
@@ -71,6 +79,12 @@ uView中，共有2个组件可以实现tabs标签切换，分别是`tabs`组件�
 				}, {
 					cate_name: '待评价'
 				}],
+				current: 0
+			}
+		},
+		methods: {
+			change(index) {
+				this.current = index;
 			}
 		}
 	}
@@ -140,6 +154,9 @@ uView中，共有2个组件可以实现tabs标签切换，分别是`tabs`组件�
 | bg-color | tabs导航栏的背景颜色 | string  | #ffffff | - |
 | name | 组件内部读取的`list`参数中的属性名，见上方说明 | string  | name | - |
 | bold | 激活选项的字体是否加粗 | Boolean | true | false |
+| show-bar | 是否显示底部的滑块 | Boolean | true | false |
+| bar-style | 底部滑块的样式，对象形式 | Object | {} | - |
+| active-item-style | 当前活动Item的样式，对象形式 | Object | {} | - |
 
 ### Events
 

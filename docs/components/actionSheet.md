@@ -120,8 +120,10 @@
 | list | 按钮的文字数组，见上方文档示例  | Array\<Object\>	 | [ ] | - |
 | tips | 顶部的提示文字，见上方文档示例 | Object  | - | - |
 | cancel-btn | 是否显示底部的取消按钮 | Boolean  | true | false |
+| border-radius | 弹出部分顶部左右的圆角值，单位rpx | Number \ String  | 0 | - |
 | mask-close-able | 点击遮罩是否可以关闭 | Boolean  | true | false |
 | safe-area-inset-bottom | 是否开启[底部安全区适配](/components/safeAreaInset.html#关于uview某些组件safe-area-inset参数的说明) | Boolean  | false | true |
+| z-index | `z-index`值 | Number \ String  | 1075 | - |
 
 
 ### Event

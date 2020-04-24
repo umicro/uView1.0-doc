@@ -10,7 +10,7 @@
 #### toast(title, duration = 1500)
 
 - `title` <String\> toast的消息内容
-- `title` <Number\> toast出现到消失的时间，单位ms，默认1500ms
+- `duration` <Number\> toast出现到消失的时间，单位ms，默认1500ms
 
 此方法为uniapp的`uni.showToast`的二次封装，方便用户使用，参数只能配置`title`和`duration`
 

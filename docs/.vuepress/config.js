@@ -58,6 +58,7 @@ module.exports = {
 						['/components/changelog', '更新日志'],
 						['/components/customIcon', '扩展自定义图标库'],
 						['/components/globalVariable', '全局变量的实现'],
+						['/components/codeHint', 'HBuilder X代码提示'],
 					]
 				},
 				{
@@ -121,6 +122,8 @@ module.exports = {
 								'/components/collapse',
 								'/components/popup',
 								'/components/swipeAction',
+								'/components/modal',
+								'/components/fullScreen',
 							]
 						},
 						{
@@ -270,6 +273,8 @@ module.exports = {
 			'/components/checkbox',
 			'/components/radio',
 			'/components/switch',
+			'/components/modal',
+			'/components/fullScreen',
 			'/components/circleProgress',
 			'/components/lineProgress',
 			'/components/table',
@@ -307,6 +312,7 @@ module.exports = {
 			'/components/avatar',
 			'/components/loading',
 			'/layout/menu',
+			'/components/codeHint',
 			'/layout/coupon',
 			'/layout/submitBar',
 			'/layout/comment',

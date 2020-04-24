@@ -97,6 +97,7 @@
 | font-size | 字体大小，单位rpx | String \| Number | 60 | - |
 | active-color | 当前激活输入框的样式 | String | #2979ff | - |
 | focus | 非激活输入框的样式，文字颜色同此值 | String | #606266 | - |
+| width | 输入框的宽度(高等于宽)，单位rpx | String \| Number | 80 | - |
 
 ### Events
 

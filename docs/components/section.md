@@ -44,6 +44,7 @@
 | font-size | 主标题的字体大小 | String \| Number  | 28 | - |
 | bold | 主标题是否加粗 | Boolean  | true | false |
 | color | 主标题颜色 | String  | #303133 | - |
+| sub-color | 右边副标题的颜色(右箭头同此颜色) | String  | #909399 | - |
 
 
 ### Events

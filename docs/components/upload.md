@@ -311,6 +311,7 @@ lists = [
 |-------------  |---------------- |---------------|------------------ |-------- |
 | action | 服务器上传地址  | String | - | - |
 | max-count | 最大选择图片的数量 | String \| Number | 99 | - |
+| width | 图片预览区域和添加图片按钮的宽度(高等于宽)，单位rpx，不能是百分比，或者`auto` | String \| Number | 200 | - |
 | custom-btn | 如果需要自定义选择图片的按钮，设置为`true` | Boolean | false | true |
 | show-progress | 是否显示进度条 | Boolean  | true | false |
 | disabled | 是否启用(显示/移仓)组件 | Boolean  | false | true |

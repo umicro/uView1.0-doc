@@ -32,13 +32,13 @@
 #### 核心代码
 ```html
 <u-waterfall :flow-list="flowList">
-	<template v-slot:left="list">
-		<view v-for="(item, index) in list.leftList" :key="index">
+	<template v-slot:left="{leftList}">
+		<view v-for="(item, index) in leftList" :key="index">
 			<!-- 这里编写您的内容，item为您传递给flow-list数的组元素 -->
 		</view>
 	<template>
-	<template v-slot:right="list">
-		<view v-for="(item, index) in list.rightList" :key="index">
+	<template v-slot:right="{rightList}">
+		<view v-for="(item, index) in rightList" :key="index">
 			<!-- 这里编写您的内容，item为您传递给flow-list数组的元素 -->
 		</view>
 	<template>
@@ -53,8 +53,8 @@
 <template>
 	<view class="wrap">
 		<u-waterfall :flowList="flowList">
-			<template v-slot:left="{list}">
-					<view class="demo-warter" v-for="(item, index) in list" :key="index">
+			<template v-slot:left="{leftList}">
+					<view class="demo-warter" v-for="(item, index) in leftList" :key="index">
 						<!-- 警告：微信小程序不支持嵌入lazyload组件，请自行如下使用image标签 -->
 						<!-- #ifndef MP-WEIXIN -->
 						<u-lazy-load threshold="-450" border-radius="10" :image="item.image" :index="index"></u-lazy-load>
@@ -83,8 +83,8 @@
 						</view>
 					</view>
 			</template>
-			<template v-slot:right="{list}">
-					<view class="demo-warter" v-for="(item, index) in list" :key="index">
+			<template v-slot:right="{rightList}">
+					<view class="demo-warter" v-for="(item, index) in rightList" :key="index">
 						<!-- #ifndef MP-WEIXIN -->
 						<u-lazy-load threshold="-450" border-radius="10" :image="item.image" :index="index"></u-lazy-load>
 						<!-- #endif -->

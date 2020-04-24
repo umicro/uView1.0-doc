@@ -62,6 +62,9 @@
 可以通过`height`(单位**px**，默认44，和uniapp系统导航栏高度一致)配置导航栏的高度，此高度为导航栏内容的高度，不含状态栏的高度，组件内部会自动
 加上状态栏的高度，并填充状态栏的占位区域。
 
+注意上方说的uniapp官方的高度，这里指的是H5，和APP。至于各家小程序，由于受导航栏右侧胶囊的影响，目前组件内部给安卓设定的导航栏高度为`48px`，iOS设定的导航栏高度为`44`，这是结合了大量的
+实践的出来的结果，具备完好的兼容性。
+
 
 ### 自定义导航栏内容
 
@@ -180,6 +183,7 @@ uView提供了一个`background`参数(需对象形式)，可以自定义导航�
 | title-width | 导航栏标题的最大宽度，内容超出会以省略号隐藏，单位rpx | String \ Number  | 250 | - |
 | title-color | 标题的颜色 | String  | #606266 | - |
 | title-size | 导航栏标题字体大小，单位rpx | String \ Number  | 32 | - |
+| z-index | 固定在顶部时的`z-index`值 | String \ Number  | 980 | - |
 | is-back | 是否显示导航栏左边返回图标和辅助文字 | Boolean  | true | false |
 | background | 导航栏背景设置，见上方说明 | Object  | { background: '#ffffff' } | - |
 | is-fixed | 导航栏是否固定在顶部 | Boolean  | true | false |

@@ -90,8 +90,8 @@
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| start-val | 开始值  | Number \| Number | 0 | - |
-| end-val | 结束值 | Number \| Number  | 0 | - |
+| start-val | 开始值  | String \| Number | 0 | - |
+| end-val | 结束值 | String \| Number  | 0 | - |
 | duration | 滚动过程所需的时间，单位ms | String \| Number  | 2000 | - |
 | autoplay | 是否自动开始滚动 | Boolean  | true | false |
 | decimals | 要显示的小数位数，见上方说明 | String \| Number  | 0 | - |
@@ -99,6 +99,7 @@
 | separator | 千位分隔符，见上方说明 | String  | - | - |
 | color | 字体颜色 | String  | #303133 | - |
 | font-size | 字体大小，单位rpx | String \| Number  | 50 | - |
+| bold | 字体是否加粗 | Boolean | false | true |
 
 
 ### Methods

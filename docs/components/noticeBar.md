@@ -46,7 +46,9 @@
 
 ### 配置主题
 
-- 通过`type`参数可以配置5种主题，即`primary`、`warning`(默认)、`error`、`info`、`success`
+- 通过`type`参数可以配置5种主题，即`primary`、`warning`(默认)、`error`、`info`、`success`、`none`
+
+说明：`none`主题默认没有背景颜色
 
 ```html
 <u-notice-bar type="error" :list="list"></u-notice-bar>
@@ -103,13 +105,13 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | list | 滚动内容，数组形式，见上方说明 | Array | - | - |
-| type | 显示的主题  | String | warning | primary / info / error / success |
+| type | 显示的主题  | String | warning | primary / info / error / success / none |
 | volume-icon | 是否显示小喇叭图标 | Boolean | true | false |
 | more-icon | 是否显示右边的向右箭头 | Boolean | false | true |
 | close-icon | 是否显示关闭图标 | Boolean | false | true |
 | autoplay | 是否自动播放 | Boolean | true | false |
 | color | 文字颜色 | String | - | - |
-| bg-color | 背景颜色 | String \| Number | 60 | - |
+| bg-color | 背景颜色 | String \| Number | - | - |
 | mode | 滚动模式 | String | horizontal(水平滚动) | vertical(垂直滚动) |
 | show | 是否显示 | Boolean | true | false |
 | font-size | 字体大小，单位rpx | String \| Number | 28 | - |
@@ -117,8 +119,12 @@
 | speed | 水平滚动时的滚动速度，即每秒移动多少距离，只对水平衔接方式有效，单位rpx | String \| Number | 160 | - |
 | font-size | 字体大小，单位rpx | String \| Number | 28 | - |
 | is-circular | `mode`为`horizontal`时，指明是否水平衔接滚动 | Boolean | true | false |
-| play-state | 播放状态，paly - 播放，paused - 暂停 | String | paly | paused |
+| play-state | 播放状态，play - 播放，paused - 暂停 | String | play | paused |
 | disable-touch | 是否禁止通过手动滑动切换通知，只有mode = vertical，或者mode = horizontal且is-circular = false时有效| Boolean | true | false |
+| padding | 内置滚动通知的内边距，字符串，类似"16rpx 20rpx" | String | 18rpx 24rpx | - |
+| border-radius | 圆角值，单位rpx | String \ Number | 0 | - |
+| no-list-hidden | `list`为空数组时，是否显示组件 | Boolean | true | false |
+
 
 ### Events
 

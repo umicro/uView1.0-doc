@@ -79,6 +79,12 @@ this.$refs.uToast.show({
 
 ### API
 
+### Props
+
+| 参数      | 说明        | 类型     |  默认值  |  可选值   |
+|-----------|-----------|----------|----------|---------|
+| z-index | toast展示时的`z-index`值  | String \| Number | 1090 | - |
+
 ### Params
 
 这些参数为通过`ref`调用`<toast/>`组件内部的`show`方法时，需要传递参数

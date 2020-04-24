@@ -43,6 +43,27 @@ console.log(this.$u.test.url('http://www.uviewui.com'));
 ```
 
 
+### 是否为空
+
+这里指的“空”，包含如下几种情况：
+- 值为`undefined`(一种类型)，非字符串`"undefined"`
+- 字符串长度为0，也即空字符串
+- 值为`false`(布尔类型)，非字符串`"false"`
+- 值为数值`0`(非字符串`"0"`)，或者`NaN`
+- 值为`null`，空对象`{}`，或者长度为0的数组
+
+#### empty(value)
+
+
+校验值是否为空
+
+- `value` <any\> 字符串
+
+```js
+console.log(this.$u.test.empty(false));
+```
+
+
 ### 是否普通日期
 
 验证一个字符串是否日期，如下行为正确：

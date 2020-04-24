@@ -49,6 +49,8 @@
 | bg-color | 整个divider的背景颜色 | String  | #ffffff | - |
 | height | 整个divider的高度，单位rpx | string \| Number  | 40 | - |
 | type | 将线条设置主题色 | string  | primary | info \ success \ warning \ error |
+| margin-top | 与前一个元素的距离，单位rpx | String \| Number  | 0 | - |
+| margin-bottom | 与后一个元素的距离，单位rpx | String \| Number  | 0 | - |
 
 
 

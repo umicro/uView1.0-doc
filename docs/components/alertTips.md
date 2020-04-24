@@ -81,7 +81,7 @@
 |-------------  |---------------- |---------------|------------------ |-------- |
 | title | 显示的文字  | String | - | - |
 | description | 辅助性文字，颜色比`title`浅一点，字号也小一点，可选 | String  | - | - |
-| close-able | 关闭按钮按钮(默认为叉号icon图标) | Boolean  | false | true |
+| close-able | 关闭按钮(默认为叉号icon图标) | Boolean  | false | true |
 | type | 使用预设的颜色 | String  | warning | success / primary / error / info |
 | close-text | 用文字替代关闭图标，`close-able`为`true`时有效 | String  | - | - |
 | show-icon | 是否显示左边的辅助图标 | Boolean  | false | true |

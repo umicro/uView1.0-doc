@@ -65,7 +65,7 @@
 
 ### 倒计时执行的时机
 
-通过`autopaly`配置倒计时是否在组件的`mounted`生命周期进行初始化(在`timestamp`有值前提下)，如果设置`autopaly`为`false`，就需要手动通过
+通过`autoplay`配置倒计时是否在组件的`mounted`生命周期进行初始化(在`timestamp`有值前提下)，如果设置`autoplay`为`false`，就需要手动通过
 `refs`的形式通知倒计时开始执行，调用的是组件内部的`start()`方法
 
 ```html
@@ -91,7 +91,7 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | timestamp | 倒计时，单位为秒 | String \| Number | 0 | - |
-| autopaly | 是否自动开始倒计时，如果为`false`，需手动调用开始方法。见上方说明  | Boolean | true | false |
+| autoplay | 是否自动开始倒计时，如果为`false`，需手动调用开始方法。见上方说明  | Boolean | true | false |
 | separator | 分隔符，`colon`为英文冒号，`zh`为中文 | String  | colon | zh |
 | separator-size | 分隔符的字体大小，单位rpx | String \| Number  | 30 | - |
 | separator-color | 分隔符的颜色 | String  | #303133 | - |
