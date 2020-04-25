@@ -36,13 +36,13 @@
 		<view v-for="(item, index) in leftList" :key="index">
 			<!-- 这里编写您的内容，item为您传递给flow-list数的组元素 -->
 		</view>
-	<template>
+	</template>
 	<template v-slot:right="{rightList}">
 		<view v-for="(item, index) in rightList" :key="index">
 			<!-- 这里编写您的内容，item为您传递给flow-list数组的元素 -->
 		</view>
-	<template>
-</u-water-fall>
+	</template>
+</u-waterfall>
 ```
 
 

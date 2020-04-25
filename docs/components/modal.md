@@ -44,6 +44,52 @@
 </script>
 ```
 
+### 传入富文本内容
+
+有时候我们需要给模态框的内容，不一定是纯文本的字符串，可能会需要换行，嵌入其他元素等，这时候我们可以使用`slot`功能，再结合uniapp的`rictText`组件，
+就能传入富文本内容了，如下演示：
+
+```html
+<template>
+	<view>
+		<u-modal v-model="show" :title-style="{color: 'red'}">
+			<view class="slot-content">
+				<rich-text :nodes="content"></rich-text>
+			</view>
+		</u-modal>
+		<u-button @click="open">
+			打开模态框
+		</u-button>
+	</view>
+</template>
+	
+<script>
+	export default {
+		data() {	
+			return {
+				show: false,
+				content: `
+					空山新雨后<br>
+					天气晚来秋
+				`
+			}
+		},
+		methods: {
+			open() {
+				this.show = true;
+			}
+		}
+	}
+</script>
+<style lang="scss" scoped>
+	.slot-content {
+		font-size: 28rpx;
+		color: $u-content-color;
+		padding-left: 30rpx;
+	}
+</style>
+```
+
 
 ### 控制模态框宽度
 
@@ -107,3 +153,18 @@
 |:-|:-|:-|:-|
 | confirm | 点击确认按钮时触发 | - |
 | cancel | 点击取消按钮时触发 | - |
+
+
+
+### Slots
+
+| 名称 | 说明 |
+|:-|:-|
+| default | 传入自定义内容，一般为富文本，见上方说明 |
+
+
+<style scoped>
+h3[id=slots] + table thead tr th:nth-child(2){
+	width: 50%;
+}
+</style>

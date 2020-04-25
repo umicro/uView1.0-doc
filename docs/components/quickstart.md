@@ -10,8 +10,11 @@
 下载uView，解压得到名为`uview`的文件夹，放到项目根目录，进行如下简单配置即可使用：
 
 ::: warning 注意
-uView依赖SCSS，相信您的项目在HBuilder X中已经安装scss插件，如果没有，请在HX菜单的 工具->插件安装中找到"scss/sass编译"插件进行安装，
-如不生效，重启HX即可。
+1. uView依赖SCSS，如果您的项目是由`HBuilder X`创建的，相信已经安装scss插件，如果没有，请在HX菜单的 工具->插件安装中找到"scss/sass编译"插件进行安装，
+如不生效，重启HX即可
+2. 如果您的项目是由`vue-cli`创建的，需要在项目根目录下通过npm安装SCSS依赖: 执行`npm i sass-loader -D`和`npm i node-sass -D`
+3. uView建议将组件库放在项目根目录，但是您也可以将uView放到项目内的任何目录，只是要在`main.js`、`uni.scss`、`pages.json`几个文件的引入路径
+做相应的变更。
 :::
 
 ### 关于easycom的说明
@@ -29,7 +32,7 @@ uView采用easycom自动按需引入组件的方式，这意味着即使您引�
 import Vue from 'vue'
 ......
 
-// 就这两行即可
+// 就这两行即可，如果不是把uView放在根目录，请根据情况修改路径
 import uView from "@/uview";
 Vue.use(uView);
 
@@ -54,9 +57,10 @@ uView的样式文件中类名没有使用类似`.box .item {...}`的嵌套形式
 :::
 
 ```css
+/* 如果不是把uView放在根目录，请根据情况修改路径 */
 @import '@/uview/index.scss';
 
-<--! 其他内容 -->
+/* 其他内容 */
 ......
 ```
 
@@ -75,7 +79,7 @@ Hbuilder X自2.5.1版开始正式支持`easycom`特性，**HX2.5.5**版支持自
 // pages.json
 
 {
-	// 此为需要加入的内容
+	// 此为需要加入的内容，如果不是把uView放在根目录，请根据情况修改路径
 	"easycom": {
 		"^u-(.*)": "@/uview/components/u-$1/u-$1.vue"
 	},

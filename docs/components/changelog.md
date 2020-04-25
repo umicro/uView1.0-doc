@@ -10,6 +10,42 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>1.1.1</h2>
+				</div>
+				<p><code>2020-04-25</code></p>
+				<ul>
+					<li>
+						<span class="add">新增</span>
+						新增对vue-cli的支持，文档有详细介绍针对vue-cli创建的项目使用uView的教程
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复宫格组件在某些安卓机型可能会错乱的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复modal组件按钮错乱的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复swiper轮播图组件在安卓上后台运行一段时间后会卡顿的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复瀑布流组件出错的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复keyboard键盘组件顶部文字提示类型有误的问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>1.1.0</h2>
 				</div>
 				<p><code>2020-04-24</code></p>

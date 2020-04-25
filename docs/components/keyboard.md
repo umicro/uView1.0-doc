@@ -38,6 +38,7 @@
 
 - 通过`tooltip`参数配置是否显示显示顶部的工具条，默认为`true`
 - 通过`tips`参数修改工具条中间的提示文字
+- 通过`show-tips`可以控制是否显示工具条中间的文字
 - 通过`cancelBtn`参数配置是否显示工具条左边的"取消"按钮
 - 通过`confirmBtn`参数配置是否显示工具条右边的"完成"按钮
 
@@ -142,7 +143,8 @@
 | mode | 键盘类型，见上方`基本使用`的说明  | String | number | car / card |
 | dot-enabled | 是否显示"."按键，只在mode=number时有效 | Boolean  | true | false |
 | tooltip | 是否显示键盘顶部工具条 | Boolean  | true | false |
-| tips | 工具条中间的提示文字，见上方`基本使用`的说明，如不需要，请传""空字符 | String  | - | - |
+| tips | 工具条中间的提示文字，见上方`基本使用`的说明 | String  | - | - |
+| show-tips | 是否显示工具条中间的文字 | Boolean  | true | false |
 | cancel-btn | 是否显示工具条左边的"取消"按钮 | Boolean  | true | false |
 | confirm-btn | 是否显示工具条右边的"完成"按钮 | Boolean  | true | false |
 | mask | 是否显示遮罩 | Boolean  | true | false |

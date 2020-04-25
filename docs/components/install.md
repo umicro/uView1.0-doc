@@ -17,14 +17,17 @@ uView已正式发布**公测版**，欢迎[交流反馈](/cooperation/about.html
 
 #### 方式一
 
-这个方式，适用于已有现成uni-app项目的情形，解压后将`uview`文件夹，复制到项目根目录，再根据[快速上手](/components/quickstart.html)
-中的配置进行引用即可。
+这个方式：
+- 如果您的项目是由HBuilder X创建的标准uni-app项目，解压后将`uview`文件夹，复制到项目根目录。
+- 如果您的项目是由[vue-cli](https://uniapp.dcloud.io/quickstart?id=_2-%e9%80%9a%e8%bf%87vue-cli%e5%91%bd%e4%bb%a4%e8%a1%8c)模式创建的，
+请将下载解压的`uview`文件夹放到项目根目录的`src`文件夹中即可。
 
-**注意：** 此下载方式必须要按照[快速上手](/components/quickstart.html)中的说明配置了才可用。
+
+**注意：**  此下载方式必须要按照[快速上手](/components/quickstart.html)中的说明配置了才可用。
 
 <br>
 <div @click="downloadPost(2)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_1.1.0.rar">uView_1.1.0.rar</a>
+	下载地址：<a href="https://download.uviewui.com/uView_1.1.1.rar">uView_1.1.1.rar</a>
 </div>
 <br>
 <br>
@@ -44,7 +47,7 @@ uView已正式发布**公测版**，欢迎[交流反馈](/cooperation/about.html
 
 <br>
 <div @click="downloadPost(1)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_demo_1.1.0.rar">uView_demo_1.1.0.rar</a>
+	下载地址：<a href="https://download.uviewui.com/uView_demo_1.1.1.rar">uView_demo_1.1.1.rar</a>
 </div>
 <br>
 <br>
@@ -57,7 +60,7 @@ uView已正式发布**公测版**，欢迎[交流反馈](/cooperation/about.html
 
 <br>
 <div @click="downloadPost(3)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_1.1.0_full.rar">uView_1.1.0_full.rar</a>
+	下载地址：<a href="https://download.uviewui.com/uView_1.1.1_full.rar">uView_1.1.1_full.rar</a>
 </div>
 <br>
 <br>
@@ -65,7 +68,8 @@ uView已正式发布**公测版**，欢迎[交流反馈](/cooperation/about.html
 <br>
 
 :::tip 注意
-方式三不适用于直接开发中，它只是演示用的，可以直接运行并查看效果。
+方式三不适用于直接开发中，它只是演示用的，可以直接运行并查看效果。  
+如果在微信开发工具真机预览时，提示分包太大运行的问题，请在`HBuilder X`进行设置：菜单栏  运行 -> 运行到小程序模拟器，在下拉菜单中**勾选**"运行时是否压缩代码"
 :::
 
 <br>
