@@ -5,10 +5,10 @@
 
 我们这里说的全局变量，着重指的是能够**全局动态响应**的情况。
 
-说到全局变量，我们首先想到的可能就是`vuex`，确实，这是最好的实现方式。在uniapp平台，我们还可以有其他的实现方式，这里我们做一个抛砖引玉的讨论，当然，我们
+说到全局变量，我们首先想到的可能就是`vuex`，确实，这是最好的实现方式。在uni-appp平台，我们还可以有其他的实现方式，这里我们做一个抛砖引玉的讨论，当然，我们
 推荐的，还是使用uView封装后的`vuex`的实现方式，它具有配置简单，使用方便的特点。  
 
-整体来说，在uniapp平台，可以有如下实现全局变量的方式：
+整体来说，在uni-appp平台，可以有如下实现全局变量的方式：
 
 1. 本地存储
 2. 配置文件
@@ -133,9 +133,9 @@ Vue.prototype.domain = config.domain;
 
 这个方式，最早是微信小程序特有的，它无法使用`vuex`进行全局状态的管理，就造了这个方式。  
 
-可能您会问，为什么uniapp有了`vuex`还要有这个呢？
+可能您会问，为什么uni-appp有了`vuex`还要有这个呢？
 
-globalData是微信小程序的特性，uniapp是对微信小程序的另一个实现，顺理成章的就有了globalData，另外的原因也是因为globalData使用简单，也有它存在的理由。
+globalData是微信小程序的特性，uni-appp是对微信小程序的另一个实现，顺理成章的就有了globalData，另外的原因也是因为globalData使用简单，也有它存在的理由。
 当然，globalData也不是动态响应的，也就是说，您在`A.vue`修改了globalData中的某个值`username`，在`B.vue`中对这个值的引用是无法自动更新的，`vuex`却是可以做到的。
 
 由上，因为无法自动更新，为了做到这一点，所以我们需要在页面的`onShow`生命周期中获取globalData的值，或许您会问，为什么一定是`onShow`呢，`onLoad`不行吗？
@@ -241,7 +241,7 @@ export default {
 
 #### (一) 传统实现方式
 
-1. 在uniapp项目根目录新建`store`文件夹，并在其中创建`index.js`，内容如下：
+1. 在uni-appp项目根目录新建`store`文件夹，并在其中创建`index.js`，内容如下：
 
 为了避免和页面`data`变量混淆，可以给`state`中的变量添加一个特定的前缀，比如"vuex_"
 
@@ -265,7 +265,7 @@ const store = new Vuex.Store({
 export default store
 ```
 
-2. 在uniapp项目根目录的`main.js`中，引入`vuex`
+2. 在uni-appp项目根目录的`main.js`中，引入`vuex`
 
 ```js
 // main.js
@@ -330,7 +330,7 @@ export default {
 
 #### **具体实现**
 
-1. uniapp项目根目录新建'/store/index.js'，并复制如下内容到其中
+1. uni-appp项目根目录新建'/store/index.js'，并复制如下内容到其中
 
 注意：如果某个变量需要保存到APP的下一次启动中，或者需要H5刷新之后不消失，在`state`中声明后，还需要写入到`saveStateKeys`数组中，
 同时，在`state`中也需要写上`lifeData.xxx ? lifeData.xxx : yyy`的形式，保证应用启动时能把从存储中获取的值赋值给变量，见如下：
@@ -402,7 +402,7 @@ const store = new Vuex.Store({
 export default store
 ```
 
-1. uniapp项目根目录新建'/store/$u.mixin.js'，并复制如下内容到其中，由于HX某些版本的限制，我们无法帮您自动引入"$u.mixin.js"，您需要在`main.js`
+1. uni-appp项目根目录新建'/store/$u.mixin.js'，并复制如下内容到其中，由于HX某些版本的限制，我们无法帮您自动引入"$u.mixin.js"，您需要在`main.js`
 中手动引入，并mixin处理。
 
 以下为"main.js"文件：

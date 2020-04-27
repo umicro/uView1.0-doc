@@ -8,9 +8,9 @@
 
 uView中，共有2个组件可以实现tabs标签切换，分别是`tabs`组件，`tabsSwiper`组件，他们的异同点是：  
 
-- `tabs`组件可以不结合uniapp的`swiper`轮播组件使用，`tabsSwiper`组件是必须要结合uniapp的`swiper`轮播组件才能使用的。
+- `tabs`组件可以不结合uni-appp的`swiper`轮播组件使用，`tabsSwiper`组件是必须要结uni-apppp的`swiper`轮播组件才能使用的。
 - `tabs`组件使用更简洁明了(这也是其存在的理由)，`tabsSwiper`组件配置相对复杂一些。
-- `tabsSwiper`组件相比`tabs`组件，由于搭配了uniapp的`swiper`轮播组件，获得了滑块跟随，标签颜色渐变等效果(请在演示中扫码查看效果)，而`tabs`组件是不具备的。
+- `tabsSwiper`组件相比`tabs`组件，由于搭配了uni-appp的`swiper`轮播组件，获得了滑块跟随，标签颜色渐变等效果(请在演示中扫码查看效果)，而`tabs`组件是不具备的。
 
 总的来说，二者配置参数和功能都差不多，看用户的需求自行衡量该使用哪一个组件。
 

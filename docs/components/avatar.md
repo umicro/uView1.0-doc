@@ -28,8 +28,10 @@
 <script>
 	export default {
 		data() {
-			src: 'http://pic2.sc.chinaz.com/Files/pic/pic9/202002/hpic2119_s.jpg',
-			text: '无头像'
+			return {
+				src: 'http://pic2.sc.chinaz.com/Files/pic/pic9/202002/hpic2119_s.jpg',
+				text: '无头像'
+			}
 		}
 	}
 </script>
@@ -47,7 +49,9 @@
 <script>
 	export default {
 		data() {
-			src: 'http://pic2.sc.chinaz.com/Files/pic/pic9/202002/hpic2119_s.jpg',
+			return {
+				src: 'http://pic2.sc.chinaz.com/Files/pic/pic9/202002/hpic2119_s.jpg'
+			}
 		}
 	}
 </script>

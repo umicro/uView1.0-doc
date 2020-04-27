@@ -49,7 +49,7 @@
 <template>
 	<u-picker mode="time" v-model="show"  default-time="2025-07-02 13:01"></u-picker>
 	
-	<u-picker mode="region" v-model="show"  :area-code='["13", "1303", "130304"]'></u-picker>
+	<u-picker mode="region" v-model="show"  :default-code='["13", "1303", "130304"]'></u-picker>
 </template>
 ```
 

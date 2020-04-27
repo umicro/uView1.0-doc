@@ -38,7 +38,7 @@ $uStore(state, payload) {
 ```
 
 - 针对上面第二点，我们通过`Vue.mixin`全局混入的形式，可以很好的解决。`mixin`会把内容注入到每一个页面，所以我们在其中写了`mapState`到`computed`，
-每个页面自然地就获得了从`vuex`的`state`中注入的全局变量，这里我们需要在uniapp项目根目录新建一个`store`文件夹(如果没有的话)，
+每个页面自然地就获得了从`vuex`的`state`中注入的全局变量，这里我们需要在uni-appp项目根目录新建一个`store`文件夹(如果没有的话)，
 在其中新建一个`$u.mixin.js`文件，这个文件无需您手动引入和`Vue.mixin`处理，uView会自动处理，只为让您少写两行代码。
 
 ```js

@@ -15,6 +15,12 @@
 			return {
 				iconList: [
 					{
+						name: 'chat'
+					},
+					{
+						name: 'chat-fill'
+					},
+					{
 						name: 'red-packet'
 					},
 					{
@@ -585,7 +591,7 @@
 </script>
 
 <style scoped>
-	@import url("//at.alicdn.com/t/font_1529455_54gy2dcj8lj.css");
+	@import url("//at.alicdn.com/t/font_1529455_grj75vnk4fq.css");
 
 	.icon-box {
 		display: flex;

@@ -46,13 +46,15 @@
 
 ### 传入富文本内容
 
-有时候我们需要给模态框的内容，不一定是纯文本的字符串，可能会需要换行，嵌入其他元素等，这时候我们可以使用`slot`功能，再结合uniapp的`rictText`组件，
+有时候我们需要给模态框的内容，不一定是纯文本的字符串，可能会需要换行，嵌入其他元素等，这时候我们可以使用`slot`功能，再结合uni-appp的`rictText`组件，
 就能传入富文本内容了，如下演示：
+
+**注意：** 传入自定义内容的话，由于微信小程序的特殊原因，需要设置`content-slot`为`true`
 
 ```html
 <template>
 	<view>
-		<u-modal v-model="show" :title-style="{color: 'red'}">
+		<u-modal v-model="show" :title-style="{color: 'red'}" :content-slot="true">
 			<view class="slot-content">
 				<rich-text :nodes="content"></rich-text>
 			</view>
@@ -132,6 +134,7 @@
 | title | 标题内容  | String | 提示 | - |
 | width | 模态框宽度，数值时单位为rpx | String \| Number  | 600 | 百分比 / auto |
 | content | 模态框内容 | String  | 内容 | - |
+| content-slot | 是否通过`slot`传入自定义的内容 | Boolean  | false | true |
 | show-title | 是否显示标题 | Boolean  | true | false |
 | show-confirm-button | 是否显示确认按钮 | Boolean  | true | false |
 | show-cancel-button | 是否显示取消按钮 | Boolean  | false | true |

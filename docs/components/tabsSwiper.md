@@ -2,22 +2,22 @@
 
 <demo-model url="/pages/template/order/index"></demo-model>
 
-该组件内部实现主要依托于uniapp的`scroll-view`和`swiper`组件，主要特色是切换过程中，tabsSwiper文字的颜色可以渐变，底部滑块可以
+该组件内部实现主要依托于uni-appp的`scroll-view`和`swiper`组件，主要特色是切换过程中，tabsSwiper文字的颜色可以渐变，底部滑块可以
 跟随式滑动，活动tab滚动居中等。应用场景可以用于需要左右切换页面，比如商城的订单中心(待收货-待付款-待评价-已退货)等应用场景。
 <br>
 <br>
 uView中，共有2个组件可以实现tabs标签切换，分别是`tabs`组件，`tabsSwiper`组件，他们的异同点是：  
 
-- `tabs`组件可以不结合uniapp的`swiper`轮播组件使用，`tabsSwiper`组件是必须要结合uniapp的`swiper`轮播组件才能使用的。
+- `tabs`组件可以不结合uni-appp的`swiper`轮播组件使用，`tabsSwiper`组件是必须要结uni-apppp的`swiper`轮播组件才能使用的。
 - `tabs`组件使用更简洁明了(这也是其存在的理由)，`tabsSwiper`组件配置相对复杂一些。
-- `tabsSwiper`组件相比`tabs`组件，由于搭配了uniapp的`swiper`轮播组件，获得了滑块跟随，标签颜色渐变等效果(请在演示中扫码查看效果)，而`tabs`组件是不具备的。
+- `tabsSwiper`组件相比`tabs`组件，由于搭配了uni-appp的`swiper`轮播组件，获得了滑块跟随，标签颜色渐变等效果(请在演示中扫码查看效果)，而`tabs`组件是不具备的。
 
 总的来说，二者配置参数和功能都差不多，看用户的需求自行衡量该使用哪一个组件。
 <br>
 <br>
 
 ::: warning 注意
-此组件目前为uView的`vue`版本，非`nvue`版本(制作中)，内部使用uniapp的`swiper`组件为基础，`swiper`是单页组件，
+此组件目前为uView的`vue`版本，非`nvue`版本(制作中)，内部使用uni-appp的`swiper`组件为基础，`swiper`是单页组件，
 适合做简单列表左右滑动，因为性能问题，用swiper做复杂长列表，需要较高的优化技巧以及接受一些限制。如果要实现类似腾讯新闻APP首页可以左右
 滑动复杂的多个tab切换，不建议使用本组件，如果使用，请自行测试列表很长时的切换流畅度。后续uView会对`nvue`进行兼容，增强此组件在APP上的能力。  
 官方有一个`nvue`新闻模板示例，内有左右滑动tab功能，具体参考：  
@@ -108,13 +108,13 @@ uView中，共有2个组件可以实现tabs标签切换，分别是`tabs`组件�
 
 ### 使用案例
 
-该组件**必须**搭配uniapp的`swiper`组件才能使用，可以实现左右滑动，同时还可以搭配uView的`loadmore`实现底部加载更多的功能，注意：
+该组件**必须**搭配uni-appp的`swiper`组件才能使用，可以实现左右滑动，同时还可以搭配uView的`loadmore`实现底部加载更多的功能，注意：
 
 - 必须要给组件设置`ref`属性，因为结合uni的`swiper`组件时需要调用tabsSwiper内部的方法，详见示例。   
-- 本示例中在`swiper-item`中嵌套了`可选`的uniapp的`scroll-view`组件，uni官方不建议在APP-vue和小程序中`scroll-view`中使用map、video等原生组件，
+- 本示例中在`swiper-item`中嵌套了`可选`的uni-appp的`scroll-view`组件，uni官方不建议在APP-vue和小程序中`scroll-view`中使用map、video等原生组件，
 - 必须将组件的`current`参数，设置为`animationfinish`中的返回值。
 
-具体请参考：[uni的scroll-view组件文档](https://uniapp.dcloud.io/component/scroll-view)    
+具体请参考：[uni的scroll-view组件文档](https://uni-appp.dcloud.io/component/scroll-view)    
 
 注意：由于tabsSwiper组件需要结合uni的`swiper`组件使用，过程较为复杂，故此示例代码仅作参考使用，请勿直接复制粘贴使用，
 具体使用方法请下载查阅uView的tabsSwiper案例。

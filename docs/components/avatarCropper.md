@@ -106,7 +106,7 @@
 }
 ```
 
-- 裁剪后的结果，通过`uni.$on`监听`uAvatarCropper`事件，由于uniapp的限制，H5端裁剪的结果为`base64`格式，其他端为`blod`二进制形式，
+- 裁剪后的结果，通过`uni.$on`监听`uAvatarCropper`事件，由于uni-appp的限制，H5端裁剪的结果为`base64`格式，其他端为`blod`二进制形式，
 如果后端对接收格式有要求，请自行处理
 
 

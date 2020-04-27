@@ -10,6 +10,46 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>1.1.2</h2>
+				</div>
+				<p><code>2020-04-27</code></p>
+				<ul>
+					<li>
+						<span class="add">新增</span>
+						新增slider滑动选择器组件，详见<a target="_blank" href="/components/slider.html">Slider滑动选择器</a>
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						为了解决某些mac电脑无法解压rar压缩包的问题，以后下载改为zip形式的压缩包
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						添加search搜索组件的blur和focus事件
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						增加section查看更多右侧的点击区域
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复1.1.1版本swiper指示器无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复popup组件触摸穿透的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复商城左右联动模板右侧无法滑动的问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>1.1.1</h2>
 				</div>
 				<p><code>2020-04-25</code></p>
@@ -401,7 +441,7 @@
 				</div>
 				<p><code>2020-04-14</code></p>
 				<ul>
-					<li>新增u-button组件对uniapp的button组件开放能力的对接</li>
+					<li>新增u-button组件对uni-appp的button组件开放能力的对接</li>
 					<li>新增允许field组件的maxlength参数为字符串数值形式</li>
 					<li>
 						修复文档关于upload组件的参数错误

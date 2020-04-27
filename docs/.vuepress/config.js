@@ -95,6 +95,7 @@ module.exports = {
 								'/components/checkbox',
 								'/components/radio',
 								'/components/switch',
+								'/components/slider',
 							]
 						},
 						{
@@ -261,6 +262,7 @@ module.exports = {
 			'/components/badge',
 			'/components/divider',
 			'/components/tag',
+			'/components/slider',
 			'/components/keyboard',
 			'/components/picker',
 			'/components/rate',
