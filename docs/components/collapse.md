@@ -97,6 +97,7 @@
 | arrow-color | 标题右侧箭头的颜色 | String | #909399 | - |
 | head-bg-color | 标题的背景颜色  | String | #ffffff | - |
 | body-bg-color | 主体内容的背景颜色  | String | #ffffff | - |
+| hover-class | 样式类名，按下时有效，样式必须写在根目录的`App.vue`或者`uni.scss`中才有效，`none`为无效果，作用于头部标题区域  | String | u-hover-class | none / 其他 |
 
 ### Collapse Item Props
 
@@ -130,6 +131,10 @@
 
 
 <style scoped>
+h3[id=collapse-props] + table thead tr th:nth-child(2){
+	width: 40%;
+}
+
 h3[id=collapse-item-props] + table thead tr th:nth-child(2){
 	width: 40%;
 }

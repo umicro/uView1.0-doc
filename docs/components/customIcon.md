@@ -48,7 +48,7 @@ uView已通过大量的实践中，收集了用户最有可能需要用到的图
 
 我们假定您一个项目中，需要扩展多个图标，所以您应该把各个图标收集进一个阿里图标库的项目中，这方便于您后面不断的扩展图标，却能让他们在同一个库中。
 
-一般情况下，我们建议您在收藏的项目中，使用"下载至本地"的功能，而后解压，复制文件夹中的"iconfont.css"至uni-appp项目中(其余的文件可忽略)
+一般情况下，我们建议您在收藏的项目中，使用"下载至本地"的功能，而后解压，复制文件夹中的"iconfont.css"至uni-app目中(其余的文件可忽略)
 
 下面的操作默认您已进入阿里图标库的"图标管理"栏目中
 
@@ -70,7 +70,7 @@ uView已通过大量的实践中，收集了用户最有可能需要用到的图
 
 <img src="/custom_icon/custom_icon_2.png" />
 
-5. 复制"iconfont.css"文件到uni-appp项目根目录的`static`目录后(也可以为其他目录)，打开"iconfont.css"，内部如下：
+5. 复制"iconfont.css"文件到uni-app目根目录的`static`目录后(也可以为其他目录)，打开"iconfont.css"，内部如下：
 
 删掉下图圈出的部分，记得把"src: url('data:application/x-font-woff2......"最后的逗号`,`改成分号`;`。
 
@@ -99,7 +99,7 @@ uView已通过大量的实践中，收集了用户最有可能需要用到的图
 </style>
 ```
 
-8. 在页面通过uView的[Icon](/components/icon.html)组件使用图标，图标名称为您在阿里图标库中点击"编辑图标"时的"Font Class / Symbol"(该值可修改，每次修改都需重新下载"iconfont.css"放到uni-appp项目中，
+8. 在页面通过uView的[Icon](/components/icon.html)组件使用图标，图标名称为您在阿里图标库中点击"编辑图标"时的"Font Class / Symbol"(该值可修改，每次修改都需重新下载"iconfont.css"放到uni-app目中，
 覆盖原来的"iconfont.css")
 
 <img src="/custom_icon/custom_icon_7.png" />

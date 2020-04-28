@@ -127,7 +127,7 @@
 | border-radius | 轮播图圆角值，单位rpx | String \| Number  | 8 | - |
 | title-style | 自定义标题样式 | Object  | - | - |
 | effect3d-previous-margin | mode = true模式的情况下，激活项与前后项之间的距离，单位rpx | String \| Number  | 50 | - |
-| img-mode | 图片的裁剪模式，详见[image组件裁剪模式](https://uni-appp.dcloud.io/component/image) | String  | aspectFill | - |
+| img-mode | 图片的裁剪模式，详见[image组件裁剪模式](https://uni-appdcloud.io/component/image) | String  | aspectFill | - |
 | name | 组件内部读取的`list`参数中的属性名，见上方说明 | string  | name | - |
 
 

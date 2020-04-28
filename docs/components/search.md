@@ -58,7 +58,7 @@
 
 - `show-action`配置是否开启右边按钮控件
 - `action-text`配置控件内容
-- `animation`(默认为`true`)设置为`true`的话，失去焦点，或者点击控件按钮时，控件自动消失，并且带有动画效果
+- `animation`(默认为`false`)设置为`true`的话，失去焦点，或者点击控件按钮时，控件自动消失，并且带有动画效果
 
 ::: warning 说明
 1. 如果不想点击右侧控件时自动消失，请把`animation`设置为`false`

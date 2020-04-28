@@ -19,7 +19,7 @@ uView已正式发布**公测版**，欢迎[交流反馈](/cooperation/about.html
 
 这个方式：
 - 如果您的项目是由HBuilder X创建的标准uni-app项目，解压后将`uview`文件夹，复制到项目根目录。
-- 如果您的项目是由[vue-cli](https://uni-appp.dcloud.io/quickstart?id=_2-%e9%80%9a%e8%bf%87vue-cli%e5%91%bd%e4%bb%a4%e8%a1%8c)模式创建的，
+- 如果您的项目是由[vue-cli](https://uni-appdcloud.io/quickstart?id=_2-%e9%80%9a%e8%bf%87vue-cli%e5%91%bd%e4%bb%a4%e8%a1%8c)模式创建的，
 请将下载解压的`uview`文件夹放到项目根目录的`src`文件夹中即可。
 
 
@@ -27,7 +27,7 @@ uView已正式发布**公测版**，欢迎[交流反馈](/cooperation/about.html
 
 <br>
 <div @click="downloadPost(2)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_1.1.2.zip">uView_1.1.2.zip</a>
+	下载地址：<a href="https://download.uviewui.com/uView_1.1.3.zip">uView_1.1.3.zip</a>
 </div>
 <br>
 <br>
@@ -35,7 +35,7 @@ uView已正式发布**公测版**，欢迎[交流反馈](/cooperation/about.html
 
 #### 方式二
 
-此方式为一个完整的uni-app示例工程(使用Hbuilder X创建，非[vue-cli](https://uni-appp.dcloud.io/quickstart?id=_2-%e9%80%9a%e8%bf%87vue-cli%e5%91%bd%e4%bb%a4%e8%a1%8c)模式创建)，
+此方式为一个完整的uni-app示例工程(使用Hbuilder X创建，非[vue-cli](https://uni-appdcloud.io/quickstart?id=_2-%e9%80%9a%e8%bf%87vue-cli%e5%91%bd%e4%bb%a4%e8%a1%8c)模式创建)，
 它适用于新启动的项目，其中已包含了uView核心，并且做好了所有配置，让您无需任何配置，开箱即用。
 
 
@@ -47,7 +47,7 @@ uView已正式发布**公测版**，欢迎[交流反馈](/cooperation/about.html
 
 <br>
 <div @click="downloadPost(1)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_demo_1.1.2.zip">uView_demo_1.1.2.zip</a>
+	下载地址：<a href="https://download.uviewui.com/uView_demo_1.1.3.zip">uView_demo_1.1.3.zip</a>
 </div>
 <br>
 <br>
@@ -60,7 +60,7 @@ uView已正式发布**公测版**，欢迎[交流反馈](/cooperation/about.html
 
 <br>
 <div @click="downloadPost(3)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_1.1.2_full.zip">uView_1.1.2_full.zip</a>
+	下载地址：<a href="https://download.uviewui.com/uView_1.1.3_full.zip">uView_1.1.3_full.zip</a>
 </div>
 <br>
 <br>

@@ -10,6 +10,50 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>1.1.3</h2>
+				</div>
+				<p><code>2020-04-28</code></p>
+				<ul>
+					<li>
+						<span class="add">新增</span>
+						新增uView特色的基础样式类，涵盖内外边距，字体大小，颜色，flex布局等，让您化繁为简，游刃有余。详见：<a target="_blank" href="/components/common.html">内置样式</a>
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化tabs组件标签的居中问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						将collapse的标题按压效果设置为自定义可选形式
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						改进rate组件的示例效果
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化grid宫格组件的hover-class按下效果
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						给empty组件添加margin-top参数
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修正toast组件的position参数拼写错误的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复http请求头某些情况下可能无效的问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>1.1.2</h2>
 				</div>
 				<p><code>2020-04-27</code></p>
@@ -441,7 +485,7 @@
 				</div>
 				<p><code>2020-04-14</code></p>
 				<ul>
-					<li>新增u-button组件对uni-appp的button组件开放能力的对接</li>
+					<li>新增u-button组件对uni-appbutton组件开放能力的对接</li>
 					<li>新增允许field组件的maxlength参数为字符串数值形式</li>
 					<li>
 						修复文档关于upload组件的参数错误

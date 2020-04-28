@@ -91,6 +91,45 @@
 </script>
 ```
 
+### 自定义样式
+
+此组件上边部分有一个白色虚化的阴影，用以将点击区域与文字内容进行融合，如果您不想要这个阴影，可以调整`shadow-style`对象，此对象内部如下：
+
+```css
+{
+	backgroundImage: "linear-gradient(-180deg, rgba(255, 255, 255, 0) 0%, #fff 80%)",
+	paddingTop: "300rpx",
+	marginTop: "-300rpx"
+}
+```
+
+如果您不想要阴影，将`backgroundImage`设置为`none`即可，关于`paddingTop`和`marginTop`自行调整至合适数值即可。
+
+
+```html
+<template>
+	<u-read-more ref="uReadMore" :shadow-style="shadowStyle">
+		<rich-text :nodes="content"></rich-text>
+	</u-read-more>
+</template>
+
+<script> 
+	export default {
+		data() {
+			return {
+				content: '',
+				shadowStyle: {
+					backgroundImage: "none",
+					paddingTop: "0",
+					marginTop: "20rpx"
+				}
+			}
+		}
+	}
+</script>
+```
+
+
 ### API
 
 ### Props
@@ -103,3 +142,5 @@
 | font-size | 提示文字的大小，单位rpx | String \| Number  | 28 | - |
 | open-text | 展开时的提示文字 | String  | 收起 | - |
 | color | 提示文字的颜色 | String  | #2979ff | - |
+| color | 提示文字的颜色 | String  | #2979ff | - |
+| shadow-style | 对阴影的自定义处理，对象形式 | Object  | 见上方说明 | - |

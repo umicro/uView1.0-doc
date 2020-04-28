@@ -25,6 +25,8 @@ uView组件功能的实现，并不依赖全局样式，内置的一些类名，
 
 ### 字体大小
 
+#### **1. 数值形式**
+
 uView为了方便用户写字体，通过SCSS生成了一套样式类，专门用于定位字体的大小。对于字体，不同用户可能有喜欢`px`，也有喜欢`rpx`单位的，
 一般来说，在uni-app上，`rpx`单位最终表现出来的大小数值为`px`的两倍，也就是说，`24rpx`和`12px`的字体大小是差不多的。  
 uView为此提供了一个类`u-font-x`，这个`x`为10-40之间(包含10和40)，当`x >= 10 && x < 20`时，表现为`px`性质，当`x >= 20 && x <= 40`时，表现为`rpx`性质。
@@ -60,6 +62,33 @@ uView为此提供了一个类`u-font-x`，这个`x`为10-40之间(包含10和40)
 ```
 
 
+#### **2. 断点形式**
+
+为了更加形象和方便记忆，uView另外提供了一套断点的字体大小，分别以`xs`、`sm`、`md`、`lg`、`xl`作为后缀，如下：
+
+```css
+.u-font-xs {
+	font-size: 22rpx;
+}
+
+.u-font-sm {
+	font-size: 26rpx;
+}
+
+.u-font-md {
+	font-size: 28rpx;
+}
+
+.u-font-lg {
+	font-size: 30rpx;
+}
+
+.u-font-xl {
+	font-size: 34rpx;
+}
+```
+
+
 ### 文字对齐
 
 uView为文字对齐定义了3个类，分别如下：
@@ -89,18 +118,20 @@ uView定义了一套内外边距的类名，调用简单，方便用户使用，
 - 1-80(可以等于80)之间的偶数(双数)
 - 能被5除尽的1-80之间的数，如5，10，15，35等
 
-类名的取值为有如下：
+类名的取值有如下：
 
-- u-padding-x
-- u-padding-left-x
-- u-padding-top-x
-- u-padding-right-x
-- u-padding-bottom-x
-- u-margin-x
-- u-margin-left-x
-- u-margin-top-x
-- u-margin-right-x
-- u-margin-bottom-x
+**注意：** uView同时也给了一套简写的方法，二者是等价的。
+
+- u-padding-x  ==  u-p-x
+- u-padding-left-x  ==  u-p-l-x
+- u-padding-top-x  ==  u-p-t-x
+- u-padding-right-x  ==  u-p-r-x
+- u-padding-bottom-x  ==  u-p-b-x
+- u-margin-x  ==  u-m-x
+- u-margin-left-x  ==  u-m-l-x
+- u-margin-top-x  ==  u-m-t-x
+- u-margin-right-x  ==  u-m-r-x
+- u-margin-bottom-x  ==  u-m-b-x
 
 如果我们想定义`26rpx`的**左外边距**：
 
@@ -277,7 +308,7 @@ flex: 1;
 
 ### 边框
 
-uni-appp中，iOS和少数设备使用`1rpx`是能够得到类似`0.5px`的半像素宽度的，但是某些情况下是不兼容的，
+uni-app，iOS和少数设备使用`1rpx`是能够得到类似`0.5px`的半像素宽度的，但是某些情况下是不兼容的，
 故uView提供了一套兼容的css类名，方便用户使用。  
 `u-border`表示给元素添加四周的边框，`u-border-top`为上边框，`u-border-right`为右边框，
 `u-border-bottom`为下边框，`u-border-left`为左边框。  

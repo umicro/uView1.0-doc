@@ -57,6 +57,7 @@
 | img-width | 图标的宽度，单位rpx | String \| Number  | 240 | - |
 | img-height | 图标的高度，单位rpx | String  | auto | - |
 | show | 是否显示组件 | Boolean  | true | false |
+| margin-top | 组件到上一个元素的间距,单位rpx | String \| Number  | 0 | - |
 
 
 

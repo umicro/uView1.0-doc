@@ -85,7 +85,7 @@ Tabbar栏，所以这里我们可以使用uView的[Popup 弹出层](/components/
 		data() {
 			return {
 				show: true,
-				// 传递给uni-appp的"rich-text"组件的内容，可以使用"<br>"进行换行
+				// 传递给uni-app"rich-text"组件的内容，可以使用"<br>"进行换行
 				content: `
 					1. 修复badge组件的size参数无效问题<br>
 					2. 新增Modal模态框组件<br>
@@ -125,7 +125,7 @@ Tabbar栏，所以这里我们可以使用uView的[Popup 弹出层](/components/
 </style>
 ```
 
-上面有一个需要注意的点，我们打开"压窗"弹窗后，可能需要通过一些按钮来关闭弹窗，这里关闭弹窗的本质意义是关闭弹出的页面(压窗屏弹框)，所以用的是uni-appp自带的
+上面有一个需要注意的点，我们打开"压窗"弹窗后，可能需要通过一些按钮来关闭弹窗，这里关闭弹窗的本质意义是关闭弹出的页面(压窗屏弹框)，所以用的是uni-app带的
 关闭页面的接口`uni.navigateBack()`，见上方示例。
 
 

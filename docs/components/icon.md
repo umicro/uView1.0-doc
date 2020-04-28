@@ -38,7 +38,7 @@
 | color | 图标颜色 | String  | inherit | - |
 | size | 图标字体大小，单位rpx | String \| Number  | 32 | - |
 | index | 一个用于区分多个图标的值，点击图标时通过`click`事件传出 | String  | - | - |
-| hover-class | 图标按下去的样式类，用法同uni的`view`组件的`hover-class`参数，详见：[hover-class](https://uni-appp.dcloud.io/component/view) | String  | - | - |
+| hover-class | 图标按下去的样式类，用法同uni的`view`组件的`hover-class`参数，详见：[hover-class](https://uni-appdcloud.io/component/view) | String  | - | - |
 
 ### Events
 

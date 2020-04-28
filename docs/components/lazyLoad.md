@@ -20,7 +20,7 @@
 通过`image`参数传入图片的`src`路径即可
 
 :::warning 注意
-由于uni-appp默认给了image组件的`height`为225px，同时也只uni-apppp的image组件的`mode`参数为`widthFix`时，image才会自动计算出一个高度值
+由于uni-app认给了image组件的`height`为225px，同时也只uni-appimage组件的`mode`参数为`widthFix`时，image才会自动计算出一个高度值
 覆盖默认的`height`(225px)。其他`mode`参数下，如果设置`height`为`auto`，或者`100%`的话，图片将会无法显示。  
 
 所以：当您使用uView的`lazyload`组件时，如果设置`height`参数为`auto`，或者`100%`，而`img-mode`参数又不为`widthFix`的话，图片将会不显示，这不是uView的BUG。  
@@ -112,7 +112,7 @@
 | is-effect | 图片加载成功时，是否启用淡入淡出效果 | Boolean | true | false |
 | border-radius | 图片圆角值，单位rpx | String \| Number | 0 | - |
 | height | 图片高度，注意：实际高度可能受`img-mode`参数影响 | String \| Number | 450 | - |
-| img-mode | 图片的裁剪模式，详见[image组件裁剪模式](https://uni-appp.dcloud.io/component/image) | String \| Number | widthFix | - |
+| img-mode | 图片的裁剪模式，详见[image组件裁剪模式](https://uni-appdcloud.io/component/image) | String \| Number | widthFix | - |
 
 ### Events
 

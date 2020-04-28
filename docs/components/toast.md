@@ -96,7 +96,7 @@ this.$refs.uToast.show({
 | duration | toast的持续时间，单位ms | Nubmer  | 2000 | - |
 | url | toast结束跳转的url，不填不跳转 | String  | - | - |
 | icon | 是否显示显示`type`对应的图标，为`false`不显示图标 | Boolean  | true | false |
-| postion | toast出现的位置 | String  | center | top / bottom |
+| position | toast出现的位置 | String  | center | top / bottom |
 | isTab | toast结束后，跳转tab页面时需要配置为`true` | Boolean  | false | true |
 
 ### Methods

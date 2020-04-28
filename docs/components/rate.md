@@ -18,7 +18,7 @@
 
 ```html
 <template>
-	<u-rate :count="count" :current="2"></u-rate>
+	<u-rate count="count" current="2"></u-rate>
 </template>
 
 <script>
@@ -39,7 +39,7 @@
 - 通过`gutter`设置星星的间距，左右内边距各占`gutter`的一半
 
 ```html
-<u-rate :active-color="#FA3534" :inactive-color="#b2b2b2" :gutter="20"></u-rate>
+<u-rate active-color="#FA3534" inactive-color="#b2b2b2" gutter="20"></u-rate>
 ```
 
 ### 自定义图标
@@ -58,7 +58,7 @@
 ### 最少选中的数量
 
 ```html
-<u-rate :min-count="5"></u-rate>
+<u-rate min-count="5"></u-rate>
 ```
 
 ### 禁用状态
@@ -81,7 +81,7 @@
 | size | 星星的大小，单位rpx | String \| Number | 32 | - |
 | inactive-color | 未选中星星的颜色 | String | #b2b2b2 | - |
 | active-color | 选中的星星颜色 | String | #FA3534 | - |
-| gutter | 星星之间的距离 | String | #323233 | - |
+| gutter | 星星之间的距离 | String \| Number | #323233 | - |
 | min-count | 最少选中星星的个数 | String \| Number | 0 | - |
 
 <!-- | allow-half | 是否允许半星选择 | Boolean | false | true | -->
