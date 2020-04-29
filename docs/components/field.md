@@ -184,7 +184,7 @@
 			>
 			</u-field>
 		</u-cell-group>
-		<u-action-sheet @click="clickItem" :itemList="sexList" :show="show" @close="show = false"></u-action-sheet>
+		<u-action-sheet @click="clickItem" :list="sexList" :v-model="show"></u-action-sheet>
 	</view>
 </template>
 

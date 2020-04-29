@@ -27,7 +27,7 @@ uView已正式发布**公测版**，欢迎[交流反馈](/cooperation/about.html
 
 <br>
 <div @click="downloadPost(2)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_1.1.3.zip">uView_1.1.3.zip</a>
+	下载地址：<a href="https://download.uviewui.com/uView_1.1.4.1.zip">uView_1.1.4.zip</a>
 </div>
 <br>
 <br>
@@ -47,7 +47,7 @@ uView已正式发布**公测版**，欢迎[交流反馈](/cooperation/about.html
 
 <br>
 <div @click="downloadPost(1)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_demo_1.1.3.zip">uView_demo_1.1.3.zip</a>
+	下载地址：<a href="https://download.uviewui.com/uView_demo_1.1.4.1.zip">uView_demo_1.1.4.zip</a>
 </div>
 <br>
 <br>
@@ -60,7 +60,7 @@ uView已正式发布**公测版**，欢迎[交流反馈](/cooperation/about.html
 
 <br>
 <div @click="downloadPost(3)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_1.1.3_full.zip">uView_1.1.3_full.zip</a>
+	下载地址：<a href="https://download.uviewui.com/uView_1.1.4.1_full.zip">uView_1.1.4_full.zip</a>
 </div>
 <br>
 <br>

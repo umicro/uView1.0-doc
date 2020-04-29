@@ -32,7 +32,7 @@ uView采用easycom自动按需引入组件的方式，这意味着即使您引�
 import Vue from 'vue'
 ......
 
-// 就这两行即可，如果不是把uView放在根目录，请根据情况修改路径
+// 就这三行即可，如果不是把uView放在根目录，请根据情况修改路径
 import uView from "@/uview";
 Vue.use(uView);
 
@@ -44,24 +44,45 @@ app.$mount();
 ```
 
 
-#### 2. 引入uView的全局SCSS文件
+#### 2. 引入uView的全局SCSS主题文件
 
-uView组件本身不依赖全局css样式实现，各样式都写在自身组件内，实现最大程度的解耦，但是为了统一的主题，以及日后的扩展，
+uni-app不支持将SCSS变量相关的样式通过`App.vue`引入，为了统一的主题，以及日后的扩展，
 目前一些跟颜色相关的scss变量定义在全局变量中，这些变量有独特的命名(`u-`开头)，不会与您的类名冲突。 
  
-uView的样式文件中类名没有使用类似`.box .item {...}`的嵌套形式，是为了向后兼容nvue做准备(nvue不支持类名嵌套)。  
 在项目根目录下的`uni.scss`的首行引入即可(如果没有此文件，创建即可)。
 
 :::danger 警告
-这里是要在项目根目录下的`uni.scss`中引入，而非根目录的`App.vue`中引入，uni-app会解析`App.vue`中的通过文件引入的`scss`变量，所以会导致报错！
+这里是要在项目根目录下的`uni.scss`中引入，而非根目录的`App.vue`中引入！
 :::
 
 ```css
 /* 如果不是把uView放在根目录，请根据情况修改路径 */
-@import '@/uview/index.scss';
+@import '@/uview/theme.scss';
 
 /* 其他内容 */
 ......
+```
+
+
+#### 3. 引入基础样式
+
+由于目前(2020-04-29)uni-app的V3模式不支持在`main.js`中引入样式文件，故需要在`App.vue`中引入uView的基础全局样样式。
+
+- 在`App.vue`中**首行**的位置，增加如下一行`import "@/uview/index.scss"`：
+
+:::danger 注意：
+1. 注意是在根目录的`App.vue`中引入，而非根目录的`uni.scss`中引入。
+2. 必须要将标签加入`lang="scss"`属性以支持SCSS，否则会出错！
+3. 请将将引入的代码，写在`styel`标签的首行。
+:::
+
+```css
+<style lang="scss">
+	/* 注意要写在第一行，同时给style标签加入lang="scss"属性 */
+	@import "@/uview/index.scss";
+	
+	/* ......其他的样式 */
+</style>
 ```
 
 

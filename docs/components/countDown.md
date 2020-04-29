@@ -84,6 +84,41 @@
 </script>
 ```
 
+
+### 如何获取当前倒计的秒数
+
+有时候我们可会需要记录当前剩余的秒数，并在某个时机重新触发，可以通过如下两个方式实现：
+
+- 监听`change`事件，在回调中获得当前剩余的秒数
+- 通过ref调用，获取内部的`seconds`参数即为当前剩余的秒数
+
+
+```html
+<template>
+	<u-count-down ref="uCountDown" :timestamp="timestamp" @change="change"></u-count-down>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				timestamp: 86400
+			}
+		},
+		nethods() {
+			// 事件触发，每秒一次
+			change(timestamp) {
+				console.log(timestamp);
+			},
+			// ref形式获取内部的值
+			getSeconds() {
+				console.log(this.$refs.uCountDown.seconds);
+			}
+		}
+	}
+</script>
+```
+
 ### API
 
 ### Props
@@ -112,6 +147,7 @@
 |事件名|说明|回调参数|
 |:-|:-|:-|
 |end|倒计时结束|-|
+|change|倒计过程中，每秒触发一次|timestamp: 当前剩余的倒计秒数|
 
 
 

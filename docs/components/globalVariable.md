@@ -479,8 +479,8 @@ state: {
 在`demo.vue`页面使用和修改这些变量，他们是动态全局响应的。  
 
 这里用的修改方式为：this.$u.vuex(key, value)：  
-1) 如果要修改`state`中的`vuerx_version`变量为`1.0.3`，则：this.$u.vuex('verx_version', '1.0.3')。  
-2) 如果要修改`state`中的`vuerx_user`对象的`name`属性为`青柠`，则：this.$u.vuex('vuerx_user.name', '青柠')，与1中不同的是，对象的话，
+1) 如果要修改`state`中的`vuex_version`变量为`1.0.3`，则：this.$u.vuex('vuex_version', '1.0.3')。  
+2) 如果要修改`state`中的`vuex_user`对象的`name`属性为`青柠`，则：this.$u.vuex('vuex_user.name', '青柠')，与1中不同的是，对象的话，
 需要用点"."分隔开。
 
 ```html

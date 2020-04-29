@@ -59,6 +59,7 @@ module.exports = {
 						['/components/customIcon', '扩展自定义图标库'],
 						['/components/globalVariable', '全局变量的实现'],
 						['/components/codeHint', 'HBuilder X代码提示'],
+						['/components/changeGuide', '升级指南'],
 					]
 				},
 				{
@@ -306,6 +307,7 @@ module.exports = {
 			'/components/link',
 			'/components/section',
 			'/components/messageInput',
+			'/components/changeGuide',
 			'/components/avatarCropper',
 			'/components/loadMore',
 			'/components/readMore',

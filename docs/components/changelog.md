@@ -10,6 +10,38 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>1.1.4</h2>
+				</div>
+				<p><code>2020-04-29</code></p>
+				<ul>
+					<li>
+						<span class="add">新增</span>
+						新增uView特色的基础样式类，涵盖内外边距，字体大小，颜色，flex布局等，让您化繁为简，游刃有余。本次升级，需要做变更(2行代码)，详见：<a target="_blank" href="/components/changeGuide.html">升级指导</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						增加countDown倒计时组件获取当前剩余时间的事件和说明
+					</li>
+					<li>
+						<span class="add">新增</span>
+						给upload上传组件添加"on-list-change"、"reUplad"、"clear"事件和方法
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						将gap间隔槽默认背景改为透明色"transparent"
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复1.1.3在uni.scss中引入基础样式导致微信小程序打包变大的问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>1.1.3</h2>
 				</div>
 				<p><code>2020-04-28</code></p>

@@ -262,7 +262,7 @@ flex: 1;
 
 /* 水平居中 */
 .u-align-center {
-	align-items: center;
+	justify-content: center;
 }
 
 /* 右边对齐 */
