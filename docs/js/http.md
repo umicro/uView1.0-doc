@@ -90,8 +90,9 @@ config =
 ```
 
 
-具体写法，建议在写在`/common/http.interceptor.js`(如无此文件夹和文件，请手动创建，一次配置，全局通用)，写完之后，请在根目录的`main.js`最末尾
-引入此文件，在最末尾的原因是，外部JS文件需要引用vue的实例，也即`this`对象，要等`main.js`中通过`new`创建了实例之后才能引用。
+具体写法，建议在写在`/common/http.interceptor.js`(如无此文件夹和文件，请手动创建，一次配置，全局通用)，写完之后，请在根目录的`main.js`
+的`new Vue()`和`app.$mount()`之间引入此文件，在`new Vue()`后面的原因是，外部JS文件需要引用vue的实例，也即`this`对象，要等`main.js`中通过`new`创建了实例之后才能引用。
+在`app.$mount()`之前的原因是，在Vue挂载`this`实例(也即初始化`App.vue`)之前配置请求信息，所以在`App.vue`中也能正常发出请求。
 
 以下为在`main.js`中的引入示例：
 
@@ -100,15 +101,15 @@ config =
 
 // 此为main.js本身已有内容
 const app = new Vue({
-  store,
   ...App
 })
-app.$mount()
 
 // http拦截器，此为需要加入的内容，如果不是写在common目录，请自行修改引入路径
 import httpInterceptor from '@/common/http.interceptor.js'
 // 这里需要写在最后，是为了等Vue创建对象完成，引入"app"对象(也即页面的"this"实例)
 Vue.use(httpInterceptor, app)
+
+app.$mount()
 ```
 
 下面为拦截器的具体内容：
@@ -339,6 +340,19 @@ export default {
 	}
 }
 ```
+
+### API集中管理
+
+这里说的集中管理，是指把各个请求，统一放到一个文件中进行管理，这样的好处是不用每次调用`this.$u.get`时都需要传入`url`参数，一些固定的
+请求参数也可以不用显式的传入，如下为配置后的使用示例：
+
+```
+this.$u.api.getSearch().then(res => {
+	console.log(res);
+})
+```
+
+此部分内容放到了另外的专题，请移步：[API集中管理](/js/apiManage.html)
 
 ### 完整示例
 

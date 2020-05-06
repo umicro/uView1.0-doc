@@ -10,7 +10,7 @@ uView组件功能的实现，并不依赖全局样式，内置的一些类名，
 
 :::warning 温馨提示
 由于uView的内置样式均是写在scss文件中的，您在使用的时候，请确保要给页面的`style`标签加上`lang="scss"`属性，否则可能会报错。  
-另外，您可能需要留意，如果页面的`style`标签加入了`lang="scss"`属性，就必须要在`style`标签中写入内容，哪怕是无用的样式也好，否则HX不会解析scss，此非uView的问题。
+<!-- 另外，您可能需要留意，如果页面的`style`标签加入了`lang="scss"`属性，就必须要在`style`标签中写入内容，哪怕是无用的样式也好，否则HX不会解析scss，此非uView的问题。 -->
 :::
 
 ### 文字省略
@@ -143,7 +143,7 @@ uView定义了一套内外边距的类名，调用简单，方便用户使用，
 
 ```css
 .u-margin-left-26 {
-	padding-left: 26rpx;
+	margin-left: 26rpx;
 }
 ```
 
@@ -235,48 +235,50 @@ flex: 1;
 ```
 
 
-#### **3. 子元素在上下左右的对其方式**
+#### **3. 子元素在上下左右的对齐方式**
 
+这里类名的命名依据为，`col`为`column`(列，竖向)的缩写，`row`为行的意思(横向)，所以就有垂直方向上的诸如`u-col-center`表
+垂直居中对齐，`u-col-left`代表水平左对齐。  
 此类名控制的是子元素，是需要写在父元素盒子上的：
 
 ```css
 /* 垂直居中 */
-.u-align-center {
+.u-col-center {
 	align-items: center;
 }
 
 /* 顶部对齐 */
-.u-align-top {
+.u-col-top {
 	align-items: flex-start;
 }
 
 /* 底部对齐 */
-.u-align-bottom {
+.u-col-bottom {
 	align-items: flex-end;
 }
 
 /* 左边对齐 */
-.u-align-left {
+.u-row-left {
 	justify-content: flex-start;
 }
 
 /* 水平居中 */
-.u-align-center {
+.u-row-center {
 	justify-content: center;
 }
 
 /* 右边对齐 */
-.u-align-right {
+.u-row-right {
 	justify-content: flex-end;
 }
 
 /* 水平两端对齐，项目之间的间隔都相等 */
-.u-align-between {
+.u-row-between {
 	justify-content: space-between;
 }
 
 /* 水平每个项目两侧的间隔相等，所以项目之间的间隔比项目与父元素两边的间隔大一倍 */
-.u-align-around {
+.u-row-around {
 	justify-content: space-around;
 }
 ```

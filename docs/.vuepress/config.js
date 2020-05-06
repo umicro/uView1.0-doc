@@ -1,6 +1,6 @@
 module.exports = {
 	title: 'uView - 多平台快速开发的UI框架', // 设置网站标题
-	description: 'uView UI，是uniapp生态最优秀的UI框架，全面的组件和便捷的工具会让您信手拈来，如鱼得水',
+	description: 'uView UI，是uni-app生态最优秀的UI框架，全面的组件和便捷的工具会让您信手拈来，如鱼得水',
 	base: '/',
 	markdown: {
 		//lineNumbers: true
@@ -49,8 +49,10 @@ module.exports = {
 					collapsable: false,
 					sidebarDepth: 0,
 					children: [
+						// ['/components/read', 'read'],
 						['/components/intro', '介绍'],
 						['/components/install', '安装'],
+						['/components/setting', '配置'],
 						['/components/quickstart', '快速上手'],
 						['/components/demo', '效果演示'],
 						['/components/common', '内置样式'],

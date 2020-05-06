@@ -164,8 +164,8 @@ let params = {
 | cancel-color | 取消按钮的颜色  | String | #606266 | - |
 | confirm-color | 确认按钮的颜色  | String | #2979ff | - | 6
 | default-time | 默认选中的时间，mode=time时有效  | String | - | - |
-| default-region | 默认选中的地区，中文形式，mode=region时有效  | String | - | - |
-| default-code | 默认选中的地区，编号形式，mode=region时有效  | String | - | - |
+| default-region | 默认选中的地区，中文形式，mode=region时有效  | Array | - | - |
+| area-code | 默认选中的地区，编号形式，mode=region时有效  | Array | - | - |
 | mask-close-able | 是否允许通过点击遮罩关闭Picker  | Boolean | true | false |
 | z-index | 弹出时的`z-index`值 | String \| Number | 1075 | - |
 

@@ -591,7 +591,7 @@
 </script>
 
 <style scoped>
-	@import url("//at.alicdn.com/t/font_1529455_grj75vnk4fq.css");
+	@import url("//at.alicdn.com/t/font_1529455_nccj7tyusxj.css");
 
 	.icon-box {
 		display: flex;

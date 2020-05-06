@@ -2,120 +2,9 @@
 
 <demo-model url="/"></demo-model>
 
-
-
-### 引入
-
-以下说明，主要针对[安装](/guide/quickstart.html)中的`方式一`  
-下载uView，解压得到名为`uview`的文件夹，放到项目根目录，进行如下简单配置即可使用：
-
-::: warning 注意
-1. uView依赖SCSS，如果您的项目是由`HBuilder X`创建的，相信已经安装scss插件，如果没有，请在HX菜单的 工具->插件安装中找到"scss/sass编译"插件进行安装，
-如不生效，重启HX即可
-2. 如果您的项目是由`vue-cli`创建的，需要在项目根目录下通过npm安装SCSS依赖: 执行`npm i sass-loader -D`和`npm i node-sass -D`
-3. uView建议将组件库放在项目根目录，但是您也可以将uView放到项目内的任何目录，只是要在`main.js`、`uni.scss`、`pages.json`几个文件的引入路径
-做相应的变更。
-:::
-
-### 关于easycom的说明
-
-uView采用easycom自动按需引入组件的方式，这意味着即使您引入了整个uView组件库，只用到了其中一个组件，最终打包的时候，只有被引用了的这个组件才会被打包编译，
-其余的组件不会被打包，也就是说不会造成打包后体积变大或者性能下降的问题，请放心引入整个uView核心库。
-
-#### 1. 引入uView主JS库
-
-在项目根目录中的`main.js`中，引入并使用uView的JS库，注意这两行要放在`import Vue`之后。
-
-注：或许您想知道`Vue.use`的作用是什么，见[简要介绍Vue.use的原理](/components/vueUse.html)
-
-```js
-import Vue from 'vue'
-......
-
-// 就这三行即可，如果不是把uView放在根目录，请根据情况修改路径
-import uView from "@/uview";
-Vue.use(uView);
-
-......
-const app = new Vue({
-	...App
-})
-app.$mount();
-```
-
-
-#### 2. 引入uView的全局SCSS主题文件
-
-uni-app不支持将SCSS变量相关的样式通过`App.vue`引入，为了统一的主题，以及日后的扩展，
-目前一些跟颜色相关的scss变量定义在全局变量中，这些变量有独特的命名(`u-`开头)，不会与您的类名冲突。 
- 
-在项目根目录下的`uni.scss`的首行引入即可(如果没有此文件，创建即可)。
-
-:::danger 警告
-这里是要在项目根目录下的`uni.scss`中引入，而非根目录的`App.vue`中引入！
-:::
-
-```css
-/* 如果不是把uView放在根目录，请根据情况修改路径 */
-@import '@/uview/theme.scss';
-
-/* 其他内容 */
-......
-```
-
-
-#### 3. 引入基础样式
-
-由于目前(2020-04-29)uni-app的V3模式不支持在`main.js`中引入样式文件，故需要在`App.vue`中引入uView的基础全局样样式。
-
-- 在`App.vue`中**首行**的位置，增加如下一行`import "@/uview/index.scss"`：
-
-:::danger 注意：
-1. 注意是在根目录的`App.vue`中引入，而非根目录的`uni.scss`中引入。
-2. 必须要将标签加入`lang="scss"`属性以支持SCSS，否则会出错！
-3. 请将将引入的代码，写在`styel`标签的首行。
-:::
-
-```css
-<style lang="scss">
-	/* 注意要写在第一行，同时给style标签加入lang="scss"属性 */
-	@import "@/uview/index.scss";
-	
-	/* ......其他的样式 */
-</style>
-```
-
-
-#### 3. 配置easycom组件模式
-
-easycom功能可以让用户无需安装、引用、注册，三个步骤后才能使用组件，详见[easycom文档](https://uni-appdcloud.io/collocation/pages?id=easycom)
-
-Hbuilder X自2.5.1版开始正式支持`easycom`特性，**HX2.5.5**版支持自动引入`components/组件名称/组件名称.vue`，考虑到用户的一些自定义组件
-都会放在`components`目录中，为了不和用户的自定义组件混淆，同时也是为了能让用户一键升级uView，所以我们把uView相关的所有内容都放在了根目录的
-`uview`文件夹中。
-
-为了能使用`easycom`特性，在项目根目录下的`pages.json`前面引入如下配置即可：
-
-```json
-// pages.json
-
-{
-	// 此为需要加入的内容，如果不是把uView放在根目录，请根据情况修改路径
-	"easycom": {
-		"^u-(.*)": "@/uview/components/u-$1/u-$1.vue"
-	},
-	
-	// 此为本身已有的内容
-	"pages": [
-		// ......
-	]
-}
-```
-
-
 ### 如何使用
 
-由于上面第三步通过`easycom`规则自动引入了组件，在某个页面可以直接使用组件，无需通过`import`引入组件。
+通过npm和下载方式的配置之后，在某个页面可以直接使用组件，无需通过`import`引入组件。
 
 ```html
 <template>
@@ -155,7 +44,7 @@ Hbuilder X自2.5.1版开始正式支持`easycom`特性，**HX2.5.5**版支持自
 </template>
 
 <script>
-	import uActionSheet from "@/uView/components/u-action-sheet/u-action-sheet.vue";
+	import uActionSheet from "uView-ui/components/u-action-sheet/u-action-sheet.vue";
 	export default {
 		components: {
 			uActionSheet

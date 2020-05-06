@@ -10,10 +10,9 @@
 使用方法：
 
 ```js
-import md5Libs from "@/uview/libs/function/md5";
+import md5Libs from "uview-ui/libs/function/md5";
 export default{
 	onLoad() {
-		console.log(md5Libs.md5('123456'));
 		// 结果为：e10adc3949ba59abbe56e057f20f883e
 	}
 }

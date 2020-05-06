@@ -10,6 +10,100 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>1.1.9</h2>
+				</div>
+				<p><code>2020-05-06</code></p>
+				<ul>
+					<li>
+						<span class="add">新增</span>
+						增加swipeAction滑动单元格按钮数量配置，如有使用此组件，本次升级，必须修改此组件的参数方可正常使用，详见：
+						<a href="/components/changeGuide.html" target="_blank">1.1.9升级指导</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						给checkbox和radio组件添加label-size控制描述文字大小的参数
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						将switch和swipAction组件的震动参数设置为可选，且默认关闭
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复rate评分组件setTimeout的参数错误
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
+					<h2>1.1.7</h2>
+				</div>
+				<p><code>2020-05-05</code></p>
+				<ul>
+					<li>
+						<span class="add">新增</span>
+						uView本次更新支持npm方式安装，同时对下载方式的解压包更改名称，本次升级，您需要对此做一些小改动方能正常使用，详见：
+						<a href="/components/changeGuide.html" target="_blank">1.1.7升级指导</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						增加API集中管理的示例教程，详见：<a href="/js/apimanage.html" target="_blank">API集中管理</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						timeFrom方法，增加可选参数，可返回"xx年之前"的格式
+					</li>
+					<li>
+						<span class="add">新增</span>
+						演示项目工具栏中新增对全局guid和多久之前的演示
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化icon组件size参数的内部处理
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						重构cell组件，其中hover、border参数，slot名称做出了变动
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复section组件左边竖线不会跟随字体变大的问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
+					<h2>1.1.5</h2>
+				</div>
+				<p><code>2020-04-30</code></p>
+				<ul>
+					<li>
+						<span class="add">新增</span>
+						给verificationCode验证码倒计时组件新增倒计时防刷新和返回功能
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化navbar自定义导航栏嵌入的搜索框示例
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						修改基础，让其更加简单明了，易用
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>1.1.4</h2>
 				</div>
 				<p><code>2020-04-29</code></p>

@@ -341,6 +341,7 @@ lists = [
 | upload | 调用此方法，手动上传图片  |
 | clear | 调用此方法，清空内部文件列表  |
 | reUpload | 调用此方法，重新上传内部上传失败或者尚未上传的图片  |
+| remove(index) | 手动移除列表的某一个图片，`index`为`lists`数组的索引  |
 
 
 ### Slot
@@ -376,5 +377,9 @@ h3[id=props] + table thead tr th:nth-child(2){
 
 h3[id=events] + p + table thead tr th:nth-child(3){
 	width: 45%;
+}
+
+h3[id=methods] + p + table thead tr th:nth-child(2){
+	width: 50%;
 }
 </style>

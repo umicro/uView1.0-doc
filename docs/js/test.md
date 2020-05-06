@@ -221,7 +221,7 @@ console.log(this.$u.test.range(35, [30, 34]));
 
 #### rangeLength(str, range)
 
-- `number` <Number\> 数值
+- `str` <String\> 数值
 - `range` <Array\> 如"[25, 35]"
 
 ```js

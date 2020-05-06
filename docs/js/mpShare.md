@@ -36,7 +36,7 @@
 // 其他内容
 
 // 引入uView对小程序分享的mixin封装
-let mpShare = require('@/uview/libs/mixin/mpShare.js');
+let mpShare = require('uview-ui/libs/mixin/mpShare.js');
 Vue.mixin(mpShare)
 
 // 其他内容

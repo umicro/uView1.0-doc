@@ -129,6 +129,7 @@ uView已对接uni-app档关于uni-app方button组件](https:uni-app.dcloud.io/co
 |type|按钮的样式类型|String|default|primary / success / info/ warning / error|-|
 |plain|按钮是否镂空，背景色透明|Boolean|false|true|-|
 |disabled|是否禁用|Boolean|false|true|-|
+|hair-line|是否显示按钮的细边框|Boolean|true|false|-|
 |shape|按钮外观形状，见上方说明|String|square|circle|-|
 |loading|按钮名称前是否带 loading 图标|Boolean|false|true|App-nvue 平台，在 ios 上为雪花，Android上为圆圈|
 |form-type|用于 `<form>` 组件，点击分别会触发 `<form>` 组件的 submit/reset 事件|String|-|submit / reset|-|

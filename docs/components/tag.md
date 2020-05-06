@@ -79,6 +79,7 @@
 | shape | 标签形状 | String | square | circle / circleLeft / circleRight |
 | text | 标签的文字内容 | String | - | - |
 | bg-color | 自定义标签的背景颜色 | String  | - | - |
+| color | 文字的颜色 | String  | - | - |
 | border-color | 标签的边框颜色  | String | - | - |
 | close-color | 关闭按钮的颜色  | String | - | - |
 | index | 点击标签时，会通过`click`事件返回该值  | String \| Number | - | - |

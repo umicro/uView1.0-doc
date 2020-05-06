@@ -46,7 +46,7 @@
 - `round`参数设置进度条两端是否为半圆
 
 ```html
-<u-line-progress :percent="70" :round="false" :active-color="#ff9900"></u-line-progress>
+<u-line-progress :percent="70" :round="false" active-color="#ff9900"></u-line-progress>
 ```
 
 ### API

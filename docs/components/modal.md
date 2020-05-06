@@ -123,7 +123,7 @@
 
 ### API
 
-### Switch Props
+### Props
 
 注意：需要给`modal`组件通过`v-model`绑定一个布尔值，来初始化`modal`的状态，随后该值被双向绑定。
 
@@ -150,7 +150,7 @@
 | zoom | 是否开启缩放模式 | Boolean  | true | false |
 
 
-### Switch Event
+### Event
 
 |事件名|说明|回调参数|
 |:-|:-|:-|:-|

@@ -1,6 +1,29 @@
 ## 升级指南
 
+本专题不是每次更新版本的时候都会写入内容，只有某些需要特殊留意和处理的版本升级时，才会在这里写入相关的升级指导，如果您想看看uView近来
+都有哪些升级记录，请移步：[更新日志](/components/changelog.html)
+
 <demo-model url="/"></demo-model>
+
+### 1.1.9升级指导(2020-05-06)
+
+本次升级，对swipeAction组件进行了修改，可以配置多个按钮，原本通过`btn-text`和`btn-bg-color`配置按钮的文字和背景颜色，本次升级，加入`options`
+参数(数组)，可以配置多个按钮，详见[SwipeAction 滑动操作](/components/swipeAction.html)的基本说明，另外，点击的回调事件中，返回了两个
+参数，一个为Props传递的`index`参数，另一个`options`按钮参数的索引。
+
+<br>
+
+### 1.1.7升级指导(2020-05-05)
+
+本次升级，迎来了uView的一个跨越发展，uView正式支持npm方式安装，借助此方式，您不用每次都下载覆盖升级，仅执行`npm update uview-ui`即可，
+由于uView在npm的包名为`uview-ui`，引入时需写上`import uView from "uview-ui"`，旧版中下载方式安装时uView的文件夹为`uview`，为了规范和统一，
+在此`1.1.7`版本后，uView将以前根目录的`uview`文件夹，改名为`uview-ui`，其他保持不变。  
+
+对此您有两个选择：
+1. uView下载解压后得到`uview-ui`文件夹，您可以将其改名为`uview`，从而覆盖原有的同名库(如果这不是您第一次下载的话)，这样您无需在`pages.json`、`main.js`、`uni.scss`、`App.vue`做出路径名称的变更(但是我们不推荐这样做)
+2. 如果您是在进行下载方式的升级，删掉(或备份)原来的`uview`文件夹，将`uview-ui`文件夹放到根目录，然后根据[下载安装方式配置](/components/downloadSetting.html)说明对`pages.json`、`main.js`、`uni.scss`、`App.vue`做出细微修改。(推荐此方式，一劳永逸)
+
+<br>
 
 ### 1.1.4升级指导(2020-04-29)
 
@@ -13,28 +36,28 @@
 
 具体操作如下：
 
-- 在`App.vue`中**首行**的位置，增加如下一行`import "@/uview/index.scss"`：
+- 在`App.vue`中**首行**的位置，增加如下一行`import "@/uview-ui/index.scss"`：
 
 :::danger 注意：
 1. 必须要将标签加入`lang="scss"`属性以支持SCSS，否则会出错！
-2. 请将将引入的代码，写在`styel`标签的首行。
+2. 请将将引入的代码，写在`style`标签的首行。
 :::
 
 ```css
 <style lang="scss">
 	/* 注意要写在第一行，同时给style标签加入lang="scss"属性 */
-	@import "@/uview/index.scss";
+	@import "@/uview-ui/index.scss";
 	
 	/* ......其他的样式 */
 </style>
 ```
 
-- 在项目根目录的`uni.scss`中，删除原来的`@import '@/uview/theme.scss';`一行，改成如下：
+- 在项目根目录的`uni.scss`中，删除原来的`@import '@/uview-ui/theme.scss';`一行，改成如下：
 
 ```js
 // 删除原来的这一行
-// @import '@/uview/index.scss';
+// @import '@/uview-ui/index.scss';
 
 // 加入这一行
-@import '@/uview/theme.scss';
+@import '@/uview-ui/theme.scss';
 ```

@@ -160,6 +160,7 @@
 | size | 开关尺寸，单位rpx | String \| Number  | 50 | - |
 | active-color | 打开时的背景色 | String  | #2979ff | - |
 | inactive-color | 关闭时的背景色 | String  | #ffffff | - |
+| vibrate-short | 是否使手机发生短促震动，目前只在iOS的微信小程序和微信小程序开发工具有效  | Boolean | false | true |
 
 
 ### Switch Event

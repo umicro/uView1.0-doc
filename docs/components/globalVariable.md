@@ -80,7 +80,7 @@ export default {
 需要使用的时候，我们通过`import`引入即可，这种方式，缺点是每次都需要引入文件，我们无法将挂载在到Vue.prototype上。
 
 ```js
-import config from "./uview/libs/config/config.js"
+import config from "./uview-ui/libs/config/config.js"
 
 export default {
 	onLoad() {
@@ -95,7 +95,7 @@ export default {
 
 ```js
 // main.js
-import config from "./uview/libs/config/config.js"
+import config from "./uview-ui/libs/config/config.js"
 
 Vue.prototype.domain = config.domain;
 ```
@@ -154,7 +154,9 @@ export default {
 	},
 	// 这里需要注意的是，如果我们需要在App.vue中使用userName
 	// 使用getApp().globalData.userName是不行，因为此时getApp()尚未生成
-	// 需要通过this.$scope.globalData获取
+	// 1. 非V3模式，可以通过this.$scope.globalData获取
+	// 2. V3模式，可以通过getApp({allowDefault: true}).globalData获取
+	// 详见uni-app文档：https://uniapp.dcloud.io/collocation/frame/window?id=getapp
 	onLaunch() {
 		console.log(this.$scope.globalData.userName);
 	}
