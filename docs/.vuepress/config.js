@@ -49,7 +49,7 @@ module.exports = {
 					collapsable: false,
 					sidebarDepth: 0,
 					children: [
-						// ['/components/read', 'read'],
+						['/components/addQQGroup', '点击加QQ群反馈交流'],
 						['/components/intro', '介绍'],
 						['/components/install', '安装'],
 						['/components/setting', '配置'],

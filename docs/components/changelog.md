@@ -10,6 +10,54 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>1.2.1</h2>
+				</div>
+				<p><code>2020-05-08</code></p>
+				<ul>
+					<li>
+						<span class="fix">修复</span>
+						解决waterfall瀑布流示例多次快速上拉，导致数据加载失败的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						解决indexList索引列表和checkbox组件在微信小程序报错的问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
+					<h2>1.2.0</h2>
+				</div>
+				<p><code>2020-05-07</code></p>
+				<ul>
+					<li>
+						<span class="add">新增</span>
+						field组件增加field-style和clear-size参数
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化swipeAction滑动单元格组件的内部逻辑，新增content-click事件
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复部分安卓手机下载demo中样式错乱的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复picker组件的按钮颜色参数无效的问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>1.1.9</h2>
 				</div>
 				<p><code>2020-05-06</code></p>

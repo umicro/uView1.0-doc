@@ -171,3 +171,4 @@
 | click | 点击组件时触发 | (index1, index)，见上方"点击事件"的说明 |
 | close | 组件触发关闭状态时 | index: 通过props传递的`index` | 
 | open | 组件触发打开状态时 | index: 通过props传递的`index` | 
+| content-click | 点击内容时触发 | index: 通过props传递的`index` | 

@@ -184,7 +184,7 @@
 			>
 			</u-field>
 		</u-cell-group>
-		<u-action-sheet @click="clickItem" :list="sexList" :v-model="show"></u-action-sheet>
+		<u-action-sheet @click="clickItem" :list="sexList" v-model="show"></u-action-sheet>
 	</view>
 </template>
 
@@ -237,6 +237,8 @@ export default {
 | label-align | `label`的文字对齐方式 | String  | left | center / right |
 | input-align | 输入框内容对齐方式 | String | left | center / right |
 | icon-color | 左边通过`icon`配置的图标的颜色 | String  | #606266 | - |
+| clear-size | 清除图标的大小，单位rpx | Number \| String | 30 | - |
+| field-style | 输入框的样式，对象形式 | Object  | - | - |
 | auto-height | 是否自动增高输入区域，`type`为`textarea`时有效 | Boolean | true | false |
 | error-message | 显示的错误提示内容，如果为空字符串或者`false`，则不显示错误信息 | String \ Boolean  | - | - |
 | placeholder | 输入框的提示文字 | String | - | - |
