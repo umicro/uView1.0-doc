@@ -10,6 +10,46 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>1.2.3</h2>
+				</div>
+				<p><code>2020-05-08</code></p>
+				<ul>
+					<li>
+						<span class="fix">修复</span>
+						修复field组件设置为textare类型是样式有误的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复支付宝小程序图标无法显示的问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
+					<h2>1.2.2</h2>
+				</div>
+				<p><code>2020-05-08</code></p>
+				<ul>
+					<li>
+						<span class="fix">修复</span>
+						修复微信小程序upload组件演示中，无法修改上传按钮样式的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						解决微信小程序开发工具上按钮组件的选择器警告问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>1.2.1</h2>
 				</div>
 				<p><code>2020-05-08</code></p>
