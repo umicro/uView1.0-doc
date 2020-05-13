@@ -95,9 +95,9 @@
 | accordion | 是否手风琴模式  | Boolean | true | false |
 | arrow | 是否显示标题右侧的箭头  | Boolean | true | false |
 | arrow-color | 标题右侧箭头的颜色 | String | #909399 | - |
-| head-bg-color | 标题的背景颜色  | String | #ffffff | - |
-| body-bg-color | 主体内容的背景颜色  | String | #ffffff | - |
-| hover-class | 样式类名，按下时有效，样式必须写在根目录的`App.vue`或者`uni.scss`中才有效，`none`为无效果，作用于头部标题区域  | String | u-hover-class | none / 其他 |
+| head-style | 标题自定义样式，对象形式  | Object | - | - |
+| body-style | 主体自定义样式，对象形式  | Object | - | - |
+| hover-class | 样式类名，按下时有效，样式必须写在根目录的`App.vue`或通过其引入的全局样式中才有效，`none`为无效果，作用于头部标题区域  | String | u-hover-class | none / 其他 |
 
 ### Collapse Item Props
 

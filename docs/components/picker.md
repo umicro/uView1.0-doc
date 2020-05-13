@@ -49,7 +49,7 @@
 <template>
 	<u-picker mode="time" v-model="show"  default-time="2025-07-02 13:01"></u-picker>
 	
-	<u-picker mode="region" v-model="show"  :default-code='["13", "1303", "130304"]'></u-picker>
+	<u-picker mode="region" v-model="show"  :area-code='["13", "1303", "130304"]'></u-picker>
 </template>
 ```
 
@@ -167,6 +167,7 @@ let params = {
 | default-region | 默认选中的地区，中文形式，mode=region时有效  | Array | - | - |
 | area-code | 默认选中的地区，编号形式，mode=region时有效  | Array | - | - |
 | mask-close-able | 是否允许通过点击遮罩关闭Picker  | Boolean | true | false |
+| show-time-tag | 时间模式时，是否显示后面的年月日中文提示  | Boolean | true | false |
 | z-index | 弹出时的`z-index`值 | String \| Number | 1075 | - |
 
 

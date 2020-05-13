@@ -116,6 +116,7 @@ uView有写一个完善的导航栏自定义内容案例，如右侧演示区域
 
 uView提供了一个`background`参数(需对象形式)，可以自定义导航栏的背景颜色：
 
+- 这个颜色，在APP和小程序上，包括状态的颜色在内
 - 如果是定义纯色的背景，可以设置`backgroundColor`属性
 - 如果是定义渐变的背景，可以设置`backgroundImage`属性
 - 如果是定义背景图，可以设置`background`属性，还可以加上其他属性，比如`no-repeqt`，`center`等
@@ -185,7 +186,7 @@ uView提供了一个`background`参数(需对象形式)，可以自定义导航�
 | title-size | 导航栏标题字体大小，单位rpx | String \ Number  | 32 | - |
 | z-index | 固定在顶部时的`z-index`值 | String \ Number  | 980 | - |
 | is-back | 是否显示导航栏左边返回图标和辅助文字 | Boolean  | true | false |
-| background | 导航栏背景设置，见上方说明 | Object  | { background: '#ffffff' } | - |
+| background | 导航栏背景设置(APP和小程序上包括状态栏的颜色)，见上方说明 | Object  | { background: '#ffffff' } | - |
 | is-fixed | 导航栏是否固定在顶部 | Boolean  | true | false |
 | border-bottom | 导航栏底部是否显示下边框，如定义了较深的背景颜色，可取消此值 | Boolean  | true | false |
 

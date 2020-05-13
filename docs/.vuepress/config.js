@@ -1,5 +1,5 @@
 module.exports = {
-	title: 'uView - 多平台快速开发的UI框架', // 设置网站标题
+	title: 'uView - 多平台快速开发的UI框架 - uni-app UI框架', // 设置网站标题
 	description: 'uView UI，是uni-app生态最优秀的UI框架，全面的组件和便捷的工具会让您信手拈来，如鱼得水',
 	base: '/',
 	markdown: {
@@ -42,6 +42,9 @@ module.exports = {
 		}, {
 			text: '关于我们',
 			link: '/cooperation/about'
+		}, {
+			text: 'GitHub',
+			link: 'https://github.com/YanxinNet/uView'
 		}],
 		sidebar: {
 			'/components/': [{
@@ -225,6 +228,7 @@ module.exports = {
 				sidebarDepth: 0,
 				children: [
 					['/js/http', 'Http请求'],
+					['/js/apiManage', 'API集中管理']
 				]
 			}, {
 				title: '工具库',
@@ -308,6 +312,7 @@ module.exports = {
 			'/components/empty',
 			'/components/link',
 			'/components/section',
+			'/js/apiManage',
 			'/components/messageInput',
 			'/components/changeGuide',
 			'/components/avatarCropper',

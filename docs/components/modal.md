@@ -92,6 +92,50 @@
 </style>
 ```
 
+### 异步关闭
+
+异步关闭只对"确定"按钮起作用，需要设置`async-close`为`true`，当点击确定按钮的时候，按钮的文字变成一个loading动画，此动画的颜色为
+`confirm-color`参数的颜色，同时Modal不会自动关闭，需要手动设置通过`v-model`绑定的变量为`false`来实现手动关闭。
+
+```html
+<template>
+	<view class="">
+		<u-modal v-model="show" @confirm="confirm" :async-close="true"></u-modal>
+		<u-button @click="showModal">弹起Modal</u-button>
+	</view>
+</template>
+
+<script>
+export default {
+    data() {
+        return {
+			show: false
+		}
+	},
+	onLoad: function(opt) {
+		
+	},
+	methods:{
+		showModal() {
+			this.show = true;
+		},
+		confirm() {
+			setTimeout(() => {
+				this.show = false;
+			}, 3000)
+		}
+    }
+}
+</script>
+```
+
+### 点击遮罩关闭
+
+有时候我们不显示"关闭"按钮的时候，需要点击遮罩也可以关闭Modal，这时通过配置`mask-close-able`为`true`即可
+
+```html
+<u-modal v-model="show" :mask-close-able="true"></u-modal>
+```
 
 ### 控制模态框宽度
 
@@ -148,6 +192,8 @@
 | cancel-style | 自定义取消按钮样式，对象形式 | Object  | - | - |
 | confirm-style | 自定义确认按钮样式，对象形式 | Object  | - | - |
 | zoom | 是否开启缩放模式 | Boolean  | true | false |
+| async-close | 是否异步关闭，只对确定按钮有效，见上方说明 | Boolean  | false | true |
+| mask-close-able | 是否允许点击遮罩关闭Modal | Boolean  | false | true |
 
 
 ### Event

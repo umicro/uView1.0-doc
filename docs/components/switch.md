@@ -68,6 +68,14 @@
 <u-switch v-model="checked" active-color="red" inactive-color="#eee"></u-switch>
 ```
 
+### 自定义值
+
+可以通过设置`active-value`和`inactive-value`来控制选择器打开或者关闭时，通过`change`事件发出的回调值。
+
+```html
+<u-switch v-model="checked" active-value="1" inactive-value="0"></u-switch>
+```
+
 
 ### 异步控制
 
@@ -161,10 +169,12 @@
 | active-color | 打开时的背景色 | String  | #2979ff | - |
 | inactive-color | 关闭时的背景色 | String  | #ffffff | - |
 | vibrate-short | 是否使手机发生短促震动，目前只在iOS的微信小程序和微信小程序开发工具有效  | Boolean | false | true |
+| active-value | 打开选择器时通过change事件发出的值 | Boolean \| Number \| String  | #ffffff | true |
+| inactive-value | 关闭选择器时通过change事件发出的值 | Boolean \| Number \| String | false |
 
 
 ### Switch Event
 
 |事件名|说明|回调参数|
 |:-|:-|:-|:-|
-| change | 在`switch`打开或关闭时触发 | status：`true` 或者 `false` |
+| change | 在`switch`打开或关闭时触发 | value：打开时为`active-value`值，关闭时为`inactive-value`值 |

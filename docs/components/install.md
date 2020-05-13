@@ -51,7 +51,7 @@ npm update uview-ui
 
 <br>
 <div @click="downloadPost(2)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_1.2.3.zip">uView_1.2.3.zip</a>
+	下载地址：<a href="https://download.uviewui.com/uView_1.2.5.zip">uView_1.2.5.zip</a>
 </div>
 <br>
 <br>
@@ -71,7 +71,7 @@ npm update uview-ui
 
 <br>
 <div @click="downloadPost(1)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_demo_1.2.3.zip">uView_demo_1.2.3.zip</a>
+	下载地址：<a href="https://download.uviewui.com/uView_demo_1.2.5.zip">uView_demo_1.2.5.zip</a>
 </div>
 <br>
 <br>
@@ -84,7 +84,7 @@ npm update uview-ui
 
 <br>
 <div @click="downloadPost(3)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_1.2.3_full.zip">uView_1.2.3_full.zip</a>
+	下载地址：<a href="https://download.uviewui.com/uView_1.2.5_full.zip">uView_1.2.5_full.zip</a>
 </div>
 <br>
 <br>

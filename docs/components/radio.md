@@ -136,7 +136,6 @@ export default {
 |-------------  |---------------- |---------------|------------------ |-------- |
 | icon-size | 图标大小，单位rpx  | String \ Number | 24 | - |
 | label-size | label字体大小，单位rpx  | String \ Number | 28 | - |
-| size | 组件整体的大小，单位rpx  | String \ Number | 40 | - |
 | name | `radio`组件的标示符  | String \ Number | - | - |
 | shape | 形状，见上方说明 | String  | circle | square |
 | disabled | 是否禁用 | Boolean  | false | true |
@@ -151,6 +150,7 @@ export default {
 |-------------  |---------------- |---------------|------------------ |-------- |
 | disabled | 是否禁用所有`radio`  | Boolean | false | true |
 | active-color | 选中时的颜色，应用到所有子`Radio`组件 | String  | #2979ff | - |
+| size | radio组件整体的大小，单位rpx  | String \ Number | 40 | - |
 
 
 ### radio Event

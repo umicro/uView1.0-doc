@@ -142,5 +142,4 @@
 | font-size | 提示文字的大小，单位rpx | String \| Number  | 28 | - |
 | open-text | 展开时的提示文字 | String  | 收起 | - |
 | color | 提示文字的颜色 | String  | #2979ff | - |
-| color | 提示文字的颜色 | String  | #2979ff | - |
 | shadow-style | 对阴影的自定义处理，对象形式 | Object  | 见上方说明 | - |

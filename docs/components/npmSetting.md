@@ -6,13 +6,25 @@ uView依赖SCSS，您必须要安装此插件，否则无法正常运行。
 
 - 如果您的项目是由`HBuilder X`创建的，相信已经安装scss插件，如果没有，请在HX菜单的 工具->插件安装中找到"scss/sass编译"插件进行安装，
 如不生效，重启HX即可
-- 如果您的项目是由`vue-cli`创建的，并且通过**npm**安装uView，您无需安装SCSS插件，因为已内置SCSS。
+- 如果您的项目是由vue-cli创建的，请通过以下命令安装对sass(scss)的支持，如果已安装，请略过。
+
+```js
+// 安装node-sass
+npm i node-sass -D
+
+// 安装sass-loader
+npm i sass-loader -D
+```
 
 ### 准备工作
 
 在进行配置之前，请确保您已经根据[安装](/components/install.html)中的步骤对uView进行了npm安装，如果没有，请先执行安装：
 
 ```js
+// 如果您的项目是HX创建的，根目录又没有package.json文件的话，请先执行如下命令：
+// npm init -y
+
+// 安装
 npm install uview-ui
 ```
 
@@ -41,7 +53,9 @@ Vue.use(uView);
 
 #### 3. 引入uView基础样式
 
-- 在`App.vue`中**首行**的位置引入，注意给style标签加入lang="scss"属性
+:::danger 注意！
+在`App.vue`中**首行**的位置引入，注意给style标签加入lang="scss"属性
+:::
 
 ```css
 <style lang="scss">

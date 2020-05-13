@@ -44,7 +44,7 @@
 一共有6种主题可选，如下：
 - default-灰黑色，最普通的场景，此为默认主题，可以不用填`type`参数
 - error-红色，代表错误
-- succes-绿色，代表成功
+- success-绿色，代表成功
 - warning-黄色，代表警告
 - info-灰色，比default浅一点
 - primary-蓝色，uView的主色调

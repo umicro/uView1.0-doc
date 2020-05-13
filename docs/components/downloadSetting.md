@@ -10,10 +10,10 @@ uView依赖SCSS，您必须要安装此插件，否则无法正常运行。
 
 ```js
 // 安装node-sass
-npn i node-sass -D
+npm i node-sass -D
 
 // 安装sass-loader
-npn i sass-loader -D
+npm i sass-loader -D
 ```
 
 ### 准备工作
@@ -46,7 +46,9 @@ Vue.use(uView);
 
 #### 3. 引入uView基础样式
 
-- 在`App.vue`中**首行**的位置引入，注意给style标签加入lang="scss"属性
+:::danger 注意！
+在`App.vue`中**首行**的位置引入，注意给style标签加入lang="scss"属性
+:::
 
 ```css
 <style lang="scss">

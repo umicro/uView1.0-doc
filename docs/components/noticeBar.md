@@ -114,13 +114,13 @@
 | bg-color | 背景颜色 | String \| Number | - | - |
 | mode | 滚动模式 | String | horizontal(水平滚动) | vertical(垂直滚动) |
 | show | 是否显示 | Boolean | true | false |
+| volume-size | 左边喇叭的大小 | String \| Number | 34 | - |
 | font-size | 字体大小，单位rpx | String \| Number | 28 | - |
 | duration | 滚动周期时长，只对步进模式有效，横向衔接模式无效，单位ms | String \| Number | 2000 | - |
 | speed | 水平滚动时的滚动速度，即每秒移动多少距离，只对水平衔接方式有效，单位rpx | String \| Number | 160 | - |
-| font-size | 字体大小，单位rpx | String \| Number | 28 | - |
 | is-circular | `mode`为`horizontal`时，指明是否水平衔接滚动 | Boolean | true | false |
 | play-state | 播放状态，play - 播放，paused - 暂停 | String | play | paused |
-| disable-touch | 是否禁止通过手动滑动切换通知，只有mode = vertical，或者mode = horizontal且is-circular = false时有效| Boolean | true | false |
+| disable-touch | 是否禁止通过手动滑动切换通知，只有mode = vertical，或者mode = horizontal且is-circular = false时有效；只支持App 2.5.5+、H5 2.5.5+、支付宝小程序、字节跳动小程序| Boolean | true | false |
 | padding | 内置滚动通知的内边距，字符串，类似"16rpx 20rpx" | String | 18rpx 24rpx | - |
 | border-radius | 圆角值，单位rpx | String \ Number | 0 | - |
 | no-list-hidden | `list`为空数组时，是否显示组件 | Boolean | true | false |

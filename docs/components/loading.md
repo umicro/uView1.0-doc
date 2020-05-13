@@ -60,7 +60,7 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | mode | 模式选择，见上方说明  | String | circle | flower |
-| color | 动画活动区域的颜色，只对 mode = flower 模式有效  | String	 | #c7c7c7 | - |
+| color | 动画活动区域的颜色，只对 mode = circle 模式有效  | String	 | #c7c7c7 | - |
 | size |加载图标的大小，单位rpx | String \| Number  | 34 | - |
 | show | 是否显示动画 | Boolean  | true | false |
 

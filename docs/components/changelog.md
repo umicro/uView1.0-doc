@@ -10,13 +10,73 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>1.2.5</h2>
+				</div>
+				<p><code>2020-05-12</code></p>
+				<ul>
+					<li>
+						<span class="add">新增</span>
+						给Modal弹窗添加异步关闭控制参数async-close和点击遮罩关闭参数mask-close-able
+					</li>
+					<li>
+						<span class="add">新增</span>
+						给Navbar添加右侧的slot，名为right
+					</li>
+					<li>
+						<span class="add">新增</span>
+						给Switch组件添加active-value和inactive-value
+					</li>
+					<li>
+						<span class="add">新增</span>
+						添加基础类u-relative(u-rela)和u-absolute(u-abso)
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复$u.route方法type=back时，delta参数无法设置的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复Button按钮水波纹在支付宝小程序无效的问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
+					<h2>1.2.4</h2>
+				</div>
+				<p><code>2020-05-10</code></p>
+				<ul>
+					<li>
+						<span class="add">新增</span>
+						noticeBar滚动通知组件增加控制喇叭大小的参数volume-size
+					</li>
+					<li>
+						<span class="add">新增</span>
+						picker组件新增show-time-tag参数控制是否显示年月日的中文提示
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复navbar自定义导航栏组件height参数为字符串时可能出错的问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>1.2.3</h2>
 				</div>
 				<p><code>2020-05-08</code></p>
 				<ul>
 					<li>
 						<span class="fix">修复</span>
-						修复field组件设置为textare类型是样式有误的问题
+						修复field组件设置为textarea类型是样式有误的问题
 					</li>
 					<li>
 						<span class="fix">修复</span>
