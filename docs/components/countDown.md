@@ -56,7 +56,7 @@
 
 - 通过`color`设置倒计数字的颜色
 - `font-size`设置倒计数字的大小，重申一次：uView中，所有`font-size`，`width`，`height`，`padding`，`margin`等props参数
-的单位默认都是`rpx`，特别说明除外(极少数场景会要求px单位)。关于`rpx`单位的说明，请参考uni官方文档：[尺寸单位](https://uni-appdcloud.io/frame?id=%e5%b0%ba%e5%af%b8%e5%8d%95%e4%bd%8d)
+的单位默认都是`rpx`，特别说明除外(极少数场景会要求px单位)。关于`rpx`单位的说明，请参考uni官方文档：[尺寸单位](https://uniapp.dcloud.io/frame?id=%e5%b0%ba%e5%af%b8%e5%8d%95%e4%bd%8d)
 - `show-border`参数设置倒计数字是否添加边框，`border-color`参数设置边框的颜色
 
 ```html

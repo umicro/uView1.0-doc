@@ -87,6 +87,7 @@
 | input-width | 输入框宽度，单位rpx | String \| Number | 80 | - |
 | input-height | 输入框和按钮的高度，单位rpx | String \| Number | 50 | - |
 | index | 事件回调时用以区分当前发生变化的是哪个输入框 | String \| Number | - | - |
+| disabled-input | 是否禁止输入框手动输入值 | Boolean | false | true |
 
 ### Events
 

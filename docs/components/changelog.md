@@ -10,6 +10,84 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>1.2.6</h2>
+				</div>
+				<p><code>2020-05-16</code></p>
+				<ul>
+					<li>
+						<span class="add">新增</span>
+						新增Line线条组件，详见：
+						<a href="/components/line.html" target="_blank">Line 线条</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						新增Card卡片组件，详见：
+						<a href="/components/card.html" target="_blank">Card 卡片</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						添加Upload上传组件控制右上角删除图标的样式参数，可以定义颜色，背景等
+					</li>
+					<li>
+						<span class="add">新增</span>
+						给NumberBox步进器组件添加disabled-input组件，控制输入框是否可输入内容
+					</li>
+					<li>
+						<span class="add">新增</span>
+						Icon图标组件新增label功能，支持右边和下方插入描述文字
+					</li>
+					<li>
+						<span class="add">新增</span>
+						添加搜索组件的maxlength参数
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化LazyLoad懒加载实现的方法
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化$u.getRect()方法，使其支持支付宝小程序
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化按钮点击事件，阻止冒泡
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化NoNetwork无网络提示组件，使其垂直居中
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化Swiper组件在App上滑动时圆角无效的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						给$u.test.empty改名$u.test.isEmpty，同时保留$u.test.empty，二者功能一致
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						修改Rate评分组件对支付宝小程序的支持
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复Empty组件的历史记录图标显示不全的问题，同时使该组件垂直居中
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						改正Switch开关选择器参数unActionColor与文档inActionColor不一致的错误
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修改README.md使用示例button的拼写错误
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>1.2.5</h2>
 				</div>
 				<p><code>2020-05-12</code></p>

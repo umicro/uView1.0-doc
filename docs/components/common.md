@@ -23,6 +23,22 @@ uView组件功能的实现，并不依赖全局样式，内置的一些类名，
 </view>
 ```
 
+### 定位
+
+uView内置了关于相对和绝对定位的两个类，分别为`u-relative`(`u-rela`)和`u-absolute`(`u-abso`)：
+
+```css
+.u-relative,
+.u-rela {
+	display: relative;
+}
+
+.u-absolute,
+.u-abso {
+	display: absolute;
+}
+```
+
 ### 字体大小
 
 #### **1. 数值形式**

@@ -114,7 +114,7 @@ uView中，共有2个组件可以实现tabs标签切换，分别是`tabs`组件�
 - 本示例中在`swiper-item`中嵌套了`可选`的uni-app`scroll-view`组件，uni官方不建议在APP-vue和小程序中`scroll-view`中使用map、video等原生组件，
 - 必须将组件的`current`参数，设置为`animationfinish`中的返回值。
 
-具体请参考：[uni的scroll-view组件文档](https://uni-appdcloud.io/component/scroll-view)    
+具体请参考：[uni的scroll-view组件文档](https://uniapp.dcloud.io/component/scroll-view)    
 
 注意：由于tabsSwiper组件需要结合uni的`swiper`组件使用，过程较为复杂，故此示例代码仅作参考使用，请勿直接复制粘贴使用，
 具体使用方法请下载查阅uView的tabsSwiper案例。

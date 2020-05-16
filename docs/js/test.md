@@ -9,7 +9,7 @@ uView内置了一些校验规则，如是否手机号，邮箱号，URL等
 
 #### email(email)
 
-校验是否邮箱号
+校验是否邮箱号，返回`true`或者`false`。
 
 - `email` <String\> 字符串
 
@@ -22,7 +22,7 @@ console.log(this.$u.test.email('123465798@gmail.com'));
 
 #### mobile(mobile)
 
-校验是否手机号
+校验是否手机号，返回`true`或者`false`。
 
 - `mobile` <String\> 字符串
 
@@ -35,7 +35,7 @@ console.log(this.$u.test.mobile('13845678900'));
 
 #### url(url)
 
-校验是否URL链接
+校验是否URL链接，返回`true`或者`false`。
 
 - `url` <String\> 字符串
 
@@ -53,21 +53,21 @@ console.log(this.$u.test.url('http://www.uviewui.com'));
 - 值为数值`0`(非字符串`"0"`)，或者`NaN`
 - 值为`null`，空对象`{}`，或者长度为0的数组
 
-#### empty(value)
+#### isEmpty(value)
 
-
-校验值是否为空
+校验值是否为空，返回`true`或者`false`。  
+此方法等同于`empty`名称，但是为了更语义化，推荐用`isEmpty`名称。
 
 - `value` <any\> 字符串
 
 ```js
-console.log(this.$u.test.empty(false));
+console.log(this.$u.test.isEmpty(false));
 ```
 
 
 ### 是否普通日期
 
-验证一个字符串是否日期，如下行为正确：
+验证一个字符串是否日期，返回`true`或者`false`，如下行为正确：
 - `2020-02-10`、`2020-02-10 08:32:10`、`2020/02/10 3:10`、`2020/02/10 03:10`、`2020/02-10 3:10`
 
 如下为错误：
@@ -86,7 +86,7 @@ console.log(this.$u.test.date('2020-02-10 08:32:10'));
 
 ### 是否十进制数值
 
-整数，小数，负数，带千分位数(2,359.08)等可以检验通过
+整数，小数，负数，带千分位数(2,359.08)等可以检验通过，返回`true`或者`false`。
 
 #### number(number)
 
@@ -99,7 +99,7 @@ console.log(this.$u.test.number('2020'));
 
 ### 是否整数
 
-所有字符都在`0-9`之间，才校验通过
+所有字符都在`0-9`之间，才校验通过，结果返回`true`或者`false`。
 
 #### digits(number)
 
@@ -112,7 +112,7 @@ console.log(this.$u.test.digits('2020'));
 
 ### 是否身份证号
 
-身份证号，包括尾数为"X"的类型，可以校验通过
+身份证号，包括尾数为"X"的类型，可以校验通过，结果返回`true`或者`false`。
 
 #### idCard(idCard)
 
@@ -125,7 +125,7 @@ console.log(this.$u.test.idCard('110101199003070134'));
 
 ### 是否车牌号
 
-可以校验旧车牌号和新能源类型车牌号
+可以校验旧车牌号和新能源类型车牌号，结果返回`true`或者`false`。
 
 #### carNo(carNo)
 
@@ -138,7 +138,7 @@ console.log(this.$u.test.carNo('京A88888'));
 
 ### 是否金额
 
-最多两位小数，可以带千分位
+最多两位小数，可以带千分位，结果返回`true`或者`false`。
 
 #### amount(amount)
 
@@ -151,7 +151,7 @@ console.log(this.$u.test.amount('3,233.08'));
 
 ### 是否汉字
 
-可以为单个汉字，或者汉字组成的字符串
+可以为单个汉字，或者汉字组成的字符串，结果返回`true`或者`false`。
 
 #### chinese(zh)
 
@@ -164,7 +164,7 @@ console.log(this.$u.test.chinese('更上一层楼'));
 
 ### 是否字母
 
-只能为"a-z"或者"A-Z"之间的字符
+只能为"a-z"或者"A-Z"之间的字符，结果返回`true`或者`false`。
 
 #### letter(en)
 
@@ -176,7 +176,7 @@ console.log(this.$u.test.letter('uView'));
 
 ### 是否字母或者数字
 
-只能是字母或者数字
+只能是字母或者数字，结果返回`true`或者`false`。
 
 #### enOrNum(str)
 
@@ -189,7 +189,7 @@ console.log(this.$u.test.enOrNum('uView'));
 
 ### 是否包含某个值
 
-字符串中是否包含某一个子字符串，区分大小写
+字符串中是否包含某一个子字符串，区分大小写，结果返回`true`或者`false`。
 
 #### contains(str, subStr)
 
@@ -203,7 +203,7 @@ console.log(this.$u.test.contains('uView', 'View'));
 
 ### 数值是否在某个范围内
 
-如30在"29-35"这个范围内，不在"25-28"这个范围内
+如30在"29-35"这个范围内，不在"25-28"这个范围内，结果返回`true`或者`false`。
 
 #### range(number, range)
 
@@ -217,7 +217,7 @@ console.log(this.$u.test.range(35, [30, 34]));
 
 ### 字符串长度是否在某个范围内
 
-如"abc"长度为3，范围在"2-5"这个区间
+如"abc"长度为3，范围在"2-5"这个区间，结果返回`true`或者`false`。
 
 #### rangeLength(str, range)
 

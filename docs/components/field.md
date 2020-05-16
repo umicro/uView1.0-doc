@@ -228,7 +228,7 @@ export default {
 |-------------  |---------------- |---------------|------------------ |-------- |
 | type | 输入框的类型 | String  | text | textarea |
 | icon | `label`左边的图标，限uView的图标名称 | String | - | - |
-| right-icon | 输入框右边的 | Boolean  | false | true |
+| right-icon | 输入框右边的图标名称，限uView的图标名称 | String  | - | - |
 | required | 是否必填，左边您显示红色"*"号 | Boolean  | false | true |
 | label | 输入框左边的文字提示 | String  | - | - |
 | password | 是否密码输入方式(用点替换文字)，`type`为`text`时有效 | Boolean  | false | true |

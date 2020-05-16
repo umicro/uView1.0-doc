@@ -41,7 +41,7 @@ uni-app不支持将SCSS变量相关的样式通过`App.vue`引入，为了统一
 
 #### 4. 配置easycom组件模式
 
-easycom功能可以让用户无需安装、引用、注册，三个步骤后才能使用组件，详见[easycom文档](https://uni-appdcloud.io/collocation/pages?id=easycom)
+easycom功能可以让用户无需安装、引用、注册，三个步骤后才能使用组件，详见[easycom文档](https://uniapp.dcloud.io/collocation/pages?id=easycom)
 
 easycom的另一个最大的特点是，它是**按需引入**的，所以您引入了整个uView组件，即使只用到了`button`组件，最终打包的时候只会把`button`打包进去，其他的组件都会被剔除。  
 

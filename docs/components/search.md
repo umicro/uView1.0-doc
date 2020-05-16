@@ -78,7 +78,7 @@
 - 通过`bg-color`设置是搜索组件背景颜色
 
 ```html
-<u-search :input-align="center" height="70"></u-search>
+<u-search input-align="center" height="70"></u-search>
 ```
 
 ### API
@@ -101,6 +101,7 @@
 | animation | 是否开启动画，见上方说明 | Boolean | false | true |
 | value | 输入框初始值 | String | - | - |
 | height | 输入框高度，单位rpx | String \| Number | 64 | - |
+| maxlength | 输入框最大可输入长度，默认无限制 | String \| Number | -1 | - |
 
 ### Events
 

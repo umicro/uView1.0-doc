@@ -138,6 +138,8 @@ module.exports = {
 							collapsable: false,
 							sidebarDepth: 0,
 							children: [
+								'/components/line',
+								'/components/card',
 								'/components/mask',
 								'/components/noNetwork',
 								'/components/grid',
@@ -260,6 +262,8 @@ module.exports = {
 			'/components/common',
 			'/components/changelog',
 			'/components/customIcon',
+			'/components/line',
+			'/components/card',
 			'/components/globalVariable',
 			'/components/color',
 			'/components/icon',

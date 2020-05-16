@@ -83,6 +83,8 @@
 | active-color | 选中的星星颜色 | String | #FA3534 | - |
 | gutter | 星星之间的距离 | String \| Number | 10 | - |
 | min-count | 最少选中星星的个数 | String \| Number | 0 | - |
+| active-icon | 选中时的图标名，只能为uView的内置图标 | String | star-fill | - |
+| inactive-color | 未选中时的图标名，只能为uView的内置图标 | String | star | - |
 
 <!-- | allow-half | 是否允许半星选择 | Boolean | false | true | -->
 

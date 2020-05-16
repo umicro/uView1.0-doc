@@ -329,7 +329,10 @@ lists = [
 | upload-text | 选择图片按钮的提示文字 | Boolean  | 选择图片 | - |
 | auto-upload | 选择完图片是否自动上传，见上方说明 | Boolean  | true | false |
 | show-tips | 特殊情况下是否自动提示toast，见上方说明 | Boolean  | true | false |
-| show-upload-list | 是否显示组件内部的图片预览 | Boolean  | true | false |
+| del-bg-color | 右上角删除图标的颜色，只能为uView内置图标 | String  | close | - | | 是否显示组件内部的图片预览 | Boolean  | true | false |
+| del-icon | 右上角删除图标名称，只能为uView内置图标 | String  | close | - |
+| del-bg-color | 右上角关闭按钮的背景颜色 | String  | #fa3534 | - |
+| del-color | 右上角关闭按钮图标的颜色 | String  | #ffffff | - |
 
 
 ### Methods
