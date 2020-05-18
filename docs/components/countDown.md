@@ -105,7 +105,7 @@
 				timestamp: 86400
 			}
 		},
-		nethods: {
+		methods: {
 			// 事件触发，每秒一次
 			change(timestamp) {
 				console.log(timestamp);

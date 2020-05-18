@@ -14,8 +14,8 @@ uni-app2018年初发布以来，一直蓬勃发展，一派欣欣向荣，社区
 
 因此，uView应运而生，uView的目标是成为uni-app生态最优秀的UI框架。  
 
-关于uView的取名来由，首字母`u`来自于uni-app首字母uni-app是基于Vue.js，Vue和View(延伸为UI、视图之意)同音，同时`view`组件uni-app中
-最基础，最重要的组件，故取名uView，表达源于uni-appVue之意，同时在此也对它们表示感谢。
+关于uView的取名来由，首字母`u`来自于uni-app首字母，uni-app是基于Vue.js，Vue和View(延伸为UI、视图之意)同音，同时`view`组件uni-app中
+最基础，最重要的组件，故取名uView，表达源于uni-app和Vue之意，同时在此也对它们表示感谢。
 
 
 #### 适用领域
@@ -23,7 +23,7 @@ uni-app2018年初发布以来，一直蓬勃发展，一派欣欣向荣，社区
 uView是uni-app生态专用的UI框架，uni-app 是一个使用 Vue.js 开发所有前端应用的框架，开发者编写一套代码，
 可发布到iOS、Android、H5、以及各种小程序(微信/支付宝/百度/头条/QQ/钉钉)等多个平台(引言自uni-app网)。  
 
-说明，由于uni-app前暂未支持编译到PC端，所以uView目前也不适用于PC端，如uni-app兼容了PC端，uView也会第一时间跟进适配。
+说明，由于uni-app目前暂未支持编译到PC端，所以uView目前也不适用于PC端，如uni-app兼容了PC端，uView也会第一时间跟进适配。
 
 
 #### 版权信息

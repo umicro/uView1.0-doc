@@ -101,7 +101,11 @@
 | animation | 是否开启动画，见上方说明 | Boolean | false | true |
 | value | 输入框初始值 | String | - | - |
 | height | 输入框高度，单位rpx | String \| Number | 64 | - |
-| maxlength | 输入框最大可输入长度，默认无限制 | String \| Number | -1 | - |
+| search-icon-color | 搜索图标的颜色，默认同输入框字体颜色 | String | - | - |
+| color | 输入框字体颜色 | String | #606266 | - |
+| placeholder-color | placeholder的颜色 | String | #909399 | - |
+| margin | 组件与其他上下左右元素之间的距离，带单位的字符串形式，如"30rpx"、"30rpx 20rpx"等写法 | String | - | - |
+
 
 ### Events
 

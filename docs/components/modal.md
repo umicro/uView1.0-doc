@@ -100,7 +100,7 @@
 ```html
 <template>
 	<view class="">
-		<u-modal v-model="show" @confirm="confirm" :async-close="true"></u-modal>
+		<u-modal v-model="show" @confirm="confirm" ref="uModal" :async-close="true"></u-modal>
 		<u-button @click="showModal">弹起Modal</u-button>
 	</view>
 </template>
@@ -121,7 +121,10 @@ export default {
 		},
 		confirm() {
 			setTimeout(() => {
+				// 3秒后自动关闭
 				this.show = false;
+				// 如果不想关闭，而单是清除loading状态，需要通过ref手动调用方法
+				// this.$refs.uModal.clearLoading();
 			}, 3000)
 		}
     }
@@ -204,6 +207,14 @@ export default {
 | cancel | 点击取消按钮时触发 | - |
 
 
+### Method
+
+此方法需要通过ref调用，详见上方的"异步关闭"
+
+|事件名|说明|
+|:-|:-|:-|
+| clearLoading | 异步控制时，通过调用此方法，可以不关闭Modal，而单是清除loading状态 |
+
 
 ### Slots
 
@@ -215,5 +226,9 @@ export default {
 <style scoped>
 h3[id=slots] + table thead tr th:nth-child(2){
 	width: 50%;
+}
+
+h3[id=method] + table thead tr th:nth-child(2){
+	width: 70%;
 }
 </style>

@@ -3,7 +3,7 @@
 <demo-model url="/pages/componentsA/keyboard/index"></demo-model>
 
 
-此为uViw自定义的键盘面板，内含了数字键盘，车牌号键，身份证号键盘3中模式，都有可以打乱按键顺序的选项。
+此为uView自定义的键盘面板，内含了数字键盘，车牌号键，身份证号键盘3中模式，都有可以打乱按键顺序的选项。
 
 ### 平台差异说明
 

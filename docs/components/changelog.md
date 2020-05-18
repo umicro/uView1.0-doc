@@ -10,6 +10,50 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>1.2.7</h2>
+				</div>
+				<p><code>2020-05-18</code></p>
+				<ul>
+					<li>
+						<span class="add">新增</span>
+						瀑布流新增清空列表的clear方法和移除某条数据的remove方法
+					</li>
+					<li>
+						<span class="add">新增</span>
+						给Modal弹窗添加clearLoading方法，可以在异步回调中清除loading状态
+					</li>
+					<li>
+						<span class="add">新增</span>
+						给popup弹窗组件添加控制关闭的图标
+					</li>
+					<li>
+						<span class="add">新增</span>
+						line线条组件增加margin参数
+					</li>
+					<li>
+						<span class="add">新增</span>
+						search搜索框组件添加控制图标和字体颜色的参数
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化card卡片组件的内部样式
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复http请求loading第二次以后无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复微信小程序Link链接组件mp-tips参数无效的问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>1.2.6</h2>
 				</div>
 				<p><code>2020-05-16</code></p>

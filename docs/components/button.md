@@ -154,7 +154,7 @@ uView已对接uni-app档关于uni-app方button组件](https:uni-app.dcloud.io/co
 
 |属性名|说明|类型|默认值|可选值|平台差异说明|
 |:-|:-|:-|:-|:-|:-|
-|click|按钮点击|Handler|-|
+|click|按钮点击，请勿使用`@tap`点击事件，微信小程序无效|Handler|-|
 |getphonenumber|open-type="getPhoneNumber"时有效|Handler|微信小程序|
 |getuserinfo|用户点击该按钮时，会返回获取到的用户信息，从返回参数的detail中获取到的值同uni.getUserInfo|Handler|微信小程序|
 |error|当使用开放能力时，发生错误的回调|Handler|微信小程序|

@@ -29,7 +29,7 @@
 `v-slot:left="list"`，这里的`list`变量名为用户自定义的(意味着您可以起名叫`data`都是没问题的)，它为一个对象，它内部分别有`leftList`和`rightList`，用于
 渲染左右两列的数据，见如下完整示例：
 
-#### 核心代码
+### 核心代码
 ```html
 <u-waterfall :flow-list="flowList">
 	<template v-slot:left="{leftList}">
@@ -46,71 +46,101 @@
 ```
 
 
+### 移除或清空数据
 
-#### 完整应用示例
+移除或者清空，都需要通过`ref`调用组件内部的方法。
+
+1. 移除数据
+
+组件内部方法名为`remove`，需要传入"id"值，这个"id"键值的名称配置参数为`idKey`(默认`id`)，如下：
+
+假设您的数据为:
+
+```js
+let arr = [
+	{idx: 1, name: 'lisa'},
+	{idx: 2, name: 'mary'}
+]
+```
+
+那么您应该配置`idKey`为`idx`。
+
+2. 清空数据
+
+通过`ref`手动调用组件内部的`clear`方法，可以清空左右两列的数据。
+
+说明：具体实现方法，请见下方的示例代码
+
+
+### 完整应用示例
 
 ```html
 <template>
 	<view class="wrap">
-		<u-waterfall :flowList="flowList">
+		<u-button @click="clear">清空列表</u-button>
+		<u-waterfall :flowList="flowList" ref="uWaterfall">
 			<template v-slot:left="{leftList}">
-					<view class="demo-warter" v-for="(item, index) in leftList" :key="index">
-						<!-- 警告：微信小程序不支持嵌入lazyload组件，请自行如下使用image标签 -->
-						<!-- #ifndef MP-WEIXIN -->
-						<u-lazy-load threshold="-450" border-radius="10" :image="item.image" :index="index"></u-lazy-load>
-						<!-- #endif -->
-						<!-- #ifdef MP-WEIXIN -->
-						<view class="demo-img-wrap">
-							<image class="demo-image" :src="item.image" mode="widthFix"></image>
+				<view class="demo-warter" v-for="(item, index) in leftList" :key="index">
+					<!-- 警告：微信小程序不支持嵌入lazyload组件，请自行如下使用image标签 -->
+					<!-- #ifndef MP-WEIXIN -->
+					<u-lazy-load threshold="-450" border-radius="10" :image="item.image" :index="index"></u-lazy-load>
+					<!-- #endif -->
+					<!-- #ifdef MP-WEIXIN -->
+					<view class="demo-img-wrap">
+						<image class="demo-image" :src="item.image" mode="widthFix"></image>
+					</view>
+					<!-- #endif -->
+					<view class="demo-title">
+						{{item.title}}
+					</view>
+					<view class="demo-price">
+						{{item.price}}元
+					</view>
+					<view class="demo-tag">
+						<view class="demo-tag-owner">
+							自营
 						</view>
-						<!-- #endif -->
-						<view class="demo-title">
-							{{item.title}}
-						</view>
-						<view class="demo-price">
-							{{item.price}}元
-						</view>
-						<view class="demo-tag">
-							<view class="demo-tag-owner">
-								自营
-							</view>
-							<view class="demo-tag-text">
-								放心购
-							</view>
-						</view>
-						<view class="demo-shop">
-							{{item.shop}}
+						<view class="demo-tag-text">
+							放心购
 						</view>
 					</view>
+					<view class="demo-shop">
+						{{item.shop}}
+					</view>
+					<!-- 微信小程序无效，因为它不支持在template中引入组件 -->
+					<u-icon name="close-circle-fill" color="#fa3534" size="34" class="u-close" @click="remove(item.id)"></u-icon>
+				</view>
 			</template>
 			<template v-slot:right="{rightList}">
-					<view class="demo-warter" v-for="(item, index) in rightList" :key="index">
-						<!-- #ifndef MP-WEIXIN -->
-						<u-lazy-load threshold="-450" border-radius="10" :image="item.image" :index="index"></u-lazy-load>
-						<!-- #endif -->
-						<!-- #ifdef MP-WEIXIN -->
-						<view class="demo-img-wrap">
-							<image class="demo-image" :src="item.image" mode="widthFix"></image>
+				<view class="demo-warter" v-for="(item, index) in rightList" :key="index">
+					<!-- #ifndef MP-WEIXIN -->
+					<u-lazy-load threshold="-450" border-radius="10" :image="item.image" :index="index"></u-lazy-load>
+					<!-- #endif -->
+					<!-- #ifdef MP-WEIXIN -->
+					<view class="demo-img-wrap">
+						<image class="demo-image" :src="item.image" mode="widthFix"></image>
+					</view>
+					<!-- #endif -->
+					<view class="demo-title">
+						{{item.title}}
+					</view>
+					<view class="demo-price">
+						{{item.price}}元
+					</view>
+					<view class="demo-tag">
+						<view class="demo-tag-owner">
+							自营
 						</view>
-						<!-- #endif -->
-						<view class="demo-title">
-							{{item.title}}
-						</view>
-						<view class="demo-price">
-							{{item.price}}元
-						</view>
-						<view class="demo-tag">
-							<view class="demo-tag-owner">
-								自营
-							</view>
-							<view class="demo-tag-text">
-								放心购
-							</view>
-						</view>
-						<view class="demo-shop">
-							{{item.shop}}
+						<view class="demo-tag-text">
+							放心购
 						</view>
 					</view>
+					<view class="demo-shop">
+						{{item.shop}}
+					</view>
+					<!-- 微信小程序无效，因为它不支持在template中引入组件 -->
+					<u-icon name="close-circle-fill" color="#fa3534" size="34" class="u-close" @click="remove(item.id)"></u-icon>
+				</view>
 			</template>
 		</u-waterfall>
 		<u-loadmore bg-color="rgb(240, 240, 240)" :status="loadStatus" @loadmore="addRandomData"></u-loadmore>
@@ -213,6 +243,12 @@
 					item.id = this.$u.guid();
 					this.flowList.push(item);
 				}
+			},
+			remove(id) {
+				this.$refs.uWaterfall.remove(id);
+			},
+			clear() {
+				this.$refs.uWaterfall.clear();
 			}
 		}
 	}
@@ -229,8 +265,15 @@
 	.demo-warter {
 		border-radius: 8px;
 		margin: 5px;
-		background-color: #FFFFFF;
+		background-color: #ffffff;
 		padding: 8px;
+		position: relative;
+	}
+	
+	.u-close {
+		position: absolute;
+		top: 32rpx;
+		right: 32rpx;
 	}
 	
 	.demo-image {
@@ -308,4 +351,23 @@
 |-------------  |---------------- |---------------|------------------ |-------- |
 | flow-list | 用于渲染的数据 | Array | [ ] | - |
 | add-time | 单条数据添加到队列的时间间隔，单位ms，见上方注意事项说明  | String \| Number | 200 | - |
+| idKey | 数据的唯一值的键名，见上方说明  | String | id | - |
 
+
+
+### Methods
+
+这些为组件内部的方法，需要通过`ref`调用
+
+| 参数          | 说明            | 
+|-------------  |---------------- |
+| clear | 清空列表数据 | 
+| remove(id) | `id`为唯一的"id"值，见上方说明  | 
+
+
+
+<style scoped>
+h3[id=methods] + p + table thead tr th:nth-child(2){
+	width: 50%;
+}
+</style>

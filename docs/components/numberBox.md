@@ -67,7 +67,7 @@
 - 通过`input-height`参数设置输入框和按钮的高度，单位都是rpx
 
 ```html
-<u-number-box :input-height="100" :input-height="60"></u-number-box>
+<u-number-box :input-width="100" :input-height="60"></u-number-box>
 ```
 
 ### API

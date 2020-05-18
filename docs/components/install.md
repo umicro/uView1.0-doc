@@ -9,7 +9,7 @@ uView已正式发布**公测版**，欢迎[交流反馈](/cooperation/about.html
 
 :::tip 说明
 由于uView使用`easycom`模式，让您无需引入组件即可直接使用，但是此功能需要Hbuilder X 2.5.5及以上版本才支持，详见[配置easycom组件模式](/components/quickstart.html#_3-配置easycom组件模式)。
-`easycom`打包的时候是**按需引入**的，您可以放心引入uViw的整个组件库，打包的会自动剔除您没有使用的组件。
+`easycom`打包的时候是**按需引入**的，您可以放心引入uView的整个组件库，打包的会自动剔除您没有使用的组件。
 :::
 
 ### npm安装
@@ -51,7 +51,7 @@ npm update uview-ui
 
 <br>
 <div @click="downloadPost(2)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_1.2.6.zip">uView_1.2.6.zip</a>
+	下载地址：<a href="https://download.uviewui.com/uView_1.2.7.zip">uView_1.2.7.zip</a>
 </div>
 <br>
 <br>
@@ -71,7 +71,7 @@ npm update uview-ui
 
 <br>
 <div @click="downloadPost(1)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_demo_1.2.6.zip">uView_demo_1.2.6.zip</a>
+	下载地址：<a href="https://download.uviewui.com/uView_demo_1.2.7.zip">uView_demo_1.2.7.zip</a>
 </div>
 <br>
 <br>
@@ -84,7 +84,7 @@ npm update uview-ui
 
 <br>
 <div @click="downloadPost(3)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_1.2.6_full.zip">uView_1.2.6_full.zip</a>
+	下载地址：<a href="https://download.uviewui.com/uView_1.2.7_full.zip">uView_1.2.7_full.zip</a>
 </div>
 <br>
 <br>

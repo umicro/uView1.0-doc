@@ -14,7 +14,7 @@ module.exports = {
 		}],
 		['meta', {
 			name: 'keywords',
-			content: 'uview,uView,uviewui,uview ui,uviewUI,uViewui,uViewUI,uView UI,uni ui,uni UI,uniapp ui,ui,UI框架,uniapp ui框架,uniapp UI'
+			content: 'uview,uView,uviewui,uview ui,uviewUI,uViewui,uViewUI,uView UI,uni ui,uni UI,uni-app ui框架,uni-app UI框架,uniapp ui,ui,UI框架,uniapp ui框架,uniapp UI'
 		}],
 	],
 	
@@ -52,7 +52,7 @@ module.exports = {
 					collapsable: false,
 					sidebarDepth: 0,
 					children: [
-						['/components/addQQGroup', '点击加QQ群反馈交流'],
+						['/components/addQQGroup', '加QQ群交流反馈'],
 						['/components/intro', '介绍'],
 						['/components/install', '安装'],
 						['/components/setting', '配置'],
