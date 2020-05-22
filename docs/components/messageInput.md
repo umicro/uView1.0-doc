@@ -55,6 +55,12 @@
 <u-message-input :dot-fill="true"></u-message-input>
 ```
 
+
+### 禁止唤起系统键盘
+
+uView有[键盘](/components/keyboard.html)组件，如果您想结合键盘组件进行自定义的输入效果，就需要设置`disabled-keyboard`为`true`，来保证点击
+输入框时不会触发系统自带的键盘，否则会造成冲突。
+
 ### 事件回调
 
 - 每当输入内容发生改变，会回调一个`change`事件，内容为当前输入的字符串，如"395"
@@ -98,6 +104,7 @@
 | active-color | 当前激活输入框的样式 | String | #2979ff | - |
 | focus | 非激活输入框的样式，文字颜色同此值 | String | #606266 | - |
 | width | 输入框的宽度(高等于宽)，单位rpx | String \| Number | 80 | - |
+| disabled-keyboard | 禁止点击输入框唤起系统键盘 | Boolean  | false | true |
 
 ### Events
 

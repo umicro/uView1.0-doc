@@ -9,9 +9,10 @@
 - 按钮`size`值有更多的尺寸可选
 
 ::: warning 注意
-此组件内部使用uni-app`button`组件为基础，除了开头中所说的增加的功能，另外暴露出来的props属性和官方组件的属性完全一致，
+1. 此组件内部使用uni-app`button`组件为基础，除了开头中所说的增加的功能，另外暴露出来的props属性和官方组件的属性完全一致，
 uni-app`button`组件比较特殊，因为它有一些其他小程序平台的特定能力，请参考文档后面的参数列表，更详细说明请参uni-app方文档：  
-[uni-app方button组件](https:/uniapp.dcloud.io/component/button)
+[uni-app方button组件](https:/uniapp.dcloud.io/component/button)  
+2. 由于微信小程序的限制，在微信小程序中设置了`form-type`的`u-button`无法触发`form`组件的`submit`事件(H5和APP正常)，详见微信小程序文档[Bug & Tip部分](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)
 :::
 
 ### 平台差异说明
@@ -150,7 +151,8 @@ uView已对接uni-app档关于uni-app方button组件](https:uni-app.dcloud.io/co
 
 ### Events
 
-**说明**：目前经测试(Hbuilder X 2.6.8)，在H5，APP，微信小程序，可以直接对组件监听`tap`事件，等同组件内部发出的`click`事件效果。
+**说明**：目前经测试(Hbuilder X 2.6.8)，在H5，APP，可以直接对组件监听`tap`事件，等同组件内部发出的`click`事件效果，某些HX版本上，
+微信小程序对组件使用`tap`事件可能无效，故建议对按钮组件的点击事件监听统一使用组件内部发出的`click`事件。
 
 |属性名|说明|类型|默认值|可选值|平台差异说明|
 |:-|:-|:-|:-|:-|:-|

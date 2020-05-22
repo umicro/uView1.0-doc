@@ -88,6 +88,7 @@
 | input-height | 输入框和按钮的高度，单位rpx | String \| Number | 50 | - |
 | index | 事件回调时用以区分当前发生变化的是哪个输入框 | String \| Number | - | - |
 | disabled-input | 是否禁止输入框手动输入值 | Boolean | false | true |
+| cursor-spacing | 指定光标于键盘的距离，避免键盘遮挡输入框，单位rpx | String \| Number | 200 | - |
 
 ### Events
 

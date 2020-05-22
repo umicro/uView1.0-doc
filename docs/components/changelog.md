@@ -10,6 +10,64 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>1.2.8</h2>
+				</div>
+				<p><code>2020-05-22</code></p>
+				<ul>
+					<li>
+						<span class="add">新增</span>
+						Picker选择器组件新增单列和多列模式，详见：
+						<a href="/components/picker.html" target="_blank">Picker 选择器</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						Waterfall瀑布流组件新增清空和移除数据的组件方法，本次升级需要修改原来的:flow-list为v-model，详见：
+						<a href="/components/changeGuide.html" target="_blank">升级指南</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						给popup弹窗组件添加控制关闭的图标
+					</li>
+					<li>
+						<span class="add">新增</span>
+						新增Keyboard键盘组件无遮罩时，可以点击透明层关闭键盘的特性
+					</li>
+					<li>
+						<span class="add">新增</span>
+						 MessageInput验证码输入框组件新增disabled-keyboard参数，用于禁止原生键盘
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						重构圆型进度条组件，解决微信小程序可能报错的问题，新增动态减少百分比的功能
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化Tabs组件初次加载时的动画问题以及动态修改标签长度时重置current值
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化Tag标签组件的内部逻辑
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化NoticeBar横线滚动通知的事件问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复Navbar自定义导航栏title-size参数无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复slider滑块无法触发moving事件的问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>1.2.7</h2>
 				</div>
 				<p><code>2020-05-18</code></p>

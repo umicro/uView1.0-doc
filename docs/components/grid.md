@@ -185,7 +185,6 @@
 |-------------  |---------------- |---------------|------------------ |-------- |
 | col | 宫格的列数  | String \| Number | 3 | - |
 | border | 是否显示宫格的边框  | Boolean	 | true | false |
-| hover-class | 点击宫格的时候，是否显示按下的灰色背景 | Boolean  | false | true |
 | align | 宫格的对齐方式，用于控制只有一两个宫格时的对齐场景  | String | left | center / right |
 | hover-class | 样式类名，按下时有效，样式必须写在根目录的`App.vue`或通过其引入的全局样式中才有效，`none`为无效果，作用于头部标题区域  | String | u-hover-class | none / 其他 |
 

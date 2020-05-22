@@ -132,6 +132,7 @@
 <u-keyboard mode="number" v-model="show" :mask="false"></u-keyboard>
 ```
 
+
 ### API
 
 ### Props

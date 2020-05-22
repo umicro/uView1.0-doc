@@ -10,7 +10,8 @@
 <custom-block></custom-block>
 
 :::warning 注意
-在微信小程序中，结合懒加载组件无效，见下方说明
+1. 在微信小程序中，结合懒加载组件无效，见下方说明
+2. 从1.2.8版本起，新增了清空列表和移除某条数据的组件方法，原`flow-list`参数，需要改为`v-model`接收传值
 :::
 
 ### 平台差异说明
@@ -31,15 +32,15 @@
 
 ### 核心代码
 ```html
-<u-waterfall :flow-list="flowList">
+<u-waterfall v-model="flowList">
 	<template v-slot:left="{leftList}">
 		<view v-for="(item, index) in leftList" :key="index">
-			<!-- 这里编写您的内容，item为您传递给flow-list数的组元素 -->
+			<!-- 这里编写您的内容，item为您传递给v-model的数组元素 -->
 		</view>
 	</template>
 	<template v-slot:right="{rightList}">
 		<view v-for="(item, index) in rightList" :key="index">
-			<!-- 这里编写您的内容，item为您传递给flow-list数组的元素 -->
+			<!-- 这里编写您的内容，item为您传递给v-model的数组元素 -->
 		</view>
 	</template>
 </u-waterfall>
@@ -78,7 +79,7 @@ let arr = [
 <template>
 	<view class="wrap">
 		<u-button @click="clear">清空列表</u-button>
-		<u-waterfall :flowList="flowList" ref="uWaterfall">
+		<u-waterfall v-model="flowList" ref="uWaterfall">
 			<template v-slot:left="{leftList}">
 				<view class="demo-warter" v-for="(item, index) in leftList" :key="index">
 					<!-- 警告：微信小程序不支持嵌入lazyload组件，请自行如下使用image标签 -->
@@ -333,7 +334,7 @@ let arr = [
 ### 注意事项
 
 1. 上方的示例中，结合了uView的[lazyload懒加载](/components/lazyLoad.html)和[loadmore加载更多](/components/loadmore.html)组件，具体用法，请见文档。  
-2. 用需要通过`flow-list`参数，将数据传递给组件，组件内部将每次新增的数据，通过动态查询左右列的高度
+2. 需要通过`v-model`传递参数，将数据传递给组件，组件内部将每次新增的数据，通过动态查询左右列的高度
 添加到高度低的一列。  
 3. 组件有一个`add-time`参数，用于将单条数据添加到队列的时间间隔，因为图片加载是需要时间的，所以瀑布流左右列
 的高度会不定时改变，`add-time`值越大，对程序效果越好，但是对用户来说，越大值可能就是以能感受的速度一个一个添加
@@ -347,9 +348,10 @@ let arr = [
 
 ### IndexBar Props
 
+注意：1.2.8版本后，通过`v-model`双向绑定传递参数，因为组件内部需要修改父组件的值。
+
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| flow-list | 用于渲染的数据 | Array | [ ] | - |
 | add-time | 单条数据添加到队列的时间间隔，单位ms，见上方注意事项说明  | String \| Number | 200 | - |
 | idKey | 数据的唯一值的键名，见上方说明  | String | id | - |
 

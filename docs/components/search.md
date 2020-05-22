@@ -105,6 +105,7 @@
 | color | 输入框字体颜色 | String | #606266 | - |
 | placeholder-color | placeholder的颜色 | String | #909399 | - |
 | margin | 组件与其他上下左右元素之间的距离，带单位的字符串形式，如"30rpx"、"30rpx 20rpx"等写法 | String | - | - |
+| maxlength | 输入框最大能输入的长度，-1为不限制长度 | String \| Number | -1 | - |
 
 
 ### Events
@@ -119,3 +120,10 @@
 | custom | 用户点击右侧控件时触发 | value：输入框的值 | - |
 | blur | 输入框失去焦点时触发 | value：输入框的值 | - |
 | focus | 输入框获得焦点时触发 | value：输入框的值 | - |
+
+
+<style scoped>
+h3[id=props] + table thead tr th:nth-child(2){
+	width: 35%;
+}
+</style>

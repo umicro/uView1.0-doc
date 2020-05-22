@@ -201,7 +201,6 @@ flex: 1;
 ```css
 .u-flex {
 	display: flex;
-	flex-wrap: wrap;
 	flex-direction: row;
 	align-items: center;
 }
@@ -222,14 +221,14 @@ flex: 1;
 ```
 
 :::tip 提示
-当我们写这些跟`flex`相关的类名时，总应该把`u-flex`写在`class`多个类名的左边，因为`u-flex`是一个集合类，如果你不想要其中的某个属性，如`flex-wrap: wrap`
+当我们写这些跟`flex`相关的类名时，总应该把`u-flex`写在`class`多个类名的左边，因为`u-flex`是一个集合类，如果你不想要其中的某个属性，如`align-items: center`
 ，可以通过右边的类名覆盖它。
 :::
 
-覆盖`u-flex`中的`flex-wrap: wrap`(换行)，改为不换行`u-flex-nowrap`：
+覆盖`u-flex`中的`align-items: center`(对齐)，改为顶部对齐`u-col-top`：
 
 ```html
-<view class="u-flex u-flex-nowrap">
+<view class="u-flex u-col-top">
 	......
 </view>
 ```
@@ -239,14 +238,13 @@ flex: 1;
 ```css
 .u-flex {
 	display: flex;
-	flex-wrap: wrap;
 	flex-direction: row;
 	align-items: center;
 }
 
-/* 由于flex-wrap: nowrap在后面，故覆盖了"u-flex"的flex-wrap: wrap */
-.u-flex-nowrap {
-	flex-wrap: nowrap;
+/* 由于align-items: flex-start在后面，故覆盖了"u-flex"的align-items: center */
+.u-col-top {
+	align-items: flex-start;
 }
 ```
 
