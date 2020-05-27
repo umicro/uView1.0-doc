@@ -12,6 +12,27 @@ uView已正式发布**公测版**，欢迎[交流反馈](/cooperation/about.html
 `easycom`打包的时候是**按需引入**的，您可以放心引入uView的整个组件库，打包的会自动剔除您没有使用的组件。
 :::
 
+
+### 下载安装
+
+使用下载的方式安装，能更方便阅读源码，但是每次升级都需要重新下载并覆盖`uview-ui`文件夹。
+
+- 如果您的项目是由HBuilder X创建的标准uni-app项目，解压后将`uview-ui`文件夹，复制到项目根目录。
+- 如果您的项目是由[vue-cli](https://uniapp.dcloud.io/quickstart?id=_2-%e9%80%9a%e8%bf%87vue-cli%e5%91%bd%e4%bb%a4%e8%a1%8c)模式创建的，
+请将下载解压的`uview-ui`文件夹放到项目的`src`文件夹中即可。
+
+
+**注意：**  此下载方式必须要按照[下载方式安装的配置](/components/downloadSetting.html)中的说明配置了才可用。
+
+<br>
+<div @click="downloadPost(2)" class="download-link">
+	下载地址：<a href="https://download.uviewui.com/uView_1.2.9.zip">uView_1.2.9.zip</a>
+</div>
+<br>
+<br>
+
+
+
 ### npm安装
 使用npm的方式安装，能更方便进行升级。  
 
@@ -38,23 +59,6 @@ npm update uview-ui
 ```
 
 
-### 下载安装
-
-使用下载的方式安装，能更方便阅读源码，但是每次升级都需要重新下载并覆盖`uview-ui`文件夹。
-
-- 如果您的项目是由HBuilder X创建的标准uni-app项目，解压后将`uview-ui`文件夹，复制到项目根目录。
-- 如果您的项目是由[vue-cli](https://uniapp.dcloud.io/quickstart?id=_2-%e9%80%9a%e8%bf%87vue-cli%e5%91%bd%e4%bb%a4%e8%a1%8c)模式创建的，
-请将下载解压的`uview-ui`文件夹放到项目的`src`文件夹中即可。
-
-
-**注意：**  此下载方式必须要按照[下载方式安装的配置](/components/downloadSetting.html)中的说明配置了才可用。
-
-<br>
-<div @click="downloadPost(2)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_1.2.9.zip">uView_1.2.9.zip</a>
-</div>
-<br>
-<br>
 
 ### 示例项目
 

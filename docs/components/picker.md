@@ -257,7 +257,7 @@ let params = {
 | show-time-tag | 时间模式时，是否显示后面的年月日中文提示  | Boolean | true | false |
 | z-index | 弹出时的`z-index`值 | String \| Number | 1075 | - |
 | range | 自定义选择的数据，mode=selector或mode=multiSelector时有效 | Array | [] | - |
-| range-key | 当`range`参数的元素为对象时，指定Object中的哪个key的值作为选择器显示内容，见上方说米 | String | - | - |
+| range-key | 当`range`参数的元素为对象时，指定Object中的哪个key的值作为选择器显示内容，见上方说明 | String | - | - |
 
 
 
