@@ -75,8 +75,7 @@ uView已经为用户考虑好了所有的情况，并详细指导您如何在外
 以下为可选的配置参数，**这个配置是一次配置，全局通用的**。
 
 ```js
-config = 
-{
+config = {
 	baseUrl: '', // 请求的本域名
 	method: 'POST',
 	// 设置为json，返回后会对数据进行一次JSON.parse()
@@ -86,6 +85,10 @@ config =
 	loadingTime: 800, // 在此时间内，请求还没回来的话，就显示加载中动画，单位ms
 	originalData: false, // 是否在拦截器中返回服务端的原始数据
 	loadingMask: true, // 展示loading的时候，是否给一个透明的蒙层，防止触摸穿透
+	// 配置请求头信息
+	header: {
+		'content-type': 'application/json;charset=UTF-8'
+	},
 }
 ```
 
@@ -112,7 +115,7 @@ Vue.use(httpInterceptor, app)
 app.$mount()
 ```
 
-下面为拦截器的具体内容：
+下面为配置信息的具体内容：
 
 ```js
 // common/http.interceptor.js
@@ -126,6 +129,10 @@ const install = (Vue, vm) => {
 		baseUrl: 'https://api.example.com',
 		loadingText: '努力加载中~',
 		loadingTime: 800,
+		// 设置自定义头部content-type
+		// header: {
+		// 	'content-type': 'xxx'
+		// }
 		// ......
 	});
 }

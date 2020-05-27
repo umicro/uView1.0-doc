@@ -15,6 +15,16 @@ uView为采用[MIT](https://baike.baidu.com/item/MIT/10772952)许可证的开源
 大学成立过创业公司，后来在一家上市公司担任技术负责人。  
 目前工作为uView的研发、迭代和推广。
 
+<br>
+
+### 研发组
+
+uView的理念是"挣脱束缚，向往自由"，目标是做uni-app生态的标杆，推动uni-app生态和互联网的发展。  
+uView免费开源，无需授权，欢迎商用。uView的发展也得到各个小伙伴的支持，我们一起为构建一个更加优秀的UI框架而努力。
+
+<team-member-item v-for="(item, index) in memberList" :key="index" :list="item"></team-member-item>
+
+<br>
 
 ### 文档
 
@@ -23,6 +33,7 @@ uView的文档，力求不留死角，把所有可能需要注意的地方，都
 文档写于2020年春节(新冠疫情期间)，由于没有带电脑回去，只能找出2012年上学时买的笔记本，日夜兼程，花了一个月时间，艰难的敲出了文档的一字一句。
 幸好，它虽老骥伏枥，却志在千里，使得uView成为一份良心的文档。
 
+<br>
 
 ### 展望未来
 
@@ -38,6 +49,7 @@ uView的目标是做成uniapp生态的标杆，自由且免费开源。
 
 请加作者QQ(注明加入uView开发组)：1416956117
 
+<br>
 
 ### 捐赠uView的研发
 
@@ -60,6 +72,7 @@ uView文档和源码全部开源免费，如果您认为uView帮到了您的开�
 	</div>
 </div>
 
+<br>
 
 ### 赞助商
 
@@ -67,6 +80,45 @@ uView拥有众多用户，且文档详尽，经得起推敲，受得住考验，
 我们会在适当的位置展示您的推广内容。  
 
 赞助请联系QQ(注明赞助)：1416956117
+
+
+
+<script>
+	export default {
+		data() {
+			return {
+				memberList: [
+					{
+						avatar: 'https://cdn.uviewui.com/uview/team/20200525151352.jpg',
+						name: '王博文',
+						job: '前端开发',
+						addr: '深圳',
+						duty: '负责uViw核心组件研发，各端兼容处理，社区日常管理等工作。',
+						intro: `丰富的移动端H5，微信公众号，小程序开发经验，擅长前端优化，有自己独自摸索和实践的优化方案，擅长思考总结，\
+								熟悉uniapp多端开发，适配，兼容处理。为人亲切，易相处，致力于互联网开源，在互联网拥有一席之地。`
+					},
+					{
+						avatar: 'https://cdn.uviewui.com/uview/team/9151E1673BCE.jpg',
+						name: '北桥',
+						job: '全栈开发',
+						addr: '在读学生',
+						csdn: 'https://me.csdn.net/qq_33162604',
+						duty: '负责uView核心组件研发，维护与升级，社区管理、宣传等工作',
+						intro: '多个项目开发经验，技术栈：原生安卓，java，前端，服务器等'
+					},
+					{
+						avatar: 'https://cdn.uviewui.com/uview/team/546BC1A58D6EA.jpg',
+						name: 'TtTao',
+						job: '全栈开发',
+						addr: '贵阳创业',
+						duty: '负责uView js工具库开发，测试、兼容处理、文档管理、视频教程等相关工作',
+						intro: '项目经验丰富，喜欢挑战新兴技术，对微服务、虚拟化容器有自己独到的见解，主要技术栈：Golang、Vue'
+					}
+				]
+			}
+		}
+	}
+</script>
 
 
 <style scoped>
@@ -92,3 +144,4 @@ uView拥有众多用户，且文档详尽，经得起推敲，受得住考验，
 	width: 60%;
 }
 </style>
+

@@ -96,7 +96,7 @@ uView提供了`length`来控制此种情况，此值可以是`数值`(单位rpx)
 | mask-close-able | 点击遮罩是否可以关闭弹出层  | Boolean | true | false |
 | custom-style | 用户自定义样式  | Object | - | - |
 | border-radius | 弹窗圆角值  | Number \| String | 0 | - |
-| z-index | 弹出内容的`z-index`值  | Number \| String | 1075 | - |
+| z-index | 弹出内容的`z-index`值  | Number \| String | 10075 | - |
 | closeable | 是否显示关闭图标  | Boolean | false | true |
 | close-icon | 关闭图标的名称，只能uView的内置图标  | String | close | - |
 | close-icon-pos | 自定义关闭图标位置，top-left为左上角，top-right为右上角，bottom-left为左下角，bottom-right为右下角  | String | top-right | top-left / bottom-left / bottom-right |

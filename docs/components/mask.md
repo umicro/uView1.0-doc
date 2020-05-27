@@ -89,7 +89,7 @@
 | 参数      | 说明        | 类型     |  默认值  |  可选值   |
 |-----------|-----------|----------|----------|---------|
 | show | 是否显示遮罩  | Boolean | false | true |
-| z-index | z-index 层级 | String \| Number  | 1070 | - |
+| z-index | z-index 层级 | String \| Number  | 10070 | - |
 | custom-style | 自定义样式对象，见上方说明 | Object  | - | - |
 | duration | 动画时长，单位毫秒 | String \| Number  | 300 | - |
 | zoom | 是否使用`scale`对这招进行缩放 | Boolean  | true | false |

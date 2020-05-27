@@ -10,6 +10,55 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>1.2.9</h2>
+				</div>
+				<p><code>2020-05-26</code></p>
+				<ul>
+					<li>
+						<span class="add">新增</span>
+						新增城市选择模板，详见：
+						<a href="/layout/citySelect.html" target="_blank">城市选择模板</a>
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						重构Grid宫格组件，各校小程序使用float布局，H5和APP使用flex布局
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化CircleProgress圆形进度条卡顿的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化tabsSwiper全屏选项卡滑块位置可能错乱的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						修改Field组件的名为button的slot为right
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复mask组件演示无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复Th组件的width参数带单位时无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复Picker单列和多列在微信小程序上可能存在的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						处理npm安装方式，mixin.js中条件编译无效，getRect方法带来的问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>1.2.8</h2>
 				</div>
 				<p><code>2020-05-22</code></p>

@@ -83,7 +83,7 @@ this.$refs.uToast.show({
 
 | 参数      | 说明        | 类型     |  默认值  |  可选值   |
 |-----------|-----------|----------|----------|---------|
-| z-index | toast展示时的`z-index`值  | String \| Number | 1090 | - |
+| z-index | toast展示时的`z-index`值  | String \| Number | 10090 | - |
 
 ### Params
 

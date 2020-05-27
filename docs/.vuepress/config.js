@@ -214,6 +214,7 @@ module.exports = {
 					['/layout/order', '订单列表'],
 					['/layout/login', '登录界面'],
 					['/layout/address', '收货地址'],
+					['/layout/citySelect', '城市选择'],
 				]
 			}],
 			'/js': [{

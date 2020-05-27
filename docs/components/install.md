@@ -51,13 +51,25 @@ npm update uview-ui
 
 <br>
 <div @click="downloadPost(2)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_1.2.8.zip">uView_1.2.8.zip</a>
+	下载地址：<a href="https://download.uviewui.com/uView_1.2.9.zip">uView_1.2.9.zip</a>
+</div>
+<br>
+<br>
+
+### 示例项目
+
+此方式为整个uView演示项目，里面有uView核心，组件演示，模板等，建议用户可以下载
+此项目运行用于查看UI演示效果，复制模板案例，通过里面的示例，可以快速掌握某一个组件的用法。
+
+<br>
+<div @click="downloadPost(3)" class="download-link">
+	下载地址：<a href="https://download.uviewui.com/uView_1.2.9_demo.zip">uView_1.2.9_demo.zip</a>
 </div>
 <br>
 <br>
 
 
-### 示例工程
+### 空白项目
 
 此方式为一个完整的uni-app示例工程(使用Hbuilder X创建，非[vue-cli](https://uniapp.dcloud.io/quickstart?id=_2-%e9%80%9a%e8%bf%87vue-cli%e5%91%bd%e4%bb%a4%e8%a1%8c)模式创建)，
 它适用于新启动的项目，其中已包含了uView，并且做好了所有配置，让您无需任何配置，开箱即用。
@@ -71,23 +83,11 @@ npm update uview-ui
 
 <br>
 <div @click="downloadPost(1)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_demo_1.2.8.zip">uView_demo_1.2.8.zip</a>
+	下载地址：<a href="https://download.uviewui.com/uView_1.2.9_default.zip">uView_1.2.9_default.zip</a>
 </div>
 <br>
 <br>
 
-
-### 演示项目
-
-此方式为整个uView演示项目，里面有uView核心，组件演示，模板等，建议用户可以下载
-此项目运行用于查看UI演示效果，复制模板案例，通过里面的示例，可以快速掌握某一个组件的用法。
-
-<br>
-<div @click="downloadPost(3)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_1.2.8_full.zip">uView_1.2.8_full.zip</a>
-</div>
-<br>
-<br>
 
 <br>
 

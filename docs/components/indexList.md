@@ -121,7 +121,7 @@
 | z-index | 锚点吸顶时的层级  | Number \| String | 965 | - |
 | sticky | 是否开启锚点自动吸顶  | Boolean | true | false |
 | offset-top | 锚点自动吸顶时与顶部的距离  | Number \| String | 0 | - |
-| highlight-color | 锚点和右边索引字符高亮颜色  | String | #2979ff | - |
+| active-color | 锚点和右边索引字符高亮颜色  | String | #2979ff | - |
 
 ### IndexAnchor Props
 
@@ -129,7 +129,7 @@
 |-------------  |---------------- |---------------|------------------ |-------- |
 | use-slot | 是否使用自定义内容的插槽  | Boolean | false | true |
 | index | 索引字符，如果定义了`use-slot`，此参数自动失效   | String \| Number | - | - |
-| custStyle | 自定义样式，对象形式，如"{color: 'red'}"  | Object | - | - |
+| custom-style | 自定义样式，对象形式，如"{color: 'red'}"  | Object | - | - |
 
 
 ### IndexBar Events
