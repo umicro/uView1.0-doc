@@ -75,13 +75,18 @@
 		}
 	}
 	
+	@media screen and (min-width: 1366px) {
+		.demo-model {
+			width: 270;
+			height: calc(270px * 143.6 / 70.9);
+			top: calc((100vh - 270px * 143.6 / 70.9 - 3.6rem) / 2 + 3.6rem);
+		}
+	}
+	
 	@media screen and (min-width: 1500px) {
 		.demo-model {
 			width: 310px;
 			height: calc(310px * 143.6 / 70.9);
-		}
-		
-		.demo-model {
 			top: calc((100vh - 310px * 143.6 / 70.9 - 3.6rem) / 2 + 3.6rem);
 		}
 	}
@@ -90,9 +95,6 @@
 		.demo-model {
 			width: 350px;
 			height: calc(350px * 143.6 / 70.9);
-		}
-		
-		.demo-model {
 			top: calc((100vh - 350px * 143.6 / 70.9 - 3.6rem) / 2 + 3.6rem);
 		}
 	}

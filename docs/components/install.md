@@ -22,7 +22,7 @@ uView已正式发布**公测版**，欢迎[交流反馈](/cooperation/about.html
 请将下载解压的`uview-ui`文件夹放到项目的`src`文件夹中即可。
 
 
-**注意：**  此下载方式必须要按照[下载方式安装的配置](/components/downloadSetting.html)中的说明配置了才可用。
+**注意：**  此安装方式必须要按照[下载方式安装的配置](/components/downloadSetting.html)中的说明配置了才可用。
 
 <br>
 <div @click="downloadPost(2)" class="download-link">
@@ -40,7 +40,7 @@ uView已正式发布**公测版**，欢迎[交流反馈](/cooperation/about.html
 无需手动npm安装`scss`，因为已内置`scss`。
 
 
-**注意：**  此下载方式必须要按照[npm方式安装的配置](/components/npmSetting.html)中的说明配置了才可用，且项目名称不能有**中文**字符。
+**注意：**  此安装方式必须要按照[npm方式安装的配置](/components/npmSetting.html)中的说明配置了才可用，且项目名称不能有**中文**字符。
 
 :::danger 注意！
 由于HX编译错误的原因的，目前(2020-05-06)不支持通过**cnpm**安装uView，这意味着您只能通过**npm**安装uView，如果您的网络无法使用**npm**，

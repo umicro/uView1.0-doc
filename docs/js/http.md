@@ -122,7 +122,7 @@ app.$mount()
 
 // 这里的Vue为Vue对象(非创建出来的实例)，vm为main.js中“Vue.use(httpInterceptor, app)”这一句的第二个参数，
 // 为一个Vue的实例，也即每个页面的"this"
-// 如果需要了解这个install方法是什么，请移步：https://uviewui.com/components/vueuse.html
+// 如果需要了解这个install方法是什么，请移步：https://uviewui.com/components/vueUse.html
 const install = (Vue, vm) => {
 	// 此为自定义配置参数，具体参数见上方说明
 	Vue.prototype.$u.http.setConfig({
@@ -261,7 +261,7 @@ export default {
 ```
 
 
-**实践：** 上面写完了请求配置(强烈建议)，请求拦截(可选，推荐)，响应拦截(可选，推荐)，下面为`post`何`get`请求的示例：
+**实践：** 上面写完了请求配置(强烈建议)，请求拦截(可选，推荐)，响应拦截(可选，推荐)，下面为`post`和`get`请求的示例：
 
 ```html
 // /pages/index/index.vue

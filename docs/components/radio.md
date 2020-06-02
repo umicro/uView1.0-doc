@@ -134,7 +134,7 @@ export default {
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| icon-size | 图标大小，单位rpx  | String \ Number | 24 | - |
+| icon-size | 图标大小，单位rpx  | String \ Number | 20 | - |
 | label-size | label字体大小，单位rpx  | String \ Number | 28 | - |
 | name | `radio`组件的标示符  | String \ Number | - | - |
 | shape | 形状，见上方说明 | String  | circle | square |
@@ -150,7 +150,9 @@ export default {
 |-------------  |---------------- |---------------|------------------ |-------- |
 | disabled | 是否禁用所有`radio`  | Boolean | false | true |
 | active-color | 选中时的颜色，应用到所有子`Radio`组件 | String  | #2979ff | - |
-| size | radio组件整体的大小，单位rpx  | String \ Number | 40 | - |
+| size | radio组件整体的大小，单位rpx  | String \ Number | 34 | - |
+| width <Badge text="2.3.0" type="tip"/> | `radio`的宽度，需带单位，如`50%`，`150rpx` | String  | auto | - |
+| wrap <Badge text="2.3.0" type="tip"/> | 是否每个`radio`占一行 | Boolean  | false | true |
 
 
 ### radio Event

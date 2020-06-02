@@ -130,7 +130,7 @@ export default {
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| icon-size | 图标大小，单位rpx  | String \ Number | 24 | - |
+| icon-size | 图标大小，单位rpx  | String \ Number | 20 | - |
 | label-size | label字体大小，单位rpx  | String \ Number | 28 | - |
 | name | `checkbox`组件的标示符  | String \ Number | - | - |
 | shape | 形状，见上方说明 | String  | circle | square |
@@ -146,8 +146,10 @@ export default {
 |-------------  |---------------- |---------------|------------------ |-------- |
 | max | 最多能选中多少个`checkbox`  | String \ Number | 999 | - |
 | disabled | 是否禁用所有`checkbox`  | Boolean | false | true |
-| size | 组件整体的大小，单位rpx  | String \ Number | 40 | - |
+| size | 组件整体的大小，单位rpx  | String \ Number | 34 | - |
 | active-color | 选中时的颜色，应用到所有子`Checkbox`组件 | String  | #2979ff | - |
+| width <Badge text="2.3.0" type="tip"/> | `checkbox`的宽度，需带单位，如`50%`，`150rpx` | String  | auto | - |
+| wrap <Badge text="2.3.0" type="tip"/> | 是否每个`checkbox`占一行 | Boolean  | false | true |
 
 
 ### Checkbox Event
@@ -162,3 +164,11 @@ export default {
 |事件名|说明|回调参数|版本|
 |:-|:-|:-|:-|
 | change | 任一个`checkbox`状态发生变化时触发，回调为一个对象 | detail = array( [元素为被选中的`checkbox`的`name`] ) | - |
+
+
+
+<style scoped>
+h3[id=checkbox-props] + p + table thead tr th:nth-child(2){
+	width: 35%;
+}
+</style>

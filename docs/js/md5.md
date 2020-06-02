@@ -13,7 +13,8 @@
 import md5Libs from "uview-ui/libs/function/md5";
 export default{
 	onLoad() {
-		// 结果为：e10adc3949ba59abbe56e057f20f883e
+		console.log(md5Libs.md5('uView'))
+		// 结果为：55c859b4750225eb1cdbd9e0403ee274
 	}
 }
 ```

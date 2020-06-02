@@ -124,6 +124,7 @@
 | mask-close-able | 点击遮罩是否可以关闭 | Boolean  | true | false |
 | safe-area-inset-bottom | 是否开启[底部安全区适配](/components/safeAreaInset.html#关于uview某些组件safe-area-inset参数的说明) | Boolean  | false | true |
 | z-index | `z-index`值 | Number \ String  | 1075 | - |
+| cancel-text | 取消按钮的提示文字 | String  | 取消 | - |
 
 
 ### Event

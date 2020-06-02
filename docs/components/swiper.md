@@ -129,6 +129,7 @@
 | effect3d-previous-margin | effect3d = true模式的情况下，激活项与前后项之间的距离，单位rpx | String \| Number  | 50 | - |
 | img-mode | 图片的裁剪模式，详见[image组件裁剪模式](https://uniapp.dcloud.io/component/image) | String  | aspectFill | - |
 | name | 组件内部读取的`list`参数中的属性名，见上方说明 | string  | name | - |
+| bg-color | 背景颜色 | string  | #f3f4f6 | - |
 
 
 ### Events
