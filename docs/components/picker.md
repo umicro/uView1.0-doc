@@ -10,7 +10,10 @@
 3. 三是单列模式
 4. 四是多列模式
 
-<custom-block></custom-block>
+::: warning 说明
+从`1.3.0`版本起，不建议使用此组件的单列和多列模式，因为已经有更友好，简单易用，专门用于处理列选择的[Select 列选择器](/components/select.html)组件，
+以后此组件将专注于时间和地区的选择。
+:::
 
 ### 平台差异说明
 
@@ -155,6 +158,8 @@ let params = {
 
 ### 二、单列和多列模式
 
+**从`1.3.0`版本起，不建议使用此组件的单列和多列模式，因为已经有更友好，简单易用，专门用于处理列选择的[Select 列选择器](/components/select.html)组件。**
+
 #### 1. 设置默认值
 
 - 如果`mode`为`selector`(单列)，可以通过设置`default-selector`为单元素的数组，表示选中单列中的第几个(索引从0开始)，如: `[1]`表示选中单列的第二个。
@@ -255,7 +260,7 @@ let params = {
 | default-selector | 数组形式，其中每一项表示选择了`range`对应项中的第几个(下标从0开始)，见上方说明 | Array | [] | - |
 | mask-close-able | 是否允许通过点击遮罩关闭Picker  | Boolean | true | false |
 | show-time-tag | 时间模式时，是否显示后面的年月日中文提示  | Boolean | true | false |
-| z-index | 弹出时的`z-index`值 | String \| Number | 1075 | - |
+| z-index | 弹出时的`z-index`值 | String \| Number | 10075 | - |
 | range | 自定义选择的数据，mode=selector或mode=multiSelector时有效 | Array | [] | - |
 | range-key | 当`range`参数的元素为对象时，指定Object中的哪个key的值作为选择器显示内容，见上方说明 | String | - | - |
 

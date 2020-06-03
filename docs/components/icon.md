@@ -28,7 +28,7 @@
 <u-icon name="photo" color="#2979ff" size="28"></u-icon>
 ```
 
-### 图片图标 <Badge text="2.3.0" type="tip"/>
+### 图片图标 <Badge text="1.3.0" type="tip"/>
 
 这里说的图片图标，指的是小图标，起作用定位为"icon"图标作用，而非大尺寸的图片展示场景，理论上，这个小图标应该为`png`格式的正方形图标。
 

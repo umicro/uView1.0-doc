@@ -59,7 +59,6 @@ module.exports = {
 						['/components/quickstart', '快速上手'],
 						['/components/demo', '效果演示'],
 						['/components/common', '内置样式'],
-						// ['/components/comparison', '对比其他UI框架'],
 						['/components/changelog', '更新日志'],
 						['/components/customIcon', '扩展自定义图标库'],
 						['/components/globalVariable', '全局变量的实现'],
@@ -90,6 +89,8 @@ module.exports = {
 							collapsable: false,
 							sidebarDepth: 0,
 							children: [
+								'/components/calendar',
+								'/components/select',
 								'/components/keyboard',
 								'/components/picker',
 								'/components/rate',
@@ -102,6 +103,7 @@ module.exports = {
 								'/components/radio',
 								'/components/switch',
 								'/components/slider',
+								'/components/form',
 							]
 						},
 						{
@@ -353,6 +355,9 @@ module.exports = {
 			'/js/getRect', 
 			'/js/mpShare',
 			'/components/navbar',
+			'/components/calendar',
+			'/components/select',
+			'/components/form',
 		],
 	}
 }

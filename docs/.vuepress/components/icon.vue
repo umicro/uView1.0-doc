@@ -15,6 +15,12 @@
 			return {
 				iconList: [
 					{
+						name: 'arrow-left-double'
+					},
+					{
+						name: 'arrow-right-double'
+					},
+					{
 						name: 'chat'
 					},
 					{
@@ -591,7 +597,7 @@
 </script>
 
 <style scoped>
-	@import url("//at.alicdn.com/t/font_1529455_nccj7tyusxj.css");
+	@import url("//at.alicdn.com/t/font_1529455_5ydw3ctm4ek.css");
 
 	.icon-box {
 		display: flex;
