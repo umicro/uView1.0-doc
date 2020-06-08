@@ -10,6 +10,139 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>1.3.0</h2>
+				</div>
+				<p><code>2020-06-08</code></p>
+				<ul>
+					<li>
+						<span class="add">说明</span>
+						说明：从1.3.0起，不推荐使用Picker的单列和多列模式，推荐使用更好的Select组件：详见
+						<a href="/components/select.html" target="_blank">Select 列选择器</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						新增uni-app生态最强表单验证Form、Form-item，Input组件
+						<a href="/components/form.html" target="_blank">Form 表单及验证</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						新增Select列选择器，可以单列，多列，多列联动选择，详见
+						<a href="/components/select.html" target="_blank">Select 列选择器</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						新增Calendar日历组件，可以单选，范围选择日期等：详见
+						<a href="/components/calendar.html" target="_blank">Calendar 日历</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						新增BackTop返回顶部组件：详见
+						<a href="/components/backtop.html" target="_blank">Backtop 返回顶部</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						Icon组件新增支持图片模式，新增custom-style参数
+					</li>
+					<li>
+						<span class="add">新增</span>
+						Collapse折叠面板新增item-style参数，修复head-style，body-style可能无效的问题
+					</li>
+					<li>
+						<span class="add">新增</span>
+						Swiper组件新增bg-color设置背景颜色的参数
+					</li>
+					<li>
+						<span class="add">新增</span>
+						新增对象深度克隆JS工具库方法，使用方式为"this.$u.deepClone(object)"，详见
+						<a href="/js/deepClone.html" target="_blank">deepClone 对象深度克隆</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						新增对象深度合并JS工具库方法，使用方式为"this.$u.deepMerge(object)"，详见
+						<a href="/js/deepMerge.html" target="_blank">deepMerge 对象深度合并</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						新增仿微信个人中心首页模板，详见
+						<a href="/layout/wxCenter.html" target="_blank">wxCenter 仿微信个人中心</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						新增结合自定义键盘及验证码输入框组件的支付模板，详见
+						<a href="/layout/keyboardPay.html" target="_blank">keyboardPay 自定义键盘支付模板</a>
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化城市选择模板的逻辑和动画
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化Radio单选框点击图标部分可能不灵敏的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化Checkbox单选框点击图标部分可能不灵敏的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化ActionSheet的取消按钮提示，由cancel-text提供
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化SwipeAction组件按钮可能闪一下的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化Http请求头信息可能由于浅合并导致的问题，修复响应拦截返回false依然进入then回调的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化Checkbox组件，可以无需搭配Checkbox-group而独立使用
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化u-border基础类的边框特殊场景可能会有边框缺失的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						移除Model组件的content-slot组件，改由组件内部判断，原功能不受影响
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化Tabs组件动态修改list参数长度对内部Current索引的判断和修改
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化文档右侧演示在1366*768分辨率显示器上，预览部分可能显示不全的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化Timeline组件左边图标的z-index层级的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						移除演示项目根目录/static中的无用图片资源，转用线上CDN资源
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复Icon图标在头条，百度小程序上无法显示的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复MessageInput验证码输入框组件可能会在左边显示输入内容的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复NoNetwork组件会导致状态栏文字颜色变化的问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>1.2.9</h2>
 				</div>
 				<p><code>2020-05-26</code></p>

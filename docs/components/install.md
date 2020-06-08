@@ -26,7 +26,7 @@ uView已正式发布**公测版**，欢迎[交流反馈](/cooperation/about.html
 
 <br>
 <div @click="downloadPost(2)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_1.2.9.zip">uView_1.2.9.zip</a>
+	下载地址：<a href="https://download.uviewui.com/uView_1.3.0.zip">uView_1.3.0.zip</a>
 </div>
 <br>
 <br>
@@ -67,7 +67,7 @@ npm update uview-ui
 
 <br>
 <div @click="downloadPost(3)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_1.2.9_demo.zip">uView_1.2.9_demo.zip</a>
+	下载地址：<a href="https://download.uviewui.com/uView_1.3.0_demo.zip">uView_1.3.0_demo.zip</a>
 </div>
 <br>
 <br>
@@ -87,7 +87,7 @@ npm update uview-ui
 
 <br>
 <div @click="downloadPost(1)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_1.2.9_default.zip">uView_1.2.9_default.zip</a>
+	下载地址：<a href="https://download.uviewui.com/uView_1.3.0_default.zip">uView_1.3.0_default.zip</a>
 </div>
 <br>
 <br>

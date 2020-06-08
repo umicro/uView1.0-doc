@@ -92,7 +92,7 @@
 | z-index | z-index 层级 | String \| Number  | 10070 | - |
 | custom-style | 自定义样式对象，见上方说明 | Object  | - | - |
 | duration | 动画时长，单位毫秒 | String \| Number  | 300 | - |
-| zoom | 是否使用`scale`对这招进行缩放 | Boolean  | true | false |
+| zoom | 是否使用`scale`对遮罩进行缩放 | Boolean  | true | false |
 | mask-click-able | 遮罩是否可点击，为`false`时点击不会发送`click`事件 | Boolean  | true | false |
 
 ### Events

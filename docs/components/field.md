@@ -125,7 +125,7 @@
 				label="验证码"
 				placeholder="请填写验证码"
 			>
-				<u-button size="mini" slot="button" type="success" @tap="getCode">{{codeText}}</u-button>
+				<u-button size="mini" slot="right" type="success" @tap="getCode">{{codeText}}</u-button>
 			</u-field>
 			<u-verification-code ref="uCode" @change="codeChange"></u-verification-code>
 		</u-cell-group>

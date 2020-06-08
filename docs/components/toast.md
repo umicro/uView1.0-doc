@@ -49,7 +49,7 @@
 - info-灰色，比default浅一点
 - primary-蓝色，uView的主色调
 
-除了`default`状态，其他5中主题，都是默认带有一个左边的图标，可以通过配置`icon`参数为`none`来取消
+除了`default`状态，其他5种主题，都是默认带有一个左边的图标，可以通过配置`icon`参数为`none`来取消
 
 ``` js
 this.$refs.uToast.show({

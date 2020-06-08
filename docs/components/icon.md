@@ -57,6 +57,7 @@
 | margin-left | `label`在右方时与图标的距离，单位rpx | String \| Number  | 6 | - |
 | margin-top | `label`在下方时与图标的距离，单位rpx | String \| Number  | 6 | - |
 | label-pos | `label`相对于图标的位置 | String  | right | bottom |
+| custom-style <Badge text="1.3.0" /> | 图标的样式，可以设置字体大小，颜色等，对象形式，`size`和`color`优先级高于此参数 | Object  | - | - |
 
 ### Events
 

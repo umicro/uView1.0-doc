@@ -86,6 +86,66 @@
 </script>
 ```
 
+
+### 自定义样式
+
+在此组件中，可以通过多个方式对每个`Item`进行样式定义，我们可以从如下方面思考和着手：
+
+#### 1. 如果修改展开后的内容？  
+- 因为是通过默认的`slot`传入的(见上方示例)，我们可以加一个`view`元素当做外层，在父组件给它添加样式，如下：
+
+```html
+<template>
+	<u-collapse :item-style="itemStyle" event-type="close" :arrow="arrow" :accordion="accordion" @change="change">
+		<u-collapse-item :index="index" @change="itemChange" :title="item.head" v-for="(item, index) in itemList" :key="index">
+			<view class="collapse-item">
+				{{item.body}}
+			</view>
+		</u-collapse-item>
+	</u-collapse>
+</template>
+
+<style scoped>
+	.collapse-item {
+		color: red;
+		padding-bottom: 10px;
+	}
+</style>
+```
+
+- 通过`Collapse`的`body-style`参数也可以配置主体内容的样式，需要注意上面的自定义`slot`内容如果在父组件定义了样式，会优先起作用。
+
+#### 2. 如何自定义标题的样式？
+
+如果想修改头部标题的字体大小，颜色等，可以通过`head-style`参数修改。
+
+
+#### 3. 如何修改整个`Item`的样式？
+
+有时候我们需要修改`Item`的整体样式，比如将各个`Item`之间隔开，这时我们可以通过`item-style`参数进行设置，比如：
+
+```html
+<template>
+	<u-collapse :item-style="itemStyle">
+		......
+	</u-collapse>
+</template>
+
+<script>
+export default {
+	data() {
+		return {
+			itemStyle: {
+				marginTop: '20px'
+			}
+		}
+	}
+}
+</script>
+```
+
+
+
 ### API
 
 ### Collapse Props
@@ -95,8 +155,9 @@
 | accordion | 是否手风琴模式  | Boolean | true | false |
 | arrow | 是否显示标题右侧的箭头  | Boolean | true | false |
 | arrow-color | 标题右侧箭头的颜色 | String | #909399 | - |
-| head-style | 标题自定义样式，对象形式  | Object | - | - |
-| body-style | 主体自定义样式，对象形式  | Object | - | - |
+| item-style<Badge text="1.3.0" /> | 整个`Item`的自定义样式，对象形式  | Object | - | - |
+| head-style | `Item`的标题自定义样式，对象形式  | Object | - | - |
+| body-style | `Item`的主体自定义样式，对象形式  | Object | - | - |
 | hover-class | 样式类名，按下时有效，样式必须写在根目录的`App.vue`或通过其引入的全局样式中才有效，`none`为无效果，作用于头部标题区域  | String | u-hover-class | none / 其他 |
 
 ### Collapse Item Props

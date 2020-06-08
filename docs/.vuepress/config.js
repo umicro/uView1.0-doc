@@ -158,6 +158,7 @@ module.exports = {
 							collapsable: false,
 							sidebarDepth: 0,
 							children: [
+								'/components/backTop',
 								'/components/navbar',
 								'/components/tabs',
 								'/components/tabsSwiper',
@@ -210,6 +211,8 @@ module.exports = {
 				collapsable: false,
 				sidebarDepth: 0,
 				children: [
+					['/layout/wxCenter', '微信个人中心页'],
+					['/layout/keyboardPay', '自定义键盘支付'],
 					['/layout/menu', '垂直分类'],
 					['/layout/submitBar', '提交订单栏'],
 					['/layout/comment', '评论列表'],
@@ -240,6 +243,8 @@ module.exports = {
 				collapsable: false,
 				sidebarDepth: 0,
 				children: [
+					['/js/deepClone', '对象深度克隆'],
+					['/js/deepMerge', '对象深度合并'],
 					['/js/time', '时间格式化'],
 					['/js/route', '路由跳转'],
 					['/js/randomArray', '数组乱序'],
@@ -336,6 +341,8 @@ module.exports = {
 			'/layout/comment',
 			'/layout/order',
 			'/layout/intro',
+			'/layout/wxCenter',
+			'/layout/keyboardPay',
 			'/layout/login',
 			'/layout/address',
 			'/js/time',
@@ -358,6 +365,10 @@ module.exports = {
 			'/components/calendar',
 			'/components/select',
 			'/components/form',
+			'/components/input',
+			'/components/backTop',
+			'/js/deepMerge',
+			'/js/deepClone',
 		],
 	}
 }
