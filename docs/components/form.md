@@ -502,7 +502,7 @@ export default {
 | label-position | 表单域提示文字的位置，`left`-左侧，`top`-上方 | String | left | top |
 | label-width | 提示文字的宽度，单位rpx | String \| Number | 90 | - |
 | label-style | `lable`的样式，对象形式 | Object | - | - |
-| label-align | `lable`的对齐方式 | String | center / right |  - |
+| label-align | `lable`的对齐方式 | String | left |  center / right |
 | right-icon | 右侧自定义字体图标(限uView内置图标)或图片地址 | String |  - |
 | left-icon | 左侧自定义字体图标(限uView内置图标)或图片地址 | String |  - |
 | left-icon-style | 左侧图标的样式，对象形式 | Object | - | - |

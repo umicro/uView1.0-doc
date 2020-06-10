@@ -120,6 +120,7 @@
 | custom | 用户点击右侧控件时触发 | value：输入框的值 | - |
 | blur | 输入框失去焦点时触发 | value：输入框的值 | - |
 | focus | 输入框获得焦点时触发 | value：输入框的值 | - |
+| clear | 配置了`clearabled`后，清空内容时会发出此事件 | - | - |
 
 
 <style scoped>

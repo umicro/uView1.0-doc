@@ -10,6 +10,95 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>1.3.3</h2>
+				</div>
+				<p><code>2020-06-10</code></p>
+				<ul>
+					<li>
+						<span class="add">新增</span>
+						1.3.3起，numberBox步进器推荐使用v-model双向绑定数值，无需在change回调中重新赋值，详见文档：
+						<a href="/components/numberBox.html" target="_blank">numberBox 步进器</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						search组件新增clear清除内容事件
+					</li>
+					<li>
+						<span class="add">新增</span>
+						section组件新增可控制左边竖条的show-line参数
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化城市选择模板在微信小程序上的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化countTo组件可能由于传入字符串数值而报错的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						由于form表单验证在某些表单域没有验证规则导致不会触发验证回调的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化验证码倒计时组件可能会触发多次的问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
+					<h2>1.3.2</h2>
+				</div>
+				<p><code>2020-06-09</code></p>
+				<ul>
+					<li>
+						<span class="add">新增</span>
+						新增双箭头图标arrow-left-double和arrow-right-double
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化this.$u.test.url()URL检测方法正则无法识别"127.0.0.1"的缺陷
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化Swiper轮播图组件动态修改list长度时，重置内部current值
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						移除Slider滑块组件的use-slot参数，改由组件内部判断，原功能不受影响
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						完善文档Select组件关于回调参数的说明，完善日历组件的演示效果
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						由于加载问题，阿里，头条，百度小程序的图标改用线上资源
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						扩大Search搜索组件右边清除按钮的可点击区域
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复http请求可能存在导致跨域的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复navBar返回按钮可能会触发两次的问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>1.3.0</h2>
 				</div>
 				<p><code>2020-06-08</code></p>
@@ -58,7 +147,7 @@
 					</li>
 					<li>
 						<span class="add">新增</span>
-						新增对象深度合并JS工具库方法，使用方式为"this.$u.deepMerge(object)"，详见
+						新增对象深度合并JS工具库方法，使用方式为"this.$u.deepMerge(target, source)"，详见
 						<a href="/js/deepMerge.html" target="_blank">deepMerge 对象深度合并</a>
 					</li>
 					<li>

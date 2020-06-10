@@ -181,7 +181,7 @@
 |-------------  |---------------- |---------------|------------------ |-------- |
 | type | 模式选择，见上方说明  | String	 | text | select / password / textarea / number |
 | clearable | 是否显示右侧的清除图标 | Boolean | true | false |
-| value / v-model | 用于双向绑定输入框的值 | - | - | - |
+| v-model | 用于双向绑定输入框的值 | - | - | - |
 | input-align | 输入框文字的对齐方式  | String | left | center / right |
 | placeholder | placeholder显示值  | String | 请输入内容 | - |
 | disabled | 是否禁用输入框 | Boolean | false | true |
