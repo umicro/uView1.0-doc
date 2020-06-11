@@ -70,7 +70,7 @@ this.$refs.uToast.show({
 this.$refs.uToast.show({
 	title: '操作成功',
 	url: '/pages/user/index',
-	param: {
+	params: {
 		id: 1,
 		menu: 3
 	}
