@@ -23,3 +23,6 @@ TODOs.md
 /.ftp
 
 deploy.sh
+
+package-lock.json
+yarn.lock

@@ -74,7 +74,7 @@
 - 通过`input-align`设置输入框内容的对其方式，和css的`text-align`同理
 - 通过`border-color`设置整个搜索组件的边框，只要配置了颜色，才会出现边框
 - 通过`height`设置组件高度
-- 通过`enabled`设置是否禁用输入框
+- 通过`disabled`设置是否禁用输入框
 - 通过`bg-color`设置是搜索组件背景颜色
 
 ```html

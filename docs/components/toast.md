@@ -63,14 +63,14 @@ this.$refs.uToast.show({
 
 ### toast结束跳转URL
 
-- 如果配置了`src`参数，在toast结束的时候，就会用`uni.navigateTo`(默认)或者`uni.switchTab`(需另外设置`isTab`为`true`)
+- 如果配置了`url`参数，在toast结束的时候，就会用`uni.navigateTo`(默认)或者`uni.switchTab`(需另外设置`isTab`为`true`)
 - 如果配置了`params`参数，就会在跳转时自动在URL后面拼接上这些参数，具体用法如下：
 
 ``` js
 this.$refs.uToast.show({
 	title: '操作成功',
 	url: '/pages/user/index',
-	param: {
+	params: {
 		id: 1,
 		menu: 3
 	}
