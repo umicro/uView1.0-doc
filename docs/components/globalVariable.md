@@ -404,7 +404,7 @@ const store = new Vuex.Store({
 export default store
 ```
 
-1. uni-app目根目录新建'/store/$u.mixin.js'，并复制如下内容到其中，由于HX某些版本的限制，我们无法帮您自动引入"$u.mixin.js"，您需要在`main.js`
+2. uni-app目根目录新建'/store/$u.mixin.js'，并复制如下内容到其中，由于HX某些版本的限制，我们无法帮您自动引入"$u.mixin.js"，您需要在`main.js`
 中手动引入，并mixin处理。
 
 以下为"main.js"文件：
