@@ -1,143 +1,112 @@
 <template>
 	<div class="member-item">
-		<div class="member-item__avatar">
-			<img :src="list.avatar" />
-		</div>
+		<div class="member-item__avatar"><img :src="list.avatar" /></div>
 		<div class="member-item__info">
-			<div class="member-item__name">
-				{{list.name}}
-			</div>
+			<div class="member-item__name">{{ list.name }}</div>
 			<div class="member-item__tag">
-				<div class="member-item__tag__item" v-if="list.job">
-					{{list.job}}
-				</div>
-				<div class="member-item__tag__split" v-if="list.addr">
-					·
-				</div>
-				<div class="member-item__tag__item" v-if="list.addr">
-					{{list.addr}}
-				</div>
-				<div class="member-item__tag__split" v-if="list.github">
-					·
-				</div>
+				<div class="member-item__tag__item" v-if="list.job">{{ list.job }}</div>
+				<div class="member-item__tag__split" v-if="list.addr">·</div>
+				<div class="member-item__tag__item" v-if="list.addr">{{ list.addr }}</div>
+				<div class="member-item__tag__split" v-if="list.github">·</div>
 				<div class="member-item__tag__item" v-if="list.github">
-					<a :href="list.github" target="_blank">
-						<span class="iconfont">&#xe64a;</span>
-					</a>
+					<a :href="list.github" target="_blank"><span class="iconfont">&#xe64a;</span></a>
 				</div>
-				<div class="member-item__tag__split" v-if="list.gitee">
-					·
+				<div class="member-item__tag__split" v-if="list.uniapp">·</div>
+				<div class="member-item__tag__item" v-if="list.uniapp">
+					<a :href="list.uniapp" target="_blank"><span class="iconfont">&#xe609;</span></a>
 				</div>
+				<div class="member-item__tag__split" v-if="list.gitee">·</div>
 				<div class="member-item__tag__item" v-if="list.gitee">
-					<a :href="list.gitee" target="_blank">
-						<span class="iconfont">&#xe600;</span>
-					</a>
+					<a :href="list.gitee" target="_blank"><span class="iconfont">&#xe600;</span></a>
 				</div>
-				<div class="member-item__tag__split" v-if="list.csdn">
-					·
-				</div>
+				<div class="member-item__tag__split" v-if="list.csdn">·</div>
 				<div class="member-item__tag__item" v-if="list.csdn">
-					<a :href="list.csdn" target="_blank">
-						<span class="iconfont">&#xe601;</span>
-					</a>
+					<a :href="list.csdn" target="_blank"><span class="iconfont">&#xe601;</span></a>
 				</div>
-				<div class="member-item__tag__split" v-if="list.link">
-					·
-				</div>
+				<div class="member-item__tag__split" v-if="list.link">·</div>
 				<div class="member-item__tag__item" v-if="list.link">
-					<a :href="list.link" target="_blank">
-						<span class="iconfont">&#xe67b;</span>
-					</a>
+					<a :href="list.link" target="_blank"><span class="iconfont">&#xe67b;</span></a>
 				</div>
 			</div>
-			<div class="member-item__job">
-				职责：{{list.duty}}
-			</div>
-			<div class="member-item__intro">
-				介绍：{{list.intro}}
-			</div>
+			<div class="member-item__job">职责：{{ list.duty }}</div>
+			<div class="member-item__intro">介绍：{{ list.intro }}</div>
 		</div>
 	</div>
 </template>
 
 <script>
-	export default {
-		props: {
-			list: {
-				type: Object,
-				default() {
-					return {}
-				}
+export default {
+	props: {
+		list: {
+			type: Object,
+			default() {
+				return {};
 			}
 		}
 	}
+};
 </script>
 
 <style scoped lang="scss">
-	@font-face {
-	  font-family: 'iconfont';  /* project id 1839347 */
-	  src: url('//at.alicdn.com/t/font_1839347_9wsyz3bbvvr.eot');
-	  src: url('//at.alicdn.com/t/font_1839347_9wsyz3bbvvr.eot?#iefix') format('embedded-opentype'),
-	  url('//at.alicdn.com/t/font_1839347_9wsyz3bbvvr.woff2') format('woff2'),
-	  url('//at.alicdn.com/t/font_1839347_9wsyz3bbvvr.woff') format('woff'),
-	  url('//at.alicdn.com/t/font_1839347_9wsyz3bbvvr.ttf') format('truetype'),
-	  url('//at.alicdn.com/t/font_1839347_9wsyz3bbvvr.svg#iconfont') format('svg');
+@font-face {
+	font-family: 'iconfont'; /* project id 1839347 */
+	src: url('//at.alicdn.com/t/font_1839347_q72yio5zage.ttf') format('truetype');
+}
+
+.member-item {
+	background-color: rgb(242, 242, 242);
+	display: flex;
+	padding: 20px;
+	border-radius: 5px;
+	margin-top: 25px;
+	max-width: 1200px;
+
+	&__avatar {
+		height: 100px;
+		flex: 0 0 100px;
+		width: 100px;
+
+		img {
+			width: 100%;
+			border-radius: 4px;
+		}
 	}
-	
-	.member-item {
-		background-color: rgb(242, 242, 242);
+
+	&__info {
+		margin-left: 20px;
+	}
+
+	&__name {
+		color: #333;
+		font-weight: bold;
+		font-size: 16px;
+		margin-top: 5px;
+	}
+
+	&__tag {
 		display: flex;
-		padding: 20px;
-		border-radius: 5px;
-		margin-top: 25px;
-		max-width: 1200px;
-		
-		&__avatar {
-			height: 100px;
-			flex: 0 0 100px;
-			width: 100px;
-			
-			img {
-				width: 100%;
-				border-radius: 4px;
-			}
-		}
-		
-		&__info {
-			margin-left: 20px;
-		}
-		
-		&__name {
-			color: #333;
-			font-weight: bold;
-			font-size: 16px;
-			margin-top: 5px;
-		}
-		
-		&__tag {
-			display: flex;
-			color: #999;
-			font-size: 15px;
-			margin-top: 5px;
-			align-items: center;
-			
-			&__split {
-				font-size: 20px;
-				margin: 0 7px;
-				color: #000;
-			}
-		}
-		
-		&__job {
-			color: #555;
-			font-size: 15px;
-			margin-top: 7px;
-		}
-		
-		&__intro {
-			color: #666;
-			font-size: 14px;
-			margin-top: 7px;
+		color: #999;
+		font-size: 15px;
+		margin-top: 5px;
+		align-items: center;
+
+		&__split {
+			font-size: 20px;
+			margin: 0 7px;
+			color: #000;
 		}
 	}
+
+	&__job {
+		color: #555;
+		font-size: 15px;
+		margin-top: 7px;
+	}
+
+	&__intro {
+		color: #666;
+		font-size: 14px;
+		margin-top: 7px;
+	}
+}
 </style>

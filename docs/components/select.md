@@ -1,6 +1,6 @@
 ## Select 列选择器 <Badge text="1.3.0" type="tip"/>
 
-<demo-model url="/pages/componentsB/select/index"></demo-model>
+<demo-model url="/pages/componentsA/select/index"></demo-model>
 
 
 此选择器用于单列，多列，多列联动的选择场景。
@@ -241,6 +241,45 @@
 
 配置方法同"多列模式"，见上。
 
+<br>
+
+### 回调参数
+
+1. 单列模式
+
+此模式点击`确定`按钮，会返回一个只有一个元素的数组，此元素即为回调结果，数组内容可能如下：  
+
+```js
+res = [
+	{
+		label: '雪月夜',
+		value: '1'
+	}
+]
+```
+
+2. 多列模式
+
+此模式点击`确定`按钮，会返回一个有多个元素的数组，元素的数量和列数相等，第0个元素(索引从0开始)与第一列(也可以认为是第0列)相匹配，以此类推，
+返回结果可能如下：
+
+```js
+res = [
+	{
+		label: '雪月夜',
+		value: '1'
+	},
+	{
+		label: '冷夜雨',
+		value: '2'
+	},
+]
+```
+
+
+3. 多列联动
+
+返回结果同上方的"多列模式"。
 
 
 ### API
@@ -251,14 +290,21 @@
 |-------------  |---------------- |---------------|------------------ |-------- |
 | mode | 模式选择，"single-column"-单列模式，"mutil-column"-多列模式，"single-column-auto"-多列联动模式  | String	 | single-column | mutil-column / single-column-auto |
 | list | 列数据，数组形式，见上方说明 | Array | - | - |
-| value / v-model | 布尔值变量，用于控制选择器的弹出与收起 | Boolean | false | true |
+| v-model | 布尔值变量，用于控制选择器的弹出与收起 | Boolean | false | true |
 | safe-area-inset-bottom | 是否开启[底部安全区适配](/components/safeAreaInset.html#关于uview某些组件safe-area-inset参数的说明) | Boolean  | false | true |
 | cancel-color | 取消按钮的颜色  | String | #606266 | - |
 | confirm-color | 确认按钮的颜色  | String | #2979ff | - |
 | default-value | 提供的默认选中的下标，见上方说明  | Array | - | - |
-| default-region | 默认选中的地区，中文形式，mode=region时有效  | Array | - | - |
 | mask-close-able | 是否允许通过点击遮罩关闭Picker  | Boolean | true | false |
 | z-index | 弹出时的`z-index`值 | String \| Number | 10075 | - |
+
+
+### Events
+
+|事件名|说明|回调参数|版本|
+|:-|:-|:-|:-|
+| confirm | 点击确定按钮，返回当前选择的值 | Array: 见上方"回调参数"部分说明 | - |
+
 
 
 <style scoped>

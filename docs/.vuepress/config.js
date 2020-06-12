@@ -89,6 +89,8 @@ module.exports = {
 							collapsable: false,
 							sidebarDepth: 0,
 							children: [
+								'/components/input',
+								'/components/form',
 								'/components/calendar',
 								'/components/select',
 								'/components/keyboard',
@@ -103,7 +105,6 @@ module.exports = {
 								'/components/radio',
 								'/components/switch',
 								'/components/slider',
-								'/components/form',
 							]
 						},
 						{
@@ -369,6 +370,7 @@ module.exports = {
 			'/components/backTop',
 			'/js/deepMerge',
 			'/js/deepClone',
+			'/components/input',
 		],
 	}
 }

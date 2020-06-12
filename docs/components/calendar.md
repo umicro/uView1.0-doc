@@ -3,7 +3,7 @@
 <demo-model url="/pages/componentsA/calendar/index"></demo-model>
 
 
-此组件用单个选择日期，范围选择日期等，日历被包裹在底部弹起的容器中。
+此组件用于单个选择日期，范围选择日期等，日历被包裹在底部弹起的容器中。
 
 **注意：** 此组件与[Picker 选择器](/components/picker.html)的日期选择模式有一定的重合之处，区别在于本组件为更专业的日期选择场景，能选择日期范围等。
 另外`Picker`组件的日期模式可以配置更多的参数，如时、分、秒等，可以根据不同的使用场景进行选择。
@@ -18,7 +18,7 @@
 
 ### 基本使用
 
-- 通过`v-model`绑定一个布尔变量和打开或收起日历弹窗。
+- 通过`v-model`绑定一个布尔变量用于打开或收起日历弹窗。
 - 通过`mode`参数指定选择单个日期，还是选择日期范围。
 
 ```html
@@ -187,16 +187,16 @@
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| mode | 模式选择，"single-column"-单列模式，"mutil-column"-多列模式，"single-column-auto"-多列联动模式  | String	 | single-column | mutil-column / single-column-auto |
+| mode | 选择日期的模式，date-为单个日期，range-为选择日期范围 | String | date | range |
 | list | 列数据，数组形式，见上方说明 | Array | - | - |
-| value / v-model | 布尔值变量，用于控制日历的弹出与收起 | Boolean | false | true |
+| v-model | 布尔值变量，用于控制日历的弹出与收起 | Boolean | false | true |
 | safe-area-inset-bottom | 是否开启[底部安全区适配](/components/safeAreaInset.html#关于uview某些组件safe-area-inset参数的说明) | Boolean  | false | true |
 | change-year | 是否显示顶部的切换年份方向的按钮  | Boolean | true | false |
-| change-month | 是否显示顶部的切换鱼月份的方向按钮  | Boolean | true | false |
+| change-month | 是否显示顶部的切换月份方向的按钮  | Boolean | true | false |
 | max-year | 可切换的最大年份 | Number \| String | 2050 | - |
 | min-year | 可切换的最小年份 | Number \| String | 1950 | - |
 | min-date | 最小可选日期 | Number \| String | 1950-01-01 | - |
-| min-year | 最大可选日期 | Number \| String | 当前日期 | - |
+| max-date | 最大可选日期 | Number \| String | 当前日期 | - |
 | border-radius | 弹窗顶部左右两边的圆角值，单位rpx  | Number \| String | 20 | - |
 | mask-close-able | 是否允许通过点击遮罩关闭日历  | Boolean | true | false |
 | month-arrow-color | 月份切换按钮箭头颜色 | String | #606266 | - |

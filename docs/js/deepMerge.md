@@ -2,12 +2,21 @@
 
 <demo-model url="/pages/library/deepMerge/index"></demo-model>
 
+<br>
 
-#### deepMerge(target = {}, source = {})
+:::tip 注意
+由于JS对象包括的范围非常广，加上ES6又有众多的新特性，很难、也没必要做到囊括所有的类型和情况，这里说的"对象"，指的是普通的对象，不包括修改对象原型链，
+或者为"Function"，"Promise"等的情况，请留意。
+:::
+
+<br>
 
 在ES6中，我们可以很方便的使用`Object.assign`进行对象合并，但这只是浅层的合并，如果对象的属性为数组或者对象的时候，会导致属性内部的值丢失。
   
 **注意：** 此处合并不同于`Object.assign`，因为`Object.assign(a, b)`会修改`a`的值为最终的结果(这往往不是我们所期望的)，但是`deepMerge(a, b)`并不会修改`a`的值。
+
+
+#### deepMerge(target = {}, source = {})
 
 - `target` <Object\> 目标对象
 - `source` <Object\> 源对象

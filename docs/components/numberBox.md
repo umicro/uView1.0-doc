@@ -15,17 +15,20 @@
 
 ### 基本使用
 
-通过`value`(默认为1)参数绑定初始值，通过`change`事件监听组件输入值的变化，回调参数为一个对象，有两个属性，分别是：
-- `value`，表示当前输入值
-- `index`，额外字段，由用户通过Props的`index`字段传入，回调时用以区分当前发生变化的是哪个输入框
+通过`v-model`绑定`value`初始值，此值是双向绑定的，**无需**在回调中将返回的数值重新赋值给`value`。
 
 ```html
 <template>
-	<u-number-box :value="0" @change="valChange"></u-number-box>
+	<u-number-box v-model="value" @change="valChange"></u-number-box>
 </template>
 
 <script>
 	export default {
+		data() {
+			return {
+				value: 0
+			}
+		},
 		methods: {
 			valChange(e) {
 				console.log('当前值为: ' + e.value)
@@ -76,7 +79,7 @@
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| value | 输入框初始值 | Number | 1 | - |
+| v-model | 输入框初始值 | Number | 1 | - |
 | bg-color | 输入框和按钮的背景颜色  | String | #F2F3F5 | - |
 | min | 用户可输入的最小值 | Number | 0 | - |
 | max | 用户可输入的最大值 | Number | 99999 | - |

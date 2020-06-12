@@ -3,7 +3,14 @@
 <demo-model url="/pages/library/deepClone/index"></demo-model>
 
 
-#### deepClone(object = {})
+<br>
+
+:::tip 注意
+由于JS对象包括的范围非常广，加上ES6又有众多的新特性，很难、也没必要做到囊括所有的类型和情况，这里说的"对象"，指的是普通的对象，不包括修改对象原型链，
+或者为"Function"，"Promise"等的情况，请留意。
+:::
+
+<br>
 
 场景：  
 
@@ -12,6 +19,8 @@
 
 - 当我们将一个对象(变量A)赋值给另一个变量(变量B)时，修改变量B，因为对象引用的特性，导致A也同时被修改，所以有时候我们需要将A克隆给B，这样修改B的时候，就不会
 导致A也被修改。
+
+#### deepClone(object = {})
 
 - `object` <Object\> 需要被克隆的对象
 

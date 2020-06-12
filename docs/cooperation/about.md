@@ -2,10 +2,9 @@
 
 uView为采用[MIT](https://baike.baidu.com/item/MIT/10772952)许可证的开源项目，使用完全免费。欢迎加QQ群交流反馈，一起学习，共同进步。
 
-- 官方1群：1042987248
-<!-- - 官方2群：249718512 -->
+- 官方群：249718512
 
-**注意：** 由于群成员数量有限，请勿重复加群。
+<!-- **注意：** 由于群成员数量有限，请勿重复加群。 --> 
 
 
 ### 作者
@@ -21,6 +20,8 @@ uView为采用[MIT](https://baike.baidu.com/item/MIT/10772952)许可证的开源
 
 uView的理念是"挣脱束缚，向往自由"，目标是做uni-app生态的标杆，推动uni-app生态和互联网的发展。  
 uView免费开源，无需授权，欢迎商用。uView的发展也得到各个小伙伴的支持，我们一起为构建一个更加优秀的UI框架而努力。
+
+以下为部分对uView有特出贡献的研发组成员，排名不分先后：
 
 <team-member-item v-for="(item, index) in memberList" :key="index" :list="item"></team-member-item>
 
@@ -121,6 +122,25 @@ uView拥有众多用户，且文档详尽，经得起推敲，受得住考验，
 						addr: '深圳',
 						duty: '负责uView模板维护开发，收集，样式调整，社区管理、宣传等工作',
 						intro: '擅长移动端开发，以及对前端交互和性能的优化。善于处理不同端和不同机型的样式适配。有多个线上成熟的实战项目'
+					},
+					{
+						avatar: 'https://cdn.uviewui.com/uview/team/15915681648132.jpg',
+						name: '黄河浪',
+						job: '前端开发',
+						addr: '长沙',
+						csdn: 'https://blog.csdn.net/u013350495',
+						link: 'http://www.jq22.com/mem395541',
+						uniapp: 'https://ext.dcloud.net.cn/publisher?id=110853',
+						duty: '负责uView模板开发，社区管理等工作',
+						intro: '脾气不好的暴躁老哥。丰富的前端开发经验，对代码有洁癖，CSS能力出众'
+					},
+					{
+						avatar: 'https://cdn.uviewui.com/uview/team/19641856415541.jpg',
+						name: 'Pocky',
+						job: '前端开发',
+						link: 'https://www.yuque.com/pocky',
+						duty: '负责uView组件和JS工具库 开发、测试、维护，社区维护等工作',
+						intro: '好的代码像粥一样，都是用时间熬出来的。技术栈：前端'
 					}
 				]
 			}
