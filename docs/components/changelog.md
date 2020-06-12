@@ -10,6 +10,50 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>1.3.4</h2>
+				</div>
+				<p><code>2020-06-11</code></p>
+				<ul>
+					<li>
+						<span class="add">新增</span>
+						文档和示例新增表单验证的异步自定义函数
+					</li>
+					<li>
+						<span class="add">新增</span>
+						navbar组件新增左侧图标自定义回调方法参数custom-back
+					</li>
+					<li>
+						<span class="add">新增</span>
+						search组件新增input-style自定样式参数
+					</li>
+					<li>
+						<span class="add">新增</span>
+						verificationCode组件新增unique-key参数，用于继续倒计时区分多个组件的变量名
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化this.$u.test.url()验证方法对URL中存在大写字母时判断无效的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						form-item的label-width可以设置auto值
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复表单验证的form-item，可能无法显示左侧的必填"*"号的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复readMore阅读更多的组件可能出现高度单位混淆的问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>1.3.3</h2>
 				</div>
 				<p><code>2020-06-10</code></p>

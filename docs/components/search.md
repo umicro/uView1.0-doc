@@ -106,6 +106,7 @@
 | placeholder-color | placeholder的颜色 | String | #909399 | - |
 | margin | 组件与其他上下左右元素之间的距离，带单位的字符串形式，如"30rpx"、"30rpx 20rpx"等写法 | String | - | - |
 | maxlength | 输入框最大能输入的长度，-1为不限制长度 | String \| Number | -1 | - |
+| input-style | 自定义输入框样式，对象形式 | Object | - | - |
 
 
 ### Events

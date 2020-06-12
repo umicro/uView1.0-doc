@@ -292,10 +292,16 @@ rules: {
 - `message`  
 校验不通过时的提示信息  
 
-- `validator`{Function}：自定义校验函数，参数如下：
+- `validator`{Function}：自定义**同步**校验函数，参数如下：
 	- `rule`：当前校验字段在 rules 中所对应的校验规则
 	- `value`：当前校验字段的值
-	- `callback`：校验完成时的回调，一般返回`true`(校验通过)或者`false`(校验失败)即可
+	- `callback`：校验完成时的回调，一般无需执行callback，返回`true`(校验通过)或者`false`(校验失败)即可
+
+- `asyncValidator`{Function}：自定义**异步**校验函数，参数如下：
+	- `rule`：当前校验字段在 rules 中所对应的校验规则
+	- `value`：当前校验字段的值
+	- `callback`：校验完成时的回调，执行完异步操作(比如向后端请求数据验证)，如果不通过，需要callback(new Error('提示错误信息'))，如果校验通过，执行callback()即可
+
 
 
 #### uView自带验证规则
@@ -341,6 +347,7 @@ rules: {
 2. 必须为字母或字符串，校验前先将字段值转为字符串类型：通过`pattern`参数配置正则：/^[0-9a-zA-Z]*$/g，通过`transform`参数在校验前对字段值转换为字符串
 3. 长度6-8个字符之间：通过 配置`min`为6，`max`为8
 4. 需要包含字母"A"：使用uView的`this.$u.test.contains()`方法，并结合`validator`自定义函数实现
+5. 异步校验，输入完账号，输入框失去焦点时，向后端请求该账号是否已存在：通过上方的`asyncValidator`异步函数进行验证。
 
 
 综上，我们可以得出如下的一个配置规则(仅为综合演示，非最优做法)：
@@ -376,6 +383,22 @@ rules: {
 				return this.$u.test.contains(value, "A");
 			},
 			message: '必须包含字母"A"'
+		},
+		// 校验用户是否已存在
+		{
+			asyncValidator: (rule, value, callback) => {
+				this.$u.post('/xxx/xxx', {name: value}).then(res => {
+					// 如果验证不通过，需要在callback()抛出new Error('错误提示信息')
+					if(res.error) {
+						callback(new Error('姓名重复'));
+					} else {
+						// 如果校验通过，也要执行callback()回调
+						callback();
+					}
+				})
+			},
+			// 如果是异步校验，无需写message属性，错误的信息通过Error抛出即可
+			// message: 'xxx'
 		}
 	]
 }
@@ -500,7 +523,7 @@ export default {
 | prop | 表单域`model`对象的属性名，在使用 validate、resetFields 方法的情况下，该属性是必填的 | Object | - | - |
 | border-bottom | 是否显示表单域的下划线边框 | Boolean | true | - |
 | label-position | 表单域提示文字的位置，`left`-左侧，`top`-上方 | String | left | top |
-| label-width | 提示文字的宽度，单位rpx | String \| Number | 90 | - |
+| label-width | 提示文字的宽度，单位rpx | String \| Number | 90 | 数值 / auto(1.3.4引入) |
 | label-style | `lable`的样式，对象形式 | Object | - | - |
 | label-align | `lable`的对齐方式 | String | left |  center / right |
 | right-icon | 右侧自定义字体图标(限uView内置图标)或图片地址 | String |  - |

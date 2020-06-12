@@ -102,6 +102,17 @@
 对于这种情况，uView给出了一个`keep-running`参数(默认为`false`)，为`true`的时候，即使刷新浏览器，或者返回上一个页面，
 倒计时依然会继续(如果还在倒计时间内的话)。
 
+**注意：** 如果您的一个页面或者多个页面同时使用了多个此组件，为了防止多个组件之间，保存在本地的多个继续倒计时的变量之间互相干扰，可以配置
+各个组件的`unique-key`为一个不重复的字符串，以作区分：
+
+```html
+/* A.vue */
+<u-verification-code unique-key="page-a"></u-verification-code>
+
+/* B.vue */
+<u-verification-code unique-key="page-b"></u-verification-code>
+```
+
 
 ### API
 
@@ -114,6 +125,7 @@
 | change-text | 倒计时期间的提示语，必须带有字母"x"，见上方说明 | String  | X秒重新获取 | - |
 | end-text | 倒计结束的提示语，见上方说明 | String  | 重新获取 | - |
 | keep-running | 是否在H5刷新或各端返回再进入时继续倒计时 | Boolean  | false | true |
+| unique-key <Badge text="1.3.4" /> | 多个组件之间继续倒计时的区分`key`，见上方说明 | String  | - | - |
 
 
 ### Methods
@@ -139,7 +151,7 @@
 
 <style scoped>
 h3[id=props] + table thead tr th:nth-child(2){
-	width: 40%;
+	width: 35%;
 }
 
 h3[id=methods] + p + table thead tr th:nth-child(2){

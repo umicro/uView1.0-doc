@@ -189,6 +189,7 @@ uView提供了一个`background`参数(需对象形式)，可以自定义导航�
 | background | 导航栏背景设置(APP和小程序上包括状态栏的颜色)，见上方说明 | Object  | { background: '#ffffff' } | - |
 | is-fixed | 导航栏是否固定在顶部 | Boolean  | true | false |
 | border-bottom | 导航栏底部是否显示下边框，如定义了较深的背景颜色，可取消此值 | Boolean  | true | false |
+| custom-back <Badge text="1.3.4" /> | 自定义返回逻辑方法，如传入，点击返回按钮执行函数，否则正常返回上一页 | Function  | - | - |
 
 
 ### Slot
