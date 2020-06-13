@@ -72,7 +72,7 @@
 ### 关于uView组件的esaycom规则可能和其他组件引入名称冲突的问题
 
 uView的组件引入是通过easycom形式的，写在pages.json中，以`u-`开头，这可能和其他UI组件，或者uni-app件市场的[uParse修复版-html富文本加载](https://ext.dcloud.net.cn/plugin?id=364)组件名冲突而**报错**，
-原因是此`uParse`的组件引用名为`u-parse`，也是`u-`开头，即使您在页面中显式地配置了组件引入，但uni-app然认为easycom配置的规则优先级比页面引入的组件规则高。
+原因是此`uParse`的组件引用名为`u-parse`，也是`u-`开头，即使您在页面中显式地配置了组件引入，但uni-app仍认为easycom配置的规则优先级比页面引入的组件规则高。
 
 以下为`uParse`第三方插件的官方写法：
 
@@ -91,7 +91,7 @@ uView的组件引入是通过easycom形式的，写在pages.json中，以`u-`开
 </script>
 ```
 
-可以看到，上方虽然通过`import`声明了此组件，最终引用的组件名称为`<u-parse>`("u-"开头)，但是uni-app然忽视了，而认为uView在`pages.json`配置的easycom规则的优先级更高，因而去uView的组件库
+可以看到，上方虽然通过`import`声明了此组件，最终引用的组件名称为`<u-parse>`("u-"开头)，但是uni-app仍然忽视了，而认为uView在`pages.json`配置的easycom规则的优先级更高，因而去uView的组件库
 中查找`u-parse`，因为找不到而报错，这是不合理的。
 
 解决办法也很简单，给冲突的插件换一个名字即可，比如上面的`uParse`插件，我们在`import`和`components`声明的时候换一个名字即可，比如这里让其为字母`a`开头：
