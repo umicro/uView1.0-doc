@@ -266,7 +266,7 @@ rules: {
 	- any：任意类型
 	
 - `required`  
-布尔值，是否必填
+布尔值，是否必填，配置此参数不会显示输入框左边的必填星号，如需要，请配置`u-form-item`的`required`为`true`
 
 - `pattern`  
 要求此参数值为一个正则表达式，如： /\d+/，**不能**带引号，如："/\d+/"，组件会对字段进行正则判断，返回结果。
@@ -407,11 +407,12 @@ rules: {
 
 #### 校验错误提示方式
 
-uView提供了多种校验的错误提示方式，这些值需要包含在数组中，传递给`Form`组件的`errory-type`参数：
+uView提供了多种校验的错误提示方式，这些值需要包含在数组(可以填写多个值，同时进行多种提示)中，传递给`Form`组件的`errory-type`参数：
 - `message`：默认为输入框下方用文字进行提示
 - `none`：只要包含此值，将不会进行任何提示
 - `border-bottom`：配置作用域底部的下划线显示为红色
 - `border`：配置输入框的边框为红色进行提示 -- 如果有配置显示`Input`组件显示边框的话
+- `toast`：以"toast"提示的方式弹出错误信息，每次只弹出最前面的那个表单域的错误信息(1.3.5新增)
 
 ```html
 <template>
@@ -530,6 +531,7 @@ export default {
 | left-icon | 左侧自定义字体图标(限uView内置图标)或图片地址 | String |  - |
 | left-icon-style | 左侧图标的样式，对象形式 | Object | - | - |
 | right-icon-style | 右侧图标的样式，对象形式 | Object | - | - |
+| required <Badge text="1.3.5" /> | 是否显示左边的"*"号，这里仅起展示作用，如需校验必填，请通过`rules`配置必填规则 | Boolean | false | true |
 
 
 ### Form-item Slot

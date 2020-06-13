@@ -109,4 +109,27 @@ export default {
 		margin-top: 7px;
 	}
 }
+
+@media screen and (max-width: 768px) {
+	.member-item {
+		&__avatar {
+			width: 50px;
+			height: 50px;
+			flex: 0 0 50px;
+		}
+		
+		&__info {
+			margin-left: 10px;
+		}
+		
+		&__name {
+			margin-top: 0;
+		}
+		
+		&__intro, &__job {
+			font-size: 13px;
+			line-height: 1.7;
+		}
+	}
+}
 </style>

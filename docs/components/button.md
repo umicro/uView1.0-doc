@@ -139,8 +139,8 @@ uView已对接uni-app档关于uni-app方button组件](https:uni-app.dcloud.io/co
 |hover-start-time|按住后多久出现点击态，单位毫秒|Number|20|-|-|
 |hover-stay-time|手指松开后点击态保留时间，单位毫秒|Number|70|-|-|
 |custom-style|对按钮的自定义样式，对象形式，见上方说明|Object|-|-|-|
-|app-parameter|指定是否阻止本节点的祖先节点出现点击态|Boolean|false|true|微信小程序、QQ小程序|
-|hover-stop-propagation|打开 APP 时，向 APP 传递的参数，open-type=launchApp时有效|Boolean|false|true|微信小程序|
+|app-parameter|打开 APP 时，向 APP 传递的参数，open-type=launchApp时有效|Boolean|false|true|微信小程序、QQ小程序|
+|hover-stop-propagation|指定是否阻止本节点的祖先节点出现点击态|Boolean|false|true|微信小程序|
 |lang|指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文|String|en|zh_CN \ zh_TW  |微信小程序|
 |session-from|会话来源，open-type="contact"时有效|String|-|-|微信小程序|
 |send-message-title|会话内消息卡片标题，open-type="contact"时有效|String|当前标题|-|微信小程序|
