@@ -26,7 +26,7 @@ module.exports = {
 		// lastUpdated: '上次更新时间',
 		nav: [{
 			text: '指南',
-			link: '/guide/note'
+			link: '/guide/demo'
 		}, {
 			text: '组件',
 			link: '/components/intro'
@@ -34,11 +34,8 @@ module.exports = {
 			text: 'JS',
 			link: '/js/intro'
 		}, {
-			text: '布局',
+			text: '模板',
 			link: '/layout/intro'
-		}, {
-			text: '演示',
-			link: '/components/demo'
 		}, {
 			text: '关于我们',
 			link: '/cooperation/about'
@@ -48,7 +45,7 @@ module.exports = {
 		}],
 		sidebar: {
 			'/components/': [{
-					title: '开发指南',
+					title: '起步',
 					collapsable: false,
 					sidebarDepth: 0,
 					children: [
@@ -57,12 +54,8 @@ module.exports = {
 						['/components/install', '安装'],
 						['/components/setting', '配置'],
 						['/components/quickstart', '快速上手'],
-						['/components/demo', '效果演示'],
 						['/components/common', '内置样式'],
 						['/components/changelog', '更新日志'],
-						['/components/customIcon', '扩展自定义图标库'],
-						['/components/globalVariable', '全局变量的实现'],
-						['/components/codeHint', 'HBuilder X代码提示'],
 						['/components/changeGuide', '升级指南'],
 					]
 				},
@@ -190,11 +183,23 @@ module.exports = {
 				},
 			],
 			'/guide': [
-				'/guide/note',
-				'/guide/design'
+				{
+					title: '开发指南',
+					collapsable: false,
+					sidebarDepth: 0,
+					children: [
+						['/guide/demo', '效果演示'],
+					//	['/guide/addQQGroup', '加QQ群交流反馈'],
+						['/guide/customIcon', '扩展自定义图标库'],
+						['/guide/globalVariable', '全局变量的实现'],
+						['/guide/codeHint', 'HBuilder X代码提示'],
+						['/guide/design', '设计理念'],
+						['/guide/note', '注意事项'],
+					]
+				}
 			],
 			'/layout': [{
-				title: '开发指南',
+				title: '起步',
 				collapsable: false,
 				sidebarDepth: 0,
 				children: [
@@ -270,10 +275,8 @@ module.exports = {
 			'/components/quickstart',
 			'/components/common',
 			'/components/changelog',
-			'/components/customIcon',
 			'/components/line',
 			'/components/card',
-			'/components/globalVariable',
 			'/components/color',
 			'/components/icon',
 			'/components/button',
@@ -336,7 +339,6 @@ module.exports = {
 			'/components/avatar',
 			'/components/loading',
 			'/layout/menu',
-			'/components/codeHint',
 			'/layout/coupon',
 			'/layout/submitBar',
 			'/layout/comment',
