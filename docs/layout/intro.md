@@ -1,7 +1,7 @@
 ## 介绍
 
 <demo-model url="/pages/example/template"></demo-model>
-
+<template-download></template-download>
 
 <!-- 布局为uView框架的一部分，是uView(**言信网络**)前端开发组平时积累的常见页面布局，可能是页面的一部分，可也能是整个 -->
 布局为uView框架的一部分，是uView平时积累的常见页面布局，可能是页面的一部分，可也能是整个

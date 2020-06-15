@@ -1,7 +1,7 @@
 ## 垂直分类
 
 <demo-model url="/pages/template/mallMenu/index2"></demo-model>
-
+<template-download></template-download>
 
 uView为用户制作了两个类型的分类页面，分别是左右联动，左右分开的场景。  
 这两个页面，为布局而非组件形式，可以根据自己的需求修改页面的结构，逻辑，样式。

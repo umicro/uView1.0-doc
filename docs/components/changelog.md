@@ -10,6 +10,66 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>1.3.5</h2>
+				</div>
+				<p><code>2020-06-15</code></p>
+				<ul>
+					<li>
+						<span class="add">新增</span>
+						form表单验证新增toast的错误提示方式，配置erroryType=['toast']即可
+					</li>
+					<li>
+						<span class="add">新增</span>
+						search搜索框组件新增search-icon参数，可自定义左侧的图标
+					</li>
+					<li>
+						<span class="add">新增</span>
+						card组件新增可控制头部和尾部显示与否的show-head和show-foot参数
+					</li>
+					<li>
+						<span class="add">新增</span>
+						collapse组件新增控制头部的slot参数title和title-all
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						form-item组件左侧红色星标通过required参数配置，仅起展示作用，如需校验是否填写请配置rules规则
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						改正section组件的show-line默认为false的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复popup组件在低性能安卓设备上可能存在弹出动画无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复line线条组件可能在小程序上无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复upload组件在H5上可能弹出两次选择文件窗口的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复verificationCode验证码倒计时设置保持倒计时模式时多次切换页面倒计时可能混乱的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复calendar日历组件的关闭按钮在支付宝小程序上位置不对的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复numberBox组件渲染完成时自动触发一次change事件的问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>1.3.4</h2>
 				</div>
 				<p><code>2020-06-11</code></p>

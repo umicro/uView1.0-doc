@@ -191,6 +191,15 @@ export default {
 | change | 某个item被打开或者收起时触发 | 对象，{index: index, show: true \| false }，index为`collapse-item`的`index`参数，show为`true`表示被打开，`false`表示被收起 |
 
 
+### Slot
+
+| 名称          | 说明            |
+|-------------  |---------------- |
+| - |  主体部分的内容  |
+| title <Badge text="1.3.5" /> |  头部的内容，不含右边的箭头  |
+| title-all <Badge text="1.3.5" /> |  整个头部的内容，包含右边的箭头  |
+
+
 <style scoped>
 h3[id=collapse-props] + table thead tr th:nth-child(2){
 	width: 40%;
@@ -205,6 +214,10 @@ h3[id=collapse-event] + p + table thead tr th:nth-child(2){
 }
 
 h3[id=collapse-item-event] + p + table thead tr th:nth-child(3){
+	width: 50%;
+}
+
+h3[id=slot] + table thead tr th:nth-child(2){
 	width: 50%;
 }
 </style>

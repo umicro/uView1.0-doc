@@ -373,6 +373,7 @@ module.exports = {
 			'/js/deepMerge',
 			'/js/deepClone',
 			'/components/input',
+			'/layout/citySelect',
 		],
 	}
 }

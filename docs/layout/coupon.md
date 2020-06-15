@@ -1,7 +1,7 @@
 ## 优惠券
 
 <demo-model url="/pages/template/coupon/index"></demo-model>
-
+<template-download></template-download>
 
 <custom-block></custom-block>
 

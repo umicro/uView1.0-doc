@@ -46,21 +46,19 @@ export default {
 			list: [
 				{
 					name: 'apple',
-					checked: false,
 					disabled: false
 				},
 				{
 					name: 'banner',
-					checked: false,
 					disabled: false
 				},
 				{
 					name: 'orange',
-					checked: false,
 					disabled: false
 				}
 			],
-			value: '',
+			// u-radio-group的v-model绑定的值如果设置为某个radio的name，就会被默认选中
+			value: 'orange',
 		};
 	},
 	methods: {
@@ -90,7 +88,7 @@ export default {
 
 ### 自定义形状
 
-可以通过设置`shape`为`square`或者`circle`，将复选框设置为方形或者圆形
+可以通过设置`shape`为`square`或者`circle`，将单选框设置为方形或者圆形
 
 
 ```html
@@ -128,12 +126,12 @@ export default {
 
 ### Radio Props
 
-注意：需要给`radioGroup`组件通过`v-model`绑定一个**布尔值**，来初始化`radio`的状态，随后该值被双向绑定，
-当用户勾选复选框时，该值在`radio`内部被修改为`true`，并反映到父组件，否则为`false`，换言之，您无需监听`radio`的`change`事件，也能
-知道某一个`radio`是否被选中的状态
+注意：需要给`radioGroup`组件通过`v-model`绑定一个**变量**，来初始化`radio`的状态，随后该值被双向绑定，
+当用户勾单选框时，该值在`radio`内部被修改为`name`值，并反映到父组件，换言之，您无需监听`radio`的`change`事件，也能知道哪个`radio`被选中了。
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
+| v-model | 被选中`radio`双向绑定的值，如果初始值为某一个`radio`的`name`，该`radio`将会默认被选中 | String \ Number | - | - |
 | icon-size | 图标大小，单位rpx  | String \ Number | 20 | - |
 | label-size | label字体大小，单位rpx  | String \ Number | 28 | - |
 | name | `radio`组件的标示符  | String \ Number | - | - |
