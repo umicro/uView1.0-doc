@@ -1,6 +1,6 @@
 ## HBuilder X对uView的代码
 
-<demo-model url="/"></demo-model>
+<!-- <demo-model url="/"></demo-model> -->
 
 uView发布一周后，	迅速适配了HX的代码提示功能，让用户可以更简单，畅快的使用uView的组件，这个提示功能有如下特色：
 

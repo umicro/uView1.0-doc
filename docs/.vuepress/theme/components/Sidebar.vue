@@ -2,7 +2,7 @@
 	<div>
 		<aside class="sidebar">
 			<a class="jump-link" href="https://www.uviewui.com">
-				<img src="/common/contact.png" />
+				<img src="/common/contact1.png" />
 			</a>
 			<NavLinks />
 			<slot name="top" />
@@ -29,6 +29,10 @@ export default {
 .sidebar
 	.jump-link
 		margin-top 1rem
+		margin-right 2rem
+		img {
+			max-width 100%
+		}
 
 	ul
 		padding 0

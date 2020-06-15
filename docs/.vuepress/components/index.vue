@@ -142,6 +142,10 @@
 					</li>
 				</ul>
 			</div>
+			<div class="card-box friend-link">
+				<p class="card-title">友情链接</p>
+				<friend-link></friend-link>
+			</div>
 		</div>
 		<div class="foot">
 			Copyright 2020 uView UI | <a target="_blank" href="http://www.beian.miit.gov.cn">粤ICP备19025822号</a>
@@ -273,6 +277,10 @@
 	}
 	
 	@media (max-width: 992px) {
+		.banner {
+			margin-top: 2rem;
+		}
+		
 		.banner .desc h1 {
 			font-size: 24px;
 		}
@@ -283,9 +291,7 @@
 		
 		.card-box .card-title {
 		    font-size: 20px;
+			margin-bottom: 25px;
 		}
 	}
-
-
-	
 </style>

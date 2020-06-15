@@ -28,6 +28,6 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | bg-color |  背景颜色 | String	 | transparent(背景透明) | - |
-| height | 分割槽高度，单位rpx  | String \| Number | 30 | - |
+| height | 间隔槽高度，单位rpx  | String \| Number | 30 | - |
 | margin-top | 与前一个元素的距离，单位rpx | String \| Number  | 0 | - |
 | margin-bottom | 与后一个元素的距离，单位rpx | String \| Number  | 0 | - |

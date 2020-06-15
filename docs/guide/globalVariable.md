@@ -1,6 +1,6 @@
 ## 全局变量的实现方式
 
-<demo-model url="/pages/library/globalVariable/index"></demo-model>
+<!-- <demo-model url="/pages/library/globalVariable/index"></demo-model> -->
 
 
 我们这里说的全局变量，着重指的是能够**全局动态响应**的情况。

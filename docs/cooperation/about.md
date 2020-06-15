@@ -53,25 +53,8 @@ uView的目标是做成uniapp生态的标杆，自由且免费开源。
 <br>
 
 ### 捐赠uView的研发
-
-做一个UI框架是一项庞大的工作，尤其是要多端适配，并且迅速跟进uniapp官方的更新，uView作者经常为此工作到深夜……  
-今年春节(2020)，uView作者母亲说不想去广东打工了，想看看镇上的砖厂招人不……  
-uView文档和源码全部开源免费，如果您认为uView帮到了您的开发工作，您可以捐赠uView的研发工作，捐赠无门槛，哪怕是一杯可乐也好(相信这比打赏主播更有意义)。
-
-<div class="container-fluid">
-	<div class="row col-md-6">
-		<div class="col-sm-6 col-md-6 col-xs-12 col-box">
-			<div class="sponsor-type">
-				<img src="/common/wechat.png" />
-			</div>
-		</div>
-		<div class="col-sm-6 col-md-6 col-xs-12 col-box">
-			<div class="sponsor-type">
-				<img src="/common/alipay.png" />
-			</div>
-		</div>
-	</div>
-</div>
+		
+<donation></donation>
 
 <br>
 
@@ -141,6 +124,14 @@ uView拥有众多用户，且文档详尽，经得起推敲，受得住考验，
 						link: 'https://www.yuque.com/pocky',
 						duty: '负责uView组件和JS工具库 开发、测试、维护，社区维护等工作',
 						intro: '好的代码像粥一样，都是用时间熬出来的。技术栈：前端'
+					},
+					{
+						avatar: 'https://cdn.uviewui.com/uview/team/A6A2AD122A73AB60F0.png',
+						name: '刘娇娇',
+						job: '前端开发',
+						addr: '深圳',
+						duty: '负责uView核心组件库研发，参与模板改进，社区管理等工作',
+						intro: '热爱编程技术，熟悉前端、Java，数据库等，有多个大型项目实践经验。对自己要求高，不断学习和吸收新技术，进步永无止境'
 					}
 				]
 			}
@@ -156,20 +147,6 @@ uView拥有众多用户，且文档详尽，经得起推敲，受得住考验，
 
 .col-box {
 	text-align: center;
-}
-
-.sponsor-type {
-	text-align: center;
-	margin: 30px 0;
-	display: inline-block;
-}
-
-.sponsor-type img {
-	display: inline-block;
-}
-
-.sponsor-type img {
-	width: 60%;
 }
 </style>
 
