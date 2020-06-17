@@ -51,7 +51,7 @@
 | size | 图标字体大小，单位rpx | String \| Number  | inherit | - |
 | index | 一个用于区分多个图标的值，点击图标时通过`click`事件传出 | String  | - | - |
 | hover-class | 图标按下去的样式类，用法同uni的`view`组件的`hover-class`参数，详见：[hover-class](https://uniapp.dcloud.io/component/view) | String  | - | - |
-| label | 图标右侧的label文字 | String  | - | - |
+| label | 图标右侧/下方的label文字 | String  | - | - |
 | label-size | `label`字体大小，单位rpx | String \| Number  | 28 | - |
 | label-color | `label`字体颜色 | String  | #606266 | - |
 | margin-left | `label`在右方时与图标的距离，单位rpx | String \| Number  | 6 | - |

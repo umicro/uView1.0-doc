@@ -7,6 +7,18 @@ module.exports = {
 	},
 	// <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	plugins: ['@vuepress/back-to-top'],
+	configureWebpack: (config, isServer) => {
+		if (!isServer) {
+			
+			// 修改客户端的 webpack 配置
+			// 加入一个时间戳，让每次编译时，文件都不一样，也即每次发版本，都强行更新所有文件
+			return {
+				output: {
+					filename: `assets/js/[name].${+ new Date()}.[chunkhash].js`,
+				}
+			}
+		}
+	},
 	head: [
 		['meta', {
 			name: 'viewport',
@@ -17,7 +29,7 @@ module.exports = {
 			content: 'uview,uView,uviewui,uview ui,uviewUI,uViewui,uViewUI,uView UI,uni ui,uni UI,uni-app ui框架,uni-app UI框架,uniapp ui,ui,UI框架,uniapp ui框架,uniapp UI'
 		}],
 	],
-	
+
 	themeConfig: {
 		baseUrl: 'https://api.uviewui.com',
 		search: true, // 是否显示顶部搜索框
@@ -182,22 +194,20 @@ module.exports = {
 					]
 				},
 			],
-			'/guide': [
-				{
-					title: '开发指南',
-					collapsable: false,
-					sidebarDepth: 0,
-					children: [
-						['/guide/demo', '效果演示'],
+			'/guide': [{
+				title: '开发指南',
+				collapsable: false,
+				sidebarDepth: 0,
+				children: [
+					['/guide/demo', '效果演示'],
 					//	['/guide/addQQGroup', '加QQ群交流反馈'],
-						['/guide/customIcon', '扩展自定义图标库'],
-						['/guide/globalVariable', '全局变量的实现'],
-						['/guide/codeHint', 'HBuilder X代码提示'],
-						['/guide/design', '设计理念'],
-						['/guide/note', '注意事项'],
-					]
-				}
-			],
+					['/guide/customIcon', '扩展自定义图标库'],
+					['/guide/globalVariable', '全局变量的实现'],
+					['/guide/codeHint', 'HBuilder X代码提示'],
+					['/guide/design', '设计理念'],
+					['/guide/note', '注意事项'],
+				]
+			}],
 			'/layout': [{
 				title: '起步',
 				collapsable: false,
@@ -362,7 +372,7 @@ module.exports = {
 			'/js/md5',
 			'/js/random',
 			'/js/trim',
-			'/js/getRect', 
+			'/js/getRect',
 			'/js/mpShare',
 			'/components/navbar',
 			'/components/calendar',

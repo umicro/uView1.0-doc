@@ -17,7 +17,9 @@
 
 ### 基本使用
 
-所有的配置模式中，都要求传入数组的元素(对象)中含有`value`和`label`属性，`value`用于在回调时，区别选择了哪一个(针对开发者)，`label`用于展示在选择器中，供用户选择和查看(针对用户)。
+所有的配置模式中，都要求传入数组的元素(对象)中含有`value`和`label`属性(可以通过`value-name`和`label-name`参数自定义)，
+`value`用于在回调时，区别选择了哪一个(针对开发者)，`label`用于展示在选择器中，供用户选择和查看(针对用户)。
+
 
 - 通过v-model绑定一个布尔值变量，用于控制组件的弹出与收起。
 - 组件共有3种模式，通过配置`mode`参数实现，如下：
@@ -245,6 +247,9 @@
 
 ### 回调参数
 
+**注意：** 如果您觉得回调的`value`和`label`属性还无法满足您的需求，您可以在传递给`list`的参数中多带一个`extra`属性，如果有此属性，
+在回调中将会多返回一个`extra`属性值(1.3.6新增)。
+
 1. 单列模式
 
 此模式点击`确定`按钮，会返回一个只有一个元素的数组，此元素即为回调结果，数组内容可能如下：  
@@ -253,7 +258,9 @@
 res = [
 	{
 		label: '雪月夜',
-		value: '1'
+		value: '1',
+		// 如果传递给"list"的对象中有extra属性，将会在此返回
+		// extra: 'xxx'
 	}
 ]
 ```
@@ -297,6 +304,8 @@ res = [
 | default-value | 提供的默认选中的下标，见上方说明  | Array | - | - |
 | mask-close-able | 是否允许通过点击遮罩关闭Picker  | Boolean | true | false |
 | z-index | 弹出时的`z-index`值 | String \| Number | 10075 | - |
+| value-name | 自定义`list`数据的`value`属性名 <Badge text="1.3.6" /> | String | value | - |
+| label-name | 自定义`list`数据的`label`属性名 <Badge text="1.3.6" /> | String | label | - |
 
 
 ### Events

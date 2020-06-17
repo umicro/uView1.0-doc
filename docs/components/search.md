@@ -93,7 +93,7 @@
 | placeholder | 占位文字内容 | String | 请输入关键字 | - |
 | clearabled | 是否启用清除控件 | Boolean | true | false |
 | focus | 是否自动获得焦点 | Boolean | false | true |
-| show-action | 是否显示右侧控件 | Boolean | true | false |
+| show-action | 是否显示右侧控件(右侧的"搜索"按钮) | Boolean | true | false |
 | action-text | 右侧控件文字 | String | 搜索 | - |
 | action-style | 右侧控件的样式，对象形式 | Object | - | - |
 | input-align | 输入框内容水平对齐方式 | String | left | center / right |

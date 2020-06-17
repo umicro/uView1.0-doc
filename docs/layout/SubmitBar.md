@@ -1,7 +1,7 @@
 ## SubmitBar 提交订单栏
 
 <demo-model url="/pages/template/submitBar/index"></demo-model>
-
+<template-download></template-download>
 
 <custom-block></custom-block>
 

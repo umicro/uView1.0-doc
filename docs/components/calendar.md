@@ -188,7 +188,6 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | mode | 选择日期的模式，date-为单个日期，range-为选择日期范围 | String | date | range |
-| list | 列数据，数组形式，见上方说明 | Array | - | - |
 | v-model | 布尔值变量，用于控制日历的弹出与收起 | Boolean | false | true |
 | safe-area-inset-bottom | 是否开启[底部安全区适配](/components/safeAreaInset.html#关于uview某些组件safe-area-inset参数的说明) | Boolean  | false | true |
 | change-year | 是否显示顶部的切换年份方向的按钮  | Boolean | true | false |
@@ -206,6 +205,7 @@
 | z-index | 弹出时的`z-index`值 | String \| Number | 10075 | - |
 | active-color | 起始/结束日期按钮的字体颜色 | String | #ffffff | - |
 | range-bg-color | 起始/结束日期之间的区域的背景颜色 | String | rgba(41,121,255,0.13) | - |
+| range-color | 选择范围内字体颜色 | String | #2979ff | - |
 | start-text | 起始日期底部的提示文字 | String | 开始 | - |
 | end-text | 结束日期底部的提示文字 | String | 结束 | - |
 | btn-type | 底部确定按钮的主题 | String | primary | default / success / info/ warning / error |
