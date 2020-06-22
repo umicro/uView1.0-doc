@@ -191,6 +191,13 @@ export default {
 | change | 某个item被打开或者收起时触发 | 对象，{index: index, show: true \| false }，index为`collapse-item`的`index`参数，show为`true`表示被打开，`false`表示被收起 |
 
 
+### Collapse Methods 
+
+|方法|说明|
+|:-|:-|
+| init  <Badge text="1.3.8" /> | 重新初始化内部高度计算，用于异步获取内容的情形 |
+
+
 ### Slot
 
 | 名称          | 说明            |
@@ -210,6 +217,10 @@ h3[id=collapse-item-props] + table thead tr th:nth-child(2){
 }
 
 h3[id=collapse-event] + p + table thead tr th:nth-child(2){
+	width: 50%;
+}
+
+h3[id=collapse-methods] + table thead tr th:nth-child(2){
 	width: 50%;
 }
 

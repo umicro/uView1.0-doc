@@ -1,6 +1,6 @@
 ## Input 输入框 <Badge text="1.3.0" />
 
-<demo-model url="/pages/componentsA/input/index"></demo-model>
+<!-- <demo-model url="/pages/componentsA/input/index"></demo-model> -->
 
 此组件为一个输入框，默认没有边框和样式，是专门为配合表单组件[u-form](/components/form.html)而设计的，利用它可以快速实现表单验证，输入内容，下拉选择等功能。  
 

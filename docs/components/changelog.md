@@ -10,6 +10,110 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>1.3.7</h2>
+				</div>
+				<p><code>2020-06-22</code></p>
+				<ul>
+					<li>
+						<span class="add">新增</span>
+						upload新增上传前钩子before-upload，可返回布尔值或者Promise，to-json参数可配置是否将返回结果转为json格式
+					</li>
+					<li>
+						<span class="add">新增</span>
+						select，form，input，calendar组件的HX代码提示
+					</li>
+					<li>
+						<span class="add">新增</span>
+						select新增child-name和title参数，picker组件新增title参数
+					</li>
+					<li>
+						<span class="add">新增</span>
+						popup组件新增width和height参数，如果内容超出容器，自动垂直滚动
+					</li>
+					<li>
+						<span class="add">新增</span>
+						Line线条组件新增border-style参数，可以设置实线，方形虚线，圆点虚线
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						select和picker组件在微信小程序滑动过快，快速点击确定按钮时选择值可能不对的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						废弃color.js文件，颜色值全部改由css提供，为自定义主题做准备
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						form表单综合演示中，switch没有垂直居中的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复fullScreen演示无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复input组件设置password-icon可能导致错乱的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复verificationCode验证码倒计时组件设置保持验证码时可能导致错乱的问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
+					<h2>1.3.6</h2>
+				</div>
+				<p><code>2020-06-18</code></p>
+				<ul>
+					<li>
+						<span class="add">新增</span>
+						select组件新增自定义value和label属性名的value-name和label-name，以及额外参数extra
+					</li>
+					<li>
+						<span class="add">新增</span>
+						toast组件新增callback回调参数
+					</li>
+					<li>
+						<span class="add">新增</span>
+						swiper新增轮播切换时的change事件
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化mask组件缩放效果时，传入的slot被一直停留在1.2倍放大的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化modal组件同时去除确定和取消按钮时，底部有占用空间的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化switch组件切换的控件可能会受父组件字体大小影响的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						去除请求插件中的默认header请求头的content-type字段，避免某些特殊情况下造成影响
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复由于deepClone方法缺陷导致select组件报错的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复slider在演示中无法显示拖动滑块的问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>1.3.5</h2>
 				</div>
 				<p><code>2020-06-15</code></p>

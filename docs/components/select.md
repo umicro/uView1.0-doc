@@ -31,14 +31,17 @@
 
 ```html
 <template>
-	<u-select v-model="show" :list="list"></u-select>
+	<view>
+		<u-select v-model="show" :list="list"></u-select>
+		<u-button @click="show = true">打开</u-button>
+	</view>
 </template>
 
 <script>
 	export default {
 		data() {
 			return {
-				show: true,
+				show: false,
 				list: [
 					{
 						value: '1',
@@ -306,6 +309,8 @@ res = [
 | z-index | 弹出时的`z-index`值 | String \| Number | 10075 | - |
 | value-name | 自定义`list`数据的`value`属性名 <Badge text="1.3.6" /> | String | value | - |
 | label-name | 自定义`list`数据的`label`属性名 <Badge text="1.3.6" /> | String | label | - |
+| child-name | 自定义`list`数据的`children`属性名，只对多列联动模式有效 <Badge text="1.3.6" /> | String | children | - |
+| title | 顶部中间的标题 <Badge text="1.3.6" /> | String | - | - |
 
 
 ### Events

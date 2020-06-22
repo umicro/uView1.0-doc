@@ -110,6 +110,16 @@
 </style>
 ```
 
+
+### 自定义导航栏
+
+默认情况下，组件的锚点是吸附在导航栏下方的，如果您修改了导航栏，比如取消导航栏、或者自定义了导航栏，就需要指定吸顶的高度，也就是`offset-top`
+的值，注意这个值的单位为`rpx`：
+
+- 如果取消导航栏，需要将`offset-top`为`0`
+- 如果自定义了导航栏，需要`offset-top`设置为导航栏的高度
+
+
 ### API
 
 ### IndexBar Props
@@ -120,7 +130,7 @@
 | index-list | 索引字符列表，数组  | Array[string \| number] | A-Z | - |
 | z-index | 锚点吸顶时的层级  | Number \| String | 965 | - |
 | sticky | 是否开启锚点自动吸顶  | Boolean | true | false |
-| offset-top | 锚点自动吸顶时与顶部的距离  | Number \| String | 0 | - |
+| offset-top | 锚点自动吸顶时与顶部的距离，单位rpx，见上方"自定义导航栏"说明  | Number \| String | 0 | - |
 | active-color | 锚点和右边索引字符高亮颜色  | String | #2979ff | - |
 
 ### IndexAnchor Props

@@ -20,7 +20,10 @@
 
 ```html
 <template>
-	<u-keyboard ref="uKeyboard" mode="car" v-model="show"></u-keyboard>
+	<view>
+		<u-keyboard ref="uKeyboard" mode="car" v-model="show"></u-keyboard>
+		<u-button @click="show = true">打开</u-button>
+	</view>
 </template>
 
 <script>
