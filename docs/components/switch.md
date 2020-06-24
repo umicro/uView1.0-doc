@@ -169,7 +169,7 @@
 | active-color | 打开时的背景色 | String  | #2979ff | - |
 | inactive-color | 关闭时的背景色 | String  | #ffffff | - |
 | vibrate-short | 是否使手机发生短促震动，目前只在iOS的微信小程序和微信小程序开发工具有效  | Boolean | false | true |
-| active-value | 打开选择器时通过change事件发出的值 | Boolean \| Number \| String  | #ffffff | true |
+| active-value | 打开选择器时通过change事件发出的值 | Boolean \| Number \| String  | true | |
 | inactive-value | 关闭选择器时通过change事件发出的值 | Boolean \| Number \| String | false |
 
 
