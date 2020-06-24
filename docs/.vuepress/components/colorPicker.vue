@@ -1,40 +1,93 @@
 <template>
-	<div>
-		<!-- <picker v-model="value" @input="updateValue"></picker> -->
-		<dropdown>
-			<template  slot="btn">Click me</template >
-			<template  slot="body">
-				<picker v-model="value" @input="updateValue"></picker>
-			</template >
-		</dropdown>
+	<div class="picker">
+		<div
+			class="picker__item"
+			:style="{
+				backgroundColor: value,
+				color: color
+			}"
+		>
+			<div class="picker__item__name">{{ name }}</div>
+			<div class="picker__item__value">{{ value }}</div>
+		</div>
+		<el-row class="picker__tool" type="flex" justify="space-between">
+			<el-col :span="15"><el-input class="picker__input" readonly :placeholder="value"></el-input></el-col>
+			<el-col :span="9" class="picker__tool__picker"><el-color-picker @change="change" v-model="pickerColor"></el-color-picker></el-col>
+		</el-row>
 	</div>
 </template>
 
 <script>
-import {Chrome} from 'vue-color';
-import dropdown from 'bp-vuejs-dropdown';
 export default {
-	components: {
-		'picker': Chrome,
-		dropdown
-	},
 	props: {
 		color: {
 			type: String,
-			default: '#000000'
+			default: '#ffffff'
+		},
+		bgColor: {
+			type: String,
+			default: '#2979ff'
+		},
+		name: {
+			type: String,
+			default: ''
+		},
+		value: {
+			type: String,
+			default: ''
 		}
 	},
 	data() {
 		return {
-			value: this.color
+			pickerColor: this.value
 		};
 	},
 	methods: {
-		updateValue(e) {
-			console.log(e);
-		}
+		change(e) {
+			this.$emit('input', e.toLowerCase())
+		},
 	}
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.picker {
+	margin: 1rem 0;
+
+	&__item {
+		border-radius: 5px;
+		padding: 1.1rem;
+
+		&__name {
+			font-size: 16px;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+
+		&__value {
+			font-size: 12px;
+			margin-top: 8px;
+			opacity: 0.8;
+		}
+	}
+
+	&__tool {
+		margin-top: 10px;
+
+		&__picker /deep/ .el-color-picker__trigger {
+			height: 35px;
+		}
+
+		&__picker {
+			text-align: right;
+		}
+	}
+
+	&__input /deep/ input {
+		cursor: pointer;
+		height: 35px;
+		padding: 0 10px;
+	}
+}
+</style>

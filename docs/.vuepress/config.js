@@ -385,6 +385,7 @@ module.exports = {
 			'/js/deepClone',
 			'/components/input',
 			'/layout/citySelect',
+			'/guide/theme',
 		],
 	}
 }

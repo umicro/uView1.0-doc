@@ -74,7 +74,7 @@ uView拥有众多用户，且文档详尽，经得起推敲，受得住考验，
 				memberList: [
 					{
 						avatar: 'https://cdn.uviewui.com/uview/team/20200525151352.jpg',
-						name: '王博文',
+						name: '小恐龙',
 						job: '前端开发',
 						addr: '深圳',
 						duty: '负责uView核心组件研发，各端兼容处理，社区日常管理等工作。',

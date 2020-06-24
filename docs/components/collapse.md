@@ -193,9 +193,11 @@ export default {
 
 ### Collapse Methods 
 
+注意：此方法需要通过`ref`调用
+
 |方法|说明|
 |:-|:-|
-| init  <Badge text="1.3.8" /> | 重新初始化内部高度计算，用于异步获取内容的情形 |
+| init  <Badge text="1.3.8" /> | 重新初始化内部高度计算，用于异步获取内容的情形，请结合`this.$nextTick()`使用 |
 
 
 ### Slot

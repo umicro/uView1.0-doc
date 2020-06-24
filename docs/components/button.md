@@ -137,6 +137,7 @@ uView已对接uni-app档关于uni-app方button组件](https:uni-app.dcloud.io/co
 |open-type|开放能力|String|请参考uni-app方文档|-|-|
 |hover-class|指定按钮按下去的样式类。当 hover-class="none" 时，没有点击态效果|String|button-hover|-|App-nvue 平台暂不支持|
 |hover-start-time|按住后多久出现点击态，单位毫秒|Number|20|-|-|
+|data-name|微信小程序的data-*属性，可通过target.dataset.name获取，一般情况下用不到|String \| Number|-|-|微信小程序|
 |hover-stay-time|手指松开后点击态保留时间，单位毫秒|Number|70|-|-|
 |custom-style|对按钮的自定义样式，对象形式，见上方说明|Object|-|-|-|
 |app-parameter|打开 APP 时，向 APP 传递的参数，open-type=launchApp时有效|Boolean|false|true|微信小程序、QQ小程序|
