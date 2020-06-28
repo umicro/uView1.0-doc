@@ -13,7 +13,7 @@ cell单元格一般用于一组列表的情况，比如个人中心页，设置�
 
 ### 基本使用
 
-- 该组件需要搭配`cell-group`使用，并由它实现列表组的上下边框，如不需要上线边框，配置`cellGroup`的`border`参数为`false`即可。
+- 该组件需要搭配`cell-group`使用，并由它实现列表组的上下边框，如不需要上下边框，配置`cellGroup`的`border`参数为`false`即可。
 - 通过`title`设置左侧标题，`value`设置右侧内容。
 - 通过`icon`字段设置图标，值为uView自带的[Icon 图标](/components/icon.html)名。
 

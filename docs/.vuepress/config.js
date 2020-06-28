@@ -8,8 +8,8 @@ module.exports = {
 	// <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	plugins: ['@vuepress/back-to-top'],
 	configureWebpack: (config, isServer) => {
-		if (!isServer) {
-			
+		// 只有在发布(isServer=true)的时候才进行此修改操作，否则在本地预览时出问题
+		if (isServer) {
 			// 修改客户端的 webpack 配置
 			// 加入一个时间戳，让每次编译时，文件都不一样，也即每次发版本，都强行更新所有文件
 			return {
@@ -202,6 +202,7 @@ module.exports = {
 					['/guide/demo', '效果演示'],
 					//	['/guide/addQQGroup', '加QQ群交流反馈'],
 					['/guide/customIcon', '扩展自定义图标库'],
+					['/guide/theme', '自定义主题'],
 					['/guide/globalVariable', '全局变量的实现'],
 					['/guide/codeHint', 'HBuilder X代码提示'],
 					['/guide/design', '设计理念'],
@@ -230,7 +231,7 @@ module.exports = {
 					['/layout/wxCenter', '微信个人中心页'],
 					['/layout/keyboardPay', '自定义键盘支付'],
 					['/layout/menu', '垂直分类'],
-					['/layout/submitBar', '提交订单栏'],
+					['/layout/SubmitBar', '提交订单栏'],
 					['/layout/comment', '评论列表'],
 					['/layout/order', '订单列表'],
 					['/layout/login', '登录界面'],
@@ -350,7 +351,7 @@ module.exports = {
 			'/components/loading',
 			'/layout/menu',
 			'/layout/coupon',
-			'/layout/submitBar',
+			'/layout/SubmitBar',
 			'/layout/comment',
 			'/layout/order',
 			'/layout/intro',
@@ -384,6 +385,7 @@ module.exports = {
 			'/js/deepClone',
 			'/components/input',
 			'/layout/citySelect',
+			'/guide/theme',
 		],
 	}
 }

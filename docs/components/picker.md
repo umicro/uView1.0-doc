@@ -28,7 +28,10 @@
 
 ```html
 <template>
-	<u-picker v-model="show" mode="time"></u-picker>
+	<view>
+		<u-picker v-model="show" mode="time"></u-picker>
+		<u-button @click="show = true">打开</u-button>
+	</view>
 </template>
 
 <script>
@@ -110,7 +113,8 @@ let params = {
 	second: false,
 	province: true,
 	city: true,
-	area: true
+	area: true,
+	timestamp: true, // 1.3.7版本提供
 }
 
 
@@ -121,7 +125,9 @@ let params = {
 	day: true,
 	hour: false,
 	minute: false,
-	second: false
+	second: false,
+	// 选择时间的时间戳
+	timestamp: true,
 }
 
 // 那么回调的参数可能如下：
@@ -236,7 +242,7 @@ let params = {
 `column`表示第几列发生了变化(从0开始)，`index`表示当前的下标值，如`{column: 1, index: 2}`表示第二列(从0开始)发生了变化，下标变成了`2`，您可以
 根据这个回调，对应的修改`default-selector`参数，让多列中的其他列联动起来。
 
-此处演示较为复杂，请见uView的演示代码，在[安装](/components/picker.html)页下载`演示项目`方式，内有所有演示的示例，是一个完整的HX工程。
+此处演示较为复杂，请见uView的演示代码，在[安装](/components/install.html)页下载`演示项目`方式，内有所有演示的示例，是一个完整的HX工程。
 
 
 ### API
@@ -263,6 +269,7 @@ let params = {
 | z-index | 弹出时的`z-index`值 | String \| Number | 10075 | - |
 | range | 自定义选择的数据，mode=selector或mode=multiSelector时有效 | Array | [] | - |
 | range-key | 当`range`参数的元素为对象时，指定Object中的哪个key的值作为选择器显示内容，见上方说明 | String | - | - |
+| title | 顶部中间的标题 <Badge text="1.3.6" /> | String | - | - |
 
 
 

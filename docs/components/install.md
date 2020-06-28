@@ -3,10 +3,6 @@
 <demo-model url="/"></demo-model>
 
 
-<!-- :::danger 说明
-uView已正式发布**公测版**，欢迎[交流反馈](/cooperation/about.html)，如有问题，我们会紧急修复。
-::: -->
-
 :::tip 说明
 由于uView使用`easycom`模式，让您无需引入组件即可直接使用，但是此功能需要Hbuilder X 2.5.5及以上版本才支持，详见[配置easycom组件模式](/components/quickstart.html#_3-配置easycom组件模式)。
 `easycom`打包的时候是**按需引入**的，您可以放心引入uView的整个组件库，打包的会自动剔除您没有使用的组件。
@@ -26,8 +22,8 @@ uView已正式发布**公测版**，欢迎[交流反馈](/cooperation/about.html
 
 <br>
 <div @click="downloadPost(2)" class="download-link">
-	<!-- 下载地址：<a href="https://download.uviewui.com/uView_1.3.4.zip">uView_1.3.4.zip</a> -->
-	下载地址(1.3.5)：<a target="_blank" href="https://ext.dcloud.net.cn/plugin?id=1593">https://ext.dcloud.net.cn/plugin?id=1593</a>
+	<!-- 下载地址：<a href="https://download.uviewui.com/uView_1.3.6.zip">uView_1.3.6.zip</a> -->
+	下载地址(1.3.7)：<a target="_blank" href="https://ext.dcloud.net.cn/plugin?id=1593">https://ext.dcloud.net.cn/plugin?id=1593</a>
 </div>
 <br>
 <br>
@@ -68,8 +64,8 @@ npm update uview-ui
 
 <br>
 <div @click="downloadPost(3)" class="download-link">
-	<!-- 下载地址：<a href="https://download.uviewui.com/uView_1.3.4_demo.zip">uView_1.3.4_demo.zip</a> -->
-	下载地址(1.3.5)：<a target="_blank" href="https://ext.dcloud.net.cn/plugin?id=1593">https://ext.dcloud.net.cn/plugin?id=1593</a>
+	<!-- 下载地址：<a href="https://download.uviewui.com/uView_1.3.6_demo.zip">uView_1.3.6_demo.zip</a> -->
+	下载地址(1.3.7)：<a target="_blank" href="https://ext.dcloud.net.cn/plugin?id=1593">https://ext.dcloud.net.cn/plugin?id=1593</a>
 </div>
 <br>
 <br>
@@ -89,7 +85,7 @@ npm update uview-ui
 
 <br>
 <div @click="downloadPost(1)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_1.3.5_default.zip">uView_1.3.5_default.zip</a>
+	下载地址：<a href="https://download.uviewui.com/uView_1.3.7_default.zip">uView_1.3.7_default.zip</a>
 </div>
 <br>
 <br>

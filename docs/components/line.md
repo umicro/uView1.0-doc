@@ -30,6 +30,15 @@
 ```
 
 
+### 线条类型 <Badge text="1.3.7" />
+
+我们可以通过`border-style`参数设置线条的类型，有如下三种可选项：
+
+- `solid`表示实线
+- `dashed`表示方形虚线
+- `dotted`表示圆点虚线
+
+
 ### API
 
 ### Props
@@ -41,10 +50,11 @@
 | direction | 线条的方向，`row`-横向，`col`-竖向 | String | row | col |
 | hair-line | 是否显示细线条 | Boolean  | true | false |
 | margin | 线条与上下左右元素的间距，字符串形式，如"30rpx"、"20rpx 30rpx" | String  | - | - |
+| border-style <Badge text="1.3.7" /> | 线条类型，见上方说明 | String  | solid | dashed / dotted |
 
 
 <style scoped>
 h3[id=props] + table thead tr th:nth-child(2){
-	width: 40%;
+	width: 37%;
 }
 </style>

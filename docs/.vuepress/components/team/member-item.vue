@@ -49,8 +49,16 @@ export default {
 
 <style scoped lang="scss">
 @font-face {
-	font-family: 'iconfont'; /* project id 1839347 */
+	font-family: 'doc-iconfont'; /* project id 1839347 */
 	src: url('//at.alicdn.com/t/font_1839347_q72yio5zage.ttf') format('truetype');
+}
+
+.iconfont {
+	font-family: 'doc-iconfont' !important;
+	font-size: 16px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .member-item {
@@ -117,16 +125,17 @@ export default {
 			height: 50px;
 			flex: 0 0 50px;
 		}
-		
+
 		&__info {
 			margin-left: 10px;
 		}
-		
+
 		&__name {
 			margin-top: 0;
 		}
-		
-		&__intro, &__job {
+
+		&__intro,
+		&__job {
 			font-size: 13px;
 			line-height: 1.7;
 		}

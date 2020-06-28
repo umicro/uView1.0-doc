@@ -140,6 +140,90 @@
 <u-upload :max-size="5 * 1024 * 1024" max-count="6"></u-upload>
 ```
 
+
+### 上传前的钩子 <Badge text="1.3.7" />
+
+某些时候，**每个文件**上传前可能需要动态修改文件名，修改额外参数等，就会需要用到一个叫`before-upload`的钩子，也即回调方法，此方法会返回两个参数：
+
+- `index`——即当前上传文件在上传列表中的索引
+- `lists`——当前所有的文件列表
+
+此回调可以返回一个`promise`、`true`，或者`false`，下面分别阐述三者的处理情况：
+
+- `false`——如果返回`false`，将会跳过当前文件，继续上传下一张图片(如果有)，并且再次执行`before-upload`钩子
+- `true`——如果返回`true`，会随即上传当前文件，上传成功后，继续上传下一张图片(如果有)，并且再次执行`before-upload`钩子
+- `promise`——如果返回的是一个`promise`，如果进入`then`回调，就会和返回`true`的情况一样，如果进入`catch`回调，就会和返回`false`的情况一样
+
+下面举例说明：
+
+#### 1. 普通返回
+
+```html
+<template>
+	<u-upload :before-upload="beforeUpload"></u-upload>
+</template>
+
+<script>
+	export default {
+		methods: {
+			beforeUpload(index, list) {
+				// 只上传偶数索引的文件
+				if(index % 2 == 0) return true;
+				else return false;
+			}
+		}
+	}
+</script>
+```
+
+#### 2. 请求之后再返回
+
+```html
+<template>
+	<u-upload :before-upload="beforeUpload"></u-upload>
+</template>
+
+<script>
+	export default {
+		methods: {
+			async beforeUpload(index, list) {
+				// await等待一个请求，请求回来后再返回true，继续上传文件
+				let data = await this.$u.post('url');
+				return true; // 或者根据逻辑返回false
+			}
+		}
+	}
+</script>
+```
+
+#### 3. 返回一个Promise
+
+```html
+<template>
+	<u-upload :before-upload="beforeUpload"></u-upload>
+</template>
+
+<script>
+	export default {
+		methods: {
+			beforeUpload(index, list) {
+				// 返回一个promise
+				return new Promise((resolve, reject) => {
+					this.$u.post('http://www.tp5.com/index.php/index/index/hello').then(res => {
+						// resolve()之后，将会进入promise的组件内部的then回调，相当于返回true
+						resolve();
+					}).catch(err => {
+						// reject()之后，将会进入promise的组件内部的catch回调，相当于返回false
+						reject();
+					})
+				})
+			}
+		}
+	}
+</script>
+```
+
+
 ### 自定义相关说明
 
 1. 组件内部样式  
@@ -326,13 +410,15 @@ lists = [
 | deletable | 是否显示删除图片的按钮 | Boolean  | true | false |
 | max-size | 选择单个文件的最大大小，单位B(byte)，默认不限制 | String \| Number  | Number.MAX_VALUE | - |
 | file-list | 默认显示的图片列表，数组元素为对象，必须提供`url`属性 | Array\<Object\>  | - | - |
-| upload-text | 选择图片按钮的提示文字 | Boolean  | 选择图片 | - |
+| upload-text | 选择图片按钮的提示文字 | String  | 选择图片 | - |
 | auto-upload | 选择完图片是否自动上传，见上方说明 | Boolean  | true | false |
 | show-tips | 特殊情况下是否自动提示toast，见上方说明 | Boolean  | true | false |
 | show-upload-list | 是否显示组件内部的图片预览 | Boolean  | true | false |
 | del-icon | 右上角删除图标名称，只能为uView内置图标 | String  | close | - |
 | del-bg-color | 右上角关闭按钮的背景颜色 | String  | #fa3534 | - |
 | del-color | 右上角关闭按钮图标的颜色 | String  | #ffffff | - |
+| to-json <Badge text="1.3.7" /> | 如果上传后的值 | String  | #ffffff | - |
+| before-upload <Badge text="1.3.7" /> | 每个文件上传前触发的钩子回调函数，见上方说明 | Function | - | - |
 
 
 ### Methods

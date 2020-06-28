@@ -70,11 +70,30 @@
 uView提供了`length`来控制此种情况，此值可以是`数值`(单位rpx)，`auto`，`百分比`等，内部会自动处理对应的逻辑。
 如果为`auto`的时候，表示弹窗的宽度 | 高度由内容撑开。
 
+**1.3.7版本新增`width`和`height`参数：** <Badge text="1.3.7" />
+
+1.3.7版本后，优先推荐`width`和`height`参数，并且优先级会高于`length`，这3个参数都可以设置`百分比`、`auto`、`数值`(单位rpx)、或者是带`px`和`rpx`单位的字符串：
+
+- `width` — 只对`mode = left | center | right`模式有效
+- `height` — 只对`mode = top | center | bottom`模式有效
+
+:::tip 提示
+1.3.7版本后，内置了`scroll-view`元素，内如内容超出容器的高度，将会自动获得**垂直**滚动的特性，如果您因为在`slot`内容做了滚动的处理，而造成了
+冲突的话，请移除自定义关于滚动部分的逻辑。
+:::
+
+
 ```html
 <template>
 	<u-popup v-model="show" mode="top" length="60%">
 		<view>
 			等闲变却故人心，却道故人心易变
+		</view>
+	</u-popup>
+	
+	<u-popup v-model="show" mode="center" width="500rpx" height="600px">
+		<view>
+			骊山语罢清宵半，泪雨霖铃终不怨
 		</view>
 	</u-popup>
 </template>
@@ -102,6 +121,8 @@ uView提供了`length`来控制此种情况，此值可以是`数值`(单位rpx)
 | close-icon-pos | 自定义关闭图标位置，top-left为左上角，top-right为右上角，bottom-left为左下角，bottom-right为右下角  | String | top-right | top-left / bottom-left / bottom-right |
 | close-icon-color | 关闭图标的颜色  | String | #909399 | - |
 | close-icon-size | 关闭图标的大小，单位rpx  | String \| Number | 30 | - |
+| width | mode = left \| center \| right时有效，优先级高于`length` <Badge text="1.3.7" />  | String \| Number | - | - |
+| height | mode = top \| center \| bottom时有效，优先级高于`length` <Badge text="1.3.7" />  | String \| Number | - | - |
 
 
 ### Event

@@ -149,6 +149,13 @@ uView定义了一套内外边距的类名，调用简单，方便用户使用，
 - u-margin-right-x  ==  u-m-r-x
 - u-margin-bottom-x  ==  u-m-b-x
 
+<!-- 以下为1.3.9新增的样式：
+
+- u-margin-left-right-x  ==  u-m-l-r-x
+- u-margin-top-button-x  ==  u-m-t-b-x
+- u-padding-left-right-x  ==  u-p-l-r-x
+- u-padding-top-bottom-x  ==  u-p-t-b-x -->
+
 如果我们想定义`26rpx`的**左外边距**：
 
 ```html

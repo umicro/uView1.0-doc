@@ -18,7 +18,10 @@
 
 ```html
 <template>
-	<u-action-sheet :list="list" v-model="show"></u-action-sheet>
+	<view>
+		<u-action-sheet :list="list" v-model="show"></u-action-sheet>
+		<u-button @click="show = true">打开ActionSheet</u-button>
+	</view>
 </template>
 
 <script>
@@ -32,9 +35,9 @@
 				}, {
 					text: '分享'
 				}, {
-					text: '评论'
+					text: '评论' 
 				}],
-				show: true
+				show: false
 			}
 		}
 	}

@@ -94,7 +94,7 @@ Tabbar栏，所以这里我们可以使用uView的[Popup 弹出层](/components/
 				`,
 			}
 		},
-		onShow() {
+		onReady() {
 			this.show = true;
 		},
 		methods: {
