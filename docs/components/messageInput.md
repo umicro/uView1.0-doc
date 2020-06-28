@@ -102,7 +102,7 @@ uView有[键盘](/components/keyboard.html)组件，如果您想结合键盘组�
 | bold | 字体和输入横线是否加粗 | Boolean | true | false |
 | font-size | 字体大小，单位rpx | String \| Number | 60 | - |
 | active-color | 当前激活输入框的样式 | String | #2979ff | - |
-| focus | 非激活输入框的样式，文字颜色同此值 | String | #606266 | - |
+| inactive-color | 非激活输入框的样式，文字颜色同此值 | String | #606266 | - |
 | width | 输入框的宽度(高等于宽)，单位rpx | String \| Number | 80 | - |
 | disabled-keyboard | 禁止点击输入框唤起系统键盘 | Boolean  | false | true |
 
