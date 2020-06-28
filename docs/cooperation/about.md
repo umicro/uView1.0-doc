@@ -2,9 +2,7 @@
 
 uView为采用[MIT](https://baike.baidu.com/item/MIT/10772952)许可证的开源项目，使用完全免费。欢迎加QQ群交流反馈，一起学习，共同进步。
 
-- 官方群：<a href="//shang.qq.com/wpa/qunwpa?idkey=755ffb99728fae1eb72058e92d372624fa59f69fcafa88d1cca1ae28c93bcbad" target="_blank">249718512</a>
-
-<!-- **注意：** 由于群成员数量有限，请勿重复加群。 --> 
+<qq-group></qq-group>
 
 
 ### 作者
@@ -140,6 +138,15 @@ uView拥有众多用户，且文档详尽，经得起推敲，受得住考验，
 						addr: '深圳',
 						duty: '负责UI框架项目初期架构的思维导图，原型图的设计，后期Logo、主页面、登陆等页面的设计。',
 						intro: '擅长移动端APP、PC端界面设计制作，对界面设计色彩运用熟练，设计风格紧跟主流。可以快速地捕捉产品的功能点，把文案信息画面迅速将产品经理的意图转化为交互界面设计'
+					},
+					{
+						avatar: 'https://cdn.uviewui.com/uview/team/20200627204543.png',
+						name: '小谢童鞋',
+						job: '全栈开发',
+						addr: '武汉创业',
+						github: 'https://gitee.com/chuxinone',
+						duty: '负责uView核心组件库研发，测试改进，社区管理等工作',
+						intro: '喜欢挑战新型技术，独立完成过多个大型项目，技术栈：混合app,php,vue等'
 					}
 				]
 			}

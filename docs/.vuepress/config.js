@@ -82,6 +82,7 @@ module.exports = {
 							children: [
 								'/components/color',
 								'/components/icon',
+								'/components/image',
 								'/components/button',
 								'/components/layout',
 								'/components/cell',
@@ -350,6 +351,7 @@ module.exports = {
 			'/components/avatar',
 			'/components/loading',
 			'/layout/menu',
+			'/components/image',
 			'/layout/coupon',
 			'/layout/SubmitBar',
 			'/layout/comment',

@@ -23,7 +23,7 @@
 <br>
 <div @click="downloadPost(2)" class="download-link">
 	<!-- 下载地址：<a href="https://download.uviewui.com/uView_1.3.6.zip">uView_1.3.6.zip</a> -->
-	下载地址(1.3.7)：<a target="_blank" href="https://ext.dcloud.net.cn/plugin?id=1593">https://ext.dcloud.net.cn/plugin?id=1593</a>
+	下载地址(1.4.0)：<a target="_blank" href="https://ext.dcloud.net.cn/plugin?id=1593">https://ext.dcloud.net.cn/plugin?id=1593</a>
 </div>
 <br>
 <br>
@@ -65,7 +65,7 @@ npm update uview-ui
 <br>
 <div @click="downloadPost(3)" class="download-link">
 	<!-- 下载地址：<a href="https://download.uviewui.com/uView_1.3.6_demo.zip">uView_1.3.6_demo.zip</a> -->
-	下载地址(1.3.7)：<a target="_blank" href="https://ext.dcloud.net.cn/plugin?id=1593">https://ext.dcloud.net.cn/plugin?id=1593</a>
+	下载地址(1.4.0)：<a target="_blank" href="https://ext.dcloud.net.cn/plugin?id=1593">https://ext.dcloud.net.cn/plugin?id=1593</a>
 </div>
 <br>
 <br>
@@ -85,7 +85,7 @@ npm update uview-ui
 
 <br>
 <div @click="downloadPost(1)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_1.3.7_default.zip">uView_1.3.7_default.zip</a>
+	下载地址：<a href="https://download.uviewui.com/uView_1.4.0_default.zip">uView_1.4.0_default.zip</a>
 </div>
 <br>
 <br>

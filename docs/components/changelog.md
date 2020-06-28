@@ -10,6 +10,76 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>1.4.0</h2>
+				</div>
+				<p><code>2020-06-28</code></p>
+				<ul>
+					<li>
+						<span class="add">新增</span>
+						自定义主题功能，详见：
+						<a href="/guide/theme.html" target="_blank">自定义主题</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						新增精致，小巧而实用的image组件，有淡入，懒加载，加载中，加载失败提示等效果，详见：
+						<a href="/components/image.html" target="_blank">Image 图片</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						toast新增back参数用于toast结束后自动返回上一页
+					</li>
+					<li>
+						<span class="add">新增</span>
+						cell组件新增icon-style，border-top参数，无需强制结合cell-group即可使用
+					</li>
+					<li>
+						<span class="add">新增</span>
+						field组件新增icon-style，border-top参数，无需强制结合cell-group即可使用，废弃cell组件的border-gap参数
+					</li>
+					<li>
+						<span class="add">新增</span>
+						button组件新增data-name参数
+					</li>
+					<li>
+						<span class="add">新增</span>
+						icon组件color参数可以接受primary,sucees,error,info,warning主题色值
+					</li>
+					<li>
+						<span class="add">新增</span>
+						collapse组件新增用于异步获取数据重新初始化的init()方法
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						阻止radio和checkbox组件的事件冒泡
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化row组件可能存在边距错误的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化演示项目的样式表现
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						调整input组件右侧的图标对齐效果
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复upload组件初始化绑定对象文件列表后，修改外部文件列表导致内部数据错乱的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复form组件设置toast报错提示时，没有错误也会弹出toast问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>1.3.7</h2>
 				</div>
 				<p><code>2020-06-22</code></p>
