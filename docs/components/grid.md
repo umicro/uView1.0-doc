@@ -204,7 +204,7 @@
 |click|点击宫格触发|index: `u-grid-item`通过`props`传递的`index`值|
 
 
-### Grid Event
+### Grid-item Event
 
 注意：请在`<u-grid-item></u-grid-item>`上监听此事件
 

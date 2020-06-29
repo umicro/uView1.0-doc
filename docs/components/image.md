@@ -106,7 +106,7 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | src | 图片地址 | String | - | - |
-| mode | 裁剪模式，见上方说明 | String  | widthFix | - |
+| mode | 裁剪模式，见上方说明 | String  | aspectFill | - |
 | width | 宽度，单位任意，如果为数值，则为rpx单位 | String \| Number  | 100% | - |
 | height | 高度，单位任意，如果为数值，则为rpx单位 | String \| Number  | auto | - |
 | shape | 图片形状，circle-圆形，square-方形 | String  | square | circle |
@@ -129,6 +129,15 @@
 |:-|:-|
 | loading | 自定义加载中的提示内容 |
 | error | 自定义失败的提示内容 |
+
+
+### CellItem Events
+
+|事件名|说明|回调参数|
+|:-|:-|:-|:-|
+| click | 点击图片时触发 | - |
+| error | 图片加载失败时触发 | - |
+| load | 图片加载成功时触发 | - |
 
 
 

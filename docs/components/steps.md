@@ -71,7 +71,7 @@
 | current | 设置当前处于第几步 | Number \| String  | 0 | - |
 | active-color | 已完成步骤的激活颜色，如设置，`type`值会失效 | String  | - | - |
 | un-active-color | 未激活的颜色，用于表示未完成步骤的颜色 | String  | #606266 | - |
-| icon | number = number时的自定义图标 <Badge text="1.3.7" /> | String  | checkmark | - |
+| icon | mode = number时的自定义图标 <Badge text="1.3.7" /> | String  | checkmark | - |
 
 
 
