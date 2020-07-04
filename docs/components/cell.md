@@ -113,10 +113,12 @@ cell单元格一般用于一组列表的情况，比如个人中心页，设置�
 |-------------  |---------------- |---------------|------------------ |-------- |
 | title | 左侧标题  | String | - | - |
 | icon | 左侧图标名，只支持uView内置图标，见[Icon 图标](/components/icon.html) | String  | - | - |
+| icon-style <Badge text="1.4.0" /> | icon的样式，对象形式 | Object | - | - |
 | value | 右侧内容 | String  | - | - |
 | label | 标题下方的描述信息 | String | - | - |
-| border-bottom | 是否显示每个cell的下边框 | Boolean  | true | false |
-| border-gap | `border-bottom`为`true`时，Cell列表中间的条目的下边框是否与左边有一个间隔 | Boolean  | true | false |
+| border-bottom | 是否显示cell的下边框 | Boolean  | true | false |
+| border-top | 是否显示cell的上边框 | Boolean  | false | true |
+| border-gap | `border-bottom`为`true`时，Cell列表中间的条目的下边框是否与左边有一个间隔 <Badge type="error" text="1.4.0已废弃" />  | Boolean  | true | false |
 | hover-class | 是否开启点击反馈，`none`为无效果，见上方说明 | String  | - | none |
 | arrow | 是否显示右侧箭头，开启的话，将会默认带上点击反馈，可通过`hover-class`配置 | Boolean | true | false |
 | arrow-direction | 箭头方向，可选值为 | String  | right | up / down |

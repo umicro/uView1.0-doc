@@ -13,15 +13,22 @@
 
 ### 基本使用
 
+:::tip 提示
+如果您需要一进入页面就弹出组件，您可以在`data`中设置`show`为`false`，在onReady生命周期设置`show`为`true`即可。
+:::
+
 - 弹出层的内容通过`slot`传入，由用户自定义
 - 通过`v-model`绑定一个布尔值的变量控制弹出层的打开和收起
 
 
 ```html
 <template>
-	<u-popup v-model="show">
-		<view>出淤泥而不染，濯清涟而不妖</view>
-	</u-popup>
+	<view>
+		<u-popup v-model="show">
+			<view>出淤泥而不染，濯清涟而不妖</view>
+		</u-popup>
+		<u-button @click="show = true">打开</u-button>
+	</view>
 </template>
 
 <script>

@@ -16,7 +16,6 @@
 
 ### 基本使用
 
-- 如果是表单组(连在一起的有多个`field`组件)，目前必须要结合uView的`u-cell-group`组件使用，可以给`field`表单组提供上下边框
 - 通过`v-model`，可以双向绑定输入框的值
 - 通过`label`设置输入框左边的提示文字
 - 通过`placeholder`指定个性化的提示语
@@ -24,20 +23,18 @@
 ```html
 <template>
 	<view>
-		<u-cell-group>
-			<u-field
-				v-model="mobile"
-				label="手机号"
-				placeholder="请填写手机号"
-			>
-			</u-field>
-			<u-field
-				v-model="code"
-				label="验证码"
-				placeholder="请填写验证码"
-			>
-			</u-field>
-		</u-cell-group>
+		<u-field
+			v-model="mobile"
+			label="手机号"
+			placeholder="请填写手机号"
+		>
+		</u-field>
+		<u-field
+			v-model="code"
+			label="验证码"
+			placeholder="请填写验证码"
+		>
+		</u-field>
 	</view>
 </template>
 
@@ -119,16 +116,14 @@
 ```html
 <template>
 	<view class="">
-		<u-cell-group>
-			<u-field
-				v-model="code"
-				label="验证码"
-				placeholder="请填写验证码"
-			>
-				<u-button size="mini" slot="right" type="success" @tap="getCode">{{codeText}}</u-button>
-			</u-field>
-			<u-verification-code ref="uCode" @change="codeChange"></u-verification-code>
-		</u-cell-group>
+		<u-field
+			v-model="code"
+			label="验证码"
+			placeholder="请填写验证码"
+		>
+			<u-button size="mini" slot="right" type="success" @tap="getCode">{{codeText}}</u-button>
+		</u-field>
+		<u-verification-code ref="uCode" @change="codeChange"></u-verification-code>
 	</view>
 </template>
 
@@ -177,13 +172,11 @@
 ```html
 <template>
 	<view class="">
-		<u-cell-group>
-			<u-field @click="showAction" v-model="sex" 
-			:disabled="true" label="性别" placeholder="请选择性别"
-			right-icon="arrow-down-fill"
-			>
-			</u-field>
-		</u-cell-group>
+		<u-field @click="showAction" v-model="sex" 
+		:disabled="true" label="性别" placeholder="请选择性别"
+		right-icon="arrow-down-fill"
+		>
+		</u-field>
 		<u-action-sheet @click="clickItem" :list="sexList" v-model="show"></u-action-sheet>
 	</view>
 </template>
@@ -228,6 +221,8 @@ export default {
 |-------------  |---------------- |---------------|------------------ |-------- |
 | type | 输入框的类型 | String  | text | textarea |
 | icon | `label`左边的图标，限uView的图标名称 | String | - | - |
+| border-bottom <Badge text="1.3.9" /> | 是否显示field的下边框 | Boolean  | true | false |
+| border-top <Badge text="1.3.9" /> | 是否显示field的上边框 | Boolean  | false | true |
 | icon-style <Badge text="1.3.9" /> | icon的样式，对象形式 | Object | - | - |
 | right-icon | 输入框右边的图标名称，限uView的图标名称 | String  | - | - |
 | required | 是否必填，左边您显示红色"*"号 | Boolean  | false | true |

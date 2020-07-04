@@ -417,7 +417,7 @@ lists = [
 | del-icon | 右上角删除图标名称，只能为uView内置图标 | String  | close | - |
 | del-bg-color | 右上角关闭按钮的背景颜色 | String  | #fa3534 | - |
 | del-color | 右上角关闭按钮图标的颜色 | String  | #ffffff | - |
-| to-json <Badge text="1.3.7" /> | 如果上传后的值 | String  | #ffffff | - |
+| to-json <Badge text="1.3.7" /> | 如果上传后服务端返回的值为`json`字符串的话，是否自动转为`json` | true  | false | - |
 | before-upload <Badge text="1.3.7" /> | 每个文件上传前触发的钩子回调函数，见上方说明 | Function | - | - |
 
 
