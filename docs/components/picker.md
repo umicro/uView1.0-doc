@@ -23,9 +23,6 @@
 
 ### 基本使用
 
-:::tip 提示
-如果您需要一进入页面就弹出组件，您可以在`data`中设置`show`为`false`，在onReady生命周期设置`show`为`true`即可。
-:::
 
 - 通过`mode`参数设置为`time`、`region`、`selector`、`multiSelector`，区分时间、地区、单列，多列模式。
 - 通过v-model双向绑定一个值为布尔值的变量，来打开或者收起picker。

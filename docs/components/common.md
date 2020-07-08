@@ -30,12 +30,12 @@ uView内置了关于相对和绝对定位的两个类，分别为`u-relative`(`u
 ```css
 .u-relative,
 .u-rela {
-	display: relative;
+	position: relative;
 }
 
 .u-absolute,
 .u-abso {
-	display: absolute;
+	position: absolute;
 }
 ```
 
@@ -44,7 +44,7 @@ uView内置了关于相对和绝对定位的两个类，分别为`u-relative`(`u
 #### **1. 数值形式**
 
 uView为了方便用户写字体，通过SCSS生成了一套样式类，专门用于定位字体的大小。对于字体，不同用户可能有喜欢`px`，也有喜欢`rpx`单位的，
-一般来说，在uni-app上，`rpx`单位最终表现出来的大小数值为`px`的两倍，也就是说，`24rpx`和`12px`的字体大小是差不多的。  
+一般来说，在uni-app上，`rpx`单位最终表现出来的大小数值为`px`的两倍左右，也就是说，`24rpx`和`12px`的字体大小是差不多的。  
 uView为此提供了一个类`u-font-x`，这个`x`为10-40之间(包含10和40)，当`x >= 10 && x < 20`时，表现为`px`性质，当`x >= 20 && x <= 40`时，表现为`rpx`性质。
 
 用法如下：
@@ -52,7 +52,7 @@ uView为此提供了一个类`u-font-x`，这个`x`为10-40之间(包含10和40)
 - 当`x >= 10 && x < 20`时，表现为`px`性质
 
 ```html
-<view class="u-font-13"></viwe>
+<view class="u-font-13"></view>
 ```
 
 这个`.u-font-13`在uView的内部样式定义为：
@@ -66,7 +66,7 @@ uView为此提供了一个类`u-font-x`，这个`x`为10-40之间(包含10和40)
 - 当`x >= 20 && x <= 40`时，表现为`rpx`性质
 
 ```html
-<view class="u-font-26"></viwe>
+<view class="u-font-26"></view>
 ```
 
 这个`.u-font-26`在uView的内部样式定义为：

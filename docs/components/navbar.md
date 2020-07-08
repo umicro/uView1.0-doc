@@ -119,7 +119,7 @@ uView提供了一个`background`参数(需对象形式)，可以自定义导航�
 - 这个颜色，在APP和小程序上，包括状态的颜色在内
 - 如果是定义纯色的背景，可以设置`backgroundColor`属性
 - 如果是定义渐变的背景，可以设置`backgroundImage`属性
-- 如果是定义背景图，可以设置`background`属性，还可以加上其他属性，比如`no-repeqt`，`center`等
+- 如果是定义背景图，可以设置`background`属性，还可以加上其他属性，比如`no-repeat`，`center`等
 
 
 ``` html

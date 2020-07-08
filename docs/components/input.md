@@ -196,6 +196,7 @@
 | border-color | 输入框的边框颜色 | String | #dcdfe6 | - |
 | auto-height | 是否自动增高输入区域，`type`为`textarea`时有效 | Boolean | true | false |
 | height | 高度，单位rpx | Number \| String | text类型时为70，textarea时为100 | - |
+| cursor-spacing <Badge text="1.4.4" /> | 指定光标与键盘的距离，单位**px** | Number \| String | 0 | - |
 
 
 <style scoped>

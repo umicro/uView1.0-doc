@@ -13,9 +13,6 @@
 
 ### 基本使用
 
-:::tip 提示
-如果您需要一进入页面就弹出组件，您可以在`data`中设置`show`为`false`，在onReady生命周期设置`show`为`true`即可。
-:::
 
 默认情况下，模态框只有一个`确认`按钮：
 - 请至少要配置弹框的内容参数`content`。
@@ -199,6 +196,7 @@ export default {
 | zoom | 是否开启缩放模式 | Boolean  | true | false |
 | async-close | 是否异步关闭，只对确定按钮有效，见上方说明 | Boolean  | false | true |
 | mask-close-able | 是否允许点击遮罩关闭Modal | Boolean  | false | true |
+| negative-top | 往上偏移的值，以避免可能弹出的键盘重合，单位任意，数值则默认为rpx单位 <Badge text="1.4.4" />  | String \| Number | 0 | - |
 
 
 ### Event

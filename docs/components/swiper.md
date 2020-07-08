@@ -41,18 +41,18 @@
 		data() {
 			return {
 				list: [{
-						image: '/static/uView/swiper/swiper1.jpg',
-						title: '蒹葭苍苍，白露为霜。所谓伊人，在水一方'
+						image: 'https://cdn.uviewui.com/uview/swiper/1.jpg',
+						title: '昨夜星辰昨夜风，画楼西畔桂堂东'
 					},
 					{
-						image: '/static/uView/swiper/swiper2.jpg',
-						title: '溯洄从之，道阻且长。溯游从之，宛在水中央'
+						image: 'https://cdn.uviewui.com/uview/swiper/2.jpg',
+						title: '身无彩凤双飞翼，心有灵犀一点通'
 					},
 					{
-						image: '/static/uView/swiper/swiper3.jpg',
-						title: '蒹葭萋萋，白露未晞。所谓伊人，在水之湄'
+						image: 'https://cdn.uviewui.com/uview/swiper/3.jpg',
+						title: '谁念西风独自凉，萧萧黄叶闭疏窗，沉思往事立残阳'
 					}
-				]
+				],
 			}
 		},
 		methods: {

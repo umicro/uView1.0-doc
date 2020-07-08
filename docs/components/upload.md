@@ -209,7 +209,7 @@
 			beforeUpload(index, list) {
 				// 返回一个promise
 				return new Promise((resolve, reject) => {
-					this.$u.post('http://www.tp5.com/index.php/index/index/hello').then(res => {
+					this.$u.post('url').then(res => {
 						// resolve()之后，将会进入promise的组件内部的then回调，相当于返回true
 						resolve();
 					}).catch(err => {

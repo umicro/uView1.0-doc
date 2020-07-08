@@ -5,7 +5,7 @@
 
 :::tip 说明
 由于uView使用`easycom`模式，让您无需引入组件即可直接使用，但是此功能需要Hbuilder X 2.5.5及以上版本才支持，详见[配置easycom组件模式](/components/quickstart.html#_3-配置easycom组件模式)。
-`easycom`打包的时候是**按需引入**的，您可以放心引入uView的整个组件库，打包的会自动剔除您没有使用的组件。
+`easycom`打包的时候是**按需引入**的，您可以放心引入uView的整个组件库，发布打包时会自动剔除您没有使用的组件(注意：调试时仍然是全部引入的)
 :::
 
 
@@ -23,11 +23,55 @@
 <br>
 <div @click="downloadPost(2)" class="download-link">
 	<!-- 下载地址：<a href="https://download.uviewui.com/uView_1.3.6.zip">uView_1.3.6.zip</a> -->
-	下载地址(1.4.0)：<a target="_blank" href="https://ext.dcloud.net.cn/plugin?id=1593">https://ext.dcloud.net.cn/plugin?id=1593</a>
+	下载地址(1.4.8)：<a target="_blank" href="https://ext.dcloud.net.cn/plugin?id=1593">https://ext.dcloud.net.cn/plugin?id=1593</a>
 </div>
 <br>
 <br>
 
+
+
+### 示例项目
+
+此方式为整个uView演示项目，里面有uView核心，组件演示，模板等，建议用户可以下载
+此项目运行用于查看UI演示效果，复制模板案例，通过里面的示例，可以快速掌握某一个组件的用法。
+
+<br>
+<div @click="downloadPost(3)" class="download-link">
+	<!-- 下载地址：<a href="https://download.uviewui.com/uView_1.3.6_demo.zip">uView_1.3.6_demo.zip</a> -->
+	下载地址(1.4.8)：<a target="_blank" href="https://ext.dcloud.net.cn/plugin?id=1593">https://ext.dcloud.net.cn/plugin?id=1593</a>
+</div>
+<br>
+<br>
+
+
+:::tip 注意
+演示项目不适用于直接开发中，它只是演示用的，可以直接运行并查看效果。  
+如果在微信开发工具真机预览时，提示分包太大运行的问题，请在`HBuilder X`进行设置：菜单栏  运行 -> 运行到小程序模拟器，在下拉菜单中**勾选**"运行时是否压缩代码"
+:::
+
+<br>
+<br>
+
+### 空白项目
+
+此方式为一个完整的uni-app示例工程(使用Hbuilder X创建，非[vue-cli](https://uniapp.dcloud.io/quickstart?id=_2-%e9%80%9a%e8%bf%87vue-cli%e5%91%bd%e4%bb%a4%e8%a1%8c)模式创建)，
+它适用于新启动的项目，其中已包含了uView，并且做好了所有配置，让您无需任何配置，开箱即用。
+
+**使用方法：** 下载演示项目，解压根目录的**压缩包**，即可得到空白项目。
+
+
+<br>
+<div @click="downloadPost(1)" class="download-link">
+	<!-- 下载地址：<a href="https://download.uviewui.com/uView_1.4.0_default.zip">uView_1.4.0_default.zip</a> -->
+	下载地址(1.4.8)：<a target="_blank" href="https://ext.dcloud.net.cn/plugin?id=1593">https://ext.dcloud.net.cn/plugin?id=1593</a>
+</div>
+<br>
+<br>
+
+
+
+<br>
+<br>
 
 
 ### npm安装
@@ -55,51 +99,6 @@ npm install uview-ui
 npm update uview-ui
 ```
 
-
-
-### 示例项目
-
-此方式为整个uView演示项目，里面有uView核心，组件演示，模板等，建议用户可以下载
-此项目运行用于查看UI演示效果，复制模板案例，通过里面的示例，可以快速掌握某一个组件的用法。
-
-<br>
-<div @click="downloadPost(3)" class="download-link">
-	<!-- 下载地址：<a href="https://download.uviewui.com/uView_1.3.6_demo.zip">uView_1.3.6_demo.zip</a> -->
-	下载地址(1.4.0)：<a target="_blank" href="https://ext.dcloud.net.cn/plugin?id=1593">https://ext.dcloud.net.cn/plugin?id=1593</a>
-</div>
-<br>
-<br>
-
-
-### 空白项目
-
-此方式为一个完整的uni-app示例工程(使用Hbuilder X创建，非[vue-cli](https://uniapp.dcloud.io/quickstart?id=_2-%e9%80%9a%e8%bf%87vue-cli%e5%91%bd%e4%bb%a4%e8%a1%8c)模式创建)，
-它适用于新启动的项目，其中已包含了uView，并且做好了所有配置，让您无需任何配置，开箱即用。
-
-
-**说明：**
-
-- 此方式，依然需要Hbuilder X已安装`sass/scss编译`插件
-- 此示例工程，默认开启V3编译器配置，以及自定义组件模式
-- 如果运行出现问题，可能是您的HX版本太低，请升级至最新稳定版尝试解决
-
-<br>
-<div @click="downloadPost(1)" class="download-link">
-	下载地址：<a href="https://download.uviewui.com/uView_1.4.0_default.zip">uView_1.4.0_default.zip</a>
-</div>
-<br>
-<br>
-
-
-<br>
-
-:::tip 注意
-演示项目不适用于直接开发中，它只是演示用的，可以直接运行并查看效果。  
-如果在微信开发工具真机预览时，提示分包太大运行的问题，请在`HBuilder X`进行设置：菜单栏  运行 -> 运行到小程序模拟器，在下拉菜单中**勾选**"运行时是否压缩代码"
-:::
-
-<br>
-<br>
 
 ### 版本查询
 

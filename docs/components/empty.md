@@ -14,6 +14,11 @@
 
 ### 基本使用
 
+:::tip 提示
+从`1.4.2`版本起，移除了此组件内置的图片，因为这些图片太大，影响了组件库的大小。改用字体图标的形式提供，缺点是字体图标只能是单色的，形状与原来的图片也有些许出入。
+如果您还是想要原来的图片，您可以下载原来的图片到项目再通过`src`参数引入对应需要的图片即可：[点我下载](https://download.uviewui.com/empty.zip)
+:::
+
 - 通过`text`参数配置提示的文字内容
 - 通过`mode`(默认为`data`)参数配置要显示的图标
 
@@ -51,11 +56,13 @@
 |-------------  |---------------- |---------------|------------------ |-------- |
 | color | 文字颜色 | String | #c0c4cc | - |
 | text | 文字提示 | String  | 无内容 | - |
-| src | 自定义图标路径，如定义，`mode`参数会失效 | String  | - | - |
+| icon-color <Badge text="1.4.2" /> | icon的颜色，字体图标时有效 | String  | #c0c4cc | - |
+| icon-size <Badge text="1.4.2" /> | icon的大小，单位rpx | String \| Number  | 120 | - |
+| src | 图标名称或者图片路径(绝对路径)，如定义，`mode`参数会失效 | String  | - | - |
 | font-size | 提示文字的大小，单位rpx | String \| Number  | 28 | - |
 | mode | 内置的图标，见上方说明 | String  | data | - |
-| img-width | 图标的宽度，单位rpx | String \| Number  | 240 | - |
-| img-height | 图标的高度，单位rpx | String  | auto | - |
+| img-width <Badge type="error" text="1.4.2起废弃" /> | 图标的宽度，单位rpx | String \| Number  | 240 | - |
+| img-height <Badge type="error" text="1.4.2起废弃" /> | 图标的高度，单位rpx | String  | auto | - |
 | show | 是否显示组件 | Boolean  | true | false |
 | margin-top | 组件到上一个元素的间距,单位rpx | String \| Number  | 0 | - |
 

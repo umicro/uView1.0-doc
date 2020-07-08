@@ -140,6 +140,7 @@
 | show-hours | 是否显示倒计时的"时"部分 | Boolean  | true | false |
 | show-minutes | 是否显示倒计时的"分"部分 | Boolean  | true | false |
 | show-seconds | 是否显示倒计时的"秒"部分 | Boolean  | true | false |
+| hide-zero-day <Badge text="1.4.4" /> | 当"天"的部分为0时，隐藏该字段 | Boolean  | true | false |
 
 
 ### Events

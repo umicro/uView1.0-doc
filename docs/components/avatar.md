@@ -20,9 +20,10 @@
 
 ```html
 <template>
-	<u-avatar :src="src"></u-avatar>
-
-	<u-avatar :text="text"></u-avatar>
+	<view>
+		<u-avatar :src="src"></u-avatar>
+		<u-avatar :text="text"></u-avatar>
+	</view>
 </template>
 
 <script>
