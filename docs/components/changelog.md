@@ -10,6 +10,157 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>1.4.8</h2>
+				</div>
+				<p><code>2020-07-08</code></p>
+				<ul>
+					<li>
+						<span class="add">新增</span>
+						欢迎加群交流反馈：
+						<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						新增精致，可配置性强，带凸起按钮的tabbar组件，详见：
+						<a href="/components/tabbar.html" target="_blank">底部导航栏</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						modal和popup的中部弹出模式新增negative-top参数，可以将弹出区域往上移，避免与弹出的键盘重合。
+					</li>
+					<li>
+						<span class="add">新增</span>
+						countdown组件新增hide-zero-day参数，当"天"为0时自动隐藏该字段
+					</li>
+					<li>
+						<span class="add">新增</span>
+						field组件新增icon-style，border-top参数，无需强制结合cell-group即可使用，废弃cell组件的border-gap参数
+					</li>
+					<li>
+						<span class="add">新增</span>
+						input组件添加cursor-spacing参数
+					</li>
+					<li>
+						<span class="add">新增</span>
+						rate评分组件新增v-model双向绑定的形式
+					</li>
+					<li>
+						<span class="add">新增</span>
+						numberBox步进器组件新增step支持小数加减，另外新增long-press和press-time用于长按连续加减
+					</li>
+					<li>
+						<span class="add">新增</span>
+						icon组件的lable新增在图标左边和上放的参数lebel-pos=left | top
+					</li>
+					<li>
+						<span class="add">新增</span>
+						演示项目和空白项目新增.eslintignore、.editorconfig配置文件
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						image组件允许事件冒泡到外层
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化cell组件的label数字不会换行的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化navbar的title为英文时，可能会发生部分字母被竖向截断的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						empty组件图标改由字体图标提供，减少整体包体积1/5，详见：
+						<a href="/components/empty.html" target="_blank">Empty 内容为空</a>
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化picker和select滑动顶部区域，可能会产生报错的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化popup的弹出逻辑，让keyboard，select，picker等与popup弹出有关的组件可以在页面初始化时data中设置show为而弹出组件
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						avatar头像组件二次加载图片时无效的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						row组件允许flex换行
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						image组件图片加载完成时移除背景色，避免png图片能看到底色
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化line线条组件的length参数单位问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化upload组件的on-list-change事件逻辑
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化avatar-cropper组件没有选择图片也能点击确定进行裁剪的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						重构checkbox组件，加强兼各段兼容性，修复在u-checkbox上size参数无效的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						将表单域的设置参数label-position、label-width、label-align等放到u-form组件中
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						移除在微信小程序开发工具console中对非法选择器的警告提示
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						处理u-input的input-align等于right时，文字可能与清除图标重合的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修正image组件的border-radius无法接受带单位的值的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						由于deepClone导致null结果为{}而导致http的loading无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复u-collapse-item的change事件无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修正$u.test.amount()在某些特殊场景可能无法正确识别小数的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修正input和field数值为0时，获得焦点无法显示清除图标的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修正icon组件的label-pos左和右方向颠倒的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复cell-item组件无法同时显示右箭头和right-icon的slot的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修正radio的shape参数默认为square的问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>1.4.0</h2>
 				</div>
 				<p><code>2020-06-28</code></p>

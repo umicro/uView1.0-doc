@@ -13,9 +13,6 @@
 
 ### 基本使用
 
-:::tip 提示
-如果您需要一进入页面就弹出组件，您可以在`data`中设置`show`为`false`，在onReady生命周期设置`show`为`true`即可。
-:::
 
 - 弹出层的内容通过`slot`传入，由用户自定义
 - 通过`v-model`绑定一个布尔值的变量控制弹出层的打开和收起
@@ -130,6 +127,7 @@ uView提供了`length`来控制此种情况，此值可以是`数值`(单位rpx)
 | close-icon-size | 关闭图标的大小，单位rpx  | String \| Number | 30 | - |
 | width | mode = left \| center \| right时有效，优先级高于`length` <Badge text="1.3.7" />  | String \| Number | - | - |
 | height | mode = top \| center \| bottom时有效，优先级高于`length` <Badge text="1.3.7" />  | String \| Number | - | - |
+| negative-top | 中部弹出时，以避免可能弹出的键盘重合，往上偏移的值，单位任意，数值则默认为rpx单位 <Badge text="1.4.4" />  | String \| Number | 0 | - |
 
 
 ### Event

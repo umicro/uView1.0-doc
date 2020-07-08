@@ -14,18 +14,20 @@
 ### 基本使用
 
 - 通过`count`参数设置总共有多少颗星星可选择
-- 通过`current`设置初始化时默认选中的星星数量
+- 通过`v-model`双向绑定初始化时默认选中的星星数量 <Badge text="1.4.5新增" />
+- ~~通过`current`设置初始化时默认选中的星星数量~~(1.4.5后建议使用v-model的方式，此参数为了向前兼容依然有效，但优先级低于`v-model`)
 
 ```html
 <template>
-	<u-rate count="count" current="2"></u-rate>
+	<u-rate count="count" v-model="value"></u-rate>
 </template>
 
 <script>
 	export default {
 		data() {
 			return {
-				count: 4
+				count: 4,
+				value: 2
 			}
 		}
 	}
@@ -75,8 +77,9 @@
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
+| v-model <Badge text="1.4.5" /> | 双向绑定选择星星的数量 | String \| Number | 0 | - |
 | count | 最多可选的星星数量 | String \| Number | 5 | - |
-| current | 默认选中的星星数量  | String \| Number | 0 | - |
+| current | 默认选中的星星数量，1.4.5起建议使用`v-model`方式  | String \| Number | 0 | - |
 | disabled | 是否禁止用户操作 | Boolean | false | true |
 | size | 星星的大小，单位rpx | String \| Number | 32 | - |
 | inactive-color | 未选中星星的颜色 | String | #b2b2b2 | - |
@@ -90,6 +93,6 @@
 
 ### Events
 
-| 事件名 | 说明 | 回调参数 | 版本 |
-| :- | :- | :- | :- |
-| change | 选中的星星发生变化时触发 | value：当前选中的星星的数量 | - |
+| 事件名 | 说明 | 回调参数 |
+| :- | :- | :- |
+| change | 选中的星星发生变化时触发 | value：当前选中的星星的数量，如果使用`v-model`双向绑定方式，无需监听此事件|

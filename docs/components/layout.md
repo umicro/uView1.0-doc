@@ -140,3 +140,16 @@
 | span | 栅格占据的列数，总12等分  | String \| Number | 0 | 1-12 |
 | offset | 分栏左边偏移，计算方式与`span`相同  | String \| Number | 0 | - |
 
+
+### Row Events <Badge text="1.4.3" />
+
+|事件名|说明|回调参数|
+|:-|:-|:-|
+| click | `row`被点击 | - |
+
+
+### Col Events <Badge text="1.4.3" />
+
+|事件名|说明|回调参数|
+|:-|:-|:-|
+| click | `col`被点击，会阻止事件冒泡到`row` | - |

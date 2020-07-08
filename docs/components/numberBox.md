@@ -42,6 +42,8 @@
 
 - 通过`step`属性设置每次点击增加或减少按钮时变化的值，默认为1
 
+**注意：** 自`1.4.5`版本起，`step`参数支持小数值，如`1.1`、`0.3`等 <Badge text="1.4.5" />
+
 下面示例每次都会加2或者减2
 
 ```html
@@ -83,7 +85,7 @@
 | bg-color | 输入框和按钮的背景颜色  | String | #F2F3F5 | - |
 | min | 用户可输入的最小值 | Number | 0 | - |
 | max | 用户可输入的最大值 | Number | 99999 | - |
-| step | 步长，每次加或减的值 | Number | 1 | - |
+| step | 步长，每次加或减的值，<Badge text="1.4.5" />起支持小数值 | Number | 1 | - |
 | disabled | 是否禁用操作，禁用后无法加减或手动修改输入框的值 | Boolean | false | true |
 | size | 输入框文字和按钮字体大小，单位rpx | String \| Number | 26 | - |
 | color | 输入框文字和加减按钮图标的颜色 | String | #323233 | - |
@@ -92,6 +94,8 @@
 | index | 事件回调时用以区分当前发生变化的是哪个输入框 | String \| Number | - | - |
 | disabled-input | 是否禁止输入框手动输入值 | Boolean | false | true |
 | cursor-spacing | 指定光标于键盘的距离，避免键盘遮挡输入框，单位rpx | String \| Number | 200 | - |
+| long-press <Badge text="1.4.5" /> | 是否开启长按连续递增或递减 | Boolean | true | false |
+| press-time  <Badge text="1.4.5" /> | 开启长按触发后，每触发一次需要多久，单位ms | String \| Number | 250 | - |
 
 ### Events
 

@@ -102,7 +102,7 @@
 				curNow: 0
 			}
 		},
-		mehtods: {
+		methods: {
 			sectionChange(index) {
 				this.curNow = index;
 			}

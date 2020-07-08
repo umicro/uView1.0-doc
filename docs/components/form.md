@@ -523,7 +523,12 @@ export default {
 |-------------  |---------------- |---------------|------------------ |-------- |
 | model | 表单数据对象  | Object	 | - | - |
 | rules | 通过`ref`设置，见上方说明 | Object | - | - |
-| errorType | 错误的提示方式，数组形式，见上方说明 | Array | ['message'] | - |
+| error=type | 错误的提示方式，数组形式，见上方说明 | Array | ['message'] | - |
+| border-bottom <Badge text="1.4.6" /> | 是否显示表单域的下划线边框 | Boolean | true | - |
+| label-position <Badge text="1.4.6" /> | 表单域提示文字的位置，`left`-左侧，`top`-上方 | String | left | top |
+| label-width <Badge text="1.4.6" /> | 提示文字的宽度，单位rpx | String \| Number | 90 | 数值 / auto |
+| label-style <Badge text="1.4.6" /> | `lable`的样式，对象形式 | Object | - | - |
+| label-align <Badge text="1.4.6" /> | `lable`的对齐方式 | String | left |  center / right |
 
 
 ### Form Methods
@@ -543,11 +548,11 @@ export default {
 |-------------  |---------------- |---------------|------------------ |-------- |
 | label | 左侧提示文字  | String	 | - | - |
 | prop | 表单域`model`对象的属性名，在使用 validate、resetFields 方法的情况下，该属性是必填的 | Object | - | - |
-| border-bottom | 是否显示表单域的下划线边框 | Boolean | true | - |
-| label-position | 表单域提示文字的位置，`left`-左侧，`top`-上方 | String | left | top |
-| label-width | 提示文字的宽度，单位rpx | String \| Number | 90 | 数值 / auto(1.3.4引入) |
-| label-style | `lable`的样式，对象形式 | Object | - | - |
-| label-align | `lable`的对齐方式 | String | left |  center / right |
+| border-bottom | 是否显示表单域的下划线边框，如设置，将覆盖`u-form`的同名参数 | Boolean | - | true / false |
+| label-position | 表单域提示文字的位置，`left`-左侧，`top`-上方，如设置，将覆盖`u-form`的同名参数 | String | - | left / top |
+| label-width | 提示文字的宽度，单位rpx，如设置，将覆盖`u-form`的同名参数| String \| Number | - | - |
+| label-style | `lable`的样式，对象形式，如设置，将覆盖`u-form`的同名参数 | Object | - | - |
+| label-align | `lable`的对齐方式，如设置，将覆盖`u-form`的同名参数 | String | - |  - |
 | right-icon | 右侧自定义字体图标(限uView内置图标)或图片地址 | String |  - |
 | left-icon | 左侧自定义字体图标(限uView内置图标)或图片地址 | String |  - |
 | left-icon-style | 左侧图标的样式，对象形式 | Object | - | - |

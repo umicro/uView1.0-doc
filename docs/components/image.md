@@ -96,6 +96,20 @@
 ```
 
 
+### 事件冒泡
+
+默认情况下，组件是允许内部向外事件冒泡的，因为很多情况下，我们都希望点击图片，同时图片所在的父元素的点击事件也能触发。  
+如果您想避免事件冒泡，那么您可以在组件外面嵌套一个`view`，同时给它加上`@tap.stop`即可。 
+
+```html
+<!-- 点击图片将不会触发clickHandler -->
+<view @tap="clickHandler">
+	<view @tap.stop>
+		<u-image src="https://cdn.uviewui.com/uview/example/fade.jpg"></u-image>
+	</view>
+</view>
+```
+
 
 ### API
 

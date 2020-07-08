@@ -130,7 +130,7 @@ export default {
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| icon-size | 图标大小，单位rpx  | String \ Number | 20 | - |
+| size | 组件整体的大小，单位rpx  | String \ Number | 34 | - |
 | label-size | label字体大小，单位rpx  | String \ Number | 28 | - |
 | name | `checkbox`组件的标示符  | String \ Number | - | - |
 | shape | 形状，见上方说明 | String  | circle | square |
@@ -146,8 +146,11 @@ export default {
 |-------------  |---------------- |---------------|------------------ |-------- |
 | max | 最多能选中多少个`checkbox`  | String \ Number | 999 | - |
 | disabled | 是否禁用所有`checkbox`  | Boolean | false | true |
+| icon-size | 图标大小，单位rpx  | String \ Number | 20 | - |
 | size | 组件整体的大小，单位rpx  | String \ Number | 34 | - |
+| shape | 形状，见上方说明 | String  | circle | square |
 | active-color | 选中时的颜色，应用到所有子`Checkbox`组件 | String  | #2979ff | - |
+| label-disabled | 点击文本是否可以操作`checkbox` | Boolean  | true | false |
 | width <Badge text="1.3.0" type="tip"/> | `checkbox`的宽度，需带单位，如`50%`，`150rpx` | String  | auto | - |
 | wrap <Badge text="1.3.0" type="tip"/> | 是否每个`checkbox`占一行 | Boolean  | false | true |
 
