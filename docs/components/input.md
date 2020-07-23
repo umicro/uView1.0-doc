@@ -1,4 +1,4 @@
-## Input 输入框 <Badge text="1.3.0" />
+## Input 输入框 <Badge text="1.3.0" /> <to-api/>
 
 <!-- <demo-model url="/pages/componentsA/input/index"></demo-model> -->
 
@@ -180,7 +180,7 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | type | 模式选择，见上方说明  | String	 | text | select / password / textarea / number |
-| clearable | 是否显示右侧的清除图标 | Boolean | true | false |
+| clearable | 是否显示右侧的清除图标，type = select时无效 | Boolean | true | false |
 | v-model | 用于双向绑定输入框的值 | - | - | - |
 | input-align | 输入框文字的对齐方式  | String | left | center / right |
 | placeholder | placeholder显示值  | String | 请输入内容 | - |

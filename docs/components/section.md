@@ -1,4 +1,4 @@
-## Section 查看更多
+## Section 查看更多 <to-api/>
 
 <demo-model url="/pages/componentsC/section/index"></demo-model>
 
@@ -46,6 +46,7 @@
 | bold | 主标题是否加粗 | Boolean  | true | false |
 | color | 主标题颜色 | String  | #303133 | - |
 | sub-color | 右边副标题的颜色(右箭头同此颜色) | String  | #909399 | - |
+| line-color <Badge text="1.5.5" /> | 左边竖线的颜色，默认同`color`参数值 | String  | - | - |
 
 
 ### Events

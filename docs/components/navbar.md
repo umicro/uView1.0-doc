@@ -1,4 +1,4 @@
-### Navbar 自定义导航栏
+### Navbar 自定义导航栏 <to-api/>
 
 此组件一般用于在特殊情况下，需要自定义导航栏的时候用到，一般建议使用uni-app带的导航栏。
 
@@ -176,14 +176,14 @@ uView提供了一个`background`参数(需对象形式)，可以自定义导航�
 |-----------|-----------|----------|----------|---------|
 | height | 导航栏高度(不包括状态栏高度在内，内部自动加上)，注意这里的单位是<span style="color: red;">**px**</span>  | String \ Number | 44 | - |
 | back-icon-color | 左边返回图标的颜色 | String  | #606266 | - |
-| back-icon-name | 左边返回图标的名称，只能为uView自带的图标 | String  | arrow-left | - |
+| back-icon-name | 左边返回图标的名称，只能为uView自带的图标，`1.5.5`起由arrow-left调整为nav-back | String  | nav-back | - |
 | back-icon-size | 左边返回图标的大小，单位rpx | String \ Number  | 30 | - |
 | back-text | 返回图标右边的辅助提示文字 | String  | - | - |
 | back-text-style | 返回图标右边的辅助提示文字的样式，对象形式 | Object  | { color: '#606266' } | - |
 | title | 导航栏标题，如设置为空字符，将会隐藏标题占位区域 | String  | - | - |
 | title-width | 导航栏标题的最大宽度，内容超出会以省略号隐藏，单位rpx | String \ Number  | 250 | - |
 | title-color | 标题的颜色 | String  | #606266 | - |
-| title-size | 导航栏标题字体大小，单位rpx | String \ Number  | 32 | - |
+| title-size | 导航栏标题字体大小，单位rpx，`1.5.5`起由32调整为44 | String \ Number  | 44 | - |
 | z-index | 固定在顶部时的`z-index`值 | String \ Number  | 980 | - |
 | is-back | 是否显示导航栏左边返回图标和辅助文字 | Boolean  | true | false |
 | background | 导航栏背景设置(APP和小程序上包括状态栏的颜色)，见上方说明 | Object  | { background: '#ffffff' } | - |

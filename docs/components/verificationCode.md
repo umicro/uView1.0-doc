@@ -1,4 +1,4 @@
-## VerificationCode 验证码倒计时
+## VerificationCode 验证码倒计时 <to-api/>
 
 <demo-model url="/pages/componentsA/verificationCode/index"></demo-model>
 

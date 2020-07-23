@@ -7,7 +7,8 @@
     "@vuepress/plugin-back-to-top": "^1.2.0",
     "bp-vuejs-dropdown": "^2.1.1",
     "node-sass": "^4.14.1",
-    "sass-loader": "^8.0.2"
+    "sass-loader": "^8.0.2",
+    "vuepress-plugin-dehydrate": "^1.1.4"
   },
   "dependencies": {
     "axios": "^0.19.2",

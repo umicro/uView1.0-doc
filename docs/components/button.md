@@ -1,4 +1,4 @@
-## Button 按钮
+## Button 按钮 <to-api/>
 
 <demo-model url="/pages/componentsC/button/index"></demo-model>
 

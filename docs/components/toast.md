@@ -1,4 +1,4 @@
-## Toast 消息提示
+## Toast 消息提示 <to-api/>
 
 <demo-model url="/pages/componentsA/toast/index"></demo-model>
 

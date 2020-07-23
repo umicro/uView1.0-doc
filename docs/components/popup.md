@@ -1,4 +1,4 @@
-## Popup 弹出层
+## Popup 弹出层 <to-api/>
 
 <demo-model url="/pages/componentsC/popup/index"></demo-model>
 
@@ -125,9 +125,10 @@ uView提供了`length`来控制此种情况，此值可以是`数值`(单位rpx)
 | close-icon-pos | 自定义关闭图标位置，top-left为左上角，top-right为右上角，bottom-left为左下角，bottom-right为右下角  | String | top-right | top-left / bottom-left / bottom-right |
 | close-icon-color | 关闭图标的颜色  | String | #909399 | - |
 | close-icon-size | 关闭图标的大小，单位rpx  | String \| Number | 30 | - |
-| width | mode = left \| center \| right时有效，优先级高于`length` <Badge text="1.3.7" />  | String \| Number | - | - |
-| height | mode = top \| center \| bottom时有效，优先级高于`length` <Badge text="1.3.7" />  | String \| Number | - | - |
-| negative-top | 中部弹出时，以避免可能弹出的键盘重合，往上偏移的值，单位任意，数值则默认为rpx单位 <Badge text="1.4.4" />  | String \| Number | 0 | - |
+| width  <Badge text="1.3.7" /> | mode = left \| center \| right时有效，优先级高于`length`  | String \| Number | - | - |
+| height  <Badge text="1.3.7" /> | mode = top \| center \| bottom时有效，优先级高于`length`  | String \| Number | - | - |
+| negative-top | 中部弹出时，以避免可能弹出的键盘重合，往上偏移的值，单位任意，数值则默认为rpx单位  | String \| Number | 0 | - |
+| mask-custom-style <Badge text="1.5.4" /> | 遮罩自定义样式，一般用于修改遮罩透明度对象形式，如：{background: 'rgba(0, 0, 0, 0.5)'}  | Object | - | - |
 
 
 ### Event

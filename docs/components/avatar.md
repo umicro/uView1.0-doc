@@ -1,4 +1,4 @@
-## Avatar 头像
+## Avatar 头像 <to-api/>
 
 <demo-model url="/pages/componentsA/avatar/index"></demo-model>
 

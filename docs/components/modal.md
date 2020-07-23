@@ -1,4 +1,4 @@
-## Modal 模态框
+## Modal 模态框 <to-api/>
 
 弹出模态框，常用于消息提示、消息确认、在当前页面内完成特定的交互操作。
 
@@ -228,7 +228,7 @@ h3[id=slots] + table thead tr th:nth-child(2){
 	width: 50%;
 }
 
-h3[id=method] + table thead tr th:nth-child(2){
-	width: 70%;
+h3[id=method] + p + table thead tr th:nth-child(2){
+	width: 50%;
 }
 </style>

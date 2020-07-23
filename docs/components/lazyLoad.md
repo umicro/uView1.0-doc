@@ -1,4 +1,4 @@
-## LazyLoad 懒加载
+## LazyLoad 懒加载 <to-api/>
 
 <demo-model url="/pages/componentsA/lazyload/index"></demo-model>
 

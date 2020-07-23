@@ -1,4 +1,4 @@
-## ActionSheet 操作菜单
+## ActionSheet 操作菜单 <to-api/>
 
 <demo-model url="/pages/componentsC/actionSheet/index"></demo-model>
 

@@ -1,4 +1,4 @@
-## TopTips 顶部提示
+## TopTips 顶部提示 <to-api/>
 
 <demo-model url="/pages/componentsA/topTips/index"></demo-model>
 

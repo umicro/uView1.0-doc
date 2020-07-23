@@ -1,4 +1,4 @@
-## Select 列选择器 <Badge text="1.3.0" type="tip"/>
+## Select 列选择器 <Badge text="1.3.0" type="tip"/> <to-api/>
 
 <demo-model url="/pages/componentsA/select/index"></demo-model>
 

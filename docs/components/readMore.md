@@ -1,4 +1,4 @@
-## ReadMore 展开阅读更多
+## ReadMore 展开阅读更多 <to-api/>
 
 <demo-model url="/pages/componentsB/readMore/index"></demo-model>
 
@@ -108,7 +108,7 @@
 
 ```html
 <template>
-	<u-read-more ref="uReadMore" :shadow-style="shadowStyle">
+	<u-read-more ref="uReadMore" :shadow-style="shadowStyle" :show-height="200">
 		<rich-text :nodes="content"></rich-text>
 	</u-read-more>
 </template>
@@ -143,3 +143,4 @@
 | open-text | 展开时的提示文字 | String  | 收起 | - |
 | color | 提示文字的颜色 | String  | #2979ff | - |
 | shadow-style | 对阴影的自定义处理，对象形式 | Object  | 见上方说明 | - |
+| text-indent <Badge text="1.5.6" /> | 段落首行缩进的字符个数，无需缩进请设置为0 | String  | 2em | - |

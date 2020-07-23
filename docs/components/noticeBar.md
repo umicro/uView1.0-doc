@@ -1,4 +1,4 @@
-## NoticeBar 滚动通知
+## NoticeBar 滚动通知 <to-api/>
 
 <demo-model url="/pages/componentsB/noticeBar/index"></demo-model>
 

@@ -1,4 +1,4 @@
-## Rate 评分
+## Rate 评分 <to-api/>
 
 <demo-model url="/pages/componentsB/rate/index"></demo-model>
 

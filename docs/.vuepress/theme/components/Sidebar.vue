@@ -1,8 +1,11 @@
 <template>
 	<div>
 		<aside class="sidebar">
-			<a class="jump-link" href="https://www.uviewui.com">
-				<img src="/common/contact1.png" />
+			<a target="_blank" class="jump-link" :href="jumpInfo.url">
+				<img :src="jumpInfo.src" />
+			</a>
+			<a target="_blank" class="jump-link" href="http://www.vueshop.com.cn/index.php?http_referer=uview">
+				<img src="/customer/sdf1516355we0sd2.jpg" />
 			</a>
 			<NavLinks />
 			<slot name="top" />
@@ -13,16 +16,70 @@
 </template>
 
 <script>
-import SidebarLinks from '@theme/components/SidebarLinks.vue';
-import NavLinks from '@theme/components/NavLinks.vue';
+	import SidebarLinks from '@theme/components/SidebarLinks.vue';
+	import NavLinks from '@theme/components/NavLinks.vue';
 
-export default {
-	name: 'Sidebar',
+	export default {
+		name: 'Sidebar',
 
-	components: { SidebarLinks, NavLinks },
+		components: {
+			SidebarLinks,
+			NavLinks
+		},
+		data() {
+			return {
+				// 广告信息
+				ad: [
+					{
+						name: {
+							src: '/customer/contact1.png',
+							url: 'javascript: ;'
+						},
+						chance: 0.33
+					},
+					{
+						name: {
+							src: '/customer/contact3.png',
+							url: 'https://ext.dcloud.net.cn/plugin?id=1427'
+						},
+						chance: 0.67
+					}
+				],
+				// 初始化时的信息
+				jumpInfo: {
+					src: '/customer/contact3.png',
+					url: 'http://www.rageframe.com/'
+				}
+			}
+		},
+		props: ['items'],
+		created() {
+			// 概率计算
+			//this.jumpInfo = this.random();
+			// 每隔一定时间，执行一次随机概率
+			setInterval(() => {
+				this.jumpInfo = this.random();
+			}, 3000);
+		},
+		methods: {
+			// 根据概率，获得结果
+			random() {
+				let sum = 0,
+					factor = 0,
+					random = Math.random();
 
-	props: ['items']
-};
+				for (let i = 0; i < this.ad.length; i++) {
+					sum += this.ad[i].chance; // 统计概率总和
+				};
+				random *= sum; // 生成概率随机数
+				for (let i = 0; i < this.ad.length; i++) {
+					factor += this.ad[i].chance;
+					if (factor > random) return this.ad[i].name;
+				};
+				return null;
+			}
+		}
+	};
 </script>
 
 <style lang="stylus">
@@ -30,8 +87,12 @@ export default {
 	.jump-link
 		margin-top 1rem
 		margin-right 2rem
+		border-radius 4px
+		width 170px
+		height 80px
 		img {
 			max-width 100%
+			border-radius 4px
 		}
 
 	ul

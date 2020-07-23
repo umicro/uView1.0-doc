@@ -1,4 +1,4 @@
-## Layout 布局
+## Layout 布局 <to-api/>
 
 <demo-model url="/pages/componentsC/layout/index"></demo-model>
 
@@ -137,8 +137,9 @@
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| span | 栅格占据的列数，总12等分  | String \| Number | 0 | 1-12 |
+| span | 栅格占据的列数，总12等分  | String \| Number | 0 | 1-12 | 
 | offset | 分栏左边偏移，计算方式与`span`相同  | String \| Number | 0 | - |
+| text-align <Badge text="1.5.5" /> | 文字水平对齐方式  | String | left | center / right | 
 
 
 ### Row Events <Badge text="1.4.3" />

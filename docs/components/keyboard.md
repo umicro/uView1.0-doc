@@ -1,4 +1,4 @@
-## Keyboard 键盘
+## Keyboard 键盘 <to-api/>
 
 <demo-model url="/pages/componentsA/keyboard/index"></demo-model>
 

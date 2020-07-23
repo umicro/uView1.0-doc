@@ -1,4 +1,4 @@
-## MessageInput 验证码输入
+## MessageInput 验证码输入 <to-api/>
 
 <demo-model url="/pages/componentsC/messageInput/index"></demo-model>
 

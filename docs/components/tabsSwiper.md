@@ -1,4 +1,4 @@
-## tabsSwiper 全屏选项卡
+## tabsSwiper 全屏选项卡 <to-api/>
 
 <demo-model url="/pages/template/order/index"></demo-model>
 
@@ -17,7 +17,8 @@ uView中，共有2个组件可以实现tabs标签切换，分别是`tabs`组件�
 <br>
 
 ::: warning 注意
-此组件目前为uView的`vue`版本，非`nvue`版本(制作中)，内部使用uni-app`swiper`组件为基础，`swiper`是单页组件，
+1. 由于支付宝小程序不支持uni的`swiper`组件`transition`事件的`dx`参数，故此组件不支持支付宝小程序
+2. 此组件目前为uView的`vue`版本，非`nvue`版本(制作中)，内部使用uni-app`swiper`组件为基础，`swiper`是单页组件，
 适合做简单列表左右滑动，因为性能问题，用swiper做复杂长列表，需要较高的优化技巧以及接受一些限制。如果要实现类似腾讯新闻APP首页可以左右
 滑动复杂的多个tab切换，不建议使用本组件，如果使用，请自行测试列表很长时的切换流畅度。后续uView会对`nvue`进行兼容，增强此组件在APP上的能力。  
 官方有一个`nvue`新闻模板示例，内有左右滑动tab功能，具体参考：  
@@ -28,7 +29,7 @@ uView中，共有2个组件可以实现tabs标签切换，分别是`tabs`组件�
 
 |App|H5|微信小程序|支付宝小程序|百度小程序|头条小程序|QQ小程序|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|√|√|√|√|√|√|√|
+|√|√|√|x|√|√|√|
 
 ### 基本使用
 

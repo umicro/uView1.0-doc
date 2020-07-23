@@ -1,4 +1,4 @@
-## Divider 分割线
+## Divider 分割线 <to-api/>
 
 <demo-model url="/pages/componentsB/divider/index"></demo-model>
 

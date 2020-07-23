@@ -1,4 +1,4 @@
-## Form 表单 <Badge text="1.3.0" />
+## Form 表单 <Badge text="1.3.0" /> <to-api/>
 
 此组件一般用于表单场景，可以配置Input输入框，Select弹出框，进行表单验证等。
 
@@ -523,7 +523,7 @@ export default {
 |-------------  |---------------- |---------------|------------------ |-------- |
 | model | 表单数据对象  | Object	 | - | - |
 | rules | 通过`ref`设置，见上方说明 | Object | - | - |
-| error=type | 错误的提示方式，数组形式，见上方说明 | Array | ['message'] | - |
+| error-type | 错误的提示方式，数组形式，见上方说明 | Array | ['message'] | - |
 | border-bottom <Badge text="1.4.6" /> | 是否显示表单域的下划线边框 | Boolean | true | - |
 | label-position <Badge text="1.4.6" /> | 表单域提示文字的位置，`left`-左侧，`top`-上方 | String | left | top |
 | label-width <Badge text="1.4.6" /> | 提示文字的宽度，单位rpx | String \| Number | 90 | 数值 / auto |
@@ -547,8 +547,8 @@ export default {
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | label | 左侧提示文字  | String	 | - | - |
-| prop | 表单域`model`对象的属性名，在使用 validate、resetFields 方法的情况下，该属性是必填的 | Object | - | - |
-| border-bottom | 是否显示表单域的下划线边框，如设置，将覆盖`u-form`的同名参数 | Boolean | - | true / false |
+| prop | 表单域`model`对象的属性名，在使用 validate、resetFields 方法的情况下，该属性是必填的 | String | - | - |
+| border-bottom | 是否显示下边框，如不需要下边框，需同时将`u-form`的同名参数设置为`false` | Boolean | true | true / false |
 | label-position | 表单域提示文字的位置，`left`-左侧，`top`-上方，如设置，将覆盖`u-form`的同名参数 | String | - | left / top |
 | label-width | 提示文字的宽度，单位rpx，如设置，将覆盖`u-form`的同名参数| String \| Number | - | - |
 | label-style | `lable`的样式，对象形式，如设置，将覆盖`u-form`的同名参数 | Object | - | - |

@@ -1,4 +1,4 @@
-## Sticky 吸顶
+## Sticky 吸顶 <to-api/>
 
 <demo-model url="/pages/componentsB/sticky/index"></demo-model>
 

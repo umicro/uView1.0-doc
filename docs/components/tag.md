@@ -1,4 +1,4 @@
-## Tag 标签
+## Tag 标签 <to-api/>
 
 <demo-model url="/pages/componentsA/tag/index"></demo-model>
 

@@ -1,4 +1,4 @@
-## Table 表格
+## Table 表格 <to-api/>
 
 <demo-model url="/pages/componentsB/table/index"></demo-model>
 

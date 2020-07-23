@@ -9,6 +9,212 @@
 			<div class="u-timeline-item-tail"></div>
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
+					<div class="anchor">
+						<h2>1.5.4</h2>
+					</div>
+					<p><code>2020-07-21</code></p>
+					<ul>
+						<li>
+							<span class="add">交流反馈</span>
+							欢迎加群交流反馈：
+							<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+						</li>
+						<li>
+							<span class="fix">重要说明</span>
+							本次升级主要针对支付宝小程序的兼容性，需要开启支付宝的"component2"模式，另外废弃了table组件的单元格合并模式，详见：							
+							<a href="/components/changeGuide.html" target="_blank">升级指南</a>
+						</li>
+						<li>
+							<span class="fix">其他说明</span>
+							由于支付宝小程序不支持uni的swiper组件的transition事件的dx回调参数，也不支持vue的作用域插槽特性(预计会很快支持)，所以目前
+							uView的tabsSwiper和waterfall组件不支持支付宝小程序
+						</li>
+						<li>
+							<span class="add">新增</span>
+							新增parse富文本解析器组件，详见：
+							<a href="/components/parse.html" target="_blank">富文本解析器</a>
+						</li>
+						<li>
+							<span class="add">新增</span>
+							新增$u.test.object()方法用于判断是否对象
+						</li>
+						<li>
+							<span class="add">新增</span>
+							新增$u.test.jsonString()方法用于判断是否json字符串
+						</li>
+						<li>
+							<span class="add">新增</span>
+							line-progress线性进度条新增默认slot，可传入自定义内容
+						</li>
+						<li>
+							<span class="add">新增</span>
+							popup弹窗组件新增mask-custom-style参数，用于修改遮罩的透明度等样式
+						</li>
+						<li>
+							<span class="add">新增</span>
+							新增判断固定电话规则$u.test.landline()
+						</li>
+						<li>
+							<span class="add">新增</span>
+							u-image新增bg-color参数，可以设置加载中阶段的背景颜色
+						</li>
+						<li>
+							<span class="add">新增</span>
+							u-search在disabled为true时，点击可以发出click事件，用于跳转
+						</li>
+						<li>
+							<span class="add">新增</span>
+							新增$u.test.array()方法用于判断是否数组
+						</li>
+						<li>
+							<span class="optimize">优化</span>
+							同步升级parse到最新版本
+						</li>
+						<li>
+							<span class="optimize">优化</span>
+							优化field组件使用right插槽时内容和清除图标距离太近的问题
+						</li>
+						<li>
+							<span class="fix">修复</span>
+							修复picker和select点击确定时，收起动画无效的问题
+						</li>
+						<li>
+							<span class="fix">修复</span>
+							修复number-box步进器组件连续输入多个数值，可能会导致内存溢出的问题
+						</li>
+						<li>
+							<span class="fix">修复</span>
+							修复支付宝小程序上tabs组件无效的问题
+						</li>
+						<li>
+							<span class="fix">修复</span>
+							修复swipeAction组件在支付宝小程序无效的问题
+						</li>
+						<li>
+							<span class="fix">修复</span>
+							修复table对支付宝的兼容问题，废弃table的单元格合并模式，详见官网升级指南
+						</li>
+						<li>
+							<span class="fix">修复</span>
+							修复index-list组件，全面兼容支付宝小程序
+						</li>
+						<li>
+							<span class="fix">修复</span>
+							修复keyboard组件z-index参数无效的问题
+						</li>
+						<li>
+							<span class="fix">修复</span>
+							修复readmore组件示例在支付宝小程序无效的问题
+						</li>
+						<li>
+							<span class="fix">修复</span>
+							修复picker组件start-year和end-year传递字符串类型无效的问题
+						</li>
+						<li>
+							<span class="fix">修复</span>
+							修复瀑布流组件的modify方法可能会导致数据错乱的问题
+						</li>
+						<li>
+							<span class="fix">修复</span>
+							修复H5端popup等弹出组件层级比uni.showToast()的层级高的问题
+						</li>
+						<li>
+							<span class="fix">修复</span>
+							修复modal组件异步关闭模式，可能无法清除loading的问题
+						</li>
+					</ul>
+				</div>
+			</li>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
+					<h2>1.5.2</h2>
+				</div>
+				<p><code>2020-07-15</code></p>
+				<ul>
+					<li>
+						<span class="add">交流反馈</span>
+						欢迎加群交流反馈：
+						<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						配置popup组件的外层元素z-index可动态调整
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						select和picker组件在微信小程序上第二次打开，直接点确定返回可能不对的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						添加u-col的click事件
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化table组件在支付宝小程序上报错的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						重构steps组件，支持竖向模式，同时兼容了支付宝小程序
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化checkbox组件，兼容支付宝小程序
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化swipeAction组件可能会闪烁的情况
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						调整cell组件的高度
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						重构优化radio组件，全面兼容支付宝小程序，修复每次点击都触发change事件的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化avatar-cropper头像裁剪组件，全面兼容支付宝小程序
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化circle-progress组件，全面兼容支付宝小程序
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复image组件无需淡入效果时png图片能看到底色的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复checkbox的lable-disabled参数无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复form-item的label-align无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复alert-tips的border-color和bg-color作用对象颠倒的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复picker组件时间模式timestamp在iOS上可能返回不正确的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复input组件在微信小程序第一次获得焦点时无法清空内容的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复cell组件在1.5.0版本导致变成了password模式的情况
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
 				<div class="anchor">
 					<h2>1.4.8</h2>
 				</div>
@@ -79,7 +285,7 @@
 					</li>
 					<li>
 						<span class="optimize">优化</span>
-						优化popup的弹出逻辑，让keyboard，select，picker等与popup弹出有关的组件可以在页面初始化时data中设置show为而弹出组件
+						优化popup的弹出逻辑，让keyboard，select，picker等与popup弹出有关的组件可以在页面初始化时data中设置show为true也能弹出组件
 					</li>
 					<li>
 						<span class="optimize">优化</span>

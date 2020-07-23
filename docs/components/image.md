@@ -1,4 +1,4 @@
-## Image 图片 <Badge text="1.4.0" />
+## Image 图片 <Badge text="1.4.0" /> <to-api/>
 
 <demo-model url="/pages/componentsB/image/index"></demo-model>
 

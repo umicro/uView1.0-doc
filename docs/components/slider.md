@@ -1,4 +1,4 @@
-## Slider 滑动选择器
+## Slider 滑动选择器 <to-api/>
       
 <demo-model url="/pages/componentsA/slider/index"></demo-model>
 

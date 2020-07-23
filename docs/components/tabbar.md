@@ -1,4 +1,4 @@
-## Tabbar 底部导航栏 <Badge text="1.4.8" type="tip"/>
+## Tabbar 底部导航栏 <Badge text="1.4.8" type="tip"/> <to-api/>
 
 <demo-model url="/pages/componentsB/tabbar/index"></demo-model>
 
@@ -77,7 +77,7 @@ let list = [
 			<!-- 所有内容的容器 -->
 		</view>
 		<!-- 与包裹页面所有内容的元素u-page同级，且在它的下方 -->
-		<u-tabbar v-model="current" :list="list"></u-tabbar>
+		<u-tabbar v-model="current" :list="list" :mid-button="true"></u-tabbar>
 	</view>
 </template>
 

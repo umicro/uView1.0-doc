@@ -1,4 +1,4 @@
-## Switch 开关选择器
+## Switch 开关选择器 <to-api/>
 
 <demo-model url="/pages/componentsB/switch/index"></demo-model>
 

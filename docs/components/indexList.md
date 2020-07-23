@@ -1,4 +1,4 @@
-## IndexList 索引列表
+## IndexList 索引列表 <to-api/>
 
 <demo-model url="/pages/componentsA/indexList/index"></demo-model>
 

@@ -1,4 +1,4 @@
-## Picker 选择器
+## Picker 选择器 <to-api/>
 
 <demo-model url="/pages/componentsB/picker/index"></demo-model>
 

@@ -1,4 +1,4 @@
-## Swiper 轮播图
+## Swiper 轮播图 <to-api/>
 
 <demo-model url="/pages/componentsB/swiper/index"></demo-model>
 

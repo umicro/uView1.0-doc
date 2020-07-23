@@ -5,6 +5,7 @@ module.exports = {
 	markdown: {
 		//lineNumbers: true
 	},
+	evergreen: true, // 只适配现代浏览器
 	// <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	plugins: ['@vuepress/back-to-top'],
 	configureWebpack: (config, isServer) => {
@@ -183,6 +184,7 @@ module.exports = {
 							collapsable: false,
 							sidebarDepth: 0,
 							children: [
+								'/components/parse',
 								'/components/messageInput',
 								'/components/avatarCropper',
 								'/components/loadMore',
@@ -388,6 +390,7 @@ module.exports = {
 			'/js/deepClone',
 			'/layout/citySelect',
 			'/guide/theme',
+			'/components/parse',
 		],
 	}
 }

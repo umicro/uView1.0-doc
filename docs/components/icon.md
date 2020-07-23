@@ -1,4 +1,4 @@
-## Icon 图标
+## Icon 图标 <to-api/>
 
 <demo-model url="/pages/componentsA/icon/index"></demo-model>
 
@@ -62,6 +62,7 @@
 | label | 图标右侧/下方的label文字 | String  | - | - |
 | label-size | `label`字体大小，单位rpx | String \| Number  | 28 | - |
 | label-color | `label`字体颜色 | String  | #606266 | - |
+| custom-prefix | 自定义字体图标库时，需要写上此值，详见：[扩展自定义图标库](https://www.uviewui.com/guide/customIcon.html) | String  | uicon | - |
 | margin-left | `label`在右方时与图标的距离，单位rpx | String \| Number  | 6 | - |
 | margin-top | `label`在下方时与图标的距离，单位rpx | String \| Number  | 6 | - |
 | margin-bottom <Badge text="1.4.1" /> | `label`在上方时与图标的距离，单位rpx | String \| Number  | 6 | - |

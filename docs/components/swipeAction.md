@@ -1,4 +1,4 @@
-## SwipeAction 滑动操作
+## SwipeAction 滑动操作 <to-api/>
 
 <demo-model url="/pages/componentsB/swipeAction/index"></demo-model>
 

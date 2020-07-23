@@ -1,4 +1,4 @@
-## Search 搜索
+## Search 搜索 <to-api/>
 
 <demo-model url="/pages/componentsB/search/index"></demo-model>
 
@@ -123,6 +123,7 @@
 | blur | 输入框失去焦点时触发 | value：输入框的值 | - |
 | focus | 输入框获得焦点时触发 | value：输入框的值 | - |
 | clear | 配置了`clearabled`后，清空内容时会发出此事件 | - | - |
+| click <Badge text="1.5.3" /> | `disabled`为`true`时，点击输入框，发出此事件，用于跳转搜索页 | - | - |
 
 
 <style scoped>

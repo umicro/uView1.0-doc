@@ -1,4 +1,4 @@
-## CountTo 数字滚动
+## CountTo 数字滚动 <to-api/>
 
 <demo-model url="/pages/componentsC/countTo/index"></demo-model>
 

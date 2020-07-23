@@ -1,4 +1,4 @@
-## AlertTips 警告提示
+## AlertTips 警告提示 <to-api/>
 
 <demo-model url="/pages/componentsC/alertTips/index"></demo-model>
 

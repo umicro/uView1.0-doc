@@ -1,4 +1,4 @@
-## Badge 徽标数
+## Badge 徽标数 <to-api/>
 该组件一般用于图标右上角显示未读的消息数量，提示用户点击，有圆点和圆包含文字两种形式。
 
 <demo-model url="/pages/componentsC/badge/index"></demo-model>

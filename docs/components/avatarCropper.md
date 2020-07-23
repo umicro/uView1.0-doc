@@ -1,4 +1,4 @@
-## AvatarCropper 头像裁剪
+## AvatarCropper 头像裁剪 <to-api/>
 
 <demo-model url="/pages/componentsA/avatarCropper/index"></demo-model>
 

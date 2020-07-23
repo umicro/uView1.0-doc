@@ -1,4 +1,4 @@
-## Checkbox 复选框
+## Checkbox 复选框 <to-api/>
 
 <demo-model url="/pages/componentsB/checkbox/index"></demo-model>
 
@@ -13,7 +13,7 @@
 
 ### 基本使用
 
-- 该组件需要搭配`checkboxGroup`组件使用，以便用户进行操作时，获得当前复选框组的选中情况，当然，您也可以单独对某个`checkbox`进行事件监听
+- 该组件无需强制搭配`checkboxGroup`组件使用(是情况而定)，可以单个独立使用`u-checkbox`组件
 - 通过`v-model`给`checkbox`绑定一个变量，这个绑定的变量是双向的(初始值只能是`true`或者`false`)，也就是说，您可以无需监听`checkbox`或者`checkboxGroup`组件的`change`事件，也能知道哪个复选框
 被勾选了
 
@@ -128,14 +128,18 @@ export default {
 当用户勾选复选框时，该值在`checkbox`内部被修改为`true`，并反映到父组件，否则为`false`，换言之，您无需监听`checkbox`的`change`事件，也能
 知道某一个`checkbox`是否被选中的状态
 
+注意：`checkbox`和`checkbox-group`二者同名参数中，`checkbox`的参数优先级更高。
+
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| size | 组件整体的大小，单位rpx  | String \ Number | 34 | - |
-| label-size | label字体大小，单位rpx  | String \ Number | 28 | - |
+| v-model | 双向绑定某一个`checkbox`的值，如果将该变量设置为`true`，将会被选中 | String \ Number | - | - |
+| size | 组件整体的大小，单位rpx  | String \ Number | - | - |
+| label-size | label字体大小，单位rpx  | String \ Number | - | - |
+| icon-size | 图标大小，单位rpx  | String \ Number | - | - |
 | name | `checkbox`组件的标示符  | String \ Number | - | - |
-| shape | 形状，见上方说明 | String  | circle | square |
-| disabled | 是否禁用 | Boolean  | false | true |
-| label-disabled | 点击文本是否可以操作`checkbox` | Boolean  | true | false |
+| shape | 形状，见上方说明 | String  | - | square |
+| disabled | 是否禁用 | Boolean  | - | false / true |
+| label-disabled | 是否禁止点击文本操作`checkbox` | Boolean  | - | false / true |
 | active-color | 选中时的颜色，如设置`CheckboxGroup`的`active-color`将失效 | String  | - | - |
 
 
@@ -150,7 +154,7 @@ export default {
 | size | 组件整体的大小，单位rpx  | String \ Number | 34 | - |
 | shape | 形状，见上方说明 | String  | circle | square |
 | active-color | 选中时的颜色，应用到所有子`Checkbox`组件 | String  | #2979ff | - |
-| label-disabled | 点击文本是否可以操作`checkbox` | Boolean  | true | false |
+| label-disabled | 是否禁止点击文本操作`checkbox` | Boolean  | false | true |
 | width <Badge text="1.3.0" type="tip"/> | `checkbox`的宽度，需带单位，如`50%`，`150rpx` | String  | auto | - |
 | wrap <Badge text="1.3.0" type="tip"/> | 是否每个`checkbox`占一行 | Boolean  | false | true |
 

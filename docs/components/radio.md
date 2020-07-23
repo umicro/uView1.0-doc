@@ -1,4 +1,4 @@
-## Radio 单选框
+## Radio 单选框 <to-api/>
 
 <demo-model url="/pages/componentsB/radio/index"></demo-model>
 
@@ -126,27 +126,32 @@ export default {
 
 ### Radio Props
 
-注意：需要给`radioGroup`组件通过`v-model`绑定一个**变量**，来初始化`radio`的状态，随后该值被双向绑定，
-当用户勾单选框时，该值在`radio`内部被修改为`name`值，并反映到父组件，换言之，您无需监听`radio`的`change`事件，也能知道哪个`radio`被选中了。
+注意：`radio`和`radio-group`二者同名参数中，`radio`的参数优先级更高。
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| v-model | 被选中`radio`双向绑定的值，如果初始值为某一个`radio`的`name`，该`radio`将会默认被选中 | String \ Number | - | - |
-| icon-size | 图标大小，单位rpx  | String \ Number | 20 | - |
-| label-size | label字体大小，单位rpx  | String \ Number | 28 | - |
-| name | `radio`组件的标示符  | String \ Number | - | - |
-| shape | 形状，见上方说明 | String  | circle | square |
-| disabled | 是否禁用 | Boolean  | false | true |
-| label-disabled | 点击文本是否可以操作`radio` | Boolean  | true | false |
+| icon-size | 图标大小，单位rpx  | String \| Number | - | - |
+| label-size | label字体大小，单位rpx  | String \| Number | - | - |
+| name | `radio`组件的标示符  | String \| Number | - | - |
+| shape | 形状，见上方说明 | String  | - | circle / square |
+| disabled | 是否禁用 | Boolean  | - | false / true |
+| label-disabled | 是否禁止点击文本操作`radio` | Boolean  | - | true / false |
 | active-color | 选中时的颜色，如设置`radioGroup`的`active-color`将失效 | String  | - | - |
 
 
 
 ### radioGroup Props
 
+注意：需要给`radioGroup`组件通过`v-model`绑定一个**变量**，来初始化`radio`的状态，随后该值被双向绑定，
+当用户勾单选框时，该值在`radio`内部被修改为`name`值，并反映到父组件，换言之，您无需监听`radio`的`change`事件，也能知道哪个`radio`被选中了。
+
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
+| v-model | 被选中`radio`双向绑定的值，如果初始值为某一个`radio`的`name`，该`radio`将会默认被选中 | String \ Number | - | - |
 | disabled | 是否禁用所有`radio`  | Boolean | false | true |
+| label-disabled <Badge text="1.5.2" /> | 是否禁止点击文本操作`radio` | Boolean  | false | true |
+| shape <Badge text="1.5.2" /> | 形状，见上方说明 | String  | circle | square |
+| icon-size <Badge text="1.5.2" /> | 图标大小，单位rpx  | String \ Number | 20 | - |
 | active-color | 选中时的颜色，应用到所有子`Radio`组件 | String  | #2979ff | - |
 | size | radio组件整体的大小，单位rpx  | String \ Number | 34 | - |
 | width <Badge text="1.3.0" type="tip"/> | `radio`的宽度，需带单位，如`50%`，`150rpx` | String  | auto | - |

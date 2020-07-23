@@ -19,4 +19,20 @@ this.$u.toast('Hello uView!');
 ```
 
 
+#### os <Badge text="1.5.5" />
+
+此属性用于返回平台的名称，为小写的`ios`或`android`
+
+```js
+console.log(this.$u.os)
+```
+
+
+#### sys <Badge text="1.5.5" />
+
+此属性用于获取设备的信息，相当于uni.getSystemInfoSync()的效果
+
+```js
+console.log(this.$u.sys)
+```
 

@@ -1,4 +1,4 @@
-## Skeleton 骨架屏
+## Skeleton 骨架屏 <to-api/>
 
 <demo-model url="/pages/componentsB/skeleton/index"></demo-model>
 

@@ -5,6 +5,47 @@ uView内置了一些校验规则，如是否手机号，邮箱号，URL等
 
 <demo-model url="/pages/library/test/index"></demo-model>
 
+### 是否数组 <Badge text="1.5.4" />
+
+#### array(array)
+
+校验是否数组，返回`true`或者`false`。
+
+- `array` <Array\> 数组
+
+```js
+console.log(this.$u.test.array([1, 2, 3]));
+```
+
+### 是否Json字符串 <Badge text="1.5.4" />
+
+#### jsonString(json)
+
+校验是否数组，返回`true`或者`false`。
+
+- `json` <Json\> Json字符串
+
+注意：请留意json字符串的要求：
+1. 整体为一个字符串
+2. 字符串对象内的属性需要用`""`双引号包含
+
+```js
+console.log(this.$u.test.jsonString('{"a": 1}'));
+```
+
+
+### 是否对象 <Badge text="1.5.4" />
+
+#### object(object)
+
+校验是否数组，返回`true`或者`false`。
+
+- `object` <Object\> 对象
+
+```js
+console.log(this.$u.test.object({a: 1}));
+```
+
 ### 是否邮箱号
 
 #### email(email)

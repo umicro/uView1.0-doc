@@ -1,4 +1,4 @@
-## deepClone 对象深度合并
+## deepMerge 对象深度合并
 
 <demo-model url="/pages/library/deepMerge/index"></demo-model>
 

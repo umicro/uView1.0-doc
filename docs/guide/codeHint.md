@@ -1,4 +1,4 @@
-## HBuilder X对uView的代码
+## HBuilder X对uView的代码提示
 
 <!-- <demo-model url="/"></demo-model> -->
 

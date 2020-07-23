@@ -1,4 +1,4 @@
-## Collapse 折叠面板
+## Collapse 折叠面板 <to-api/>
 
 <demo-model url="/pages/componentsC/collapse/index"></demo-model>
 

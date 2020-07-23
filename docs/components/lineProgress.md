@@ -1,4 +1,4 @@
-## LineProgress 线形进度条
+## LineProgress 线形进度条 <to-api/>
 
 
 <demo-model url="/pages/componentsC/progress/index"></demo-model>
@@ -64,3 +64,17 @@
 | height | 进度条的高度，单位rpx | String \| Number  | 28 | - |
 | striped | 是否显示进度条激活部分的条纹 | Boolean  | false | true |
 | striped-active | 条纹是否具有动态效果 | Boolean  | false | true |
+
+
+ ### Slots
+
+| 名称 | 说明 |
+|:-|:-|
+| default <Badge text="1.5.4" /> | 传入自定义的显示内容，将会覆盖默认显示的百分比值 |
+
+
+<style scoped>
+h3[id=slots] + table thead tr th:nth-child(2){
+	width: 50%;
+}
+</style>
