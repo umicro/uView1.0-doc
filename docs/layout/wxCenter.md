@@ -1,4 +1,4 @@
-## 登录界面
+## 微信个人中心
 
 <demo-model url="/pages/template/wxCenter/index"></demo-model>
 <template-download></template-download>

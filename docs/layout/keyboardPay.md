@@ -1,4 +1,4 @@
-## 登录界面
+## 自定义键盘支付
 
 <demo-model url="/pages/template/keyboardPay/index"></demo-model>
 <template-download></template-download>
