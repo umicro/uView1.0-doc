@@ -115,7 +115,7 @@ uni-app`button`组件比较特殊，因为它有一些其他小程序平台的�
 
 ### 各家小程序开放能力的对接
 
-uView已对接uni-app档关于[uni-app方button组件](https:uni-app.dcloud.io/component/button)的所有开放能力(截止2020-04-14)，按uni-app文档说明使用即可，如果有发现遗漏的地方，请加群反馈。
+uView已对接uni-app档关于[uni-app方button组件](https:uni-app.dcloud.io/component/button)的所有开放能力(截止2020-04-14)uni-app-app文档说明使用即可，如果有发现遗漏的地方，请加群反馈。
 
 ### API
 
@@ -137,11 +137,10 @@ uView已对接uni-app档关于[uni-app方button组件](https:uni-app.dcloud.io/c
 |open-type|开放能力|String|请参考uni-app方文档|-|-|
 |hover-class|指定按钮按下去的样式类。当 hover-class="none" 时，没有点击态效果|String|button-hover|-|App-nvue 平台暂不支持|
 |hover-start-time|按住后多久出现点击态，单位毫秒|Number|20|-|-|
-|data-name|微信小程序的data-*属性，可通过target.dataset.name获取，一般情况下用不到|String \| Number|-|-|微信小程序|
 |hover-stay-time|手指松开后点击态保留时间，单位毫秒|Number|70|-|-|
 |custom-style|对按钮的自定义样式，对象形式，见上方说明|Object|-|-|-|
-|app-parameter|打开 APP 时，向 APP 传递的参数，open-type=launchApp时有效|Boolean|false|true|微信小程序、QQ小程序|
-|hover-stop-propagation|指定是否阻止本节点的祖先节点出现点击态|Boolean|false|true|微信小程序|
+|app-parameter|指定是否阻止本节点的祖先节点出现点击态|Boolean|false|true|微信小程序、QQ小程序|
+|hover-stop-propagation|打开 APP 时，向 APP 传递的参数，open-type=launchApp时有效|Boolean|false|true|微信小程序|
 |lang|指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文|String|en|zh_CN \ zh_TW  |微信小程序|
 |session-from|会话来源，open-type="contact"时有效|String|-|-|微信小程序|
 |send-message-title|会话内消息卡片标题，open-type="contact"时有效|String|当前标题|-|微信小程序|
