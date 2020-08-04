@@ -157,6 +157,8 @@
 | random | 是否打乱键盘按键的顺序 | Boolean  | false | true |
 | safe-area-inset-bottom | 是否开启[底部安全区适配](/components/safeAreaInset.html#关于uview某些组件safe-area-inset参数的说明) | Boolean  | false | true |
 | mask-close-able | 是否允许点击遮罩收起键盘 | Boolean  | true | false |
+| confirm-text  <Badge text="1.5.6" /> | 确认按钮的文字 | String | 取消 | - |
+| cancel-text  <Badge text="1.5.6" /> | 取消按钮的文字 | String | 确认 | - |
 
 ### Events
 

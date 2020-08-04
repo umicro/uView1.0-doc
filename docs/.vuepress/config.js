@@ -68,6 +68,7 @@ module.exports = {
 						['/components/setting', '配置'],
 						['/components/quickstart', '快速上手'],
 						['/components/common', '内置样式'],
+						['/components/feature', '注意事项'],
 						['/components/changelog', '更新日志'],
 						['/components/changeGuide', '升级指南'],
 					]
@@ -264,6 +265,7 @@ module.exports = {
 				collapsable: false,
 				sidebarDepth: 0,
 				children: [
+					['/js/debounce', '节流防抖'],
 					['/js/deepClone', '对象深度克隆'],
 					['/js/deepMerge', '对象深度合并'],
 					['/js/time', '时间格式化'],
@@ -391,6 +393,7 @@ module.exports = {
 			'/layout/citySelect',
 			'/guide/theme',
 			'/components/parse',
+			'/js/debounce',
 		],
 	}
 }

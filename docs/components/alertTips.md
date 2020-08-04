@@ -86,6 +86,10 @@
 | close-text | 用文字替代关闭图标，`close-able`为`true`时有效 | String  | - | - |
 | show-icon | 是否显示左边的辅助图标 | Boolean  | false | true |
 | show | 显示或隐藏组件 | Boolean  | true | false |
+| icon <Badge text="1.5.8" /> | 左侧的图标名称，如设置`type`和`show-icon`值，会有一个默认的图标 | String  | - | - |
+| icon-style <Badge text="1.5.8" /> | 自定义图标的样式，对象形式 | Object  | - | - |
+| title-style <Badge text="1.5.8" /> | 自定义标题的样式，对象形式 | Object  | - | - |
+| desc-style <Badge text="1.5.8" /> | 自定义内容的样式，对象形式 | Object  | - | - |
 
 ### Events
 

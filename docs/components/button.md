@@ -11,7 +11,7 @@
 ::: warning 注意
 1. 此组件内部使用uni-app`button`组件为基础，除了开头中所说的增加的功能，另外暴露出来的props属性和官方组件的属性完全一致，
 uni-app`button`组件比较特殊，因为它有一些其他小程序平台的特定能力，请参考文档后面的参数列表，更详细说明请参uni-app方文档：  
-[uni-app方button组件](https:/uniapp.dcloud.io/component/button)  
+[uni-app方button组件](https://uniapp.dcloud.io/component/button)  
 2. 由于微信小程序的限制，在微信小程序中设置了`form-type`的`u-button`无法触发`form`组件的`submit`事件(H5和APP正常)，详见微信小程序文档[Bug & Tip部分](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)
 :::
 
@@ -115,7 +115,7 @@ uni-app`button`组件比较特殊，因为它有一些其他小程序平台的�
 
 ### 各家小程序开放能力的对接
 
-uView已对接uni-app档关于[uni-app方button组件](https:uni-app.dcloud.io/component/button)的所有开放能力(截止2020-04-14)，按uni-app文档说明使用即可，如果有发现遗漏的地方，请加群反馈。
+uView已对接uni-app档关于[uni-app方button组件](https://uniapp.dcloud.io/component/button)的所有开放能力(截止2020-04-14)，按uni-app文档说明使用即可，如果有发现遗漏的地方，请加群反馈。
 
 ### API
 
@@ -148,6 +148,7 @@ uView已对接uni-app档关于[uni-app方button组件](https:uni-app.dcloud.io/c
 |send-message-path|会话内消息卡片点击跳转小程序路径，open-type="contact"时有效	|String|当前分享路径|-|微信小程序|
 |send-message-img|会话内消息卡片图片，open-type="contact"时有效	|String|当前页面截图|-|微信小程序|
 |show-message-card|是否显示会话内消息卡片，设置此参数为 true，用户进入客服会话会在右下角显示"可能要发送的小程序"提示，用户点击后可以快速发送小程序消息，open-type="contact"时有效|String|-|-|微信小程序|
+|throttle-time <Badge text="1.5.8" />| 节流的时间间隔(一定时间内无论点击多少次，只会触发一次`click`事件)，单位ms，详见[节流防抖](/js/deboundce.html) |String \| Number |500|-|-|
 
 
 ### Events
@@ -157,7 +158,7 @@ uView已对接uni-app档关于[uni-app方button组件](https:uni-app.dcloud.io/c
 
 |属性名|说明|类型|默认值|可选值|平台差异说明|
 |:-|:-|:-|:-|:-|:-|
-|click|按钮点击，请勿使用`@tap`点击事件，微信小程序无效|Handler|-|
+|click|按钮点击，请勿使用`@tap`点击事件，微信小程序无效，返回值为点击事件及参数|Handler|-|
 |getphonenumber|open-type="getPhoneNumber"时有效|Handler|微信小程序|
 |getuserinfo|用户点击该按钮时，会返回获取到的用户信息，从返回参数的detail中获取到的值同uni.getUserInfo|Handler|微信小程序|
 |error|当使用开放能力时，发生错误的回调|Handler|微信小程序|

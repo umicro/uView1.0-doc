@@ -75,7 +75,12 @@
 | mode | 显示类型，见上方说明 | String  | circle | square |
 | text | 用文字替代图片，级别优先于`src` | String  | - | - |
 | img-mode | 头像图片的裁剪类型，与uni的`image`组件的`mode`参数一致，如效果达不到需求，可尝试传`widthFix`值 | String  | aspectFill | - |
-| index | 用户传递的标识符值，如果是列表循环，可穿`v-for`的`index`值 | String  | - | - |
+| show-sex <Badge text="1.5.6" /> | 是否显示右上角的性别图标 | Boolean  | false | true |
+| sex-icon <Badge text="1.5.6" /> | 右上角性别图标，可传入图片路径，或内置图标名 | String  | man | woman |
+| sex-bg-color <Badge text="1.5.6" /> | 性别图标的背景颜色 | String  | man-primary主题，woman-error主题 | - |
+| show-sex <Badge text="1.5.6" /> | 是否显示右上角的等级图标 | Boolean  | false | true |
+| level-icon <Badge text="1.5.6" /> | 右下角性别图标，可传入图片路径，或内置图标名 | String  | level | - |
+| sex-bg-color <Badge text="1.5.6" /> | 等级图标的背景颜色 | String  | warning主题 | - |
 
 
 
@@ -90,6 +95,6 @@
 
 <style scoped>
 h3[id=props] + table thead tr th:nth-child(2){
-	width: 50%;
+	width: 35%;
 }
 </style>

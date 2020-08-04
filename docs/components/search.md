@@ -38,7 +38,7 @@
 
 ### 设置输入框形状
 
-通过`shape`设置输入框两端的形状，`square`(默认)-方形带圆角，`round`-半圆形
+通过`shape`设置输入框两端的形状，`square`-方形带圆角，`round`(默认)-半圆形
 
 ```html
 <u-search shape="round"></u-search>

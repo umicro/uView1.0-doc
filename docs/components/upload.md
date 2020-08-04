@@ -24,13 +24,15 @@
 <script>
 	export default {
 		data() {
-			// 演示地址，请勿直接使用
-			action: 'http://www.example.com/upload',
-			fileList: [
-				{
-					url: 'http://pics.sc.chinaz.com/files/pic/pic9/201912/hpic1886.jpg',
-				}
-			]
+			return {
+				// 演示地址，请勿直接使用
+				action: 'http://www.example.com/upload',
+				fileList: [
+					{
+						url: 'http://pics.sc.chinaz.com/files/pic/pic9/201912/hpic1886.jpg',
+					}
+				]
+			}
 		}
 	}
 </script>
@@ -51,8 +53,10 @@
 <script>
 	export default {
 		data() {
-			// 非真实地址
-			action: 'http://www.example.com/upload',
+			return {
+				// 非真实地址
+				action: 'http://www.example.com/upload',
+			}
 		},
 		methods: {
 			submit() {
@@ -84,8 +88,10 @@
 <script>
 	export default {
 		data() {
-			action: 'http://www.example.com/upload',
-			filesArr: []
+			return {
+				action: 'http://www.example.com/upload',
+				filesArr: []
+			}
 		},
 		methods: {
 			submit() {
@@ -118,7 +124,9 @@
 <script>
 	export default {
 		data() {
-			action: 'http://www.example.com/upload',
+			return {
+				action: 'http://www.example.com/upload',
+			}
 		},
 		methods: {
 			onRemove(index, lists) {
@@ -306,6 +314,8 @@ lists = [
 			return {
 				action: 'http://192.168.100.17/index.php/index/index/upload', // 演示地址
 				showUploadList: false, 
+				// 如果将某个ref的组件实例赋值给data中的变量，在小程序中会因为引用报错，这里仅做演示
+				// 实际中请通过事件监听来获得内部的文件列表
 				uUpload: {}, // 组件实例
 			}
 		},
@@ -398,7 +408,7 @@ lists = [
 | width | 图片预览区域和添加图片按钮的宽度(高等于宽)，单位rpx，不能是百分比，或者`auto` | String \| Number | 200 | - |
 | custom-btn | 如果需要自定义选择图片的按钮，设置为`true` | Boolean | false | true |
 | show-progress | 是否显示进度条 | Boolean  | true | false |
-| disabled | 是否启用(显示/移仓)组件 | Boolean  | false | true |
+| disabled | 是否启用(显示/隐藏)组件 | Boolean  | false | true |
 | image-mode | 预览图片等显示模式，可选值为uni的image的`mode`属性值 | String  | aspectFill | - |
 | header | 上传携带的头信息，对象形式 | Object | {} | - |
 | form-data | 上传额外携带的参数 | Object | {} | - |
@@ -417,7 +427,7 @@ lists = [
 | del-icon | 右上角删除图标名称，只能为uView内置图标 | String  | close | - |
 | del-bg-color | 右上角关闭按钮的背景颜色 | String  | #fa3534 | - |
 | del-color | 右上角关闭按钮图标的颜色 | String  | #ffffff | - |
-| to-json <Badge text="1.3.7" /> | 如果上传后服务端返回的值为`json`字符串的话，是否自动转为`json` | true  | false | - |
+| to-json <Badge text="1.3.7" /> | 如果上传后服务端返回的值为`json`字符串的话，是否自动转为`json` | Boolean | true  | false |
 | before-upload <Badge text="1.3.7" /> | 每个文件上传前触发的钩子回调函数，见上方说明 | Function | - | - |
 | limitType <Badge text="1.5.5" /> | 允许的图片后缀 | Array | ['png', 'jpg', 'jpeg', 'webp', 'gif'] | - |
 

@@ -76,3 +76,4 @@
 |事件名|说明|回调参数|
 |:-|:-|:-|
 | fixed | 组件吸顶时触发 | index: 通过props传递的`index` |
+| unfixed <Badge text="1.5.6" /> | 组件取消吸顶时触发 | index: 通过props传递的`index` |

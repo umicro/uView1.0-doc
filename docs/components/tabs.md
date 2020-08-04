@@ -157,6 +157,7 @@ uView中，共有2个组件可以实现tabs标签切换，分别是`tabs`组件�
 | show-bar | 是否显示底部的滑块 | Boolean | true | false |
 | bar-style | 底部滑块的样式，对象形式 | Object | {} | - |
 | active-item-style | 当前活动Item的样式，对象形式 | Object | {} | - |
+| item-width <Badge text="1.5.6" /> | 标签的宽度，单位rpx | String \| Number  | auto | - |
 
 ### Events
 

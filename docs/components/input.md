@@ -186,7 +186,7 @@
 | placeholder | placeholder显示值  | String | 请输入内容 | - |
 | disabled | 是否禁用输入框 | Boolean | false | true |
 | maxlength | 输入框的最大可输入长度 | Number \| String | 140 | - |
-| placeholderStyle | placeholder的样式，字符串形式，如"color: red;" | String | "color: #c0c4cc;" | - |
+| placeholder-style | placeholder的样式，字符串形式，如"color: red;" | String | "color: #c0c4cc;" | - |
 | confirm-type | 设置键盘右下角按钮的文字，仅在`type`为`text`时生效  | String | done | - |
 | custom-style | 自定义输入框的样式，对象形式  | Object | - | - |
 | focus | 是否自动获得焦点 | Boolean | false | true |
@@ -197,6 +197,9 @@
 | auto-height | 是否自动增高输入区域，`type`为`textarea`时有效 | Boolean | true | false |
 | height | 高度，单位rpx | Number \| String | text类型时为70，textarea时为100 | - |
 | cursor-spacing <Badge text="1.4.4" /> | 指定光标与键盘的距离，单位**px** | Number \| String | 0 | - |
+| selection-start <Badge text="1.5.6" /> | 光标起始位置，自动聚焦时有效，需与selection-end搭配使用 | Number \| String | -1 | - |
+| selection-end	 <Badge text="1.5.6" /> | 光标结束位置，自动聚焦时有效，需与selection-start搭配使用 | Number \| String | -1 | - |
+| trim <Badge text="1.5.8" /> | 是否自动去除两端的空格 | Boolean | true | false |
 
 
 <style scoped>

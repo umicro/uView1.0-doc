@@ -2,9 +2,205 @@
 
 <demo-model url="/"></demo-model>
 
-
 <div class="doc-update">
 	<ul class="u-timeline u-timeline-pending">
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
+					<h2>1.5.8</h2>
+				</div>
+				<p><code>2020-08-03</code></p>
+				<ul>
+					<li>
+						<span class="add">交流反馈</span>
+						欢迎加群交流反馈：
+						<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+					</li>
+					<li>
+						<span class="fix">重要调整</span>
+						【调整】调整this.$u.sys和this.$u.os，通过this.$u.sys()和this.$u.os()调用，详见
+						<a href="https://uviewui.com/components/changeGuide.html" target="_blank">升级指南</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						readMore组件新增index参数和close，open事件
+					</li>
+					<li>
+						<span class="add">新增</span>
+						新增man，woman，level三个图标
+					</li>
+					<li>
+						<span class="add">新增</span>
+						新增"注意事项"专题，记录一些踩坑知识点，让同学们少走弯路，详见
+						<a href="https://uviewui.com/components/feature.html" target="_blank">注意事项</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						alertTips组件新增icon、title-style、desc-style、icon-style参数
+					</li>
+					<li>
+						<span class="add">新增</span>
+						新增节流和防抖方法，通过this.$u.debounce()和this.$u.throttle()调用，详见
+						<a href="https://uviewui.com/js/debounce.html" target="_blank">节流防抖</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						button组件新增节流功能，以及配置间隔时间的throttle-time参数
+					</li>
+					<li>
+						<span class="add">新增</span>
+						field和input组件新增trim参数，默认为true，可以去除输入内容两端的空格
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化form-item组件的label设置为空内容时，依然显示左边的占位的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化lazy-load组件修改图片路径后，无法再次加载的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化navbar，upload，tabbar等组件由于各小程序props参数类型为Function，组件内执行父组件方法时this上下文丢失的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化numberbox组件无法阻止事件冒泡的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化timeFormat组件由于使用es7的padStart方法，导致在电脑版微信小程序无法识别的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复无法通过手动设置popup的v-model为false来关闭popup的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复骨架屏组件在微信小程序平台的组件中使用无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复section组件showLine参数无法隐藏左边竖条的问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
+					<h2>1.5.6</h2>
+				</div>
+				<p><code>2020-07-28</code></p>
+				<ul>
+					<li>
+						<span class="add">交流反馈</span>
+						欢迎加群交流反馈：
+						<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						新增$u.sys用于获取设备的信息，相当于uni.getSystemInfoSync()的效果
+					</li>
+					<li>
+						<span class="add">新增</span>
+						新增$u.os用于返回平台名称，结果为小写的"ios"或者"android"
+					</li>
+					<li>
+						<span class="add">新增</span>
+						popup和mask新增hover-stop-propagation属性，阻止父节点出现点击状态
+					</li>
+					<li>
+						<span class="add">新增</span>
+						layout组件的col新增text-align属性，用于控制内部的水平对齐方式
+					</li>
+					<li>
+						<span class="add">新增</span>
+						upload新增limit-type参数，用于控制允许选择的图片后缀
+					</li>
+					<li>
+						<span class="add">新增</span>
+						input组件新增selection-start和selection-end参数
+					</li>
+					<li>
+						<span class="add">新增</span>
+						number-box组件新增只能属于正整数的positive-integer参数
+					</li>
+					<li>
+						<span class="add">新增</span>
+						picker、select和keyboard组件新增cancel-text和confirm-text参数
+					</li>
+					<li>
+						<span class="add">新增</span>
+						tabs组件新增item-width参数，用于控制标签的宽度，超出用过省略号表示，默认auto
+					</li>
+					<li>
+						<span class="add">新增</span>
+						avatar头像新增性别和等级展示角标
+					</li>
+					<li>
+						<span class="add">新增</span>
+						sticky新增unfixed取消吸顶事件
+					</li>
+					<li>
+						<span class="add">新增</span>
+						action-sheet组件新增disabled属性，用于禁止某些条目的可选性
+					</li>
+					<li>
+						<span class="add">新增</span>
+						最新版hx2.8.2中，waterfall组件支持支付宝小程序
+					</li>
+					<li>
+						<span class="add">新增</span>
+						button组件返回的click事件中新增返回事件源参数
+					</li>
+					<li>
+						<span class="add">新增</span>
+						icon组件新增用于控制图标的width和height参数，以及控制垂直方向偏移的top参数
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						调整navbar的返回图标为nav-back，大小调整为44
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						重构section组件，类名使用BEM规范，左侧竖线使用字体图标，新增控制竖线颜色的line-color参数
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						改正radio和checkbox组件的label-disabled判断不严格的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复popup组件关闭时触发两次close事件的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复slider滑块组件block-color参数无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复http请求中拦截器中返回false报错的问题，优化响应拦截器返回false报找不到catch()的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复layout的col子组件text-align参数无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复image组件的error-icon和loadingicon参数传图片地址时无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复number-box动态设置输入值不生效的问题
+					</li>
+				</ul>
+			</div>
+		</li>
 		<li class="u-timeline-item">
 			<div class="u-timeline-item-tail"></div>
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
@@ -26,8 +222,8 @@
 						</li>
 						<li>
 							<span class="fix">其他说明</span>
-							由于支付宝小程序不支持uni的swiper组件的transition事件的dx回调参数，也不支持vue的作用域插槽特性(预计会很快支持)，所以目前
-							uView的tabsSwiper和waterfall组件不支持支付宝小程序
+							由于支付宝小程序不支持uni的swiper组件的transition事件的dx回调参数，所以目前uView的tabsSwiper组件不支持支付宝小程序，其中由于uniapp的问题，
+							waterfall组件需要hx2.8.2以上才支持
 						</li>
 						<li>
 							<span class="add">新增</span>

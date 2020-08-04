@@ -5,6 +5,20 @@
 
 <demo-model url="/"></demo-model>
 
+
+### 1.5.8升级指导(2020-08-03)
+
+由于`1.5.6`版本新增了[this.$u.sys](/js/fastUse.html)和[this.$u.os](/js/fastUse.html)属性，因为属性是初始化时执行一次，导致获取首页和
+内页通过`this.$u.sys`获取`windowHeight`高度可能不准确的问题，详见[全局赋值设备信息的陷阱](/components/feature.html#全局赋值设备信息的陷阱)。  
+因此，我们在`1.5.8`版本中，将二者修改为方法的形式，简而言之，是需要后面加上括号，修改后为如下用法：
+```js
+console.log(this.$u.sys()) 
+
+console.log(this.$u.os()) 
+```
+这意味着，如果您使用了`this.$u.sys`和`this.$u.os`必须要将其修改为`this.$u.sys()`和`this.$u.os()`才行。
+
+
 ### 1.5.4升级指导(2020-07-21)
 
 :::warning 重要说明

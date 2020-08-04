@@ -153,17 +153,6 @@ uView提供了一个`background`参数(需对象形式)，可以自定义导航�
 		}
 	}
 </script>
-
-<style scoped lang="scss">
-	.slot-wrap {
-		display: flex;
-		align-items: center;
-		/* 如果您想让slot内容占满整个导航栏的宽度 */
-		/* flex: 1; */
-		/* 如果您想让slot内容与导航栏左右有空隙 */
-		/* padding: 0 30rpx; */
-	}
-</style>
 ```
 
 
@@ -174,22 +163,23 @@ uView提供了一个`background`参数(需对象形式)，可以自定义导航�
 
 | 参数      | 说明        | 类型     |  默认值  |  可选值   |
 |-----------|-----------|----------|----------|---------|
-| height | 导航栏高度(不包括状态栏高度在内，内部自动加上)，注意这里的单位是<span style="color: red;">**px**</span>  | String \ Number | 44 | - |
+| height | 导航栏高度(不包括状态栏高度在内，内部自动加上)，注意这里的单位是<span style="color: red;">**px**</span>  | String \| Number | 44 | - |
 | back-icon-color | 左边返回图标的颜色 | String  | #606266 | - |
 | back-icon-name | 左边返回图标的名称，只能为uView自带的图标，`1.5.5`起由arrow-left调整为nav-back | String  | nav-back | - |
-| back-icon-size | 左边返回图标的大小，单位rpx | String \ Number  | 30 | - |
+| back-icon-size | 左边返回图标的大小，单位rpx | String \| Number  | 30 | - |
 | back-text | 返回图标右边的辅助提示文字 | String  | - | - |
 | back-text-style | 返回图标右边的辅助提示文字的样式，对象形式 | Object  | { color: '#606266' } | - |
 | title | 导航栏标题，如设置为空字符，将会隐藏标题占位区域 | String  | - | - |
-| title-width | 导航栏标题的最大宽度，内容超出会以省略号隐藏，单位rpx | String \ Number  | 250 | - |
+| title-width | 导航栏标题的最大宽度，内容超出会以省略号隐藏，单位rpx | String \| Number  | 250 | - |
 | title-color | 标题的颜色 | String  | #606266 | - |
-| title-size | 导航栏标题字体大小，单位rpx，`1.5.5`起由32调整为44 | String \ Number  | 44 | - |
-| z-index | 固定在顶部时的`z-index`值 | String \ Number  | 980 | - |
+| title-size | 导航栏标题字体大小，单位rpx，`1.5.5`起由32调整为44 | String \| Number  | 44 | - |
+| z-index | 固定在顶部时的`z-index`值 | String \| Number  | 980 | - |
 | is-back | 是否显示导航栏左边返回图标和辅助文字 | Boolean  | true | false |
 | background | 导航栏背景设置(APP和小程序上包括状态栏的颜色)，见上方说明 | Object  | { background: '#ffffff' } | - |
 | is-fixed | 导航栏是否固定在顶部 | Boolean  | true | false |
 | border-bottom | 导航栏底部是否显示下边框，如定义了较深的背景颜色，可取消此值 | Boolean  | true | false |
 | custom-back <Badge text="1.3.4" /> | 自定义返回逻辑方法，如传入，点击返回按钮执行函数，否则正常返回上一页 | Function  | - | - |
+| immersive <Badge text="1.5.6" /> | 沉浸式，允许fixed定位后导航栏塌陷，仅fixed定位下生效 | Boolean  | false | true |
 
 
 ### Slot

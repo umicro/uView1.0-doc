@@ -17,9 +17,6 @@
 - 通过`v-model`给`checkbox`绑定一个变量，这个绑定的变量是双向的(初始值只能是`true`或者`false`)，也就是说，您可以无需监听`checkbox`或者`checkboxGroup`组件的`change`事件，也能知道哪个复选框
 被勾选了
 
-**注意：** 由于`checkbox`组件需要由`checkboxGroup`组件提供参数值，这些父子组件间通过Vue的"provide/inject"特性注入依赖，
-所以您必须使用`checkboxGroup`包裹`checkbox`组件才能正常使用。
-
 
 ```html
 <template>

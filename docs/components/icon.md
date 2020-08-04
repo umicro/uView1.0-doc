@@ -69,6 +69,10 @@
 | margin-right <Badge text="1.4.1" /> | `label`在左侧时与图标的距离，单位rpx | String \| Number  | 6 | - |
 | label-pos | `label`相对于图标的位置(left和top为1.4.1新增) | String  | right | bottom / top / left |
 | custom-style <Badge text="1.3.0" /> | 图标的样式，可以设置字体大小，颜色等，对象形式，`size`和`color`优先级高于此参数 | Object  | - | - |
+| width <Badge text="1.5.6" /> | `name`为图片路径时图片的宽度，单位任意，数值默认为rpx单位 | String \| Number  | - | - |
+| height <Badge text="1.5.6" /> | `name`为图片路径时图片的高度，单位任意，数值默认为rpx单位 | String \| Number  | - | - |
+| top <Badge text="1.5.6" /> | 如果某些场景，如果图标没有垂直居中，可以调整此参数，单位任意，数值默认为rpx单位 | String \| Number  | 0 | - |
+
 
 ### Events
 

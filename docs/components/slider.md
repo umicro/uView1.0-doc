@@ -138,7 +138,7 @@
 | height | 滑动选择条的高度，单位rpx | String \| Number | 6 | - |
 | inactive-color | 滑动选择条的底部背景颜色  | String | #c0c4cc | - |
 | active-color | 底部选择部分的背景颜色  | String | #2979ff | - |
-| block-color | 滑块颜色  | String | #ffffff | - |
+| block-color | 滑块背景颜色  | String | #ffffff | - |
 | block-style | 给滑块按钮自定义样式，对象形式  | Object | - | - |
 | disabled | 是否禁用滑块  | Boolean | false | true |
 | use-slot | 是否使用slot传入自定义滑块  | Boolean | false | true |

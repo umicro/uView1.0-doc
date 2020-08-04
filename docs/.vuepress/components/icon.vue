@@ -15,6 +15,15 @@
 			return {
 				iconList: [
 					{
+						name: 'level'
+					},
+					{
+						name: 'woman'
+					},
+					{
+						name: 'man'
+					},
+					{
 						name: 'arrow-left-double'
 					},
 					{
@@ -597,7 +606,7 @@
 </script>
 
 <style scoped>
-	@import url("//at.alicdn.com/t/font_1529455_5ydw3ctm4ek.css");
+	@import url("//at.alicdn.com/t/font_1529455_adug8z8qzbi.css");
 
 	.icon-box {
 		display: flex;

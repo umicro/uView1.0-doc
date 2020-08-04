@@ -312,6 +312,8 @@ res = [
 | label-name | 自定义`list`数据的`label`属性名 <Badge text="1.3.6" /> | String | label | - |
 | child-name | 自定义`list`数据的`children`属性名，只对多列联动模式有效 <Badge text="1.3.6" /> | String | children | - |
 | title | 顶部中间的标题 <Badge text="1.3.6" /> | String | - | - |
+| confirm-text  <Badge text="1.5.6" /> | 确认按钮的文字 | String | 取消 | - |
+| cancel-text  <Badge text="1.5.6" /> | 取消按钮的文字 | String | 确认 | - |
 
 
 ### Events
@@ -324,6 +326,6 @@ res = [
 
 <style scoped>
 h3[id=props] + table thead tr th:nth-child(2){
-	width: 40%;
+	width: 30%;
 }
 </style>

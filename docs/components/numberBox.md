@@ -96,6 +96,8 @@
 | cursor-spacing | 指定光标于键盘的距离，避免键盘遮挡输入框，单位rpx | String \| Number | 200 | - |
 | long-press <Badge text="1.4.5" /> | 是否开启长按连续递增或递减 | Boolean | true | false |
 | press-time  <Badge text="1.4.5" /> | 开启长按触发后，每触发一次需要多久，单位ms | String \| Number | 250 | - |
+| positive-integer <Badge text="1.5.6" /> | 是否只能输入正整数 | Boolean | true | false |
+
 
 ### Events
 

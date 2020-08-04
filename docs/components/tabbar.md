@@ -15,14 +15,14 @@
 
 #### 缺点：
 
-虽然优点很多，但是此组件依然是瑜不掩瑕的，而且我们不建议使用，除非在某些特殊场景 不得已而为之，因为它同样带来很多难以解决的缺点：
+虽然优点很多，但是如果用此组件模拟tabbar页面的话依然是瑜不掩瑕的，因为它同样带来很多难以解决的缺点：
 - 首先是性能问题，在uni-app的vue版本上，自定义tabbar让您不得不在一个webview内模拟出多个页面，这存在严重的性能问题
 - 相比原生的uni-app的tabbar，自定义tabbar让你失去了路由管理的功能
 - 渲染的速度比不上原生的tabbar，但是这影响不大
 
 
-:::warning 注意：
-选择了自定义tabbar，意味着您默认接受了它糟糕的性能。所以当您觉得最终的结果差强人意时，我们也无能为力，我们并非系铃人。
+:::tip 提示
+以上的缺点，是指自定义模拟tabbar页面的情形，我们提供了一个解决方案，可以使用uni-app自带tabbar系统，保证性能的同时，又能尽情自定义tabbar导航栏，见下方`实战教程`说明。
 :::
 
 
@@ -63,7 +63,9 @@ let list = [
 		// 自定义字体图标库教程：https://www.uviewui.com/guide/customIcon.html
 		customIcon: false,
 		// 如果是凸起按钮项，需配置此值为true
-		midButton: false
+		midButton: false,
+		// 点击某一个item时，跳转的路径，此路径必须是pagees.json中tabBar字段中定义的路径
+		pagePath: '', // 1.5.6新增
 	}
 ]
 ```
@@ -225,6 +227,22 @@ let list = [
 组件默认带了顶部边框，如果有配置中部凸起按钮的话，此按钮同时也会有外层边框，如果不需要，配置`border-top`为`false`即可。
 
 
+### 实战教程 <Badge text="1.5.6" />
+
+自定义tabbar场景，我们不建议在一个页面内通过几个组件，用`v-if`切换去模拟各个页面，而应该使用uni-app自带的tabbar系统，同时隐藏原生的tabbar，
+再引入自定导航栏，这样可以保证原有性能，同时又能自定义tabbar，思路如下：
+
+1. 在pages.json中正常定义tabbar逻辑和字段，只需配置`tabBar`字段`list`中的`pagePath`属性即可
+2. 在各个tabbar页面引入`u-tabbar`组件，组件会默认自动通过`uni.hideTabBar()`隐藏系统tabbar
+3. 通过`vuex`引用同一份tabbar组件的`list`参数，这样可以做到修改某一个页面的`u-tabbar`数据，其他页面的`u-tabbar`也能同步更新
+4. 组件内部会自动处理各种跳转的逻辑，同时需要注意以下两点：
+
+- 要在`list`参数中配置`pagePath`路径，此路径为`pages.json`中定义的tabbar字段的路径
+- 此种方式，无需通过`v-model`绑定活动项，内部会自动进行判断和跳转
+
+我们为此做了一个演示`demo`，您可以在演示项目中直接看到效果，[点此跳转下载](https://ext.dcloud.net.cn/plugin?id=1593)
+
+
 
 ### API
 
@@ -244,6 +262,7 @@ let list = [
 | mid-button | 是否需要中部凸起的按钮，配置了此值，依然需要配置`list`参数中需凸起项的`midButton`为`true`，见上方说明 | Boolean  | false | true |
 | before-switch | 切换之前的回调钩子，见上方说明 | Function  | - | - |
 | border-top | 是否显示顶部的边框 | Boolean | true | false |
+| hide-tab-bar <Badge text="1.5.6" /> | 是否隐藏原生tabbar | Boolean | true | false |
 
 
 ### Events

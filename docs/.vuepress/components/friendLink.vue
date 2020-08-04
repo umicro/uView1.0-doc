@@ -11,7 +11,7 @@
 			</a>
 		</div>
 		<div class="col-md-4 col-sm-4 col-xs-12 friend-link__wrap">
-			<a target="_blank" class="friend-link__wrap__item" href="https://www.quanzhan.co/luch-request">
+			<a target="_blank" class="friend-link__wrap__item" href="https://www.quanzhan.co/luch-request/">
 				<img src="/friend-link/luch-request.jpg">
 			</a>
 		</div>
