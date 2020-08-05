@@ -78,7 +78,7 @@
 | show-sex <Badge text="1.5.6" /> | 是否显示右上角的性别图标 | Boolean  | false | true |
 | sex-icon <Badge text="1.5.6" /> | 右上角性别图标，可传入图片路径，或内置图标名 | String  | man | woman |
 | sex-bg-color <Badge text="1.5.6" /> | 性别图标的背景颜色 | String  | man-primary主题，woman-error主题 | - |
-| show-sex <Badge text="1.5.6" /> | 是否显示右上角的等级图标 | Boolean  | false | true |
+| show-level <Badge text="1.5.6" /> | 是否显示右上角的等级图标 | Boolean  | false | true |
 | level-icon <Badge text="1.5.6" /> | 右下角性别图标，可传入图片路径，或内置图标名 | String  | level | - |
 | sex-bg-color <Badge text="1.5.6" /> | 等级图标的背景颜色 | String  | warning主题 | - |
 
