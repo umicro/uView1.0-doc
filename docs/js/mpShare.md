@@ -60,7 +60,7 @@ this.$u.mpShare = {
 ```js
 export default {
 	onLoad() {
-		this.$u.mpShare.title = '天苍苍野茫茫，风吹草低现牛羊';
+		this.$u.mpShare.title = '天苍苍野茫茫，风吹草低见牛羊';
 	}
 }
 ```
