@@ -147,7 +147,7 @@ uView已对接uni-app档关于[uni-app方button组件](https:uni-app.dcloud.io/c
 |send-message-path|会话内消息卡片点击跳转小程序路径，open-type="contact"时有效	|String|当前分享路径|-|微信小程序|
 |send-message-img|会话内消息卡片图片，open-type="contact"时有效	|String|当前页面截图|-|微信小程序|
 |show-message-card|是否显示会话内消息卡片，设置此参数为 true，用户进入客服会话会在右下角显示"可能要发送的小程序"提示，用户点击后可以快速发送小程序消息，open-type="contact"时有效|String|-|-|微信小程序|
-|throttle-time <Badge text="1.5.8" />| 节流的时间间隔(一定时间内无论点击多少次，只会触发一次`click`事件)，单位ms，详见[节流防抖](/js/deboundce.html) |String \| Number |500|-|-|
+|throttle-time <Badge text="1.5.8" />| 节流的时间间隔(一定时间内无论点击多少次，只会触发一次`click`事件)，单位ms，详见[节流防抖](/js/debounce.html) |String \| Number |500|-|-|
 
 
 ### Events

@@ -29,6 +29,7 @@
 				:name="item.name"
 			>{{item.name}}</u-checkbox>
 		</u-checkbox-group>
+		<u-button @click="checkedAll">全选</u-button>
 	</view>
 </template>
 
@@ -63,6 +64,12 @@ export default {
 		// 选中任一checkbox时，由checkbox-group触发
 		checkboxGroupChange(e) {
 			// console.log(e);
+		},
+		// 全选
+		checkedAll() {
+			this.list.map(val => {
+				val.checked = true;
+			})
 		}
 	}
 };

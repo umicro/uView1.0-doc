@@ -1,6 +1,6 @@
 ## 安装
 
-<demo-model url="/pages/componentsC/debounce/index"></demo-model>
+<demo-model url="/"></demo-model>
 
 
 :::tip 说明

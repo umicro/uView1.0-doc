@@ -16,7 +16,7 @@
 结合以上两种情况，回到我们最实际的场景，比如防止表单提交按钮被多次触发，我们应该选择使用`节流`而不是`防抖`方案。
 
 :::tip 温馨提示
-uView内置的按钮组件`u-button`内部已做节流处理(1.5.8版本)，无需外部再做节流处理。配置`throttle`参数，可以设置节流的时间，详见[Button 按钮](/components/button.html)
+uView内置的按钮组件`u-button`内部已做节流处理(1.5.8版本)，无需外部再做节流处理。配置`throttle-time`参数，可以设置节流的时间，详见[Button 按钮](/components/button.html)
 :::
 
 ### 节流
