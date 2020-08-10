@@ -1,7 +1,7 @@
 <template>
 	<div class="demo-model">
 		<div class="model-content">
-			<iframe class="iframe" scrolling="auto" frameborder="0" :src="baseUrl + url">
+			<iframe class="iframe" scrolling="auto" frameborder="0" :src="href">
 				
 			</iframe>
 		</div>
@@ -18,8 +18,13 @@
 		},
 		data() {
 			return {
-				baseUrl: 'https://h5.uviewui.com/#'
+				// baseUrl: 'https://h5.uviewui.com/#'
 				// baseUrl: 'http://192.168.100.7:8080'
+			}
+		},
+		computed: {
+			href() {
+				return this.url.indexOf('http') >= 0 ? this.url : 'https://h5.uviewui.com/#' + this.url;
 			}
 		}
 	}

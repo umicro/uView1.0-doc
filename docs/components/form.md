@@ -327,7 +327,7 @@ rules: {
 
 #### uView自带验证规则
 
-uView在JS板块的[Test 规则校验](/js/route.html)中有大量内置的验证规则，这些规则对表单验证来说，属于**自定义规则**，故需要用到上方规则属性的
+uView在JS板块的[Test 规则校验](/js/test.html)中有大量内置的验证规则，这些规则对表单验证来说，属于**自定义规则**，故需要用到上方规则属性的
 `validator`自定义验证函数，这里做一个详细说明。  
 
 我们知道uView有自带的判断手机号的验证方法`this.$u.test.mobile(value)`，但是[async-validator](https://github.com/yiminghe/async-validator)没有

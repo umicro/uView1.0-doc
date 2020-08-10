@@ -208,6 +208,7 @@ module.exports = {
 					//	['/guide/addQQGroup', '加QQ群交流反馈'],
 					['/guide/customIcon', '扩展自定义图标库'],
 					['/guide/theme', '自定义主题'],
+					['/guide/i18n', '多语言切换'],
 					['/guide/globalVariable', '全局变量的实现'],
 					['/guide/codeHint', 'HBuilder X代码提示'],
 					['/guide/design', '设计理念'],
@@ -394,6 +395,7 @@ module.exports = {
 			'/guide/theme',
 			'/components/parse',
 			'/js/debounce',
+			'/guide/i18n'
 		],
 	}
 }
