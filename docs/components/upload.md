@@ -430,6 +430,7 @@ lists = [
 | to-json <Badge text="1.3.7" /> | 如果上传后服务端返回的值为`json`字符串的话，是否自动转为`json` | Boolean | true  | false |
 | before-upload <Badge text="1.3.7" /> | 每个文件上传前触发的钩子回调函数，见上方说明 | Function | - | - |
 | limitType <Badge text="1.5.5" /> | 允许的图片后缀 | Array | ['png', 'jpg', 'jpeg', 'webp', 'gif'] | - |
+| index  <Badge text="1.6.1" /> | 在各个回调事件中的最后一个参数返回，用于区别是哪一个组件的事件 | String \| Number  | - | - |
 
 
 ### Methods
@@ -454,20 +455,20 @@ lists = [
 
 ### Events
 
-回调参数中的`lists`参数，为目前组件内的所有图片数组，`index`为当前操作的图片的索引
+回调参数中的`lists`参数，为目前组件内的所有图片数组，`index`为当前操作的图片的索引，`name`为通过`props`传递的`index`参数(1.6.1加入)
 
 |事件名|说明|回调参数|
 |:-|:-|:-|:-|
-| on-oversize | 图片大小超出最大允许大小 | (file, lists) |
-| on-preview | 全屏预览图片时触发 | (url, lists)，url为当前选中的图片地址 |
-| on-remove | 移除图片时触发 | (index, lists) |
-| on-success | 图片上传成功时触发 | (data, index, lists)，data为服务器返回的数据 |
-| on-change | 图片上传后，无论成功或者失败都会触发 | (res, index, lists)，res为服务器返回的信息 |
-| on-error | 图片上传失败时触发 | (res, index, lists)，res为服务器返回的信息 |
-| on-progress | 图片上传过程中的进度变化过程触发 | (res, index, lists)，res为服务器返回的信息，具体参数请打印查看 |
-| on-uploaded | 所有图片上传完毕触发 | (lists)，可以通过此事件，将lists参数获取，提交给后端使用 |
-| on-choose-complete | 每次选择图片后触发，只是让外部可以得知每次选择后，内部的文件列表 | (lists)，内部当前的文件列表 |
-| on-list-change | 当内部文件列表被加入文件、移除文件，或手动调用`clear`方法时触发 | (lists)，内部文件变化之后的列表 |
+| on-oversize | 图片大小超出最大允许大小 | (file, lists, name), name为通过`props`传递的`index`参数 |
+| on-preview | 全屏预览图片时触发 | (url, lists, name)，url为当前选中的图片地址，index为通过`props`传递的`index`参数 |
+| on-remove | 移除图片时触发 | (index, lists, name)，name为通过`props`传递的`index`参数 |
+| on-success | 图片上传成功时触发 | (data, index, lists, name)，data为服务器返回的数据，name为通过`props`传递的`index`参数 |
+| on-change | 图片上传后，无论成功或者失败都会触发 | (res, index, lists, name)，res为服务器返回的信息，name为通过`props`传递的`index`参数 |
+| on-error | 图片上传失败时触发 | (res, index, lists, name)，res为服务器返回的信息，name为通过`props`传递的`index`参数 |
+| on-progress | 图片上传过程中的进度变化过程触发 | (res, index, lists, name)，res为服务器返回的信息，具体参数请打印查看，name为通过`props`传递的`index`参数 |
+| on-uploaded | 所有图片上传完毕触发 | (lists, name)，可以通过此事件，将lists参数获取，提交给后端使用，name为通过`props`传递的`index`参数 |
+| on-choose-complete | 每次选择图片后触发，只是让外部可以得知每次选择后，内部的文件列表 | (lists, name)，内部当前的文件列表，name为通过`props`传递的`index`参数 |
+| on-list-change | 当内部文件列表被加入文件、移除文件，或手动调用`clear`方法时触发 | (lists, name)，内部文件变化之后的列表，name为通过`props`传递的`index`参数 |
 
 
 <style scoped>

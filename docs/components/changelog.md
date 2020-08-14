@@ -9,6 +9,67 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>1.6.2</h2>
+				</div>
+				<p><code>2020-08-13</code></p>
+				<ul>
+					<li>
+						<span class="add">交流反馈</span>
+						欢迎加群交流反馈：
+						<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						swiper组件新增current参数，可以初始化时指定激活项的索引
+					</li>
+					<li>
+						<span class="add">新增</span>
+						card组件新增box-shadow参数，用于设置卡片外围阴影
+					</li>
+					<li>
+						<span class="add">新增</span>
+						upload组件新增index参数，在每个回调事件的最后一个参数中返回，用于区别当前的回调属于第几个upload组件产生
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化count-down倒计时组件，避免多个组件同时使用可能会出现串扰的情况
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						头像裁剪组件文档添加npm引入方式对组件页面特殊处理的说明
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						压缩picker组件的地区数据文件，减少整体包体积100K左右
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化radio和checkbox的icon在QQ小程序上，位置偏下的兼容性
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复演示项目中，无法切换rate组件演示选择数量，以及微信演示中，timeFrom函数演示异常的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复tabswiper组件演示中，点击菜单可能报错的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复由于HX2.8.5版本v-if导致的自定义tabbar报错的问题的
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复row，col组件在QQ小程序上的兼容性
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>1.5.8</h2>
 				</div>
 				<p><code>2020-08-03</code></p>

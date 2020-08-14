@@ -130,11 +130,12 @@
 | img-mode | 图片的裁剪模式，详见[image组件裁剪模式](https://uniapp.dcloud.io/component/image) | String  | aspectFill | - |
 | name | 组件内部读取的`list`参数中的属性名，见上方说明 | string  | name | - |
 | bg-color | 背景颜色 | string  | #f3f4f6 | - |
+| current <Badge text="1.6.2" /> | 初始化时，默认显示第几项 | String \| Number  | 0 | - |
 
 
 ### Events
 
 |事件名|说明|回调参数|
 |:-|:-|:-|:-|
-| click | 点击轮播图时触发 | index：点击的第几张图片，从0开始 |
+| click | 点击轮播图时触发 | index：点击了第几张图片，从0开始 |
 | change | 轮播图切换时触发(自动或者手动切换) | index：切换到了第几张图片，从0开始 |

@@ -73,7 +73,7 @@
 
 ```html
 <template>
-	<u-loadmore :status="status" icon-type="iconType" :load-text="loadText" />
+	<u-loadmore :status="status" :icon-type="iconType" :load-text="loadText" />
 </template>
 
 <script>
