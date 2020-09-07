@@ -127,6 +127,49 @@ uView为文字对齐定义了3个类，分别如下：
 ```
 
 
+### 重置按钮样式 <Badge text="1.6.3" />
+
+我们知道，uni-app和微信小程序的`button`按钮是自带样式的，比如边框，内边距，行高等。在某些特殊场景，我们可能会需要清除这些样式，仅仅只留下按钮文本，就像
+单纯的`view`元素一样，不带预置样式，场景：  
+在微信小程序中，我们知道`button`设置`open-type`参数为`getUserInfo`(或者分享场景)，点击按钮可以弹出让用户授权的系统弹窗，有时候我们可能需要按钮形式展现，但也有时候我们仅仅需要
+"点击登录/授权/分享"几个字，同时具备获取相应的功能，就需要清除按钮的样式了，只需要给`button`加上`u-reset-button`类名即可。
+
+```html
+<button class="u-reset-button">点击登录</button>
+```
+
+提示：
+1. 此种场景，不建议使用uView的`u-button`组件，使用原生的`button`即可
+2. 有时候，我们可能弹出询问用户是否想授权，可以用`u-modal`组件，此组件有一个`confirm-button`的`slot`用于替换`确定`按钮，用户点击确定，即可授权。
+
+```html
+/* 请在微信开发工具中运行此代码 */
+<template>
+	<view>
+		<u-modal v-model="show" content="点击确定进行授权">
+			<button open-type="getUserInfo" class="u-reset-button" slot="confirm-button" @getuserinfo="getuserinfo">确定</button>
+		</u-modal>
+		<u-button @click="show = true">打开modal</u-button>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				show: true
+			}
+		},
+		methods: {
+			getuserinfo(res) {
+				console.log(res);
+			}
+		}
+	}
+</script>
+```
+
+
 ### 内外边距
 
 uView定义了一套内外边距的类名，调用简单，方便用户使用，类似`u-padding-x`、`u-margin-left-x`等，这里的`x`取值规则如下：

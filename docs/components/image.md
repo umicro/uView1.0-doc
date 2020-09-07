@@ -119,7 +119,7 @@
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| src | 图片地址 | String | - | - |
+| src | 图片地址，**强烈建议**使用绝对或者网络路径 | String | - | - |
 | mode | 裁剪模式，见上方说明 | String  | aspectFill | - |
 | width | 宽度，单位任意，如果为数值，则为rpx单位 | String \| Number  | 100% | - |
 | height | 高度，单位任意，如果为数值，则为rpx单位 | String \| Number  | auto | - |
@@ -134,6 +134,7 @@
 | fade | 是否需要淡入效果 | Boolean  | true | false |
 | webp | 只支持网络资源，只对微信小程序有效 | Boolean  | false | true |
 | duration | 搭配`fade`参数的过渡时间，单位ms | String \| Number   | 500 | - |
+| bg-color <Badge text="1.6.2" /> | 背景颜色 | String   | #f3f4f6 | - |
 
 
 

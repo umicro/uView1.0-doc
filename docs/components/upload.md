@@ -75,12 +75,12 @@
 - progress：如果值为100，表示图片上传成功
 - response：上传成功后，服务器返回的数据，这是最有用的了
 
-为了获得上传的文件列表，应该监听`on-uploaded`，此事件表示现有的文件队列已经上传完毕(包括自动和手动上传)
+为了获得上传的文件列表，可以在提交表单时，通过`ref`获取组件内部的`lists`文件数组，历遍元素筛选出`progress`为100的文件
 
 ```html
 <template>
 	<view>
-		<u-upload ref="uUpload" @on-uploaded="onUploaded" :action="action" :auto-upload="false" ></u-upload>
+		<u-upload ref="uUpload" :action="action" :auto-upload="true" ></u-upload>
 		<u-button @click="submit">提交</u-button>
 	</view>
 </template>
@@ -95,10 +95,14 @@
 		},
 		methods: {
 			submit() {
-				this.$refs.uUpload.upload();
-			},
-			onUploaded(lists) {
-				this.filesArr = lists;
+				let files = [];
+				// 通过filter，筛选出上传进度为100的文件(因为某些上传失败的文件，进度值不为100，这个是可选的操作)
+				files = this.$refs.uUpload.lists.filter(val => {
+					return val.progress == 100;
+				})
+				// 如果您不需要进行太多的处理，直接如下即可
+				// files = this.$refs.uUpload.lists;
+				console.log(files)
 			}
 		}
 	}
@@ -291,18 +295,13 @@ lists = [
 <template>
 	<view class="wrap">
 		<view class="pre-box" v-if="!showUploadList">
-			<view class="pre-item" v-for="(item, index) in uUpload.lists" :key="index">
+			<view class="pre-item" v-for="(item, index) in lists" :key="index">
 				<image class="pre-item-image" :src="item.url" mode="aspectFill"></image>
-				<view class="u-delete-icon" @tap.stop="uUpload.deleteItem(index)">
-					<u-icon name="close" size="20" color="#ffffff"></u-icon>
-				</view>
-				<u-line-progress v-if="item.progress > 0 && !item.error" :show-percent="false" height="16" class="u-progress"
-				 :percent="item.progress"></u-line-progress>
 			</view>
 		</view>
 		<u-upload :custom-btn="true" ref="uUpload" :show-upload-list="showUploadList" :action="action"> 
 			<view slot="addBtn" class="slot-btn" hover-class="slot-btn__hover" hover-stay-time="150">
-				<u-icon name="photo" size="60" :color="$u.color['lightColor']"></u-icon>
+				<u-icon name="photo" size="60" color="#c0c4cc"></u-icon>
 			</view>
 		</u-upload>
 	</view>
@@ -312,20 +311,17 @@ lists = [
 	export default {
 		data() {
 			return {
-				action: 'http://192.168.100.17/index.php/index/index/upload', // 演示地址
+				action: 'http://www.example.com', // 演示地址
 				showUploadList: false, 
-				// 如果将某个ref的组件实例赋值给data中的变量，在小程序中会因为引用报错，这里仅做演示
-				// 实际中请通过事件监听来获得内部的文件列表
-				uUpload: {}, // 组件实例
+				// 如果将某个ref的组件实例赋值给data中的变量，在小程序中会因为循环引用而报错
+				// 这里直接获取内部的lists变量即可
+				lists: []
 			}
 		},
 		// 只有onReady生命周期才能调用refs操作组件
 		onReady() {
 			// 得到整个组件对象，内部图片列表变量为"lists"
-			this.uUpload = this.$refs.uUpload;
-		},
-		methods: {
-			
+			this.lists = this.$refs.uUpload.lists;
 		}
 	}
 </script>
@@ -365,35 +361,11 @@ lists = [
 		margin-bottom: 20rpx;
 	}
 
-	.u-progress {
-		position: absolute;
-		bottom: 10rpx;
-		left: 8rpx;
-		right: 8rpx;
-		z-index: 9;
-		width: auto;
-	}
-
 	.pre-item-image {
 		width: 100%;
 		height: 140rpx;
 	}
-
-	.u-delete-icon {
-		position: absolute;
-		top: 10rpx;
-		right: 10rpx;
-		z-index: 10;
-		background-color: $u-type-error;
-		border-radius: 100rpx;
-		width: 44rpx;
-		height: 44rpx;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
 </style>
-
 ```
 
 
@@ -405,7 +377,8 @@ lists = [
 |-------------  |---------------- |---------------|------------------ |-------- |
 | action | 服务器上传地址  | String | - | - |
 | max-count | 最大选择图片的数量 | String \| Number | 99 | - |
-| width | 图片预览区域和添加图片按钮的宽度(高等于宽)，单位rpx，不能是百分比，或者`auto` | String \| Number | 200 | - |
+| width | 图片预览区域和添加图片按钮的宽度，单位rpx，不能是百分比，或者`auto` | String \| Number | 200 | - |
+| height <Badge text="1.6.4" /> | 图片预览区域和添加图片按钮的高度，单位rpx，不能是百分比，或者`auto` | String \| Number | 200 | - |
 | custom-btn | 如果需要自定义选择图片的按钮，设置为`true` | Boolean | false | true |
 | show-progress | 是否显示进度条 | Boolean  | true | false |
 | disabled | 是否启用(显示/隐藏)组件 | Boolean  | false | true |
@@ -413,7 +386,7 @@ lists = [
 | header | 上传携带的头信息，对象形式 | Object | {} | - |
 | form-data | 上传额外携带的参数 | Object | {} | - |
 | name | 上传文件的字段名，供后端获取使用 | String  | file | - |
-| size-type | original 原图，compressed 压缩图，默认二者都有 | Array\<String\>  | ['original', 'compressed'] | - |
+| size-type | original 原图，compressed 压缩图，默认二者都有，H5无效 | Array\<String\>  | ['original', 'compressed'] | - |
 | source-type | 选择图片的来源，album-从相册选图，camera-使用相机，默认二者都有 | Array\<String\>  | ['album', 'camera'] | - |
 | preview-full-image | 是否可以通过`uni.previewImage`预览已选择的图片 | Boolean  | true | false |
 | multiple | 是否开启图片多选，部分安卓机型不支持  | Boolean  | true | false |
@@ -430,6 +403,7 @@ lists = [
 | to-json <Badge text="1.3.7" /> | 如果上传后服务端返回的值为`json`字符串的话，是否自动转为`json` | Boolean | true  | false |
 | before-upload <Badge text="1.3.7" /> | 每个文件上传前触发的钩子回调函数，见上方说明 | Function | - | - |
 | limitType <Badge text="1.5.5" /> | 允许的图片后缀 | Array | ['png', 'jpg', 'jpeg', 'webp', 'gif'] | - |
+| index  <Badge text="1.6.1" /> | 在各个回调事件中的最后一个参数返回，用于区别是哪一个组件的事件 | String \| Number  | - | - |
 
 
 ### Methods
@@ -454,20 +428,20 @@ lists = [
 
 ### Events
 
-回调参数中的`lists`参数，为目前组件内的所有图片数组，`index`为当前操作的图片的索引
+回调参数中的`lists`参数，为目前组件内的所有图片数组，`index`为当前操作的图片的索引，`name`为通过`props`传递的`index`参数(1.6.1加入)
 
 |事件名|说明|回调参数|
 |:-|:-|:-|:-|
-| on-oversize | 图片大小超出最大允许大小 | (file, lists) |
-| on-preview | 全屏预览图片时触发 | (url, lists)，url为当前选中的图片地址 |
-| on-remove | 移除图片时触发 | (index, lists) |
-| on-success | 图片上传成功时触发 | (data, index, lists)，data为服务器返回的数据 |
-| on-change | 图片上传后，无论成功或者失败都会触发 | (res, index, lists)，res为服务器返回的信息 |
-| on-error | 图片上传失败时触发 | (res, index, lists)，res为服务器返回的信息 |
-| on-progress | 图片上传过程中的进度变化过程触发 | (res, index, lists)，res为服务器返回的信息，具体参数请打印查看 |
-| on-uploaded | 所有图片上传完毕触发 | (lists)，可以通过此事件，将lists参数获取，提交给后端使用 |
-| on-choose-complete | 每次选择图片后触发，只是让外部可以得知每次选择后，内部的文件列表 | (lists)，内部当前的文件列表 |
-| on-list-change | 当内部文件列表被加入文件、移除文件，或手动调用`clear`方法时触发 | (lists)，内部文件变化之后的列表 |
+| on-oversize | 图片大小超出最大允许大小 | (file, lists, name), name为通过`props`传递的`index`参数 |
+| on-preview | 全屏预览图片时触发 | (url, lists, name)，url为当前选中的图片地址，index为通过`props`传递的`index`参数 |
+| on-remove | 移除图片时触发 | (index, lists, name)，name为通过`props`传递的`index`参数 |
+| on-success | 图片上传成功时触发 | (data, index, lists, name)，data为服务器返回的数据，name为通过`props`传递的`index`参数 |
+| on-change | 图片上传后，无论成功或者失败都会触发 | (res, index, lists, name)，res为服务器返回的信息，name为通过`props`传递的`index`参数 |
+| on-error | 图片上传失败时触发 | (res, index, lists, name)，res为服务器返回的信息，name为通过`props`传递的`index`参数 |
+| on-progress | 图片上传过程中的进度变化过程触发 | (res, index, lists, name)，res为服务器返回的信息，具体参数请打印查看，name为通过`props`传递的`index`参数 |
+| on-uploaded | 所有图片上传完毕触发 | (lists, name)，可以通过此事件，将lists参数获取，提交给后端使用，name为通过`props`传递的`index`参数 |
+| on-choose-complete | 每次选择图片后触发，只是让外部可以得知每次选择后，内部的文件列表 | (lists, name)，内部当前的文件列表，name为通过`props`传递的`index`参数 |
+| on-list-change | 当内部文件列表被加入文件、移除文件，或手动调用`clear`方法时触发 | (lists, name)，内部文件变化之后的列表，name为通过`props`传递的`index`参数 |
 
 
 <style scoped>

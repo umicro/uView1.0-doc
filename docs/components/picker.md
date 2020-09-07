@@ -15,6 +15,7 @@
 以后此组件将专注于时间和地区的选择。
 :::
 
+
 ### 平台差异说明
 
 |App|H5|微信小程序|支付宝小程序|百度小程序|头条小程序|QQ小程序|
@@ -59,9 +60,9 @@
 
 ```html
 <template>
-	<u-picker mode="time" v-model="show"  default-time="2025-07-02 13:01"></u-picker>
+	<u-picker mode="time" v-model="show"></u-picker>
 	
-	<u-picker mode="region" v-model="show"  :area-code='["13", "1303", "130304"]'></u-picker>
+	<u-picker mode="region" v-model="show" :area-code='["13", "1303", "130304"]'></u-picker>
 </template>
 ```
 
@@ -261,8 +262,8 @@ let params = {
 | safe-area-inset-bottom | 是否开启[底部安全区适配](/components/safeAreaInset.html#关于uview某些组件safe-area-inset参数的说明) | Boolean  | false | true |
 | cancel-color | 取消按钮的颜色  | String | #606266 | - |
 | confirm-color | 确认按钮的颜色  | String | #2979ff | - | 6
-| default-time | 默认选中的时间，mode=time时有效  | String | - | - |
-| default-region | 默认选中的地区，中文形式，mode=region时有效  | Array | - | - |
+| default-time | 默认选中的时间，mode=time时有效，需在`onReady`生命周期赋值，见顶部说明  | String | - | - |
+| default-region | 默认选中的地区，中文形式，mode=region时有效，需在`onReady`生命周期赋值，见顶部说明  | Array | - | - |
 | area-code | 默认选中的地区，编号形式，mode=region时有效  | Array | - | - |
 | default-selector | 数组形式，其中每一项表示选择了`range`对应项中的第几个(下标从0开始)，见上方说明 | Array | [] | - |
 | mask-close-able | 是否允许通过点击遮罩关闭Picker  | Boolean | true | false |

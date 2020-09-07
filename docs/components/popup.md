@@ -103,6 +103,53 @@ uView提供了`length`来控制此种情况，此值可以是`数值`(单位rpx)
 </template>
 ```
 
+### 内容局部滚动
+
+如果您需要让弹窗中的内容局部滚动，局部固定，比如商城底部弹出SKU选择的场景，可以按如下思路进行处理： 
+
+1. 在弹窗内容中放一个`scroll-view`组件，设置为竖向滚动，并指定高度(必须)
+2. 在`scroll-view`组件下方放一块无需滚动内容，如下：
+
+```html
+<template>
+	<view class="">
+		<u-button @click="show = true;">打开弹窗</u-button>
+		<u-popup mode="bottom" v-model="show">
+			<view class="content">
+				<scroll-view scroll-y="true" style="height: 300rpx;">
+					<view>
+						<view v-for="index in 20" :key="index">
+							第{{index}}个Item
+						</view>
+					</view>
+				</scroll-view>
+				<view class="confrim-btn">
+					<u-button @click="show = false;">确定</u-button>
+				</view>
+			</view>
+		</u-popup>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				show: false
+			}
+		}
+	}
+</script>
+
+<style lang="scss" scoped>
+	.content {
+		padding: 24rpx;
+		text-align: center;
+	}
+</style>
+```
+
+
 ### API
 
 ### Props
@@ -129,6 +176,7 @@ uView提供了`length`来控制此种情况，此值可以是`数值`(单位rpx)
 | height  <Badge text="1.3.7" /> | mode = top \| center \| bottom时有效，优先级高于`length`  | String \| Number | - | - |
 | negative-top | 中部弹出时，以避免可能弹出的键盘重合，往上偏移的值，单位任意，数值则默认为rpx单位  | String \| Number | 0 | - |
 | mask-custom-style <Badge text="1.5.4" /> | 遮罩自定义样式，一般用于修改遮罩透明度对象形式，如：{background: 'rgba(0, 0, 0, 0.5)'}  | Object | - | - |
+| duration  <Badge text="1.6.6" /> | 遮罩打开或收起的动画过渡时间，单位ms | String \| Number | 250 | - |
 
 
 ### Event

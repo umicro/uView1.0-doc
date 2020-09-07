@@ -1,9 +1,12 @@
 <template>
 	<div>
 		<aside class="sidebar">
-			<a target="_blank" class="jump-link" :href="jumpInfo.url">
-				<img :src="jumpInfo.src" />
+			<a target="_blank" class="jump-link" href="http://www.lizhiqi.net/partner/plan/?from=uview">
+				<img src="https://cdn.uviewui.com/uview/link/15648916521.jpg" />
 			</a>
+			<!-- <a target="_blank" class="jump-link" :href="jumpInfo.url">
+				<img :src="jumpInfo.src" />
+			</a> -->
 			<a target="_blank" class="jump-link" href="http://www.vueshop.com.cn/index.php?http_referer=uview">
 				<img src="/customer/sdf1516355we0sd2.jpg" />
 			</a>

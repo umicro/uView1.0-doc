@@ -94,6 +94,11 @@
 
 ### 注意事项
 
+根据`下载`方式和`NPM`方式引入uView的不同，需要进行不同的处理，下载方式可以引用`uview-ui`中的某个文件当做页面文件，但是`NPM`方式，不能引入
+`node_modules`文件夹中的`uview-ui`包的某个文件当做页面路径，故下方对两个方式分别说明：
+
+#### 1. 下载引入uView方式
+
 - 裁剪页面内置在uView中，由于打开页面，需要先在`pages.json`声明页面，故请把以下内容复制到项目根目录的`pages.json`中的`pages`数组中：
 
 ```js
@@ -105,6 +110,12 @@
 	}
 }
 ```
+
+#### 1. NPM引入uView方式
+
+您需要去`node_modules`文件中，按路径`/node_modules/uview-ui/components/u-avatar-cropper/u-avatar-cropper.vue`找到此文件，将其内容复制出来，
+放到`/pages`文件夹中的某个文件中，再按上面下载方式引入的一样的操作，去声明和引用页面即可。
+
 
 - 裁剪后的结果，通过`uni.$on`监听`uAvatarCropper`事件，由于uni-app限制，H5端裁剪的结果为`base64`格式，其他端为`blod`二进制形式，
 如果后端对接收格式有要求，请自行处理

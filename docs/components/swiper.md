@@ -22,8 +22,20 @@
 - `list`的"image"属性为轮播图的图片路径
 - `list`的"title"属性为需要显示的标题
 
-**说明：** 某些情况下，您从服务端获取的数据，里面的数组对于图片的属性名不一定为`image`，如果让您再历遍修改为`image`属性，显示是不人性的，
+
+**说明：** 某些情况下  
+1. 您从服务端获取的数据，里面的数组对于图片的属性名不一定为`image`，如果让您再历遍修改为`image`属性，显示是不人性的，
 所以uView提供了一个`name`参数，比如您数组中的图片名称为`img`，您可以设置`u-swiper`组件的`name`参数为`img`值。
+
+2. 您也可以直接传递一个元素为图片路径的数组给`list`参数，如下(1.6.5支持)：
+```html
+<u-swiper :list="list"></u-swiper>
+
+let list = [
+	'1.png',
+	'2.png'
+];
+```
 
 ::: warning 注意
 如果需要显示标题，还需要设置`title`参数为`true`
@@ -130,11 +142,12 @@
 | img-mode | 图片的裁剪模式，详见[image组件裁剪模式](https://uniapp.dcloud.io/component/image) | String  | aspectFill | - |
 | name | 组件内部读取的`list`参数中的属性名，见上方说明 | string  | name | - |
 | bg-color | 背景颜色 | string  | #f3f4f6 | - |
+| current <Badge text="1.6.2" /> | 初始化时，默认显示第几项 | String \| Number  | 0 | - |
 
 
 ### Events
 
 |事件名|说明|回调参数|
 |:-|:-|:-|:-|
-| click | 点击轮播图时触发 | index：点击的第几张图片，从0开始 |
+| click | 点击轮播图时触发 | index：点击了第几张图片，从0开始 |
 | change | 轮播图切换时触发(自动或者手动切换) | index：切换到了第几张图片，从0开始 |
