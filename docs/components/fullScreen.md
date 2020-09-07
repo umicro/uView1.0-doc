@@ -4,6 +4,12 @@
 
 <demo-model url="/pages/componentsA/fullScreen/index"></demo-model>
 
+
+:::danger 警告
+由于uni-app的Bug，在最新版的HX2.8.6(包括之前的多个版本)，此功能(组件)无效，等到uni-app修复此Bug时，我们会撤销此通告。
+:::
+
+
 :::tip 提示
 这里的做法是在本页面打开一个新页面，同时在`pages.json`中配置本页面的背景为百分百透明，这样即可达到压窗效果。  
 由于只有APP支持设置页面背景透明度，故只有APP支持本组件做法，非APP端不支持。

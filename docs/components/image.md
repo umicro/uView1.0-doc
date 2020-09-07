@@ -134,6 +134,7 @@
 | fade | 是否需要淡入效果 | Boolean  | true | false |
 | webp | 只支持网络资源，只对微信小程序有效 | Boolean  | false | true |
 | duration | 搭配`fade`参数的过渡时间，单位ms | String \| Number   | 500 | - |
+| bg-color <Badge text="1.6.2" /> | 背景颜色 | String   | #f3f4f6 | - |
 
 
 

@@ -87,6 +87,7 @@
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
+| v-model | 双向绑定输入框搜索值 | String | - | - |
 | shape | 搜索框形状，round-圆形，square-方形 | String | round | square |
 | bg-color | 搜索框背景颜色  | String | #f2f2f2 | - |
 | border-color | 边框颜色，配置了颜色，才会有边框  | String | - | - |
@@ -99,7 +100,6 @@
 | input-align | 输入框内容水平对齐方式 | String | left | center / right |
 | disabled | 是否启用输入框 | Boolean | false | true |
 | animation | 是否开启动画，见上方说明 | Boolean | false | true |
-| value | 输入框初始值 | String | - | - |
 | height | 输入框高度，单位rpx | String \| Number | 64 | - |
 | search-icon-color | 搜索图标的颜色，默认同输入框字体颜色 | String | - | - |
 | color | 输入框字体颜色 | String | #606266 | - |

@@ -5,6 +5,22 @@ uView内置了一些校验规则，如是否手机号，邮箱号，URL等
 
 <demo-model url="/pages/library/test/index"></demo-model>
 
+
+### 是否验证码 <Badge text="1.6.3" />
+
+#### code(value, len = 6)
+
+校验是否验证码(要求为数字)，返回`true`或者`false`。
+
+- `value` <String\> 验证码字符串
+- `len` <Number\> 验证码长度，默认为6
+
+```js
+console.log(this.$u.test.code('4567', 4));
+```
+
+
+
 ### 是否数组 <Badge text="1.5.4" />
 
 #### array(array)

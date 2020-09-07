@@ -49,12 +49,20 @@ module.exports = {
 		}, {
 			text: '模板',
 			link: '/layout/intro'
-		}, {
+		}, 
+		// {
+		// 	text: '课程',
+		// 	link: '/course/promise'
+		// }, 
+		{
 			text: '关于我们',
 			link: '/cooperation/about'
 		}, {
 			text: 'GitHub',
 			link: 'https://github.com/YanxinNet/uView'
+		}, {
+			text: 'Gitee',
+			link: 'https://gitee.com/xuqu/uView'
 		}],
 		sidebar: {
 			'/components/': [{
@@ -167,6 +175,7 @@ module.exports = {
 							collapsable: false,
 							sidebarDepth: 0,
 							children: [
+								'/components/dropdown',
 								'/components/tabbar',
 								'/components/backTop',
 								'/components/navbar',
@@ -283,6 +292,14 @@ module.exports = {
 					['/js/getRect', '节点布局信息'],
 					['/js/mpShare', '小程序分享'],
 				]
+			}],
+			'/course': [{
+				title: '系列课程',
+				collapsable: false,
+				sidebarDepth: 0,
+				children: [
+					['/course/promise', 'Promise入门到精通'],
+				]
 			}]
 		},
 		logo: '/common/logo.png',
@@ -395,7 +412,9 @@ module.exports = {
 			'/guide/theme',
 			'/components/parse',
 			'/js/debounce',
-			'/guide/i18n'
+			'/guide/i18n',
+			'/components/dropdown',
+			'/course/promise'
 		],
 	}
 }

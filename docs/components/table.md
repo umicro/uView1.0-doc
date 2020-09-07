@@ -42,7 +42,28 @@
 </template>
 ```
 
-### 合并单元格
+### 兼容性
+
+由于`头条小程序`的兼容性问题，您需要给表格相关的组件(`u-tr`、`u-th`、`u-td`)写上对应的类名才有效，如下：
+
+```html
+<u-table>
+	<u-tr class="u-tr">
+		<u-th class="u-th">姓名</u-th>
+		<u-th class="u-th">年龄</u-th>
+		<u-th class="u-th">籍贯</u-th>
+		<u-th class="u-th">性别</u-th>
+	</u-tr>
+	<u-tr class="u-tr">
+		<u-td class="u-td">吕布</u-td>
+		<u-td class="u-td">22</u-td>
+		<u-td class="u-td">楚河</u-td>
+		<u-td class="u-td">男</u-td>
+	</u-tr>
+</u-table>
+```
+
+<!-- ### 合并单元格
 
 :::warning 注意
 由于微信小程序编译后特殊的元素结构，目前合并单元格暂不支持微信小程序端
@@ -95,7 +116,7 @@
 		<u-td>20</u-td>
 	</u-tr>
 </u-table>
-```
+``` -->
 
 ### API
 

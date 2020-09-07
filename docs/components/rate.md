@@ -19,7 +19,7 @@
 
 ```html
 <template>
-	<u-rate count="count" v-model="value"></u-rate>
+	<u-rate :count="count" v-model="value"></u-rate>
 </template>
 
 <script>
@@ -60,7 +60,7 @@
 ### 最少选中的数量
 
 ```html
-<u-rate min-count="5"></u-rate>
+<u-rate :min-count="5"></u-rate>
 ```
 
 ### 禁用状态

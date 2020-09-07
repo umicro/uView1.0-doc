@@ -299,7 +299,7 @@ res = [
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| mode | 模式选择，"single-column"-单列模式，"mutil-column"-多列模式，"mutil-column-auto"-多列联动模式  | String	 | single-column | mutil-column / single-column-auto |
+| mode | 模式选择，"single-column"-单列模式，"mutil-column"-多列模式，"mutil-column-auto"-多列联动模式  | String	 | single-column | mutil-column / mutil-column-auto |
 | list | 列数据，数组形式，见上方说明 | Array | - | - |
 | v-model | 布尔值变量，用于控制选择器的弹出与收起 | Boolean | false | true |
 | safe-area-inset-bottom | 是否开启[底部安全区适配](/components/safeAreaInset.html#关于uview某些组件safe-area-inset参数的说明) | Boolean  | false | true |
@@ -312,8 +312,8 @@ res = [
 | label-name | 自定义`list`数据的`label`属性名 <Badge text="1.3.6" /> | String | label | - |
 | child-name | 自定义`list`数据的`children`属性名，只对多列联动模式有效 <Badge text="1.3.6" /> | String | children | - |
 | title | 顶部中间的标题 <Badge text="1.3.6" /> | String | - | - |
-| confirm-text  <Badge text="1.5.6" /> | 确认按钮的文字 | String | 取消 | - |
-| cancel-text  <Badge text="1.5.6" /> | 取消按钮的文字 | String | 确认 | - |
+| confirm-text  <Badge text="1.5.6" /> | 确认按钮的文字 | String | 确认 | - |
+| cancel-text  <Badge text="1.5.6" /> | 取消按钮的文字 | String | 取消 | - |
 
 
 ### Events

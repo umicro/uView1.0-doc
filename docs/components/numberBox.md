@@ -85,7 +85,7 @@
 | bg-color | 输入框和按钮的背景颜色  | String | #F2F3F5 | - |
 | min | 用户可输入的最小值 | Number | 0 | - |
 | max | 用户可输入的最大值 | Number | 99999 | - |
-| step | 步长，每次加或减的值，<Badge text="1.4.5" />起支持小数值 | Number | 1 | - |
+| step | 步长，每次加或减的值，<Badge text="1.4.5" />起支持小数值，如需小数，请设置`positive-integer`为`false` | Number | 1 | - |
 | disabled | 是否禁用操作，禁用后无法加减或手动修改输入框的值 | Boolean | false | true |
 | size | 输入框文字和按钮字体大小，单位rpx | String \| Number | 26 | - |
 | color | 输入框文字和加减按钮图标的颜色 | String | #323233 | - |

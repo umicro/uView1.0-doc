@@ -31,7 +31,7 @@
 `size`参数默认为`default`，如果设置为`mini`，将会得到一个小尺寸的徽标，组件内部通过css的`scale`属性值进行缩放。
 
 ```html
-<u-badge size="small" type="success"></u-badge>
+<u-badge size="mini" type="success"></u-badge>
 ```
 
 ### 设置徽标的类型为一个圆点

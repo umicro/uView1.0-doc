@@ -9,6 +9,211 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>1.6.6</h2>
+				</div>
+				<p><code>2020-09-03</code></p>
+				<ul>
+					<li>
+						<span class="add">交流反馈</span>
+						欢迎加群交流反馈：
+						<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+					</li>
+					<li>
+						<span class="add">说明</span>
+						本次更新主要针对头条系小程序，实现全面兼容头条，抖音，西瓜小程序等
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化empty演示在头条小程序上的兼容性
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化tabs组件在头条小程序的表现问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化tag组件在支付宝小程序上不支持行内样式加"!important"的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化toast组件多次调用，可能会造成配置混乱的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化link组件在头条小程序上复制链接后，toast弹出瞬间被关闭的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化line组件在头条小程序上的兼容性
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复在nvue下样式的警告和报错问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复grid组件在头条小程序的报错的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复index-list组件在头条小程序上的兼容性
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复layout组件在头条小程序上的兼容性
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复table组件在头条小程序上的兼容性
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复checkbox组件在头条小程序上的兼容性
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复radio组件在头条小程序上的兼容性
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复form和form-item在头条小程序上的兼容性
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复popup在头条小程序上底部有缺失的问题，同时连带修复使用了popup的keyborad和picker，calendar等组件的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复rate组件在微信，头条小程序上滑动选择可能不正确的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复message-input组件在头条小程序上的兼容性
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
+					<h2>1.6.4</h2>
+				</div>
+				<p><code>2020-08-21</code></p>
+				<ul>
+					<li>
+						<span class="add">交流反馈</span>
+						欢迎加群交流反馈：
+						<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						upload组件新增height参数，可以设置预览缩略图的高度
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化tabs组件在微信小程序开发控制台报选择器警告的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化某些sass版本无法支持/deep/的问题，改为使用::v-deep穿透写法
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复dropdown在微信小程序菜单第一项无法高亮，以及title无法双向绑定的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复select组件的extra属性为0时，内部判断无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复swiper组件title-style参数缺失的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复1.6.3引起的按钮水波纹会溢出的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复由于hx2.8.x引出的field和input点击右侧清除图标，在微信小程序上报错的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复tabbar在某些机型中，图标不居中的问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
+					<h2>1.6.3</h2>
+				</div>
+				<p><code>2020-08-18</code></p>
+				<ul>
+					<li>
+						<span class="add">交流反馈</span>
+						欢迎加群交流反馈：
+						<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						新增u-reset-button样式类，用于清除button自带的样式，同时具备button在小程序上的各项能力，详见
+						<a href="/components/common.html#重置按钮样式" target="_blank">重置按钮样式</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						新增轻巧精致的dropdown下拉菜单组件，详见
+						<a href="/components/dropdown.html" target="_blank">下拉菜单</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						upload组件新增index参数，在每个回调事件的最后一个参数中返回，用于区别当前的回调属于第几个upload组件产生
+					</li>
+					<li>
+						<span class="add">新增</span>
+						新增$u.test.code(value, length)判断是否验证码
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						移除http请求中，出错时弹出的modal
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化button组件在某些场景下，某个边框可能会被裁剪的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化radio和checkbox的icon在QQ小程序上，位置偏下的兼容性
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复number-box的blur事件无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复slider的max值大于100时，滑动按钮可能会溢出边界的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复picker组件设置默认值无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复card组件的box-shadow参数类型定义错误的问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>1.6.2</h2>
 				</div>
 				<p><code>2020-08-13</code></p>
