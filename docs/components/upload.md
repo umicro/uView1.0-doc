@@ -155,7 +155,7 @@
 
 ### 上传前的钩子 <Badge text="1.3.7" />
 
-某些时候，**每个文件**上传前可能需要动态修改文件名，修改额外参数等，就会需要用到一个叫`before-upload`的钩子，也即回调方法，此方法会返回两个参数：
+某些时候，**每个文件**上传前可能需要动态修改文件名，修改额外参数等，就会需要用到一个叫`before-upload`的钩子(参数注意不要加括号)，也即回调方法，此方法会返回两个参数：
 
 - `index`——即当前上传文件在上传列表中的索引
 - `lists`——当前所有的文件列表
@@ -234,6 +234,21 @@
 	}
 </script>
 ```
+
+### 移除前的钩子 <Badge text="1.6.8" />
+
+某些时候，文件被移除前可能需要进行判断是否可以被移除，就会需要用到一个叫`before-remove`的钩子(参数注意不要加括号)，也即回调方法，此方法会返回两个参数：
+
+- `index`——即当前上传文件在上传列表中的索引
+- `lists`——当前所有的文件列表
+
+此回调可以返回一个`promise`、`true`，或者`false`，下面分别阐述三者的处理情况：
+
+- `false`——如果返回`false`，终止移除操作
+- `true`——如果返回`true`，执行移除操作
+- `promise`——如果返回的是一个`promise`，如果进入`then`回调，就会和返回`true`的情况一样，如果进入`catch`回调，就会和返回`false`的情况一样
+
+此处不举例说明，参考`before-upload`的示例即可。
 
 
 ### 自定义相关说明
@@ -401,7 +416,7 @@ lists = [
 | del-bg-color | 右上角关闭按钮的背景颜色 | String  | #fa3534 | - |
 | del-color | 右上角关闭按钮图标的颜色 | String  | #ffffff | - |
 | to-json <Badge text="1.3.7" /> | 如果上传后服务端返回的值为`json`字符串的话，是否自动转为`json` | Boolean | true  | false |
-| before-upload <Badge text="1.3.7" /> | 每个文件上传前触发的钩子回调函数，见上方说明 | Function | - | - |
+| before-upload <Badge text="1.3.7" /> | 每个文件上传前触发的钩子回调函数，见上方说明，注意不要加括号 | Function | - | - |
 | limitType <Badge text="1.5.5" /> | 允许的图片后缀 | Array | ['png', 'jpg', 'jpeg', 'webp', 'gif'] | - |
 | index  <Badge text="1.6.1" /> | 在各个回调事件中的最后一个参数返回，用于区别是哪一个组件的事件 | String \| Number  | - | - |
 

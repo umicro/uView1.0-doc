@@ -9,6 +9,59 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>1.6.8</h2>
+				</div>
+				<p><code>2020-09-08</code></p>
+				<ul>
+					<li>
+						<span class="add">交流反馈</span>
+						欢迎加群交流反馈：
+						<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						grid-item组件新增custom-style参数
+					</li>
+					<li>
+						<span class="add">新增</span>
+						action-sheet组件新增subText描述信息参数
+					</li>
+					<li>
+						<span class="add">新增</span>
+						upload组件新增before-remove钩子
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化badge组件的层级问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复form组件label-style参数无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复message-input组件box模式下，active-color参数无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复form组件label-style参数无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复radio组件的默认值无效的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复notice-bar组件左侧喇叭图标不显示的问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>1.6.6</h2>
 				</div>
 				<p><code>2020-09-03</code></p>

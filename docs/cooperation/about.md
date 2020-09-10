@@ -71,7 +71,7 @@ uView拥有众多用户，且文档详尽，经得起推敲，受得住考验，
 			return {
 				memberList: [
 					{
-						avatar: 'https://cdn.uviewui.com/uview/team/20200525151352.jpg',
+						avatar: 'http://q.qlogo.cn/headimg_dl?dst_uin=1363931801&spec=640&img_type=jpg',
 						name: '小恐龙',
 						job: '前端开发',
 						addr: '深圳',
@@ -105,7 +105,7 @@ uView拥有众多用户，且文档详尽，经得起推敲，受得住考验，
 						intro: '擅长移动端开发，以及对前端交互和性能的优化。善于处理不同端和不同机型的样式适配。有多个线上成熟的实战项目'
 					},
 					{
-						avatar: 'https://cdn.uviewui.com/uview/team/15915681648132.jpg',
+						avatar: 'https://cdn.uviewui.com/uview/team/185948196150231.jpg',
 						name: '黄河浪',
 						job: '前端开发',
 						addr: '长沙',

@@ -194,6 +194,7 @@
 |-------------  |---------------- |---------------|------------------ |-------- |
 | bg-color | 宫格的背景颜色  | String | #ffffff | - |
 | index | 点击宫格时，返回的值  | String \| Number	 | - | - |
+| custom-style <Badge text="1.6.8" /> | 自定义样式，对象形式 | Object | {padding: '30rpx 0'} | - |
 
 ### Grid Event
 

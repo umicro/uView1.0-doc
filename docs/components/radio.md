@@ -154,7 +154,7 @@ export default {
 | icon-size <Badge text="1.5.2" /> | 图标大小，单位rpx  | String \ Number | 20 | - |
 | active-color | 选中时的颜色，应用到所有子`Radio`组件 | String  | #2979ff | - |
 | size | radio组件整体的大小，单位rpx  | String \ Number | 34 | - |
-| width <Badge text="1.3.0" type="tip"/> | `radio`的宽度，需带单位，如`50%`，`150rpx` | String  | auto | - |
+| width <Badge text="1.3.0" type="tip"/> | `radio`的宽度，需带单位，如`50%`，`150rpx` | String \| Number | auto | - |
 | wrap <Badge text="1.3.0" type="tip"/> | 是否每个`radio`占一行 | Boolean  | false | true |
 
 
