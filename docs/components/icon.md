@@ -72,7 +72,9 @@
 | width <Badge text="1.5.6" /> | `name`为图片路径时图片的宽度，单位任意，数值默认为rpx单位 | String \| Number  | - | - |
 | height <Badge text="1.5.6" /> | `name`为图片路径时图片的高度，单位任意，数值默认为rpx单位 | String \| Number  | - | - |
 | top <Badge text="1.5.6" /> | 如果某些场景，如果图标没有垂直居中，可以调整此参数，单位任意，数值默认为rpx单位 | String \| Number  | 0 | - |
-
+| show-decimal-icon <Badge text="1.7.2" /> | 是否为DecimalIcon | Boolean  | false | true |
+| inactive-color <Badge text="1.7.2" /> | 背景颜色，可接受主题色，仅Decimal时有效 | String  | #ececec | - |
+| percent <Badge text="1.7.2" /> | 显示的百分比，仅Decimal时有效 | String \| Number  | 50 | - |
 
 ### Events
 
