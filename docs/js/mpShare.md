@@ -68,7 +68,7 @@ export default {
 
 ### 重写"onShareAppMessage"生命周期
 
-如果您基于自己的一些业务逻辑，需要更加自定义的实现逻辑，可以在页面中重新`onShareAppMessage`生命周期即可覆盖uView通过`mixin`监听的`onShareAppMessage`生命周期。
+如果您基于自己的一些业务逻辑，需要更加自定义的实现逻辑，可以在页面中重写`onShareAppMessage`生命周期即可覆盖uView通过`mixin`监听的`onShareAppMessage`生命周期。
 
 ```js
 export default {
@@ -89,7 +89,7 @@ export default {
 
 此功能为微信小程序最新加入的功能，仅适用于微信小程序，uView也全局监听了此生命周期。
 
-同理，你也可以在页面中重新`onShareTimeline`生命周期即可覆盖uView通过`mixin`监听的`onShareTimeline`生命周期。
+同理，你也可以在页面中重写`onShareTimeline`生命周期即可覆盖uView通过`mixin`监听的`onShareTimeline`生命周期。
 
 ```js
 export default {

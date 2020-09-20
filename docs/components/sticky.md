@@ -18,6 +18,10 @@
 
 通过`slot`，将需要吸顶的内容放在`Sticky`组件中即可，`slot`中只能有一个根元素
 
+:::danger 注意！
+由于页面依赖相关的原因的，部分页面会出现**Cannot read property 'bottom' of null**的报错，可以参考 [issue #239](https://github.com/YanxinNet/uView/issues/239) 进行处理。
+:::
+
 ```html
 <template>
 	<view class="container">
