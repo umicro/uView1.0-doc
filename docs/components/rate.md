@@ -48,13 +48,37 @@
 
 - 通过`active-icon`设置激活的图标
 - 通过`inactive-icon`设置未激活的图标
-
-这里的使用的图标，只能是uView自带的图标名称，详见[Icon 图标](/components/icon.html)  
+- 通过`custom-prefix`设置自定义图标，详见：[扩展自定义图标库](https://www.uviewui.com/guide/customIcon.html) 
 
 下方示例为使用心形图标替代默认的星星图标：
 
 ```html
 <u-rate active-icon="heart-fill" inactive-icon="heart"></u-rate>
+```
+
+### 评分分级分层 <Badge text="1.7.2" />
+
+- 通过`colors`设置不同颜色区分评分层级
+- 通过`icons`设置不同类型图标区分评分层级
+
+```html
+<template>
+  <view>
+    <u-rate v-model="value" :colors="colors" :icons="icons" inactive-icon="thumb-up"></u-rate>
+  </view>
+</template>
+
+<script>
+  export default {
+    data() {
+      return {
+        value: 2,
+        colors: ['#ffc454', '#ffb409', '#ff9500'],
+        icons: ['thumb-down-fill', 'thumb-down-fill', 'thumb-up-fill', 'thumb-up-fill']
+      }
+    }
+  }
+</script>
 ```
 
 ### 最少选中的数量
@@ -65,10 +89,10 @@
 
 ### 禁用状态
 
-禁用下，无法点击或者滑动选择，但是可以通过`current`设置默认选中的数量
+禁用下，无法点击或者滑动选择，但是可以通过`current`设置默认选中的数量，禁用状态下用来展示分数，允许出现半星
 
 ```html
-<u-rate :disabled="true"></u-rate>
+<u-rate :current="3.7" :disabled="true"></u-rate>
 ```
 
 ### API
@@ -88,6 +112,9 @@
 | min-count | 最少选中星星的个数 | String \| Number | 0 | - |
 | active-icon | 选中时的图标名，只能为uView的内置图标 | String | star-fill | - |
 | inactive-icon | 未选中时的图标名，只能为uView的内置图标 | String | star | - |
+| custom-prefix <Badge text="1.7.2" /> | 自定义字体图标库时，需要写上此值，详见：[扩展自定义图标库](https://www.uviewui.com/guide/customIcon.html) | String  | uicon | - |
+| colors <Badge text="1.7.2" /> | 颜色分级显示，可以用不同颜色区分评分层级 | Array  | - | - |
+| icons <Badge text="1.7.2" /> | 图标分级显示，可以用不同类型的icon区分评分层级 | Array  | - | - |
 
 <!-- | allow-half | 是否允许半星选择 | Boolean | false | true | -->
 

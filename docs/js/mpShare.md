@@ -68,7 +68,7 @@ export default {
 
 ### 重写"onShareAppMessage"生命周期
 
-如果您基于自己的一些业务逻辑，需要更加自定义的实现逻辑，可以在页面中重新`onShareAppMessage`生命周期即可覆盖uView通过`mixin`监听的`onShareAppMessage`生命周期。
+如果您基于自己的一些业务逻辑，需要更加自定义的实现逻辑，可以在页面中重写`onShareAppMessage`生命周期即可覆盖uView通过`mixin`监听的`onShareAppMessage`生命周期。
 
 ```js
 export default {
@@ -85,6 +85,25 @@ export default {
 }
 ```
 
+### 分享到朋友圈 <Badge text="1.7.2" />
+
+此功能为微信小程序最新加入的功能，仅适用于微信小程序，uView也全局监听了此生命周期。
+
+同理，你也可以在页面中重写`onShareTimeline`生命周期即可覆盖uView通过`mixin`监听的`onShareTimeline`生命周期。
+
+```js
+export default {
+	onShareTimeline(res) {
+		if (res.from === 'button') {// 来自页面内分享按钮
+			console.log(res.target)
+		}
+		return {
+			title: '自定义分享标题',
+			path: '/pages/test/test?id=123'
+		}
+    }
+}
+```
 
 <!-- ### 如何取消全局分享
 
