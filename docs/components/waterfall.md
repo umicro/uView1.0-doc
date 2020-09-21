@@ -10,7 +10,7 @@
 <custom-block></custom-block>
 
 :::warning 注意
-1. 在微信小程序中，结合懒加载组件无效，见下方说明
+1. 在微信小程序中，需要hx2.8.11才支持在懒加载中结合其他组件
 2. 从1.2.8版本起，新增了清空列表和移除某条数据的组件方法，原`flow-list`参数，需要改为`v-model`接收传值
 3. 由于hx的问题，支付宝小程序需要hx2.8.2版本及以上才支持本组件
 :::
@@ -83,15 +83,8 @@ let arr = [
 		<u-waterfall v-model="flowList" ref="uWaterfall">
 			<template v-slot:left="{leftList}">
 				<view class="demo-warter" v-for="(item, index) in leftList" :key="index">
-					<!-- 警告：微信小程序不支持嵌入lazyload组件，请自行如下使用image标签 -->
-					<!-- #ifndef MP-WEIXIN -->
+					<!-- 警告：微信小程序中需要hx2.8.11版本才支持在template中结合其他组件，比如下方的lazy-load组件 -->
 					<u-lazy-load threshold="-450" border-radius="10" :image="item.image" :index="index"></u-lazy-load>
-					<!-- #endif -->
-					<!-- #ifdef MP-WEIXIN -->
-					<view class="demo-img-wrap">
-						<image class="demo-image" :src="item.image" mode="widthFix"></image>
-					</view>
-					<!-- #endif -->
 					<view class="demo-title">
 						{{item.title}}
 					</view>
@@ -109,20 +102,12 @@ let arr = [
 					<view class="demo-shop">
 						{{item.shop}}
 					</view>
-					<!-- 微信小程序无效，因为它不支持在template中引入组件 -->
 					<u-icon name="close-circle-fill" color="#fa3534" size="34" class="u-close" @click="remove(item.id)"></u-icon>
 				</view>
 			</template>
 			<template v-slot:right="{rightList}">
 				<view class="demo-warter" v-for="(item, index) in rightList" :key="index">
-					<!-- #ifndef MP-WEIXIN -->
 					<u-lazy-load threshold="-450" border-radius="10" :image="item.image" :index="index"></u-lazy-load>
-					<!-- #endif -->
-					<!-- #ifdef MP-WEIXIN -->
-					<view class="demo-img-wrap">
-						<image class="demo-image" :src="item.image" mode="widthFix"></image>
-					</view>
-					<!-- #endif -->
 					<view class="demo-title">
 						{{item.title}}
 					</view>
@@ -140,7 +125,6 @@ let arr = [
 					<view class="demo-shop">
 						{{item.shop}}
 					</view>
-					<!-- 微信小程序无效，因为它不支持在template中引入组件 -->
 					<u-icon name="close-circle-fill" color="#fa3534" size="34" class="u-close" @click="remove(item.id)"></u-icon>
 				</view>
 			</template>

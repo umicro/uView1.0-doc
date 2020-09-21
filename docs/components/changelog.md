@@ -9,6 +9,83 @@
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
 			<div class="u-timeline-item-content">
 				<div class="anchor">
+					<h2>1.7.0</h2>
+				</div>
+				<p><code>2020-09-16</code></p>
+				<ul>
+					<li>
+						<span class="add">交流反馈</span>
+						欢迎加群交流反馈：
+						<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						upload组件新增on-choose-fail事件
+					</li>
+					<li>
+						<span class="add">新增</span>
+						select组件新增cancel事件
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化dropdown组件内部100%高度的问题，dropdown-item组件新增height参数
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						处理number-box某些情况下，无法通过外部修改内部值的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化loadmore组件，结合line组件，无需再配置bg-color参数
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化avatar组件方形时加载图片出错，显示的默认头像却为圆型的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化count-down组件在微信小程序上"天"部分可能显示有误的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化radio组件演示，无法通过配置修改效果的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化grid组件演示，无法通过配置修改border是否显示的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化toast组件无法显示多行的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化search组件maxlength参数在微信小程序上的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化键盘组件车牌号模式样式错乱的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化form-item组件在没有label和图标时依然占用空间的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复checkbox的change事件返回value值相反的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复radio组件change事件不触发的问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
 					<h2>1.6.8</h2>
 				</div>
 				<p><code>2020-09-08</code></p>

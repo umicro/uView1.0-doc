@@ -240,6 +240,8 @@ let options = [
 | height | 标题菜单的高度，单位任意，数值默认为rpx单位 | String \| Number | 80 | - |
 | border-bottom | 标题菜单是否显示下边框  | Boolean | false | true |
 | title-size | 标题的字体大小，单位任意，数值默认为rpx单位 | String \| Number | 28 | - |
+| border-radius <Badge text="1.7.2" /> | 菜单展开内容下方的圆角值，单位任意 | String \| Number | 0 | - |
+
 
 ### Dropdown Events <Badge text="1.6.5" />
 
@@ -257,6 +259,7 @@ let options = [
 | title | 菜单项标题  | String  | - | - |
 | options | 选项数据，如果传入了默认slot，此参数无效，数据结构见上方说明  | Array[Object]  | - | - |
 | disabled | 是否禁用此选项卡  | Boolean | false | true |
+| height <Badge text="1.7.0" /> | 弹窗下拉内容的高度(内容超出将会滚动)，`slot`自定义内容时无效(自行使用`scroll-view`处理)，单位任意，默认rpx | String \| Number | auto | - |
 
 
 

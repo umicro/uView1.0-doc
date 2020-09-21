@@ -107,7 +107,7 @@
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
 | status | 组件状态  | String | loadmore | loading / nomore |
-| bg-color | 组件背景颜色，在页面是非白色时会用到  | String	 | #ffffff | - |
+| bg-color | 组件背景颜色，在页面是非白色时会用到(1.7.0起废弃此参数，默认为transparent)  | String	 | #ffffff | - |
 | icon | 加载中时是否显示图标  | Boolean | true | false |
 | icon-type | 加载中时的图标类型， | String | circle | flower |
 | icon-color | `icon-type`为`circle`时有效，加载中的动画图标的颜色  | String | #b7b7b7 | - |

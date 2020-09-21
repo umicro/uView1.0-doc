@@ -247,7 +247,7 @@ export default {
 | trim <Badge text="1.5.8" /> | 是否自动去除两端的空格 | Boolean | true | false |
 
 
-### CellItem Slot
+### Slot
 
 | 名称          | 说明            |
 |-------------  |---------------- |
@@ -255,7 +255,7 @@ export default {
 | right | 自定义右侧内容 |
 
 
-### CellItem Events
+### Events
 
 |事件名|说明|回调参数|
 |:-|:-|:-|:-|
