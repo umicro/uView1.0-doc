@@ -7,8 +7,11 @@
 			官方2群： 249718512(已满)
 		</div>
 		<div class="qq-group__item">
-			官方3群： <a href="https://qm.qq.com/cgi-bin/qm/qr?k=1FfucLpozYbnb7FWo_KsqAdEi1mE3Qrf&jump_from=webapi" target="_blank">1129077272</a>
+			官方3群： 1129077272(已满)
 		</div>
+    <div class="qq-group__item">
+      官方4群： <a href="https://jq.qq.com/?_wv=1027&k=uyZUkSlo" target="_blank">1084514613</a>
+    </div>
 	</div>
 </template>
 
@@ -17,7 +20,7 @@
 
 <style lang="scss" scoped>
 	.qq-group {
-		
+
 		&__item {
 			margin-top: 12px;
 			font-size: 14px;
