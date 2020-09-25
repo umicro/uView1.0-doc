@@ -117,7 +117,7 @@ uni-app`button`组件比较特殊，因为它有一些其他小程序平台的�
 
 uView已对接uni-app档关于[uni-app方button组件](https://uni-app.dcloud.io/component/button)的所有开放能力(截止2020-04-14)uni-app-app文档说明使用即可，如果有发现遗漏的地方，请加群反馈。
 
-### API c=  Akk       
+### API
 
 ### Props
 

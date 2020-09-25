@@ -232,7 +232,7 @@ let list = [
 自定义tabbar场景，我们不建议在一个页面内通过几个组件，用`v-if`切换去模拟各个页面，而应该使用uni-app自带的tabbar系统，同时隐藏原生的tabbar，
 再引入自定导航栏，这样可以保证原有性能，同时又能自定义tabbar，思路如下：
 
-1. 在pages.json中正常定义tabbar逻辑和字段，只需配置`tabBar`字段`list`中的`pagePath`属性即可，注意路径需要"/"开头
+1. 在pages.json中正常定义tabbar逻辑和字段，只需配置`tabBar`字段`list`中的`pagePath`属性即可
 2. 在各个tabbar页面引入`u-tabbar`组件，组件会默认自动通过`uni.hideTabBar()`隐藏系统tabbar
 3. 通过`vuex`引用同一份tabbar组件的`list`参数，这样可以做到修改某一个页面的`u-tabbar`数据，其他页面的`u-tabbar`也能同步更新
 4. 组件内部会自动处理各种跳转的逻辑，同时需要注意以下两点：
