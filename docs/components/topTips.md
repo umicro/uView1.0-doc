@@ -109,7 +109,7 @@ export default {
 |-------------  |---------------- |---------------|------------------ |-------- |
 | title | 要现实的内容  | String | - | - |
 | type | 主题选择  | String | primary | success / info / warning / error |
-| duration | 显示的时间，单位ms | 2000  | - |
+| duration | 显示的时间，单位ms |  String \| Number | - |
 
 
 ### Props
