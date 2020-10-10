@@ -44,7 +44,8 @@ uView中，共有2个组件可以实现tabs标签切换，分别是`tabs`组件�
 				}, {
 					name: '待付款'
 				}, {
-					name: '待评价'
+					name: '待评价',
+					count: 5
 				}],
 				current: 0
 			}
@@ -62,11 +63,12 @@ uView中，共有2个组件可以实现tabs标签切换，分别是`tabs`组件�
 ### 控制组件读取的数组元素属性名
 
 某些情况下，数据可能是从后端获取的，`list`所需的数组中不一定会有`name`属性，比如可能为`cate_name`，如果这种情况还需一定要提供`name`属性
-会导致用户需要循环一遍，把`cate_name`改成`name`，显然不人性的，所以uView给tabsSwiper组件提供了一个`name`参数，您可以设置其值为`cate_name`，组件内部
-会读取数组中的`cate_name`属性，而不是默认的`name`属性。
+会导致用户需要循环一遍，把`cate_name`改成`name`，显然不人性的，所以uView给tabsSwiper组件提供了一个`name`参数，您可以设置其值为`cate_name`，组件内部会读取数组中的`cate_name`属性，而不是默认的`name`属性。
+
+同理，在1.7.4版本中新增的`count`属性，您可以设置其值为`cate_count`，组件内部会读取数组中的`cate_count`属性，而不是默认的`count`属性。
 
 ```html
-<u-tabs name="cate_name" :list="list" :is-scroll="false" :current="current" @change="change"></u-tabs>
+<u-tabs name="cate_name" count="cate_count" :list="list" :is-scroll="false" :current="current" @change="change"></u-tabs>
 
 <script>
 	export default {
@@ -77,7 +79,8 @@ uView中，共有2个组件可以实现tabs标签切换，分别是`tabs`组件�
 				}, {
 					cate_name: '待付款'
 				}, {
-					cate_name: '待评价'
+					cate_name: '待评价',
+                    cate_count: 5
 				}],
 				current: 0
 			}
@@ -152,12 +155,14 @@ uView中，共有2个组件可以实现tabs标签切换，分别是`tabs`组件�
 | bar-height | 滑块高度，单位rpx | String \| Number  | 6 | - |
 | gutter | 单个tab标签的左右内边距之和，单位rpx | String \| Number  | 40 | - |
 | bg-color | tabs导航栏的背景颜色 | string  | #ffffff | - |
-| name | 组件内部读取的`list`参数中的属性名，见上方说明 | string  | name | - |
+| name | 组件内部读取的`list`参数中的属性名（tab名称），见上方说明 | string  | name | - |
 | bold | 激活选项的字体是否加粗 | Boolean | true | false |
 | show-bar | 是否显示底部的滑块 | Boolean | true | false |
 | bar-style | 底部滑块的样式，对象形式 | Object | {} | - |
 | active-item-style | 当前活动Item的样式，对象形式 | Object | {} | - |
 | item-width <Badge text="1.5.6" /> | 标签的宽度，单位rpx | String \| Number  | auto | - |
+| count <Badge text="1.7.4" /> | 组件内部读取的`list`参数中的属性名（badge徽标数），用法与`name`一致，见上方说明 | string  | count | - |
+| offset <Badge text="1.7.4" /> | 设置badge的位置偏移，格式为 [x, y]，也即设置的为`top`和`right`的值，单位rpx。 | Array  | [5, 20] | - |
 
 ### Events
 
