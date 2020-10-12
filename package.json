@@ -1,17 +1,26 @@
 {
+  "name": "uview_doc",
+  "version": "1.0.0",
+  "description": "uView document",
+  "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "vuepress dev docs",
     "build": "vuepress build docs"
   },
+  "keywords": [
+    "uView"
+  ],
+  "author": "uViewUI",
+  "license": "MIT",
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "^1.2.0",
-    "bp-vuejs-dropdown": "^2.1.1",
     "node-sass": "^4.14.1",
-    "sass-loader": "^8.0.2",
-    "vuepress-plugin-dehydrate": "^1.1.4"
+    "sass-loader": "^10.0.3",
+    "vuepress": "^1.6.0"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.20.0",
+    "core-js": "^2.6.11",
     "element-ui": "^2.13.2"
   }
 }
