@@ -7,7 +7,6 @@ module.exports = {
 	},
 	evergreen: true, // 只适配现代浏览器
 	// <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-	plugins: ['@vuepress/back-to-top'],
 	configureWebpack: (config, isServer) => {
 		// 只有在发布(isServer=true)的时候才进行此修改操作，否则在本地预览时出问题
 		if (isServer) {
