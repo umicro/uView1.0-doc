@@ -161,16 +161,22 @@
 			}
 		},
 		created() {
-			
+			this.$alert('深圳宝安区高薪招聘前端开发岗位，加入我们，和uView UI核心研发团队一起工作和成长，快来看看吧！联系QQ：1416956117，查看岗位：http://zpurl.cn/YnBDC', '高薪招聘前端开发', {
+				confirmButtonText: '确定',
+				callback: action => {
+					if(action == 'confirm') window.open("http://zpurl.cn/YnBDC");
+				}
+			});
 		}
 	}
 </script>
 
 <style scoped>
-	ul, ol {
-	    padding-left: 0;
+	ul,
+	ol {
+		padding-left: 0;
 	}
-	
+
 	.foot {
 		padding: 30px 0;
 		/* background-color: rgb(40, 44, 52); */
@@ -275,22 +281,22 @@
 	.card-box.support img:hover {
 		transform: scale(1.2);
 	}
-	
+
 	@media (max-width: 992px) {
 		.banner {
 			margin-top: 2rem;
 		}
-		
+
 		.banner .desc h1 {
 			font-size: 24px;
 		}
-		
+
 		.banner .desc-text {
-		    font-size: 15px;
+			font-size: 15px;
 		}
-		
+
 		.card-box .card-title {
-		    font-size: 20px;
+			font-size: 20px;
 			margin-bottom: 25px;
 		}
 	}

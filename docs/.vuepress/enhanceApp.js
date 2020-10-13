@@ -17,18 +17,20 @@ export default ({
 		mounted() {
 			// 判断某一个页面是否需要添加右边预览的右内边距，通过一个类名实现，
 			// 此for-simulator-padding类名定义于/docs/.vuepress/styles/index.styl
-			let pageRoot = this.$page.path.split(".")[0];
-			if(this.$themeConfig.simulatorUrl.indexOf(pageRoot) >= 0) {
-				try{
-					document.getElementsByClassName('page')[0].classList.add("for-simulator-padding");
-				}catch(e){
-					//TODO handle the exception
-				}
-			} else {
-				try{
-					document.getElementsByClassName('page')[0].classList.remove("for-simulator-padding");
-				}catch(e){
-					//TODO handle the exception
+			if(this.$page && this.$page.path) {
+				let pageRoot = this.$page.path.split(".")[0];
+				if (this.$themeConfig.simulatorUrl.indexOf(pageRoot) >= 0) {
+					try {
+						document.getElementsByClassName('page')[0].classList.add("for-simulator-padding");
+					} catch (e) {
+						//TODO handle the exception
+					}
+				} else {
+					try {
+						document.getElementsByClassName('page')[0].classList.remove("for-simulator-padding");
+					} catch (e) {
+						//TODO handle the exception
+					}
 				}
 			}
 		}
