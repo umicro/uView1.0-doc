@@ -241,6 +241,8 @@ let options = [
 | border-bottom | 标题菜单是否显示下边框  | Boolean | false | true |
 | title-size | 标题的字体大小，单位任意，数值默认为rpx单位 | String \| Number | 28 | - |
 | border-radius <Badge text="1.7.2" /> | 菜单展开内容下方的圆角值，单位任意 | String \| Number | 0 | - |
+| menu-icon <Badge text="1.7.6" /> | 标题菜单右侧的图标 | String | arrow-down | arrow-down-fill |
+| menu-icon-size <Badge text="1.7.6" /> | 标题菜单右侧的图标的大小，单位任意，数值默认为rpx单位 | String \| Number | 26 | - |
 
 
 ### Dropdown Events <Badge text="1.6.5" />

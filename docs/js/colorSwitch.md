@@ -67,3 +67,22 @@ export default{
 }
 ```
 
+
+### 颜色透明度
+
+#### colorToRgba(color, opacity = 0.3)
+
+该函数可以接受一个`十六进制`或者`rgb`格式的颜色值(不能接受命名式颜色格式，比如`white`)，返回此颜色的`rgba`格式值，如下：
+
+- `color` <String\> 颜色值，只能`hex`或者`rgba`格式
+- `opacity` <Number\> 不透明度值，取值为0-1之间
+
+
+```js
+this.$u.colorToRgba('#000000', 0.35);
+// 结果为 rgba(0, 0, 0, 0.35)
+
+this.$u.colorToRgba('rgb(255, 180, 0)', 0.4);
+// 结果为 rgba(255, 180, 0, 0.4)
+```
+

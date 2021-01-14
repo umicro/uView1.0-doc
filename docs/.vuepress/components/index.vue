@@ -161,12 +161,12 @@
 			}
 		},
 		created() {
-			this.$alert('深圳宝安区高薪招聘前端开发岗位，加入我们，和uView UI核心研发团队一起工作和成长，快来看看吧！联系QQ：1416956117，查看岗位：http://zpurl.cn/YnBDC', '高薪招聘前端开发', {
-				confirmButtonText: '确定',
-				callback: action => {
-					if(action == 'confirm') window.open("http://zpurl.cn/YnBDC");
-				}
-			});
+			// this.$alert('深圳宝安区高薪招聘前端开发岗位，加入我们，和uView UI核心研发团队一起工作和成长，快来看看吧！联系QQ：1416956117，查看岗位：http://zpurl.cn/Y3SzR', '高薪招聘前端开发', {
+			// 	confirmButtonText: '确定',
+			// 	callback: action => {
+			// 		if(action == 'confirm') window.open("http://zpurl.cn/YnBDC");
+			// 	}
+			// });
 		}
 	}
 </script>

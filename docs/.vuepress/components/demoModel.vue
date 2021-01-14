@@ -28,12 +28,12 @@
 			}
 		},
 		created() {
-			this.$notify({
-				title: '高薪招聘前端开发',
-				message: '深圳宝安区高薪招聘前端开发岗位，加入我们，和uView UI核心研发团队一起工作和成长，快来看看吧！联系QQ：1416956117，查看岗位：http://zpurl.cn/YnBDC',
-				duration: 10000,
-				offset: 100
-			});
+			// this.$notify({
+			// 	title: '高薪招聘前端开发',
+			// 	message: '深圳宝安区高薪招聘前端开发岗位，加入我们，和uView UI核心研发团队一起工作和成长，快来看看吧！联系QQ：1416956117，查看岗位：http://zpurl.cn/Y3SzR',
+			// 	duration: 10000,
+			// 	offset: 100
+			// });
 		}
 	}
 </script>
@@ -51,11 +51,12 @@
 		box-sizing: border-box;
 		overflow-y: auto;
 		/* background-image: url(/iPhone_model.png); */
-		background-image: url(/common/iphonex-modal.png);
+		background-image: url(/common/iPhoneX_model.png);
+        background-repeat: no-repeat;
 		background-size: 100%;
-		box-shadow: 0 4px 25px 0 rgba(4, 40, 60, 0.18);
+		/* box-shadow: 0 4px 25px 0 rgba(4, 40, 60, 0.18); */
 		border-radius: 30px;
-		padding: 50px 10px 14px 10px;
+		padding: 48px 23px 38px 16px;
 	}
 
 	.model-content {
@@ -68,7 +69,7 @@
 	.iframe {
 		height: 100%;
 		width: 100%;
-		border-radius: 15px;
+		border-radius: 30px;
 	}
 
 	@media screen and (min-width: 1200px) {

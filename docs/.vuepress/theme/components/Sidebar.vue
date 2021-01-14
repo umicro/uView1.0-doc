@@ -1,8 +1,8 @@
 <template>
 	<div>
 		<aside class="sidebar">
-			<a class="jump-link">
-				<img src="/customer/contact1.png" />
+			<a target="_blank" class="jump-link" href="https://www.apipost.cn/">
+				<img :src="url" />
 			</a>
 			<!-- <a target="_blank" class="jump-link" :href="jumpInfo.url">
 				<img :src="jumpInfo.src" />
@@ -48,11 +48,8 @@
 						chance: 0.67
 					}
 				],
-				// 初始化时的信息
-				jumpInfo: {
-					src: '/customer/contact3.png',
-					url: 'http://www.rageframe.com/'
-				}
+                // 顶部广告图
+                url: '/customer/contact1.png'
 			}
 		},
 		props: ['items'],
@@ -60,9 +57,15 @@
 			// 概率计算
 			//this.jumpInfo = this.random();
 			// 每隔一定时间，执行一次随机概率
-			setInterval(() => {
-				this.jumpInfo = this.random();
-			}, 3000);
+			// setInterval(() => {
+			// 	this.jumpInfo = this.random();
+            // }, 3000);
+            // 与广州亿速云的广告合作到期时间为2020-11-22，时间戳为：1608911994000(ms)
+            // if (+new Date() > 1606058735000) {
+            //     this.url = '/customer/contact1.png'
+            // } else { 
+            //     this.url = 'https://cdn.uviewui.com/uview/friends-link/apipost_350x150px.jpeg';
+            // }
 		},
 		methods: {
 			// 根据概率，获得结果

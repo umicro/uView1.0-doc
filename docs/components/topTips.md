@@ -107,7 +107,7 @@ export default {
 
 | 参数          | 说明            | 类型            | 默认值             |  可选值   |
 |-------------  |---------------- |---------------|------------------ |-------- |
-| title | 要现实的内容  | String | - | - |
+| title | 要显示的内容  | String | - | - |
 | type | 主题选择  | String | primary | success / info / warning / error |
 | duration | 显示的时间，单位ms |  String \| Number | - |
 

@@ -26,7 +26,7 @@
 <br>
 <div @click="downloadPost(2)" class="download-link">
 	<!-- 下载地址：<a href="https://download.uviewui.com/uView_1.3.6.zip">uView_1.3.6.zip</a> -->
-	下载地址(1.7.0)：<a target="_blank" href="https://ext.dcloud.net.cn/plugin?id=1593">https://ext.dcloud.net.cn/plugin?id=1593</a>
+	下载地址：<a target="_blank" href="https://ext.dcloud.net.cn/plugin?id=1593">https://ext.dcloud.net.cn/plugin?id=1593</a>
 </div>
 <br>
 <br>
@@ -38,12 +38,14 @@
 此方式为整个uView演示项目，里面有uView核心，组件演示，模板等，建议用户可以下载
 此项目运行用于查看UI演示效果，复制模板案例，通过里面的示例，可以快速掌握某一个组件的用法。 
 
-- 在uni-app插件市场右上角选择`使用 HBuilderX 导入示例项目`或者`下载示例项目ZIP`，然后在HBuilder X中运行即可。
+- 途径一：uView示例项目已内置到`HBuilder X`中，在`文件 -> 新建 -> 项目 -> uni-app`中，找到`uView UI`下载运行即可。
+
+- 途径二：在uni-app插件市场右上角选择`使用 HBuilderX 导入示例项目`或者`下载示例项目ZIP`，然后在HBuilder X中运行即可。
 
 <br>
 <div @click="downloadPost(3)" class="download-link">
 	<!-- 下载地址：<a href="https://download.uviewui.com/uView_1.3.6_demo.zip">uView_1.3.6_demo.zip</a> -->
-	下载地址(1.7.0)：<a target="_blank" href="https://ext.dcloud.net.cn/plugin?id=1593">https://ext.dcloud.net.cn/plugin?id=1593</a>
+	uni-app插件市场地址：<a target="_blank" href="https://ext.dcloud.net.cn/plugin?id=1593">https://ext.dcloud.net.cn/plugin?id=1593</a>
 </div>
 <br>
 <br>
@@ -62,13 +64,13 @@
 此方式为一个完整的uni-app示例工程(使用Hbuilder X创建，非[vue-cli](https://uniapp.dcloud.io/quickstart?id=_2-%e9%80%9a%e8%bf%87vue-cli%e5%91%bd%e4%bb%a4%e8%a1%8c)模式创建)，
 它适用于新启动的项目，其中已包含了uView，并且做好了所有配置，让您无需任何配置，开箱即用。
 
-**使用方法：** 在插件市场右上角选择`使用 HBuilderX 导入示例项目`或者`下载示例项目ZIP`，解压`演示项目`根目录的**压缩包**，即可得到空白项目。
+**使用方法：** 在资源下载页中找到"脚手架空白工程"下载解压，并在`Hbuilder X`中运行即可。
 
 
 <br>
 <div @click="downloadPost(1)" class="download-link">
 	<!-- 下载地址：<a href="https://download.uviewui.com/uView_1.4.0_default.zip">uView_1.4.0_default.zip</a> -->
-	下载地址(1.7.0)：<a target="_blank" href="https://ext.dcloud.net.cn/plugin?id=1593">https://ext.dcloud.net.cn/plugin?id=1593</a>
+	下载地址：<a target="_blank" href="http://uviewui.com/components/resource.html">http://uviewui.com/components/resource</a>
 </div>
 <br>
 <br>

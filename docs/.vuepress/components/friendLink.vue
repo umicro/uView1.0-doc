@@ -15,6 +15,21 @@
 				<img src="/friend-link/luch-request.jpg">
 			</a>
 		</div>
+        <div class="col-md-4 col-sm-4 col-xs-12 friend-link__wrap">
+			<a target="_blank" class="friend-link__wrap__item" href="https://www.apipost.cn/">
+				<img src="https://cdn.uviewui.com/uview/friends-link/apipost.png">
+			</a>
+		</div>
+        <div class="col-md-4 col-sm-4 col-xs-12 friend-link__wrap">
+			<a target="_blank" class="friend-link__wrap__item" href="https://www.yisu.com/cdn/huodong.html?f=uview&ystimes=cdn1210">
+				<img src="https://cdn.uviewui.com/uview/friends-link/6b2d4703fe42aff2eb7f51ff9f06b09.png">
+			</a>
+		</div>
+        <div class="col-md-4 col-sm-4 col-xs-12 friend-link__wrap">
+			<a target="_blank" class="friend-link__wrap__item" href="https://www.fastadmin.net/">
+				<img src="https://cdn.uviewui.com/uview/friends-link/K3CYA7RO43UUAS8TZVUJY.jpg">
+			</a>
+		</div>
 	</div>
 </template>
 

@@ -4,6 +4,171 @@
 
 <div class="doc-update">
 	<ul class="u-timeline u-timeline-pending">
+        <li class="u-timeline-item">
+            <div class="u-timeline-item-tail"></div>
+            <div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+            <div class="u-timeline-item-content">
+                <div class="anchor">
+                    <h2>1.8.3</h2>
+                </div>
+                <p><code>2020-12-17</code></p>
+                <ul>
+                    <li>
+                        <span class="add">交流反馈</span>
+                        欢迎加群交流反馈：
+                        <a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+                    </li>
+                    <li>
+                        <span class="optimize">优化</span>
+                        去除演示示例切换时的震动效果
+                    </li>
+                    <li>
+                        <span class="optimize">优化</span>
+                        优化多组件组合使用时，在组件卸载生命周期时移除在父组件中的实例，释放资源，避免造成数据混乱
+                    </li>
+                    <li>
+                        <span class="optimize">优化</span>
+                        优化$u.timeFormat()和$u.timeFrom()的逻辑，可以接受更多的时间类型
+                    </li>
+                    <li>
+                        <span class="optimize">优化</span>
+                        优化tabbar组件在小屏幕中，文字可能会被换行的问题
+                    </li>
+                    <li>
+                        <span class="optimize">优化</span>
+                        优化请求中，修改header后，会影响到其他请求的问题
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="u-timeline-item">
+            <div class="u-timeline-item-tail"></div>
+            <div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+            <div class="u-timeline-item-content">
+                <div class="anchor">
+                    <h2>1.7.9</h2>
+                </div>
+                <p><code>2020-11-10</code></p>
+                <ul>
+                    <li>
+                        <span class="add">交流反馈</span>
+                        欢迎加群交流反馈：
+                        <a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+                    </li>
+                    <li>
+                        <span class="add">新增</span>
+                        新增Sketch设计资源，
+                        <a href="/components/resource.html" target="_blank">点击查看</a>
+                    </li>
+                    <li>
+                        <span class="add">新增</span>
+                        将$u对象挂载到uni对象下，可以在外部js中通过uni.$u.xxx调用一些工具方法
+                    </li>
+                    <li>
+                        <span class="optimize">优化</span>
+                        优化$u.timeFormat方法，可以接受任意合法格式的时间，或时间戳参数
+                    </li>
+                    <li>
+                        <span class="optimize">优化</span>
+                        优化$u.timeFrom方法，可以接受任意合法格式的时间，或时间戳参数
+                    </li>
+                    <li>
+                        <span class="optimize">优化</span>
+                        优化card组件，某些特殊场景下可能无法占满屏幕的问题
+                    </li>
+                    <li>
+                        <span class="optimize">优化</span>
+                        优化upload组件的limitType参数，增加对支付宝小程序的支持
+                    </li>
+                    <li>
+                        <span class="optimize">优化</span>
+                        优化grid-item组件的customStyle参数可能在微信小程序无效的问题
+                    </li>
+                    <li>
+                        <span class="fix">修复</span>
+                        修复$u.test.url()方法，增加对中文参数的支持
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
+					<h2>1.7.8</h2>
+				</div>
+				<p><code>2020-10-31</code></p>
+				<ul>
+					<li>
+						<span class="add">交流反馈</span>
+						欢迎加群交流反馈：
+						<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						navbar新增title-bold参数，用于加粗标题
+					</li>
+					<li>
+						<span class="add">新增</span>
+						number-box新增focus事件
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						升级parse组件，图片和链接的点击事件不冒泡
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						允许row和col组件事件冒泡
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						优化$u.test.url()无法校验url中有中文时的问题
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="u-timeline-item">
+			<div class="u-timeline-item-tail"></div>
+			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+			<div class="u-timeline-item-content">
+				<div class="anchor">
+					<h2>1.7.4</h2>
+				</div>
+				<p><code>2020-10-13</code></p>
+				<ul>
+					<li>
+						<span class="add">交流反馈</span>
+						欢迎加群交流反馈：
+						<a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+					</li>
+					<li>
+						<span class="add">新增</span>
+						tabs组件新增count和offset参数，用于角标显示
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						优化image组件图片加载失败时显示的默认图可能为loading状态默认图的问题
+					</li>
+					<li>
+						<span class="optimize">优化</span>
+						完善文档对read-more组件内嵌parse组件时，可能产生的兼容性解决办法
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复readmore组件textIndent参数引用错误的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复numberbox组件可能会导致自动变化数值的问题
+					</li>
+					<li>
+						<span class="fix">修复</span>
+						修复rate组件颜色可能显示不对的问题
+					</li>
+				</ul>
+			</div>
+		</li>
 		<li class="u-timeline-item">
 			<div class="u-timeline-item-tail"></div>
 			<div class="u-timeline-item-head u-timeline-item-head-blue"></div>

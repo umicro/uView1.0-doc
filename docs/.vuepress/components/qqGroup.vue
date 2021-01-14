@@ -9,9 +9,12 @@
 		<div class="qq-group__item">
 			官方3群： 1129077272(已满)
 		</div>
-    <div class="qq-group__item">
-      官方4群： <a href="https://jq.qq.com/?_wv=1027&k=uyZUkSlo" target="_blank">1084514613</a>
-    </div>
+        <div class="qq-group__item">
+			官方4群： 1084514613(已满)
+		</div>
+        <div class="qq-group__item">
+        官方5群： <a href="https://qm.qq.com/cgi-bin/qm/qr?k=83HwFGFQhQzGJsPszH4mowxaB3UBMMB8&jump_from=webapi" target="_blank">863820668</a>
+        </div>
 	</div>
 </template>
 

@@ -175,3 +175,61 @@ uni-app中使用`less`、`stylus`等。
 `uni.scss`中所写的一切内容，都会注入到每个声明了`scss`的文件中，这意味着，如果您的`uni.scss`如果有几百行，大小10k左右，那么这个10k都会被注入所有的
 其他`scss`文件(页面)中，如果您的应用有50个页面，那么有可能因此导致整体的包体积多了50 * 10 = 500k的大小，这可能会导致小程序包太大而无法预览和发布，
 所以，我们建议您只将`scss`变量相关的内容放到`uni.scss`中。
+
+
+### 样式覆盖兼容性
+
+为了避免样式被用户覆盖，或者被污染，一般组件或者页面都会给`style`标签加上`scoped`属性，如下演示为一个组件的内部构造：
+
+```html
+/* item.vue */
+<template>
+	<view class="item"></view>
+</template>
+
+<style scoped>
+	.item {
+		border: 1px solid red;
+	}
+</style>
+```
+
+我们在页面中引入上方的`item`组件，并且想修改它的`border`边框为颜色(blue)，一般通过`v-deep`或`/deep/`指令修改，如下写法：
+
+
+```html
+<template>
+	<item></item>
+</template>
+
+<style scoped>
+::v-deep .item {
+	border: 1px solid blue;
+}
+</style>
+```
+
+上面的写法，在`App`和`H5`正常，但是在微信小程序无效，它要求`::v-deep`或`/deep/`前面必须还要有父元素的类名存在，如下：
+
+```html
+<template>
+	<view class="wrap">
+		<item></item>
+	</view>
+</template>
+
+<style scoped>
+.wrap ::v-deep .item {
+	border: 1px solid blue;
+}
+</style>
+```
+
+如果是在支付宝小程序中，写在组件上的类名和内联样式，都是无效的，如下：
+
+```html
+<template>
+	/* 在支付宝小程序，组件标签上的任何class和style都会被剔除，不会添加到组件内部的根元素中 */
+	<item style="border: 1px solid blue" class="item"></item>
+</template>
+```

@@ -134,7 +134,6 @@
 | max | 可选的最大值(0-100之间)  | String \| Number | 100 | - |
 | step | 选择的步长  | String \| Number | 1 | - |
 | block-width | 滑动按钮的宽度(高等于宽)，单位rpx  | String \| Number | 30 | - |
-| step | 选择的步长  | String \| Number | 1 | - |
 | height | 滑动选择条的高度，单位rpx | String \| Number | 6 | - |
 | inactive-color | 滑动选择条的底部背景颜色  | String | #c0c4cc | - |
 | active-color | 底部选择部分的背景颜色  | String | #2979ff | - |
