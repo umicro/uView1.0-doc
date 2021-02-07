@@ -13,7 +13,7 @@
 
 ### 基本使用
 
-- 该组件无需强制搭配`checkboxGroup`组件使用(是情况而定)，可以单个独立使用`u-checkbox`组件
+- 该组件无需强制搭配`checkboxGroup`组件使用(视情况而定)，可以单个独立使用`u-checkbox`组件
 - 通过`v-model`给`checkbox`绑定一个变量，这个绑定的变量是双向的(初始值只能是`true`或者`false`)，也就是说，您可以无需监听`checkbox`或者`checkboxGroup`组件的`change`事件，也能知道哪个复选框
 被勾选了
 
