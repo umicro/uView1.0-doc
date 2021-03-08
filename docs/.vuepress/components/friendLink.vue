@@ -1,7 +1,7 @@
 <template>
 	<div class="row friend-link">
 		<div class="col-md-4 col-sm-4 col-xs-12 friend-link__wrap">
-			<a target="_blank" class="friend-link__wrap__item" href="http://beautiful.panm.cn/vue-admin-beautiful/#/index">
+			<a target="_blank" class="friend-link__wrap__item" href="http://chu1204505056.gitee.io/admin-pro/?hmsr=uview&hmpl=&hmcu=&hmkw=&hmci=">
 				<img src="/friend-link/vue-admin-beautiful.png">
 			</a>
 		</div>

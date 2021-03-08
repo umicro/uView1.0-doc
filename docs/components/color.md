@@ -22,7 +22,7 @@ uView为了更好编写css，使用了scss预处理器，使用uView之前，请
 而他们又有对应的`disabled`、`dark`和`light`状态，分别表示对应的禁止，加深和变浅的对应颜色。举例uView的`button`组件来说：
 1. 设置`type`参数为`primary`时，按钮显示蓝色。
 2. 按钮被按下时，使用的是`primary`的加深颜色，也即`dark`状态。
-3. 按钮设置为镂空状态(`plain`为`true`)时，背景色为`primary`的变浅颜色，也即也即`light`状态。
+3. 按钮设置为镂空状态(`plain`为`true`)时，背景色为`primary`的变浅颜色，也即`light`状态。
 4. 按钮处于禁止状态时，使用的是`primary`的稍浅颜色，也即`disabled`状态。
 
 ### 主色

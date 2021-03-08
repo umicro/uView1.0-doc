@@ -3,21 +3,22 @@
         class="info-box"
         v-if="showAd"
         target="_blank"
-        href="https://www.yisu.com/coupon/?f=uview&ystimes=xr10000"
+        href="https://www.yisu.com/hk/huodong.html?f=uview&ystimes=xr10000"
     >
 
         <div class="left">
             <img src="https://cdn.uviewui.com/uview/resources/156465198324.png" />
             <div class="desc-box">
-                <div class="title">移动前端开发者专享红包</div>
+                <div class="title">亿速云香港服务器低至29元！</div>
                 <div class="desc">
-                    开发者福利，千元红包可用于云服务器、高防服务器、裸金属服务器、高防IP、云数据库、CDN加速购买和续费
+                    开发者福利，注册即可领取红包！购买香港服务器低至29元/月！免备案低延迟，CN2高速线路，轻松上云！
                 </div>
             </div>
         </div>
         <div class="right">
-            <div class="btn">立即免费领取</div>
+            <div class="btn">立即注册</div>
         </div>
+        <!-- <img src="https://cdn.uviewui.com/uview/resources/125651064555.gif" /> -->
     </a>
 </template>
 
