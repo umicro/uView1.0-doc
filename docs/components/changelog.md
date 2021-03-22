@@ -9,6 +9,43 @@
             <div class="u-timeline-item-head u-timeline-item-head-blue"></div>
             <div class="u-timeline-item-content">
                 <div class="anchor">
+                    <h2>1.8.4</h2>
+                </div>
+                <p><code>2021-03-15</code></p>
+                <ul>
+                    <li>
+                        <span class="add">交流反馈</span>
+                        欢迎加群交流反馈：
+                        <a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+                    </li>
+                    <li>
+                        <span class="optimize">优化</span>
+                        优化test.mobile()方法对手机号的判断规则
+                    </li>
+                    <li>
+                        <span class="optimize">优化</span>
+                        优化tabs组件加载时，隐藏滑块的首次滑动效果
+                    </li>
+                    <li>
+                        <span class="optimize">优化</span>
+                        优化tabbar组件对角标的判断
+                    </li>
+                    <li>
+                        <span class="fix">修复</span>
+                        修复image组件showMenuByLongpress参数无效的问题
+                    </li>
+                    <li>
+                        <span class="fix">修复</span>
+                        修复rate组件获取内部尺寸可能不对的问题
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="u-timeline-item">
+            <div class="u-timeline-item-tail"></div>
+            <div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+            <div class="u-timeline-item-content">
+                <div class="anchor">
                     <h2>1.8.3</h2>
                 </div>
                 <p><code>2020-12-17</code></p>
