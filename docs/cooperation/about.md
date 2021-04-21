@@ -139,6 +139,14 @@ uView拥有众多用户，且文档详尽，经得起推敲，受得住考验，
 						github: 'https://gitee.com/chuxinone',
 						duty: '负责uView核心组件库研发，测试改进，社区管理等工作',
 						intro: '喜欢挑战新型技术，独立完成过多个大型项目，技术栈：混合app,php,vue等'
+					},
+					{
+						avatar: 'https://cdn.uviewui.com/uview/team/DE94E17F7A1D5F3B1098520C7E51CEB6.jpg',
+						name: '陈熙鹏',
+						job: '全栈开发',
+						addr: '长沙',
+						duty: '负责uView组件维护与升级，社区管理、等工作',
+						intro: '独立开发过多个项目，学习能力极强，精通Vue，uni-app，Java，Linux，SQL'
 					}
 				]
 			}

@@ -71,7 +71,7 @@ export default {
 - 通过`custom-style`修改返回按钮的背景颜色，大小等
 - 通过`mode`修改按钮的形状，`circle`为圆形，`square`为方形
 
-注意：如果通过`icon`参数传入图片路径的话，需要通过`custom-style`参数设置图片的`width`和`height`属性
+注意：如果通过`icon`参数传入图片路径的话，需要通过`icon-style`参数设置图片的`width`和`height`属性
 
 ```html
 <template>
