@@ -1,15 +1,15 @@
 <template>
 	<div>
 		<aside class="sidebar">
-			<a target="_blank" class="jump-link" href="https://www.apipost.cn/">
-				<img :src="url" />
+			<a target="_blank" class="jump-link" href="https://uni.cool-js.com">
+				<img src="https://cdn.uviewui.com/uview/resources/d0c76525dcf7c08f73c90fbb5f5bfe1.jpg" />
 			</a>
 			<!-- <a target="_blank" class="jump-link" :href="jumpInfo.url">
 				<img :src="jumpInfo.src" />
 			</a> -->
-			<a target="_blank" class="jump-link" href="http://www.vueshop.com.cn/index.php?http_referer=uview">
-				<img src="/customer/sdf1516355we0sd2.jpg" />
-			</a>
+			<!-- <a target="_blank" class="jump-link" href="http://tool.zjhlone.com/sms.php">
+				<img src="https://tool.zjhlone.com/3.jpg" />
+			</a> -->
 			<NavLinks />
 			<slot name="top" />
 			<SidebarLinks :depth="0" :items="items" />
@@ -35,8 +35,8 @@
 				ad: [
 					{
 						name: {
-							src: '/customer/contact1.png',
-							url: 'javascript: ;'
+							src: 'https://cdn.uviewui.com/uview/resources/7abbfb97681216fd76ed9accc68490e.png',
+							url: 'https://cool-js.com'
 						},
 						chance: 0.33
 					},

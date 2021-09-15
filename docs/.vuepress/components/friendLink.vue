@@ -1,5 +1,10 @@
 <template>
 	<div class="row friend-link">
+        <div class="col-md-4 col-sm-4 col-xs-12 friend-link__wrap">
+			<a target="_blank" class="friend-link__wrap__item" href="https://cool-js.com">
+				<img src="https://cdn.uviewui.com/uview/friends-link/60F6A98E3697B75EAEEDEE85A2D850EF.png">
+			</a>
+		</div>
 		<div class="col-md-4 col-sm-4 col-xs-12 friend-link__wrap">
 			<a target="_blank" class="friend-link__wrap__item" href="http://chu1204505056.gitee.io/admin-pro/?hmsr=uview&hmpl=&hmcu=&hmkw=&hmci=">
 				<img src="/friend-link/vue-admin-beautiful.png">
@@ -28,6 +33,11 @@
         <div class="col-md-4 col-sm-4 col-xs-12 friend-link__wrap">
 			<a target="_blank" class="friend-link__wrap__item" href="https://www.fastadmin.net/">
 				<img src="https://cdn.uviewui.com/uview/friends-link/K3CYA7RO43UUAS8TZVUJY.jpg">
+			</a>
+		</div>
+		<div class="col-md-4 col-sm-4 col-xs-12 friend-link__wrap">
+			<a target="_blank" class="friend-link__wrap__item" href="https://code.fun/">
+				<img src="https://cdn.uviewui.com/uview/friends-link/CodeFunAd.png">
 			</a>
 		</div>
 	</div>

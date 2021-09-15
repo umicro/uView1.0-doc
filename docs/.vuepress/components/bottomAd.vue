@@ -3,10 +3,10 @@
         class="info-box"
         v-if="showAd"
         target="_blank"
-        href="https://www.yisu.com/hk/huodong.html?f=uview&ystimes=xr10000"
+        href="https://www.yisu.com/hk/huodong.html?f=uview&unit=xr10000&yisu0501"
     >
 
-        <div class="left">
+        <!-- <div class="left">
             <img src="https://cdn.uviewui.com/uview/resources/156465198324.png" />
             <div class="desc-box">
                 <div class="title">亿速云香港服务器低至29元！</div>
@@ -17,8 +17,8 @@
         </div>
         <div class="right">
             <div class="btn">立即注册</div>
-        </div>
-        <!-- <img src="https://cdn.uviewui.com/uview/resources/125651064555.gif" /> -->
+        </div> -->
+        <img src="https://cdn.uviewui.com/uview/resources/156418598104555.gif" />
     </a>
 </template>
 
@@ -41,9 +41,9 @@ export default {
     margin-top: 3rem;
     display: flex;
     max-width: 900px;
-    padding: 20px 30px;
-    border: 1px solid rgb(219, 225, 232);
-    border-left: 5px solid rgb(255, 68, 69);
+    // padding: 20px 30px;
+    // border: 1px solid rgb(219, 225, 232);
+    // border-left: 5px solid rgb(255, 68, 69);
     align-items: center;
 
     .left {
