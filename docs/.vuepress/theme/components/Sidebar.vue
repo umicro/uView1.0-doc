@@ -4,9 +4,9 @@
 			<a target="_blank" class="jump-link" href="https://uni.cool-js.com">
 				<img src="https://cdn.uviewui.com/uview/resources/d0c76525dcf7c08f73c90fbb5f5bfe1.jpg" />
 			</a>
-			<!-- <a target="_blank" class="jump-link" :href="jumpInfo.url">
-				<img :src="jumpInfo.src" />
-			</a> -->
+			<a target="_blank" class="jump-link" href="https://code.fun/">
+				<img src="https://cdn.uviewui.com/uview/resources/codeFun.jpg" />
+			</a>
 			<!-- <a target="_blank" class="jump-link" href="http://tool.zjhlone.com/sms.php">
 				<img src="https://tool.zjhlone.com/3.jpg" />
 			</a> -->
