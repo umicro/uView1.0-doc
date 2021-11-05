@@ -1,8 +1,8 @@
 <template>
 	<div>
 		<aside class="sidebar">
-			<a target="_blank" class="jump-link" href="https://uni.cool-js.com">
-				<img src="https://cdn.uviewui.com/uview/resources/d0c76525dcf7c08f73c90fbb5f5bfe1.jpg" />
+			<a target="_blank" class="jump-link" href="https://www.jnpfsoft.com/index.html?from=uview">
+				<img src="https://cdn.uviewui.com/uview/resources/456481858555415.png" />
 			</a>
 			<a target="_blank" class="jump-link" href="https://code.fun/">
 				<img src="https://cdn.uviewui.com/uview/resources/codeFun.jpg" />
