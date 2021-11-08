@@ -40,6 +40,11 @@
 				<img src="https://cdn.uviewui.com/uview/friends-link/CodeFunAd.png">
 			</a>
 		</div>
+		<div class="col-md-4 col-sm-4 col-xs-12 friend-link__wrap">
+			<a target="_blank" class="friend-link__wrap__item" href="https://www.jnpfsoft.com/index.html?from=uview">
+				<img src="https://cdn.uviewui.com/uview/friends-link/15646154564185644515.png">
+			</a>
+		</div>
 	</div>
 </template>
 
