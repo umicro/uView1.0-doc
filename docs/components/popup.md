@@ -78,8 +78,8 @@ uView提供了`length`来控制此种情况，此值可以是`数值`(单位rpx)
 
 1.3.7版本后，优先推荐`width`和`height`参数，并且优先级会高于`length`，这3个参数都可以设置`百分比`、`auto`、`数值`(单位rpx)、或者是带`px`和`rpx`单位的字符串：
 
-- `width` — 只对`mode = left | center | right`模式有效
-- `height` — 只对`mode = top | center | bottom`模式有效
+- `width`只对`mode = left | center | right`模式有效
+- `height`只对`mode = top | center | bottom`模式有效
 
 :::tip 提示
 1.3.7版本后，内置了`scroll-view`元素，内如内容超出容器的高度，将会自动获得**垂直**滚动的特性，如果您因为在`slot`内容做了滚动的处理，而造成了
