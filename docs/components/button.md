@@ -105,10 +105,16 @@ uni-app`button`组件比较特殊，因为它有一些其他小程序平台的�
 <u-button :custom-style="customStyle">雪月夜</u-button>
 
 <script>
-	customStyle: {
-		marginTop: '20px', // 注意驼峰命名，并且值必须用引号包括，因为这是对象
-		color: 'red'
+export default {
+	data() {
+		return {
+			customStyle: {
+				marginTop: '20px', // 注意驼峰命名，并且值必须用引号包括，因为这是对象
+				color: 'red'
+			}
+		};
 	}
+};
 </script>
 ```
 
