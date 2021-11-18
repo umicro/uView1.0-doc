@@ -26,7 +26,7 @@
 <br>
 <div @click="downloadPost(2)" class="download-link">
 	<!-- 下载地址：<a href="https://download.uviewui.com/uView_1.3.6.zip">uView_1.3.6.zip</a> -->
-	下载地址：<a target="_blank" href="https://ext.dcloud.net.cn/plugin?id=1593">https://ext.dcloud.net.cn/plugin?id=1593</a>
+	下载地址：<a target="_blank" href="https://ext.dcloud.net.cn/plugin?id=6682">https://ext.dcloud.net.cn/plugin?id=6682</a>
 </div>
 <br>
 <br>
@@ -45,7 +45,7 @@
 <br>
 <div @click="downloadPost(3)" class="download-link">
 	<!-- 下载地址：<a href="https://download.uviewui.com/uView_1.3.6_demo.zip">uView_1.3.6_demo.zip</a> -->
-	uni-app插件市场地址：<a target="_blank" href="https://ext.dcloud.net.cn/plugin?id=1593">https://ext.dcloud.net.cn/plugin?id=1593</a>
+	uni-app插件市场地址：<a target="_blank" href="https://ext.dcloud.net.cn/plugin?id=6682">https://ext.dcloud.net.cn/plugin?id=6682</a>
 </div>
 <br>
 <br>
