@@ -30,11 +30,6 @@ uView免费开源，无需授权，欢迎商用。uView的发展也得到各个�
 <br>
 <githubContribution-list></githubContribution-list>
 
-### Gitee贡献名单
-
-<br>
-<giteeContribution-list></giteeContribution-list>
-
 ### 文档
 
 uView的文档，力求不留死角，把所有可能需要注意的地方，都详细列出。uView的文档经得起推敲，受得住考验。  
