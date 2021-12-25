@@ -9,6 +9,59 @@
             <div class="u-timeline-item-head u-timeline-item-head-blue"></div>
             <div class="u-timeline-item-content">
                 <div class="anchor">
+                    <h2>1.8.5</h2>
+                </div>
+                <p><code>2021-12-25</code></p>
+                <ul>
+                    <li>
+                        <span class="add">交流反馈</span>
+                        欢迎加群交流反馈：
+                        <a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+                    </li>
+                    <li>
+                        <span class="optimize">优化</span>
+                        优化折叠面板collapse性能问题
+                    </li>
+                    <li>
+                        <span class="fix">修复</span>
+                        修复select组件在小程序端展示选值的bug
+                    </li>
+                    <li>
+                        <span class="fix">修复</span>
+                        修复步进器设置可输入小数在小程序真机上无法输入的问题
+                    </li>
+                    <li>
+                        <span class="fix">修复</span>
+                        修复tab过长出现左右滚动时指示器位置计算错误
+                    </li>
+                    <li>
+                        <span class="fix">修复</span>
+                        修复defautl-value传入后,用户滑动选项列表后,defalut-value不生效的问题
+                    </li>
+                    <li>
+                        <span class="fix">修复</span>
+                        修复u-select显示和实际选择的值不一致的问题
+                    </li>
+                    <li>
+                        <span class="fix">修复</span>
+                        修改upload组件单词拼写错误导致终止上传失效，及进度条100后隐藏
+                    </li>
+                    <li>
+                        <span class="fix">修复</span>
+                        修复u-image组件的src属性, 先传入空值再传入非空值时,无法触发loading效果的bug
+                    </li>
+                    <li>
+                        <span class="fix">修复</span>
+                        其他一些修复
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="u-timeline-item">
+            <div class="u-timeline-item-tail"></div>
+            <div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+            <div class="u-timeline-item-content">
+                <div class="anchor">
                     <h2>1.8.4</h2>
                 </div>
                 <p><code>2021-03-15</code></p>
