@@ -148,7 +148,7 @@
 			</div>
 		</div>
 		<div class="foot">
-			Copyright 2020 uView UI | <a target="_blank" href="http://www.beian.miit.gov.cn">粤ICP备19025822号</a>
+			Copyright {{year}} uView UI | <a target="_blank" href="http://beian.miit.gov.cn">粤ICP备19025822号</a>
 		</div>
 	</div>
 </template>
@@ -157,7 +157,7 @@
 	export default {
 		data() {
 			return {
-
+				year: new Date().getFullYear()
 			}
 		},
 		created() {
