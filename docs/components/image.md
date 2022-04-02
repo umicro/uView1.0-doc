@@ -126,7 +126,7 @@
 | shape | 图片形状，circle-圆形，square-方形 | String  | square | circle |
 | border-radius | 圆角值，单位任意，如果为数值，则为rpx单位 | String \| Number  | 0 | - |
 | lazy-load | 是否懒加载，仅微信小程序、App、百度小程序、字节跳动小程序有效 | Boolean  | true | - |
-| show-menu-by-longpress | 是否开启长按图片显示识别小程序码菜单，仅微信小程序有效 | Boolean  | false | - |
+| show-menu-by-longpress | 是否开启长按图片显示识别小程序码菜单，仅微信小程序有效 | Boolean  | true | - |
 | loading-icon | 加载中的图标，或者小图片 | String  | photo | - |
 | error-icon | 加载失败的图标，或者小图片 | String  | error-circle | - |
 | show-loading | 是否显示加载中的图标或者自定义的slot | Boolean  | true | false |
