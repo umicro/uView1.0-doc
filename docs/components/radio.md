@@ -81,7 +81,7 @@ export default {
 再禁用，会有灰色的勾选的图标，但此时依然是不可操作的。
 
 ```html
-<u-radio-group v-model="value"
+<u-radio-group v-model="value">
 	<u-radio :disabled="true">明月几时有</u-radio>
 </u-radio-group>
 ```
