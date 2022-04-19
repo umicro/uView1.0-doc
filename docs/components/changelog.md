@@ -9,6 +9,47 @@
             <div class="u-timeline-item-head u-timeline-item-head-blue"></div>
             <div class="u-timeline-item-content">
                 <div class="anchor">
+                    <h2>1.8.6</h2>
+                </div>
+                <p><code>2022-04-19</code></p>
+                <ul>
+                    <li>
+                        <span class="add">交流反馈</span>
+                        欢迎加群交流反馈：
+                        <a href="/components/addQQGroup.html" target="_blank">点击跳转</a>
+                    </li>
+                    <li>
+                        <span class="fix">修复</span>
+                        修复`u-calendar`组件可以选择给定范围之外日期的错误
+                    </li>
+                    <li>
+                        <span class="add">增加</span>
+                        增加`u-input`弹出键盘会自动调节高度属性`adjust-position`
+                    </li>
+                    <li>
+                        <span class="fix">修复</span>
+                        修复`u-number-box`动态切换类型引起的输入框bug
+                    </li>
+                    <li>
+                        <span class="fix">修复</span>
+                        修复在支付宝小程序中`u-upload`组件上传文件提示缺少参数的问题
+                    </li>
+                    <li>
+                        <span class="fix">修复</span>
+                        修复`u-input`组件中`blur`事件使用`value`变量未声明的错误
+                    </li>
+                    <li>
+                        <span class="fix">修复</span>
+                        其他一些修复
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="u-timeline-item">
+            <div class="u-timeline-item-tail"></div>
+            <div class="u-timeline-item-head u-timeline-item-head-blue"></div>
+            <div class="u-timeline-item-content">
+                <div class="anchor">
                     <h2>1.8.5</h2>
                 </div>
                 <p><code>2021-12-25</code></p>
