@@ -20,23 +20,23 @@
                     </li>
                     <li>
                         <span class="fix">修复</span>
-                        修复`u-calendar`组件可以选择给定范围之外日期的错误
+                        修复u-calendar组件可以选择给定范围之外日期的错误
                     </li>
                     <li>
                         <span class="add">增加</span>
-                        增加`u-input`弹出键盘会自动调节高度属性`adjust-position`
+                        增加u-input弹出键盘会自动调节高度属性adjust-position
                     </li>
                     <li>
                         <span class="fix">修复</span>
-                        修复`u-number-box`动态切换类型引起的输入框bug
+                        修复u-number-box动态切换类型引起的输入框bug
                     </li>
                     <li>
                         <span class="fix">修复</span>
-                        修复在支付宝小程序中`u-upload`组件上传文件提示缺少参数的问题
+                        修复在支付宝小程序中u-upload组件上传文件提示缺少参数的问题
                     </li>
                     <li>
                         <span class="fix">修复</span>
-                        修复`u-input`组件中`blur`事件使用`value`变量未声明的错误
+                        修复u-input组件中blur事件使用value变量未声明的错误
                     </li>
                     <li>
                         <span class="fix">修复</span>
@@ -2527,7 +2527,7 @@
 					</li>
 					<li>
 						<span class="optimize">优化</span>
-						优化field组件的`error-message`参数，加入Boolean类型
+						优化field组件的error-message参数，加入Boolean类型
 					</li>
 					<li>
 						<span class="optimize">优化</span>
