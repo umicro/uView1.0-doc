@@ -112,7 +112,7 @@ export default {
 
 ### 文本是否可点击
 
-设置`label-disabled`为`false`，点击文本时，无法操作`radio`
+设置`label-disabled`为`true`，点击文本时，无法操作`radio`
 
 
 ```html
