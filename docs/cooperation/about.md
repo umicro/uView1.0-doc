@@ -155,7 +155,7 @@ uView拥有众多用户，且文档详尽，经得起推敲，受得住考验，
 						intro: '独立开发过多个项目，学习能力极强，精通Vue，uni-app，Java，Linux，SQL'
 					},
 					{
-						avatar: 'https://img2.baidu.com/it/u=2152119220,4183216458&fm=26&fmt=auto',
+						avatar: 'https://q.qlogo.cn/headimg_dl?dst_uin=1592826708&spec=100&img_type=jpg',
 						name: '沈少飞',
 						job: '前端开发',
 						addr: '合肥',
