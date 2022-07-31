@@ -17,7 +17,7 @@
 `error`(红色-错误)，`success`(绿色-成功)，`info`(灰色-信息)
 
 ::: warning 注意
-此组件内部默认为`absulote`绝对定位，所以需要给`badge`父组件(元素)设置`position: relative`相对定位，
+此组件内部默认为`absolute`绝对定位，所以需要给`badge`父组件(元素)设置`position: relative`相对定位，
 再通过调整`offset`偏移值(数组，两个元素，第一个元素为`top`值，第二个元素为`right`值，单位rpx，可为负值，如"[-10, -10]")设置到合适的位置即可。  
 如果不需要组件内容默认的自动绝对定位，设置`absolute`参数为`false`即可。
 :::
