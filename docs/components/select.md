@@ -27,7 +27,7 @@
 
 1. mode = single-column，为单列选择模式。
 2. mode = mutil-column，为多列选择模式。
-3. mode = muitl-column-auto，为多列联动模式，多列联动的数据格式比较特殊，见下方说明。
+3. mode = mutil-column-auto，为多列联动模式，多列联动的数据格式比较特殊，见下方说明。
 
 
 ```html
