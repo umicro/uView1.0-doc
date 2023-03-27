@@ -100,7 +100,7 @@
 // npm init -y
 
 // 安装
-npm install uview-ui@1.8.4
+npm install uview-ui@1.8.8
 
 // 更新
 npm update uview-ui
