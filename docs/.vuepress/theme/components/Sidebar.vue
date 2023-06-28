@@ -1,8 +1,8 @@
 <template>
 	<div>
 		<aside class="sidebar">
-			<a target="_blank" class="jump-link" href="https://www.jnpfsoft.com/index.html?from=uview">
-				<img src="https://cdn.uviewui.com/uview/resources/456481858555415.png" />
+			<a target="_blank" class="jump-link" href="https://open.alipay.com/portal/forum/post/127901018?from=uview">
+				<img src="https://cdn.uviewui.com/uview/resources/127901018.jpg" />
 			</a>
 			<a target="_blank" class="jump-link" href="https://code.fun/">
 				<img src="https://cdn.uviewui.com/uview/resources/codeFun.jpg" />
@@ -63,7 +63,7 @@
             // 与广州亿速云的广告合作到期时间为2020-11-22，时间戳为：1608911994000(ms)
             // if (+new Date() > 1606058735000) {
             //     this.url = '/customer/contact1.png'
-            // } else { 
+            // } else {
             //     this.url = 'https://cdn.uviewui.com/uview/friends-link/apipost_350x150px.jpeg';
             // }
 		},
