@@ -1,8 +1,8 @@
 <template>
 	<div>
 		<aside class="sidebar">
-			<a target="_blank" class="jump-link" href="https://open.alipay.com/portal/forum/post/127901018?from=uview">
-				<img src="https://cdn.uviewui.com/uview/resources/127901018.jpg" />
+			<a target="_blank" class="jump-link" href="https://cloud.alipay.com/main/home?from=uview">
+				<img src="https://cdn.uviewui.com/uview/resources/alicloud.jpg" />
 			</a>
 			<a target="_blank" class="jump-link" href="https://v3.hhyang.cn/">
 				<img src="https://cdn.uviewui.com/uview/resources/12861689322612.jpg" />
