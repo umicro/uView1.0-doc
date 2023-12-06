@@ -89,18 +89,18 @@ export default {
                 factor = 0,
                 random = Math.random();
 
-            for (let i = 0; i < this.ad.length; i++) {
-                sum += this.ad[i].chance; // 统计概率总和
-            };
-            random *= sum; // 生成概率随机数
-            for (let i = 0; i < this.ad.length; i++) {
-                factor += this.ad[i].chance;
-                if (factor > random) return this.ad[i].name;
-            };
-            return null;
-        }
-    }
-};
+				for (let i = 0; i < this.ad.length; i++) {
+					sum += this.ad[i].chance; // 统计概率总和
+				};
+				random *= sum; // 生成概率随机数
+				for (let i = 0; i < this.ad.length; i++) {
+					factor += this.ad[i].chance;
+					if (factor > random) return this.ad[i].name;
+				};
+				return null;
+			}
+		}
+	};
 </script>
 
 <style lang="stylus">
