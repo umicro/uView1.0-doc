@@ -17,9 +17,10 @@
             </a>
             <a
                 class="jump-link"
-                href="javascript: void(0);"
+                target="_blank"
+                href="https://yunxin.163.com/im?from=uview_IM_0416"
             >
-                <img src="https://cdn.uviewui.com/uview/resources/1351701780890.jpg" />
+              <img src="https://cdn.uviewui.com/uview/resources/18496183264.png" />
             </a>
             <NavLinks />
             <slot name="top" />
