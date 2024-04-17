@@ -2,6 +2,13 @@
     <div>
         <aside class="sidebar">
             <a
+                class="jump-link"
+                target="_blank"
+                href="https://yunxin.163.com/im?from=uview_IM_0416"
+            >
+              <img src="https://cdn.uviewui.com/uview/resources/18496183264.png" />
+            </a>
+            <a
                 target="_blank"
                 class="jump-link"
                 href="https://www.crmeb.com/?from=uview"
@@ -14,13 +21,6 @@
                 href="https://cloud.alipay.com/main/home?from=uview"
             >
                 <img src="https://cdn.uviewui.com/uview/resources/alicloud.jpg" />
-            </a>
-            <a
-                class="jump-link"
-                target="_blank"
-                href="https://yunxin.163.com/im?from=uview_IM_0416"
-            >
-              <img src="https://cdn.uviewui.com/uview/resources/18496183264.png" />
             </a>
             <NavLinks />
             <slot name="top" />
