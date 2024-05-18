@@ -24,3 +24,6 @@ uView UI，是[uni-app](https://uniapp.dcloud.io/)生态优秀的UI框架，全�
 ## 关于PR
 
 > 我们非常乐意接受各位的优质PR让文档更全面更完善！
+
+### 推荐
+网易云信IM：全面兼容uni-app生态的即时通讯IM UIKit，30分钟一键集成单聊、群聊、聊天时等能力：[传送门](https://yunxin.163.com/im?from=uview)
