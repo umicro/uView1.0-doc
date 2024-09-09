@@ -160,6 +160,15 @@ uView拥有众多用户，且文档详尽，经得起推敲，受得住考验，
 						addr: '合肥',
 						duty: '负责uView组件维护与升级，社区管理、疑难解答等工作',
 						intro: '熟悉并热爱ES6+新语法，且能够在项目开发中加以运用，提高项目的开发效率以及编写代码的质量'
+					},
+					{
+						avatar: 'https://q.qlogo.cn/headimg_dl?dst_uin=2915466771&spec=100&img_type=jpg',
+						name: 'Jay丶萧邦',
+						csdn: 'https://blog.csdn.net/qq_42543244',
+						job: '前端开发',
+						addr: '郑州',
+						duty: '负责uView组件维护与升级，社区管理、疑难解答等工作',
+						intro: '独立开发多个移动端项目，uniapp重度患者，喜欢学习，积累，热爱ES6+语法'
 					}
 				]
 			}
