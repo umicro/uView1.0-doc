@@ -18,7 +18,7 @@
             <a
                 target="_blank"
                 class="jump-link"
-                href="https://www.upyun.com/?from=uview"
+                href="https://www.houdeyun.cn/?from=uview"
             >
               <img src="https://cdn.uviewui.com/uview/resources/b490bd2cefd8a827cbfed7d6386b368a.PNG" />
             </a>
