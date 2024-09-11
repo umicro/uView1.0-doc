@@ -18,9 +18,9 @@
             <a
                 target="_blank"
                 class="jump-link"
-                href="https://cloud.alipay.com/main/home?from=uview"
+                href="https://www.upyun.com/?from=uview"
             >
-                <img src="https://cdn.uviewui.com/uview/resources/alicloud.jpg" />
+              <img src="https://cdn.uviewui.com/uview/resources/b490bd2cefd8a827cbfed7d6386b368a.PNG" />
             </a>
             <NavLinks />
             <slot name="top" />

@@ -202,7 +202,7 @@ uView定义了一套内外边距的类名，调用简单，方便用户使用，
 如果我们想定义`26rpx`的**左外边距**：
 
 ```html
-<view class="u-margin-left-26"></viwe>
+<view class="u-margin-left-26"></view>
 ```
 
 这个`.u-margin-left-26`在uView的内部样式定义为：
@@ -216,7 +216,7 @@ uView定义了一套内外边距的类名，调用简单，方便用户使用，
 如果我们想要`35rpx`的内边距：
 
 ```html
-<view class="u-padding-35"></viwe>
+<view class="u-padding-35"></view>
 ```
 
 这个`.u-padding-35`在uView的内部样式定义为：
