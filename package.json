@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "NODE_OPTIONS=--openssl-legacy-provider vuepress dev docs",
     "build": "NODE_OPTIONS=--openssl-legacy-provider vuepress build docs",
-    "eject": "NODE_OPTIONS=--openssl-legacy-provider vuepress eject"
+    "eject": "NODE_OPTIONS=--openssl-legacy-provider vuepress eject",
+    "deploy": "node deploy"
   },
   "keywords": [
     "uView"
@@ -20,6 +21,7 @@
     "vuepress": "^1.6.0"
   },
   "dependencies": {
+    "anve-upload-upyun": "^1.0.8",
     "axios": "^0.27.2",
     "core-js": "^2.6.11",
     "element-ui": "^2.13.2"
