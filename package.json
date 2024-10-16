@@ -8,7 +8,8 @@
     "serve": "NODE_OPTIONS=--openssl-legacy-provider vuepress dev docs",
     "build": "NODE_OPTIONS=--openssl-legacy-provider vuepress build docs",
     "eject": "NODE_OPTIONS=--openssl-legacy-provider vuepress eject",
-    "deploy": "node deploy"
+    "deploy": "pnpm build && node deploy",
+    "preinstall": "npx only-allow pnpm"
   },
   "keywords": [
     "uView"
