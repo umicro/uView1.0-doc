@@ -3,23 +3,11 @@
         <aside class="sidebar">
             <a
                 class="jump-link"
-                target="_blank"
-                href="https://yunxin.163.com/im?from=uview_IM_0416"
+                v-for="(item, index) in adList"
+                :key="index"
+                :href="item.link ? item.link : 'javascript:;'"
             >
-              <img src="https://cdn.uviewui.com/uview/resources/18496183264.png" />
-            </a>
-            <a
-                target="_blank"
-                class="jump-link"
-                href="https://www.crmeb.com/?from=uview"
-            >
-                <img src="https://cdn.uviewui.com/uview/resources/3c56cbc6216b47db61e37090fdb6619.jpg" />
-            </a>
-            <a
-                class="jump-link"
-                href="javascript:;"
-            >
-                <img src="/customer/contact1.png" />
+                <img :alt="item.title" :src="`https://api.uviewui.com${item.imageUrl}`" />
             </a>
             <NavLinks />
             <slot name="top" />
@@ -35,71 +23,29 @@
 <script>
 import SidebarLinks from '@theme/components/SidebarLinks.vue';
 import NavLinks from '@theme/components/NavLinks.vue';
+import axios from 'axios'
 
 export default {
     name: 'Sidebar',
-
     components: {
         SidebarLinks,
         NavLinks
     },
     data() {
         return {
-            // 广告信息
-            ad: [
-                {
-                    name: {
-                        src: 'https://cdn.uviewui.com/uview/resources/7abbfb97681216fd76ed9accc68490e.png',
-                        url: 'https://cool-js.com'
-                    },
-                    chance: 0.33
-                },
-                {
-                    name: {
-                        src: '/customer/contact3.png',
-                        url: 'https://ext.dcloud.net.cn/plugin?id=1427'
-                    },
-                    chance: 0.67
-                }
-            ],
-            // 顶部广告图
-            url: '/customer/contact1.png'
+            adList: []
         }
     },
     props: ['items'],
     created() {
-        // 概率计算
-        //this.jumpInfo = this.random();
-        // 每隔一定时间，执行一次随机概率
-        // setInterval(() => {
-        // 	this.jumpInfo = this.random();
-        // }, 3000);
-        // 与广州亿速云的广告合作到期时间为2020-11-22，时间戳为：1608911994000(ms)
-        // if (+new Date() > 1606058735000) {
-        //     this.url = '/customer/contact1.png'
-        // } else {
-        //     this.url = 'https://cdn.uviewui.com/uview/friends-link/apipost_350x150px.jpeg';
-        // }
+        axios.get(`https://api.uviewui.com/client/ad?code=left-top`).then(({ data }) => {
+            const { data: { list }, code } = data
+            if (code === 0) {
+                this.adList = list
+            }
+        })
     },
-    methods: {
-        // 根据概率，获得结果
-        random() {
-            let sum = 0,
-                factor = 0,
-                random = Math.random();
-
-				for (let i = 0; i < this.ad.length; i++) {
-					sum += this.ad[i].chance; // 统计概率总和
-				};
-				random *= sum; // 生成概率随机数
-				for (let i = 0; i < this.ad.length; i++) {
-					factor += this.ad[i].chance;
-					if (factor > random) return this.ad[i].name;
-				};
-				return null;
-			}
-		}
-	};
+}
 </script>
 
 <style lang="stylus">
