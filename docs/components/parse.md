@@ -42,7 +42,7 @@
       return {
         content: `
 					<p>露从今夜白，月是故乡明</p>
-					<img src="https://xxx.com/xxx.jpg" />
+					<img src="https://cdn.uviewui.com/uview/xxx.jpg" />
 				`,
       };
     },
@@ -83,7 +83,7 @@
       return {
         content: `
 					<p>露从今夜白，月是故乡明</p>
-					<img src="https://xxx.com/xxx.jpg" />
+					<img src="https://cdn.uviewui.com/uview/xxx.jpg" />
 				`,
         style: {
           // 字符串的形式
@@ -111,7 +111,7 @@
       return {
         content: `
 					<p>露从今夜白，月是故乡明</p>
-					<img src="https://xxx.com/xxx.jpg" />
+					<img src="https://cdn.uviewui.com/uview/xxx.jpg" />
 				`,
       };
     },
