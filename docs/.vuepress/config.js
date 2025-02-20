@@ -59,26 +59,31 @@ module.exports = {
       text: '模板',
       link: '/layout/intro'
     },
-      {
-        text: '资源',
-        link: '/components/resource'
-      },
-      {
-        text: '关于我们',
-        link: '/cooperation/about'
-      }, {
-        text: '1.X',
-        items: [{
-          text: '2.X',
-          link: 'https://uviewui.com'
-        }]
-      }, {
-        text: 'GitHub',
-        link: 'https://github.com/YanxinNet/uView'
-      }, {
-        text: 'Gitee',
-        link: 'https://gitee.com/umicro/uView'
-      }
+    {
+      text: '资源',
+      link: '/components/resource'
+    },
+    {
+      text: '关于我们',
+      link: '/cooperation/about'
+    },
+    {
+      text: '捐赠名单',
+      link: '/cooperation/donation'
+    },
+    {
+      text: '1.X',
+      items: [{
+        text: '2.X',
+        link: 'https://uviewui.com'
+      }]
+    }, {
+      text: 'GitHub',
+      link: 'https://github.com/YanxinNet/uView'
+    }, {
+      text: 'Gitee',
+      link: 'https://gitee.com/umicro/uView'
+    }
     ],
     sidebar: {
       '/components/': [{
@@ -98,132 +103,132 @@ module.exports = {
           ['/components/changeGuide', '升级指南']
         ]
       },
-        {
-          title: '组件',
+      {
+        title: '组件',
+        collapsable: false,
+        sidebarDepth: 0,
+        children: [{
+          title: '基础组件',
           collapsable: false,
           sidebarDepth: 0,
-          children: [{
-            title: '基础组件',
-            collapsable: false,
-            sidebarDepth: 0,
-            children: [
-              '/components/color',
-              '/components/icon',
-              '/components/image',
-              '/components/button',
-              '/components/layout',
-              '/components/cell',
-              '/components/badge',
-              '/components/tag'
-            ]
-          },
-            {
-              title: '表单组件',
-              collapsable: false,
-              sidebarDepth: 0,
-              children: [
-                '/components/input',
-                '/components/form',
-                '/components/calendar',
-                '/components/select',
-                '/components/keyboard',
-                '/components/picker',
-                '/components/rate',
-                '/components/search',
-                '/components/numberBox',
-                '/components/upload',
-                '/components/verificationCode',
-                '/components/field',
-                '/components/checkbox',
-                '/components/radio',
-                '/components/switch',
-                '/components/slider'
-              ]
-            },
-            {
-              title: '数据组件',
-              collapsable: false,
-              sidebarDepth: 0,
-              children: [
-                '/components/circleProgress',
-                '/components/lineProgress',
-                '/components/table',
-                '/components/countDown',
-                '/components/countTo'
-              ]
-            },
-            {
-              title: '反馈组件',
-              collapsable: false,
-              sidebarDepth: 0,
-              children: [
-                '/components/actionSheet',
-                '/components/alertTips',
-                '/components/toast',
-                '/components/noticeBar',
-                '/components/topTips',
-                '/components/collapse',
-                '/components/popup',
-                '/components/swipeAction',
-                '/components/modal',
-                '/components/fullScreen'
-              ]
-            },
-            {
-              title: '布局组件',
-              collapsable: false,
-              sidebarDepth: 0,
-              children: [
-                '/components/line',
-                '/components/card',
-                '/components/mask',
-                '/components/noNetwork',
-                '/components/grid',
-                '/components/swiper',
-                '/components/timeLine',
-                '/components/skeleton',
-                '/components/sticky',
-                '/components/waterfall',
-                '/components/divider'
-              ]
-            },
-            {
-              title: '导航组件',
-              collapsable: false,
-              sidebarDepth: 0,
-              children: [
-                '/components/dropdown',
-                '/components/tabbar',
-                '/components/backTop',
-                '/components/navbar',
-                '/components/tabs',
-                '/components/tabsSwiper',
-                '/components/subsection',
-                '/components/indexList',
-                '/components/steps',
-                '/components/empty',
-                '/components/link',
-                '/components/section'
-              ]
-            },
-            {
-              title: '其他组件',
-              collapsable: false,
-              sidebarDepth: 0,
-              children: [
-                '/components/parse',
-                '/components/messageInput',
-                '/components/avatarCropper',
-                '/components/loadMore',
-                '/components/readMore',
-                '/components/lazyLoad',
-                '/components/gap',
-                '/components/avatar',
-                '/components/loading'
-              ]
-            }
+          children: [
+            '/components/color',
+            '/components/icon',
+            '/components/image',
+            '/components/button',
+            '/components/layout',
+            '/components/cell',
+            '/components/badge',
+            '/components/tag'
+          ]
+        },
+        {
+          title: '表单组件',
+          collapsable: false,
+          sidebarDepth: 0,
+          children: [
+            '/components/input',
+            '/components/form',
+            '/components/calendar',
+            '/components/select',
+            '/components/keyboard',
+            '/components/picker',
+            '/components/rate',
+            '/components/search',
+            '/components/numberBox',
+            '/components/upload',
+            '/components/verificationCode',
+            '/components/field',
+            '/components/checkbox',
+            '/components/radio',
+            '/components/switch',
+            '/components/slider'
+          ]
+        },
+        {
+          title: '数据组件',
+          collapsable: false,
+          sidebarDepth: 0,
+          children: [
+            '/components/circleProgress',
+            '/components/lineProgress',
+            '/components/table',
+            '/components/countDown',
+            '/components/countTo'
+          ]
+        },
+        {
+          title: '反馈组件',
+          collapsable: false,
+          sidebarDepth: 0,
+          children: [
+            '/components/actionSheet',
+            '/components/alertTips',
+            '/components/toast',
+            '/components/noticeBar',
+            '/components/topTips',
+            '/components/collapse',
+            '/components/popup',
+            '/components/swipeAction',
+            '/components/modal',
+            '/components/fullScreen'
+          ]
+        },
+        {
+          title: '布局组件',
+          collapsable: false,
+          sidebarDepth: 0,
+          children: [
+            '/components/line',
+            '/components/card',
+            '/components/mask',
+            '/components/noNetwork',
+            '/components/grid',
+            '/components/swiper',
+            '/components/timeLine',
+            '/components/skeleton',
+            '/components/sticky',
+            '/components/waterfall',
+            '/components/divider'
+          ]
+        },
+        {
+          title: '导航组件',
+          collapsable: false,
+          sidebarDepth: 0,
+          children: [
+            '/components/dropdown',
+            '/components/tabbar',
+            '/components/backTop',
+            '/components/navbar',
+            '/components/tabs',
+            '/components/tabsSwiper',
+            '/components/subsection',
+            '/components/indexList',
+            '/components/steps',
+            '/components/empty',
+            '/components/link',
+            '/components/section'
+          ]
+        },
+        {
+          title: '其他组件',
+          collapsable: false,
+          sidebarDepth: 0,
+          children: [
+            '/components/parse',
+            '/components/messageInput',
+            '/components/avatarCropper',
+            '/components/loadMore',
+            '/components/readMore',
+            '/components/lazyLoad',
+            '/components/gap',
+            '/components/avatar',
+            '/components/loading'
           ]
         }
+        ]
+      }
       ],
       '/guide': [{
         title: '开发指南',
