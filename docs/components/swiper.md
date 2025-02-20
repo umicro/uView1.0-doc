@@ -51,15 +51,15 @@ let list = [ '1.png', '2.png' ];
       return {
         list: [
           {
-            image: "https://xxx.com/xxx.jpg",
+            image: "https://cdn.uviewui.com/uview/xxx.jpg",
             title: "昨夜星辰昨夜风，画楼西畔桂堂东",
           },
           {
-            image: "https://xxx.com/xxx.jpg",
+            image: "https://cdn.uviewui.com/uview/xxx.jpg",
             title: "身无彩凤双飞翼，心有灵犀一点通",
           },
           {
-            image: "https://xxx.com/xxx.jpg",
+            image: "https://cdn.uviewui.com/uview/xxx.jpg",
             title: "谁念西风独自凉，萧萧黄叶闭疏窗，沉思往事立残阳",
           },
         ],

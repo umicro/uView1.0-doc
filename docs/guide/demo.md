@@ -27,7 +27,7 @@ uView 会将各个版本的演示在此展示，目前演示的版本有 H5，�
 <div class="demo-wrap row">
 	<div class="col-md-3 col-sm-6 col-xs-12">
 		<div class="demo-item">
-			<img src="https://xxx.com/resources/gh_ee0b6fe4b230_344.png" />
+			<img src="https://cdn.uviewui.com/uview/resources/gh_ee0b6fe4b230_344.png" />
 			<div class="platform-name">
 				微信小程序
 				<p class="platform-tips">只能微信扫码</p>
